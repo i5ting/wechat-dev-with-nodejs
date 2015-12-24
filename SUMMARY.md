@@ -60,6 +60,7 @@
    * [部署](vip-lession/deployment.md)
    * [监控](vip-lession/monit.md)
    * [数据统计](vip-lession/data_analyze.md)
+   * [随堂练习：代码实现](pay/pay.md)
 * [高级](vip-lession/README.md)
    * [前后端分离实践？](more/practice.md)
    * [如何展望未来的大前端？](more/tomorow.md)
