@@ -1,6 +1,6 @@
 # Summary
 
-* [nodejs入门](nodejs/README.md)
+* [Nodejs入门](nodejs/README.md)
    * [入门](nodejs/introduce.md)
    * [安装](nodejs/install.md)
    * [hello world](nodejs/helloworld.md)
@@ -10,7 +10,7 @@
    * [如何写node模块](nodejs/exercises.md)
    * [如何快速学习nodejs](nodejs/how-to-study.md)
    * [随堂练习：写一个nodejs模块并发布](nodejs/exercises.md)
-* [express和微信开发入门](express/README.md)
+* [Express和微信开发入门](express/README.md)
    * [入门](express/intro.md)
    * [connect](express/minimal.md)
    * [静态http服务器](express/html.md)
