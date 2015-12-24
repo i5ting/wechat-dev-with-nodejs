@@ -27,6 +27,9 @@ Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine. Node.j
 更多的见
 https://github.com/sindresorhus/awesome-nodejs
 
+
+http://stackshare.io/nodejs/in-stacks
+
 ## WHY NODEJS
 
 - 前端熟悉的语言，學習成本低

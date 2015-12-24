@@ -1,0 +1,1 @@
+module.exports = ['eric', '海角', '西瓜', '李小贱', 'kevin'];

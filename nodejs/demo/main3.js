@@ -1,0 +1,1 @@
+require('./helloworld3')('海角');
