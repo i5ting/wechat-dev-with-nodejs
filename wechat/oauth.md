@@ -142,3 +142,88 @@ module.exports = router;
 
 
 https://cnodejs.org/topic/555fec114eb040084cfe5d15
+
+
+
+
+之前的版本
+
+这是朴灵写的一个模块
+
+https://github.com/node-webot/wechat-oauth
+
+#### 授权流程
+
+网页授权流程分为四步：
+
+- 1、引导用户进入授权页面同意授权，获取code
+- 2、通过code换取网页授权access_token（与基础支持中的access_token不同）
+- 3、如果需要，开发者可以刷新网页授权access_token，避免过期
+- 4、通过网页授权access_token和openid获取用户基本信息（支持UnionID机制）
+
+简单点
+
+- 1、根据app_id和app_secret和授权后回调url
+- 2、在回调里处理业务逻辑，比如获取用户信息，保存或更新
+
+#### 准备工作
+
+```
+var OAuth = require('wechat-oauth');
+var client = new OAuth('your appid', 'your secret');
+```
+
+但是有一个问题，比如多台机器集群或多进程时，token需要全局维护，以下为保存token的接口。
+
+```
+if (req.wx) {
+    req.wx_client = new OAuth(req.wx.app_id, req.wx.app_secret, function (openid, callback) {
+    // 传入一个根据openid获取对应的全局token的方法
+    // 在getUser时会通过该方法来获取token
+    fs.readFile(openid +':access_token.txt', 'utf8', function (err, txt) {
+      if (err) {return callback(err);}
+      callback(null, JSON.parse(txt));
+    });
+  }, function (openid, token, callback) {
+    // 请将token存储到全局，跨进程、跨机器级别的全局，比如写到数据库、redis等
+    // 这样才能在cluster模式及多机情况下使用，以下为写入到文件的示例
+    // 持久化时请注意，每个openid都对应一个唯一的token!
+    fs.writeFile(openid + ':access_token.txt', JSON.stringify(token), callback);
+  });
+}
+```
+
+#### OAuth认证
+
+简单点说就是根据app_id和app_secret和授权后回调url，去微信的网关去认证
+
+认证成功后就会跳到回调url
+
+```
+// 主页,主要是负责OAuth认证
+router.get('/oauth', c, wx_config, wx_option, function(req, res) {
+  console.log('req.query');  
+  var qs = require('qs')
+  var query_json = qs.stringify(req.query);
+  console.log(query_json);
+  
+  var auth_url = req.wx.domain + req.wx.callback.url + "/" + query_json
+  console.log('auth_url = ' + auth_url);
+  var url = req.wx_client.getAuthorizeURL(auth_url, '', 'snsapi_userinfo');
+
+  // 重定向请求到微信服务器
+  res.redirect(url);
+});
+```
+
+核心方法就是getAuthorizeURL方法
+
+参数
+
+- 'redirectUrl'
+- 'state'
+- 'scope'
+
+#### 获取用户信息getUser(openid)
+
+#### 获取用户信息getUserByCode
