@@ -2,6 +2,8 @@
 
 ## 缓存
 
+manifest.appcache
+
 
 ## http-dns
 
