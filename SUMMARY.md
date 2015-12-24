@@ -1,7 +1,15 @@
 # Summary
 
-* [nodejs入门](nodejs/README)
-* [express和微信开发入门](express/README)
+* [nodejs入门](nodejs/README.md)
+   * [introduce](nodejs/introduce.md)
+   * [install](nodejs/install.md)
+   * [helloworld](nodejs/helloworld.md)
+   * [commonJS](nodejs/commonjs.md)
+   * [module-exports](nodejs/module-exports.md)
+   * [terms](nodejs/terms.md)
+   * [how-to-study](nodejs/how-to-study.md)
+   * [exercises](nodejs/exercises.md)
+* [express和微信开发入门](express/README.md)
 * [微信实例和h5实践](h5/README)
 * [weui实战](weui/README)
 * [微信支付](/README)
