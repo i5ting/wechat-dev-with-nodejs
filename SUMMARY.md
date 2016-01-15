@@ -1,5 +1,10 @@
 # Summary
 
+* [skill](skill/README.md)
+   * [Coding WebIDE](skill/coding_webide.md)
+   * [git](skill/git.md)
+   * [extra](skill/extra.md)
+   * [预习](faq.md)
 * [Nodejs入门](nodejs/README.md)
    * [入门](nodejs/introduce.md)
    * [安装](nodejs/install.md)
