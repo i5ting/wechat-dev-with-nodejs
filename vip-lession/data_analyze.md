@@ -3,6 +3,7 @@
 flurry，localytics，talkingdatada支持h5平台
 
 
+
 ## mta 腾讯云统计
 
 http://mta.qq.com/mta/ctr_index/h5
@@ -48,3 +49,9 @@ onclick="MtaH5.clickStat('按钮标识')"
 不好用
 
 http://h5.dataeye.com/
+
+
+## mixpanel
+
+
+http://exp.freesvc.com/public/articles/13?from=timeline&isappinstalled=0
