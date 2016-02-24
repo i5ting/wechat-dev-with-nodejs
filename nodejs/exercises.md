@@ -1,7 +1,11 @@
 # exercises
 
-
 ## 作业
+
+- 写一个npm模块，并发布到npmjs.org上
+- 如何去写一个cli工具，并发布到npmjs.org上
+
+## 作业实例
 
 最近我在做iOS适配了有一个算法，比如我在ps里测量高度是200px（ps里的2x的），也就是说它的实际告诉是100px
 
@@ -29,3 +33,4 @@ if(parseInt(result) == 117) {
   console.log('错误');
 }
 ```
+
