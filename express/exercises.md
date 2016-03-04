@@ -1,5 +1,8 @@
 # 随堂练习：完成登录、注册功能
 
+## 学习mongodb
+
+http://nodeonly.com/nodesang/#/4
 
 ## 添加mongoose
 
@@ -141,3 +144,29 @@ describe('POST /users/register', function(){
 ```
 mocha -u bdd test/user_api.js
 ```
+
+## 登录
+
+routes/user.js
+
+```
+var User = require('../models/user')
+
+router.post('/login', function(req, res, next) {
+  var name = req.body.name;
+  var password = req.body.password;
+  User.findOne({
+    "name":name,
+    "password":password
+  },function(err, user){
+    if(err){
+      res.json('register failed with err');
+    }
+
+    res.json('register sucess');
+  });
+});
+```
+
+这是示意，实际代码的密码地方是不会这样写的。采用加盐加密方式
+
