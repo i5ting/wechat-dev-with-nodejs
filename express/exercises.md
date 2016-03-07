@@ -2,7 +2,9 @@
 
 ## 学习mongodb
 
-http://nodeonly.com/nodesang/#/4
+- http://nodeonly.com/nodesang/#/4
+- https://github.com/DanialK/Simple-Authentication
+
 
 ## 添加mongoose
 
