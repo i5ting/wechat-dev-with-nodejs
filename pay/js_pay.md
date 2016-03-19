@@ -1,7 +1,7 @@
 # 公众号支付（JSAPI）
 
 
-### out_trade_no生成
+## out_trade_no生成
 
 ```
 function _get_date_string () {
@@ -37,11 +37,44 @@ function pay_h5(){
 }
 ```
 
-### 本地测试
+## 限制频率
 
-### 对账单接口
+```
+npm i -S moa-middleware-rate-cache
+```
 
-#### 支付成功的回调
+way 1：
+
+```
+var rate_cache = require('moa-middleware-rate-cache');
+var r = new rate_cache(redis, 'xxxxx_key', 40);
+```
+
+参数
+
+- redis, 传入redis对象
+- 'xxxxx_key', 在redis里缓存的key
+- 40（秒）缓存时间
+
+
+way 2：
+
+```
+var rate_cache = require('moa-middleware-rate-cache');
+var r = new rate_cache(redis, 'xxxxx_key2222');
+```
+
+参数
+
+- redis, 传入redis对象
+- 'xxxxx_key', 在redis里缓存的key
+- 默认缓存时间是30秒
+-
+
+
+## 对账单接口
+
+### 支付成功的回调
 
 ```
 wxpay.createUnifiedOrder({

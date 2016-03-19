@@ -1,9 +1,12 @@
 # 对账单
 
+防漏单
 
 ## 下载对账单
 
 https://pay.weixin.qq.com/index.php/settle/state_account
+
+![](8.png)
 
 ## 对账
 
