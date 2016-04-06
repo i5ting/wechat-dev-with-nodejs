@@ -10,6 +10,10 @@
 1. 开发和ui并行
 1. 测试、部署等
 
+![](img/api-before.png)
+
+
+![](img/api-after.png)
 
 这里面可以看到交互ue出了，就可以出静态api
 
@@ -109,7 +113,7 @@ module.exports = router;
 - 返回
   - 返回状态码
   - 返回字段说明
-  
+
 示例
 
 获取课程列表

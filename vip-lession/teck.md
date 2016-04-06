@@ -39,7 +39,7 @@ server {
   	    proxy_set_header X-NginX-Proxy true;
   	    proxy_pass http://127.0.0.1:3010;
         proxy_redirect off;
-    } 
+    }
     # Load configuration files for the default server block.
     # include /etc/nginx/default.d/*.conf;
     # Load configuration files for the default server block.
@@ -78,3 +78,8 @@ server {
 - iscroll
 - fastclick
 - swiper
+
+## 高级h5
+
+- vux
+- jmui
