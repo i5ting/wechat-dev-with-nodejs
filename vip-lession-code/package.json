@@ -1,0 +1,22 @@
+{
+  "name": "base2-wechat-jssdk",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "./node_modules/.bin/nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "base2": "^1.0.18",
+    "express": "^4.13.4",
+    "extend": "^3.0.0",
+    "jade": "^1.11.0",
+    "wechat-api": "^1.25.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.9.1"
+  }
+}

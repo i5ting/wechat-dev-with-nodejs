@@ -1,0 +1,79 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    block content
+    script(src='/javascripts/jweixin-1.0.0.js', type='text/javascript')
+    script(src='/javascripts/zepto.min.js', type='text/javascript')
+    script.
+      ;(function($){
+        // alert(2);
+        // alert(location.href.split('#')[0])
+        // process response
+        // 开始配置微信JS-SDK
+        wx.config( (!{wechat_config}) );
+        // 调用微信API
+    
+        wx.ready(function () {
+            wx.onMenuShareAppMessage({
+                title: '发货申请',
+                desc: '我在呆萌小斑马创建了发货单，需要您发货，请帮忙填写发货信息，如不确定，微信我',
+                link: location.href.split('#')[0] ,
+                imgUrl: 'http://mengxiaoban.cn/images/logo.png',
+                trigger: function (res) {
+                    // alert('用户点击发送给朋友');
+                },
+                success: function (res) {
+                    // alert('已分享');
+                },
+                cancel: function (res) {
+                    // alert('已取消');
+                },
+                fail: function (res) {
+                    alert(JSON.stringify(res));
+                }
+            });
+
+            wx.onMenuShareTimeline({
+                title: '发货申请',
+                link: location.href.split('#')[0] ,
+                imgUrl: 'http://mengxiaoban.cn/images/logo.png',
+                trigger: function (res) {
+                    alert('不建议分享到朋友圈，建议定向发送，比如发送到好友，或qq好友');
+                },
+                success: function (res) {
+                    alert('已分享');
+                },
+                cancel: function (res) {
+                    alert('已取消');
+                },
+                fail: function (res) {
+                    // alert(JSON.stringify(res));
+                }
+            });
+
+            wx.onMenuShareQQ({
+                title: '发货申请',
+                desc: '我在呆萌小斑马创建了发货单，需要您发货，请帮忙填写发货信息，如不确定，微信我',
+                link: location.href.split('#')[0] ,
+                imgUrl: 'http://mengxiaoban.cn/images/logo.png',
+                trigger: function (res) {
+                    // alert('用户点击分享到QQ');
+                },
+                complete: function (res) {
+                    // alert(JSON.stringify(res));
+                },
+                success: function (res) {
+                    alert('已分享');
+                },
+                cancel: function (res) {
+                    alert('已取消');
+                },
+                fail: function (res) {
+                    // alert(JSON.stringify(res));
+                }
+            });
+        });
+      })(Zepto)
