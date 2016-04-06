@@ -3,7 +3,7 @@ var app = require('base2')({
   // root:__dirname,
   "views": "app/views",
   "routes": "app/routes",
-  "public": "app/public",
+  "public": "frontend",
 })
 
 // console.log(app);
