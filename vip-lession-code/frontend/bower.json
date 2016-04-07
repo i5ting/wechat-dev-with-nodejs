@@ -1,0 +1,26 @@
+{
+  "name": "frontend",
+  "authors": [
+    "i5ting <i5ting@126.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "weui": "~0.4.0",
+    "iscroll": "~5.2.0",
+    "fastclick": "~1.0.6",
+    "layzr.js": "~2.0.4",
+    "Swiper": "swiper#~3.3.1",
+    "moment": "momentjs#~2.12.0"
+  }
+}

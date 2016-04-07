@@ -2,3 +2,6 @@ _book
 node_modules
 demo
 vip-lession-code/node_modules
+vip-lession-code/frontend/bower_components/
+vip-lession-code/*.log
+vip-lession-code/frontend/*.log
