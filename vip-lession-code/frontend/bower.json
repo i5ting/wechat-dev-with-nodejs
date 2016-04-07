@@ -16,11 +16,13 @@
     "tests"
   ],
   "dependencies": {
-    "weui": "~0.4.0",
+    "weui": "~0.4.1",
     "iscroll": "~5.2.0",
     "fastclick": "~1.0.6",
     "layzr.js": "~2.0.4",
     "Swiper": "swiper#~3.3.1",
-    "moment": "momentjs#~2.12.0"
+    "moment": "momentjs#~2.12.0",
+    "animate.css": "~3.5.1",
+    "zepto": "~1.1.6"
   }
 }
