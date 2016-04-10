@@ -25,6 +25,9 @@ http://mp.weixin.qq.com/debug/cgi-bin/sandboxinfo?action=showinfo&t=sandbox/inde
 
 http://mp.weixin.qq.com/debug/cgi-bin/sandbox?t=jsapisign
 
+## 微信web开发者工具
+
+http://mp.weixin.qq.com/wiki/10/e5f772f4521da17fa0d7304f68b97d7e.html
 
 ## 参考
 
