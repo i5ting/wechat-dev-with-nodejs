@@ -9,8 +9,8 @@ var fs            = require('fs');
 module.exports = {
  'app_id' : 'wx1207227ce79d76c3',
  'app_secret' : 'b1693148b1b26318c9d8224a17ff0ee1',
- // 'domain':'http://shop.mengxiaoban.cn',
- 'domain':'https://stuq.localtunnel.me',
+ 'domain':'http://stuq.mengxiaoban.cn',
+ // 'domain':'https://stuq.localtunnel.me',
  'app_token':'mengxiaoban.com',
  'enable_admin': true,
  //for pay
