@@ -105,7 +105,7 @@ UserSchema.plugin(autoIncrement.plugin, {
   incrementBy: 1
 });
 
-var UserModel = mongoose.model('UserModel', UserSchema);
+var UserModel = mongoose.model('User', UserSchema);
 
 Promise.promisifyAll(UserModel);
 Promise.promisifyAll(UserModel.prototype);
