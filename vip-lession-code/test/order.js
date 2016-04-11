@@ -7,18 +7,32 @@ require('../db')
 
 var User = require('../app/models/user')
 var Order = require('../app/models/order')
+var Course = require('../app/models/course')
 
-console.log(Order)
+var _user, _course;
 
 // 测试代码基本结构
-describe('OrderModel', function(){
-	before(function() {
+describe('Course', function(){
+	before(function(done) {
     // runs before all tests in this block
+    User.removeAsync({"openid":"ss1"}).then(function(){
+      return  Course.removeAsync({"name":"Node.js微信开发1"});
+    }).then(function(){
+      User.create({"username":"stuq1","password":"password", "openid":"ss1"},function(err, user){        
+        _user = user;
+        console.log(err)
+        console.log(_user)  
+        Course.create({"name":"Node.js微信开发1","desc":"stuq在线课程", "docent":"桑世龙", owner_id: _user._id},function(err1, c){        
+          console.log(c)  
+          _course = c;
+        
+          done();
+        });
+      });
+    })
   })
   after(function(){
-    // runs after all tests in this block
-    // User.remove({},function(err, user){
-    // });
+     
   })
   beforeEach(function(){
     // runs before each test in this block
@@ -26,18 +40,24 @@ describe('OrderModel', function(){
   afterEach(function(){
     // runs after each test in this block
   })
-
+  
   describe('#save()', function(){
-    it('should return stuq when user save', function(done){
-      User.create({"username":"stuq","password":"password", "openid":"ss"},function(err, user){        
+    it('should return order when order save', function(done){
+      Order.create({
+        "desc":"a order"
+        ,"user_id":_user._id
+        , "user_name": _user.username
+        ,course_id : _course._id
+        ,course_name : _course.name
+      },function(err, order){        
         if(err){
           console.log(err)
           expect(err).to.be.not.null;
           done();
         }
         
-        expect(user.username).to.be.a('string');
-        expect(user.username).to.equal('stuq');
+        expect(order.desc).to.be.a('string');
+        expect(order.desc).to.equal('a order');
         done();
       });
     })
