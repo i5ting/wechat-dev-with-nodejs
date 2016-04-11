@@ -14,6 +14,7 @@
     "express": "^4.13.4",
     "extend": "^3.0.0",
     "jade": "^1.11.0",
+    "mongooseconfig": "^1.0.6",
     "wechat-api": "^1.25.1"
   },
   "devDependencies": {
