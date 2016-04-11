@@ -19,6 +19,7 @@ UserSchema = new Schema({
   username: {// 真实姓名
     type: String
   },
+  password       : String,
   unionid       : String,
   openid: {// from weixin openid
     type: String,

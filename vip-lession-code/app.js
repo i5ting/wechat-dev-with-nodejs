@@ -1,4 +1,4 @@
-require('mongooseconfig')()
+require('./db')
 
 var session = require('express-session');
 var MongoStore = require('connect-mongo')(session);
