@@ -71,7 +71,7 @@ router.get('/callback', function(req, res) {
                 // if phone_number exist,go home page
                // if(user.is_valid == true){
                    req.session.current_user = user;
-                   res.redirect('/home/')
+                   res.redirect('/#/home')
                 // }else{
   //                   //if phone_number exist,go to user detail page to fill it
   //                   req.session.current_user = void 0;
