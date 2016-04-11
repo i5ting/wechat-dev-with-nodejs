@@ -6,6 +6,33 @@ $(function () {
       }
       return result[1];
     }
+    
+    var all;
+    $.getJSON('/api/courses',function(res){
+      // alert(res)
+      var item_html = ""
+      for(var i in res.data){
+        console.log(i);
+        var course = res.data[i];
+        
+        var item = "  <a href='#/course?id=1' class='weui_media_box weui_media_appmsg'>"
+                  +"    <div class='weui_media_hd'>"
+                  +"        <img class='weui_media_appmsg_thumb' src='" + course.pic + "' alt=''>"
+                  +"    </div>"
+                  +"    <div class='weui_media_bd'>"
+                  +"        <h4 class='weui_media_title'>" + course.name + "</h4>"
+                  +"        <p class='weui_media_desc'>通过学习Node.js基础和express，微信开发常用库，h5，最后达到学会Node.js开发的目的，该课程以实战为主，深入浅出</p>"
+                  +"    </div>"
+                  +"  </a>"
+        
+        item_html += item;
+      }
+      
+      all = "<div class='weui_panel_bd'> " + item_html + " </div><a class='weui_panel_ft' href='javascript:void(0);'>查看更多</a>"
+      // alert(all);
+      
+      $('.course_list').append(all);
+    })
   
     var router = new Router({
         container: '#container',
@@ -39,13 +66,14 @@ $(function () {
         url: '/home',
         className: 'tabbar',
         render: function () {
-          var _t = this;
+            var _t = this;
             setTimeout(function(){
               _t.bind()
             },100)
             return $('#tpl_tabbar').html();
         },
-        bind: function () {          
+        bind: function () {       
+          $('.course_list').append(all);   
           $('.weui_tabbar_content').eq(0).show()
           $('.weui_tabbar_item').on('click', function () {
             $('.weui_tabbar_item').eq($('.weui_tabbar_item').index(this)).addClass('weui_bar_item_on').siblings().removeClass('weui_bar_item_on')

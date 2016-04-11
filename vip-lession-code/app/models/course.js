@@ -8,6 +8,10 @@ CourseSchema = new Schema({
   name: {// 课程名
     type: String
   },
+  pic: {// 课程图片
+    type: String,
+    "default": "/images/logo.png"
+  },
   desc: {// 描述
     type: String
   },
