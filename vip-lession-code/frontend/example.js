@@ -36,7 +36,7 @@ $(function () {
 
     // tabbar
     var tabbar = {
-        url: '/',
+        url: '/home',
         className: 'tabbar',
         render: function () {
           var _t = this;
@@ -57,7 +57,7 @@ $(function () {
 
     router.push(tabbar)
         .push(course)
-        .setDefault('/')
+        .setDefault('/home')
         .init();
 
 

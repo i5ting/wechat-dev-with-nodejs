@@ -69,14 +69,14 @@ router.get('/callback', function(req, res) {
             }else{
                 console.log('根据unionid查询，用户已经存在')
                 // if phone_number exist,go home page
-               if(user.is_valid == true){
+               // if(user.is_valid == true){
                    req.session.current_user = user;
-                   res.redirect('/mobile/')
-                }else{
-                    //if phone_number exist,go to user detail page to fill it
-                    req.session.current_user = void 0;
-                    res.redirect('/users/' + user._id + '/verify');
-                }
+                   res.redirect('/home/')
+                // }else{
+  //                   //if phone_number exist,go to user detail page to fill it
+  //                   req.session.current_user = void 0;
+  //                   res.redirect('/users/' + user._id + '/verify');
+  //               }
             }
         });
     });
