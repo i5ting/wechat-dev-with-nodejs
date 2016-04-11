@@ -1,3 +1,5 @@
+require('mongooseconfig')()
+
 var app = require('base2')({
   // debug: true,
   // root:__dirname,

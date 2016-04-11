@@ -13,9 +13,13 @@
     "base2": "^1.0.18",
     "express": "^4.13.4",
     "extend": "^3.0.0",
+    "ioredis": "^1.15.1",
     "jade": "^1.11.0",
+    "mongoose": "^4.4.12",
     "mongooseconfig": "^1.0.6",
-    "wechat-api": "^1.25.1"
+    "mongoosedao": "^1.0.13",
+    "wechat-api": "^1.25.1",
+    "wechat-oauth": "^1.1.1"
   },
   "devDependencies": {
     "nodemon": "^1.9.1"
