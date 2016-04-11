@@ -7,12 +7,13 @@ require('../db')
 
 var User = require('../app/models/user')
 
-console.log(User)
-
 // 测试代码基本结构
-describe('UserModel', function(){
-	before(function() {
+describe('用户User', function(){
+	before(function(d) {
     // runs before all tests in this block
+    User.remove({"openid":"ss"},function(){
+      d()
+    })
   })
   after(function(){
     // runs after all tests in this block
@@ -27,6 +28,7 @@ describe('UserModel', function(){
   })
 
   describe('#save()', function(){
+    this.timeout(30000);
     it('should return stuq when user save', function(done){
       User.create({"username":"stuq","password":"password", "openid":"ss"},function(err, user){        
         if(err){

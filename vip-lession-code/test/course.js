@@ -12,11 +12,15 @@ var Order = require('../app/models/order')
 var _user;
 
 // 测试代码基本结构
-describe('Course', function(){
+describe('课程Course', function(){
 	before(function(done) {
     // runs before all tests in this block
-    User.create({"username":"stuq","password":"password", "openid":"ss"},function(err, user){        
+    User.removeAsync({"username":"stuq","password":"password", "openid":"ss"}).then(function(){
+      return User.createAsync({"username":"stuq","password":"password", "openid":"ss"})
+    }).then(function(user){
       _user = user;
+      return  Course.removeAsync({"name":"Node.js微信开发"});
+    }).then(function(){
       done();
     });
   })

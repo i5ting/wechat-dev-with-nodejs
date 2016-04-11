@@ -12,7 +12,7 @@ var Course = require('../app/models/course')
 var _user, _course;
 
 // 测试代码基本结构
-describe('Course', function(){
+describe('订单Order', function(){
 	before(function(done) {
     // runs before all tests in this block
     User.removeAsync({"openid":"ss1"}).then(function(){
@@ -20,10 +20,10 @@ describe('Course', function(){
     }).then(function(){
       User.create({"username":"stuq1","password":"password", "openid":"ss1"},function(err, user){        
         _user = user;
-        console.log(err)
-        console.log(_user)  
-        Course.create({"name":"Node.js微信开发1","desc":"stuq在线课程", "docent":"桑世龙", owner_id: _user._id},function(err1, c){        
-          console.log(c)  
+        // console.log(err)
+        // console.log(_user)
+        return Course.create({"name":"Node.js微信开发1","desc":"stuq在线课程", "docent":"桑世龙", owner_id: _user._id},function(err1, c){        
+          // console.log(c)
           _course = c;
         
           done();
