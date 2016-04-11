@@ -7,7 +7,7 @@ var OAuth = require('wechat-oauth');
 var config      = require('../../config/wechat');
 var app_id      = config.app_id;
 var app_secret  = config.app_secret;
-var domain      = domain;
+var domain      = config.domain;
 
 // 微信授权和回调
 var client = new OAuth(app_id, app_secret);
