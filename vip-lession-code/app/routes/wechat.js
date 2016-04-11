@@ -30,7 +30,7 @@ router.get('/', function(req, res) {
 router.get('/callback', function(req, res) {
     console.log('----weixin callback -----')
     var code = req.query.code;
-    var User = req.model.UserModel;
+    var User = require('../models/user');
 
     client.getAccessToken(code, function (err, result) {
         console.dir(err);
@@ -44,7 +44,7 @@ router.get('/callback', function(req, res) {
         console.log('unionid=' + unionid);
 
 
-        User.find_by_unionid(unionid, function(err, user){
+        User.find_by_openid(openid, function(err, user){
             console.log('微信回调后，User.find_by_unionid(unionid) 返回的user = ' + user)
             if(err || user == null){
                 console.log('经过unionid查询无结果');
