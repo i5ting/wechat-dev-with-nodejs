@@ -6,7 +6,7 @@
 https://mp.weixin.qq.com/
 
 - 微信名：StuQ课课程测试账号
-- 微信账户：zhuohang111@163.com；
+- 微信账户：zhuohang111@163.com
 - 密码：duanmu5061656
 
 

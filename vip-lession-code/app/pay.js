@@ -31,15 +31,16 @@ router.get('/', function(req, res, next) {
   
   var out_trade_no = req.query.order_id;
   var call_back_url = config.domain + cb_url;
+  
   var p = {
     openid: openid,
     body: req.query.body,
     detail: req.query.detail,
     out_trade_no: out_trade_no,// 2015_10_14_18_37_187949638969
     total_fee: parseInt(req.query.fee),
-    spbill_create_ip: '192.168.2.210',// 请求的ip地址
+    spbill_create_ip: req_ip,// 请求的ip地址
     notify_url: call_back_url,
-    // prepay_id:out_trade_no
+    prepay_id: ordor_id
   }
   console.log(p);
   wxpay.getBrandWCPayRequestParams(p, function(err, result){
