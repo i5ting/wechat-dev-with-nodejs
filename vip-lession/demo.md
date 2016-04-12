@@ -28,8 +28,8 @@ ssh root@ip
 ```
   # sudo useradd -m -d /home/sang -s /bin/bash -c "the sang user" -U sang
   # passwd sang
-  Enter new UNIX password: 
-  Retype new UNIX password: 
+  Enter new UNIX password:
+  Retype new UNIX password:
   passwd: password updated successfully
 ```
 
@@ -56,10 +56,10 @@ ssh root@ip
 ```
   # su - sang
   $ ls
-  $ 
+  $
   $ pwd
   /home/sang
-  $ 
+  $
 ```
 
 ## 安装必备软件
@@ -106,8 +106,8 @@ $ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh |
 
 => Appending source string to /home/sang/.bashrc
 => Close and reopen your terminal to start using nvm
-$ source ~/.bashrc 
-$ nvm 
+$ source ~/.bashrc
+$ nvm
 
 Node Version Manager
 ```
@@ -188,7 +188,7 @@ $ nrm use npm
 
 ### 基础
 
-- git clone 
+- git clone
 - npm i
 - pm2 start
 
@@ -423,13 +423,13 @@ describe('用户User', function(){
   describe('#save()', function(){
     this.timeout(30000);
     it('should return stuq when user save', function(done){
-      User.create({"username":"stuq","password":"password", "openid":"ss"},function(err, user){        
+      User.create({"username":"stuq","password":"password", "openid":"ss"},function(err, user){
         if(err){
           console.log(err)
           expect(err).to.be.not.null;
           done();
         }
-        
+
         expect(user.username).to.be.a('string');
         expect(user.username).to.equal('stuq');
         done();
@@ -485,13 +485,13 @@ describe('课程Course', function(){
       Course.create({
         "name":"Node.js微信开发","desc":"stuq在线课程", "docent":"桑世龙", owner_id: _user._id,
         desc:"通过学习Node.js基础和express，微信开发常用库，h5，最后达到学会Node.js开发的目的，该课程以实战为主，深入浅出"
-      },function(err, c){        
+      },function(err, c){
         if(err){
           console.log(err)
           expect(err).to.be.not.null;
           done();
         }
-        
+
         expect(c.name).to.be.a('string');
         expect(c.name).to.equal('Node.js微信开发');
         done();
@@ -524,21 +524,21 @@ describe('订单Order', function(){
     User.removeAsync({"openid":"ss1"}).then(function(){
       return  Course.removeAsync({"name":"Node.js微信开发1"});
     }).then(function(){
-      User.create({"username":"stuq1","password":"password", "openid":"ss1"},function(err, user){        
+      User.create({"username":"stuq1","password":"password", "openid":"ss1"},function(err, user){
         _user = user;
         // console.log(err)
         // console.log(_user)
-        return Course.create({"name":"Node.js微信开发1","desc":"stuq在线课程", "docent":"桑世龙", owner_id: _user._id},function(err1, c){        
+        return Course.create({"name":"Node.js微信开发1","desc":"stuq在线课程", "docent":"桑世龙", owner_id: _user._id},function(err1, c){
           // console.log(c)
           _course = c;
-        
+
           done();
         });
       });
     })
   })
   after(function(){
-     
+
   })
   beforeEach(function(){
     // runs before each test in this block
@@ -546,7 +546,7 @@ describe('订单Order', function(){
   afterEach(function(){
     // runs after each test in this block
   })
-  
+
   describe('#save()', function(){
     it('should return order when order save', function(done){
       Order.create({
@@ -555,13 +555,13 @@ describe('订单Order', function(){
         , "user_name": _user.username
         ,course_id : _course._id
         ,course_name : _course.name
-      },function(err, order){        
+      },function(err, order){
         if(err){
           console.log(err)
           expect(err).to.be.not.null;
           done();
         }
-        
+
         expect(order.desc).to.be.a('string');
         expect(order.desc).to.equal('a order');
         done();
@@ -579,7 +579,7 @@ describe('订单Order', function(){
 
 ```
 var mount         = require('mount-routes');
- 
+
 // simple
 mount(app, __dirname + '/app/routes');
 ```
@@ -648,7 +648,7 @@ frontend目录随便配，目的就是为了让大家理解前后端分离
             // alert(getQueryStringByName('id'));
             return $('#tpl_course').html();
         },
-        bind: function () {       
+        bind: function () {
             $('.pay_btn').on('click', function(){
               var id = getQueryStringByName('id');
               pay_h5(id);
@@ -667,8 +667,8 @@ frontend目录随便配，目的就是为了让大家理解前后端分离
             },100)
             return $('#tpl_tabbar').html();
         },
-        bind: function () {       
-          $('.course_list').html(all_courses_html);   
+        bind: function () {
+          $('.course_list').html(all_courses_html);
           $('.weui_tabbar_content').eq(0).show()
           $('.weui_tabbar_item').on('click', function () {
             $('.weui_tabbar_item').eq($('.weui_tabbar_item').index(this)).addClass('weui_bar_item_on').siblings().removeClass('weui_bar_item_on')
@@ -708,7 +708,7 @@ $.getJSON('/api/courses',function(res){
   for(var i in res.data){
     console.log(i);
     var course = res.data[i];
-    
+
     var item = "  <a href='#/course?id=" + course._id + "' class='weui_media_box weui_media_appmsg'>"
               +"    <div class='weui_media_hd'>"
               +"        <img class='weui_media_appmsg_thumb' src='" + course.pic + "' alt=''>"
@@ -718,13 +718,13 @@ $.getJSON('/api/courses',function(res){
               +"        <p class='weui_media_desc'>" + course.desc + "</p>"
               +"    </div>"
               +"  </a>"
-    
+
     item_html += item;
   }
-  
+
   all_courses_html = "<div class='weui_panel_bd'> " + item_html + " </div><a class='weui_panel_ft' href='javascript:void(0);'>查看更多</a>"
   // alert(all);
-  
+
   $('.course_list').html(all_courses_html);
 })
 ```
@@ -743,8 +743,8 @@ var tabbar = {
         },100)
         return $('#tpl_tabbar').html();
     },
-    bind: function () {       
-      $('.course_list').html(all_courses_html);   
+    bind: function () {
+      $('.course_list').html(all_courses_html);
       $('.weui_tabbar_content').eq(0).show()
       $('.weui_tabbar_item').on('click', function () {
         $('.weui_tabbar_item').eq($('.weui_tabbar_item').index(this)).addClass('weui_bar_item_on').siblings().removeClass('weui_bar_item_on')
@@ -769,18 +769,18 @@ var tabbar = {
                     <h1 class="page_title">StuQ课程</h1>
                     <p class="page_desc"> 提升你的IT职业技能最好的在线学习平台</p>
                 </div>
-                
+
                 <div class="weui_panel weui_panel_access">
                     <div class="weui_panel_hd">课程列表</div>
                     <div class='course_list'></div>
                 </div>
-                
+
               </div>
-              
+
               <div class="weui_tabbar_content">
- 
+
               </div>
-              
+
             </div>
             <div class="weui_tabbar">
                 <a href="javascript:;" class="weui_tabbar_item">
@@ -835,7 +835,7 @@ https://mp.weixin.qq.com/
 
 ```
 {
-  "app_id": "wx1207227ce79d76c3", 
+  "app_id": "wx1207227ce79d76c3",
   "app_secret": "b1693148b1b26318c9d8224a17ff0ee1"
 }
 ```
@@ -845,9 +845,9 @@ https://mp.weixin.qq.com/
 https://pay.weixin.qq.com
 
 
-微信支付商户号    1299809901  
+微信支付商户号    1299809901
 商户平台登录帐号    1299809901@1299809901
-商户平台登录密码    000090  
+商户平台登录密码    000090
 
 
 安装操作证书
@@ -860,4 +860,22 @@ https://pay.weixin.qq.com
 
 ## 总结
 
+### 关于StuQ
+
+![](img/1.png)
+
 软件公司招聘需要巨大，但入门难，技术发展过快（指数），而人的曲线成长较慢，现在的慕客形式又过于老旧，呆板，少互动，所以社群时代的在线教育，一定是专业的、互动的、深入浅出、共同成长，这些正是StuQ最擅长的方面，我个人特别看好StuQ这个品牌，真心推荐，如果不是股份绑定，我一定会加入StuQ
+
+### 我的近况
+
+- 新书《更了不起的 Node 4:将下一代 Web 框架 Koa 进行到底》
+- StuQ-Koa在线课程
+
+## 写给大家
+
+- 少抱怨、多思考、未来更美好
+- 闲时要有吃紧的心思
+- 一万个小时就能成为专家，难在坚持
+- 掌握了学习方法，以后职业不愁
+
+
