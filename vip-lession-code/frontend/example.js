@@ -100,10 +100,10 @@ $(function () {
   
       wx.ready(function () {
           wx.onMenuShareAppMessage({
-              title: '发货申请',
-              desc: '我在呆萌小斑马创建了发货单，需要您发货，请帮忙填写发货信息，如不确定，微信我',
+              title: 'StuQ在线课程',
+              desc: '我在StuQ学习在线课程，欢迎微信我',
               link: location.href.split('#')[0] ,
-              imgUrl: 'http://mengxiaoban.cn/images/logo.png',
+              imgUrl: 'http://stuq.mengxiaoban.cn/images/app-icon-stuq.png',
               trigger: function (res) {
                   // alert('用户点击发送给朋友');
               },
