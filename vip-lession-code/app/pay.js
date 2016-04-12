@@ -9,7 +9,7 @@ console.log(config);
 var wxpay = WXPay({
     appid:  config.app_id,
     mch_id: config.mch_id,
-    // partner_key: '', //微信商户平台API密钥
+    partner_key: '', //微信商户平台API密钥
     pfx: config.pfx, //微信商户平台证书
 });
 
@@ -32,13 +32,14 @@ router.get('/', function(req, res, next) {
   var out_trade_no = req.query.order_id;
   var call_back_url = config.domain + cb_url;
   var p = {
-    openid: ''+openid,
-    body: '公众号支付测试',
-    detail: '公众号支付测试',
-    out_trade_no: '20150331'+Math.random().toString().substr(2, 10),
-    total_fee: 1,
-    spbill_create_ip: '192.168.2.210',
-    notify_url: 'http://wxpay_notify_url'
+    openid: openid,
+    body: req.query.body,
+    detail: req.query.detail,
+    out_trade_no: out_trade_no,// 2015_10_14_18_37_187949638969
+    total_fee: parseInt(req.query.fee),
+    spbill_create_ip: '192.168.2.210',// 请求的ip地址
+    notify_url: call_back_url,
+    // prepay_id:out_trade_no
   }
   console.log(p);
   wxpay.getBrandWCPayRequestParams(p, function(err, result){
