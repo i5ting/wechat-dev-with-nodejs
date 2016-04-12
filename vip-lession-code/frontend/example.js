@@ -87,6 +87,78 @@ $(function () {
         .setDefault('/home')
         .init();
 
+    $.get('/jssdk', { url: location.href.split('#')[0] }, function(r){
+      // process response
+      console.log(r);
+      console.log(r.appid);
+      console.log(r.timestamp);
+      console.log(r.nonceStr);
+      console.log(r.signature);
+      // 开始配置微信JS-SDK
+      wx.config(r);
+      // 调用微信API
+  
+      wx.ready(function () {
+          wx.onMenuShareAppMessage({
+              title: '发货申请',
+              desc: '我在呆萌小斑马创建了发货单，需要您发货，请帮忙填写发货信息，如不确定，微信我',
+              link: location.href.split('#')[0] ,
+              imgUrl: 'http://mengxiaoban.cn/images/logo.png',
+              trigger: function (res) {
+                  // alert('用户点击发送给朋友');
+              },
+              success: function (res) {
+                  // alert('已分享');
+              },
+              cancel: function (res) {
+                  // alert('已取消');
+              },
+              fail: function (res) {
+                  alert(JSON.stringify(res));
+              }
+          });
+
+          wx.onMenuShareTimeline({
+              title: '发货申请',
+              link: location.href.split('#')[0] ,
+              imgUrl: 'http://mengxiaoban.cn/images/logo.png',
+              trigger: function (res) {
+                  alert('不建议分享到朋友圈，建议定向发送，比如发送到好友，或qq好友');
+              },
+              success: function (res) {
+                  alert('已分享');
+              },
+              cancel: function (res) {
+                  alert('已取消');
+              },
+              fail: function (res) {
+                  // alert(JSON.stringify(res));
+              }
+          });
+
+          wx.onMenuShareQQ({
+              title: '发货申请',
+              desc: '我在呆萌小斑马创建了发货单，需要您发货，请帮忙填写发货信息，如不确定，微信我',
+              link: location.href.split('#')[0] ,
+              imgUrl: 'http://mengxiaoban.cn/images/logo.png',
+              trigger: function (res) {
+                  // alert('用户点击分享到QQ');
+              },
+              complete: function (res) {
+                  // alert(JSON.stringify(res));
+              },
+              success: function (res) {
+                  alert('已分享');
+              },
+              cancel: function (res) {
+                  alert('已取消');
+              },
+              fail: function (res) {
+                  // alert(JSON.stringify(res));
+              }
+          });
+      });
+    })
 
     // .container 设置了 overflow 属性, 导致 Android 手机下输入框获取焦点时, 输入法挡住输入框的 bug
     // 相关 issue: https://github.com/weui/weui/issues/15
