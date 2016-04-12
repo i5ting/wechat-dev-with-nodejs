@@ -38,7 +38,10 @@ describe('课程Course', function(){
 
   describe('#save()', function(){
     it('should return Node.js微信开发 when Course save', function(done){
-      Course.create({"name":"Node.js微信开发","desc":"stuq在线课程", "docent":"桑世龙", owner_id: _user._id},function(err, c){        
+      Course.create({
+        "name":"Node.js微信开发","desc":"stuq在线课程", "docent":"桑世龙", owner_id: _user._id,
+        desc:"通过学习Node.js基础和express，微信开发常用库，h5，最后达到学会Node.js开发的目的，该课程以实战为主，深入浅出"
+      },function(err, c){        
         if(err){
           console.log(err)
           expect(err).to.be.not.null;

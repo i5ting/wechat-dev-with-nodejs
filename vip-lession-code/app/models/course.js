@@ -13,7 +13,11 @@ CourseSchema = new Schema({
     "default": "/images/logo.png"
   },
   desc: {// 描述
-    type: String
+    type: String,
+    "default": "这是StuQ的一门在线课程"
+  },
+  price: {// 价格
+    type: Number
   },
   docent: {// 讲师
     type: String
