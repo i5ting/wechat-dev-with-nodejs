@@ -30,7 +30,7 @@ router.get('/', function(req, res, next) {
   var req_ip = req.ip.replace('::ffff:','')
   
   var out_trade_no = req.query.order_id;
-  
+  var call_back_url = config.domain + cb_url;
   var p = {
     openid: openid,
     body: req.query.body,
@@ -38,7 +38,7 @@ router.get('/', function(req, res, next) {
     out_trade_no: out_trade_no,// 2015_10_14_18_37_187949638969
     total_fee: req.query.fee,
     spbill_create_ip: req_ip,// 请求的ip地址
-    notify_url: cb_url,
+    notify_url: call_back_url,
     prepay_id:out_trade_no
   }
   console.log(p);
