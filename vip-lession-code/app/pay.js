@@ -9,7 +9,7 @@ console.log(config);
 var wxpay = WXPay({
     appid:  config.app_id,
     mch_id: config.mch_id,
-    partner_key: '', //微信商户平台API密钥
+    partner_key: config.app_secret, //微信商户平台API密钥
     pfx: config.pfx, //微信商户平台证书
 });
 
