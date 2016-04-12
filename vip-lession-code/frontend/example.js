@@ -58,6 +58,12 @@ $(function () {
         render: function () {
             // alert(getQueryStringByName('id'));
             return $('#tpl_course').html();
+        },
+        bind: function () {       
+            $('.pay_btn').on('click', function(){
+              var id = getQueryStringByName('id');
+              pay_h5(id);
+            })
         }
     };
 
@@ -160,6 +166,34 @@ $(function () {
       });
     })
 
+
+    function _get_date_string () {
+      var date = moment().format('YYYY MM DD HH mm ss');
+
+      return date.split(' ').join('_');
+    }
+
+    function _get_out_trade_no () {
+      return _get_date_string ()  + "" + Math.random().toString().substr(2, 10);
+    }
+    
+    function pay_h5(course_id){
+      var ordor_id = _get_out_trade_no ();
+      console.log(course_id)
+      console.log(ordor_id)
+      $.get('/pay?id=' + course_id + '&order_id=' + ordor_id + '&body=1111&detail=222222&fee=1&cb_url=/wechats/pay_calllback/'+ ordor_id, function(data){
+        var r = data.data;
+
+        WeixinJSBridge.invoke('getBrandWCPayRequest', r, function(res){
+          if(res.err_msg == "get_brand_wcpay_request:ok"){
+            alert("支付成功");
+            // 这里可以跳转到订单完成页面向用户展示
+          }else{
+            alert("支付失败，请重试");
+          }
+        });
+      });
+    }
     // .container 设置了 overflow 属性, 导致 Android 手机下输入框获取焦点时, 输入法挡住输入框的 bug
     // 相关 issue: https://github.com/weui/weui/issues/15
     // 解决方法:

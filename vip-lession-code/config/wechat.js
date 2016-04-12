@@ -15,12 +15,5 @@ module.exports = {
  'enable_admin': true,
  //for pay
  'mch_id': '1299809901',
- 'pfx': fs.readFileSync('./config/pay/stuq/apiclient_cert.p12'), //微信商户平台证书
- //callback
- callback:{
-   url     : '/wechats/callback2',
-   attr    : 'openid',
-   success : '/oauth',
-   failed  : '/404'
- }
+ 'pfx': fs.readFileSync('./config/pay/stuq/apiclient_cert.p12')
 }

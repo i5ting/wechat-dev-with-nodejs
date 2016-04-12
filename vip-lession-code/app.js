@@ -6,6 +6,9 @@ var mongoose = require('mongoose');
 
 var session       = require('./app/middlewares/session');
 
+
+var pay = require('./app/pay')
+
 var app = require('base2')({
   // debug: true,
   // root:__dirname,
@@ -18,6 +21,13 @@ var app = require('base2')({
     }
     
     app.use(session);
+  },
+  after: function (app) {
+    if (app.debug) {
+      console.log('pre hook');
+    }
+    
+    app.use('/pay', pay);
   }
 })
 
