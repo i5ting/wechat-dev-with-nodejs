@@ -20,7 +20,7 @@ router.get('/', function(req, res, next) {
   console.log('openid = ' + openid)
   
   var course_id = req.query.id;
-  var ordor_id = req.query.ordor_id;
+  var ordor_id = req.query.order_id;
   
   var body = req.query.body;
   var detail = req.query.detail;
