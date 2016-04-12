@@ -31,7 +31,7 @@
     "serve-favicon": "~2.3.0",
     "wechat-api": "^1.25.1",
     "wechat-oauth": "^1.1.1",
-    "weixin-pay": "^1.1.7"
+    "weixin-pay": "1.1.6"
   },
   "devDependencies": {
     "chai": "^3.5.0",

@@ -7,13 +7,20 @@ var fs            = require('fs');
 
 // 检查用户会话
 module.exports = {
- 'app_id' : 'wx1207227ce79d76c3',
- 'app_secret' : 'b1693148b1b26318c9d8224a17ff0ee1',
- 'domain':'http://stuq.mengxiaoban.cn',
- // 'domain':'https://stuq.localtunnel.me',
+ 'app_id' : 'wx04014b02a0a61c90',
+ 'app_secret' : 'cc4c224b5018370cf6ffc95ad2be309c',
+ // 'domain':'http://shop.mengxiaoban.cn',
+ 'domain':'https://i5ting2.localtunnel.me',
  'app_token':'mengxiaoban.com',
  'enable_admin': true,
  //for pay
- 'mch_id': '1299809901',
- 'pfx': fs.readFileSync('./config/pay/stuq/apiclient_cert.p12')
+ 'mch_id': '1229607702',
+ 'pfx': fs.readFileSync('./config/pay/xbm/apiclient_cert.p12'), //微信商户平台证书
+ //callback
+ callback:{
+   url     : '/wechats/callback2',
+   attr    : 'openid',
+   success : '/oauth',
+   failed  : '/404'
+ }
 }
