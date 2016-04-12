@@ -37,7 +37,7 @@ router.get('/', function(req, res, next) {
     detail: req.query.detail,
     out_trade_no: out_trade_no,// 2015_10_14_18_37_187949638969
     total_fee: parseInt(req.query.fee),
-    spbill_create_ip: req_ip,// 请求的ip地址
+    spbill_create_ip: '192.168.2.210',// 请求的ip地址
     notify_url: call_back_url,
     prepay_id:out_trade_no
   }
