@@ -388,23 +388,436 @@ Course课程
 
 ### 测试
 
+user
+
+```
+var request = require('supertest');
+var assert  = require('chai').assert;
+var expect  = require('chai').expect;
+require('chai').should();
+
+require('../db')
+
+var User = require('../app/models/user')
+
+// 测试代码基本结构
+describe('用户User', function(){
+	before(function(d) {
+    // runs before all tests in this block
+    User.remove({"openid":"ss"},function(){
+      d()
+    })
+  })
+  after(function(){
+    // runs after all tests in this block
+    // User.remove({},function(err, user){
+    // });
+  })
+  beforeEach(function(){
+    // runs before each test in this block
+  })
+  afterEach(function(){
+    // runs after each test in this block
+  })
+
+  describe('#save()', function(){
+    this.timeout(30000);
+    it('should return stuq when user save', function(done){
+      User.create({"username":"stuq","password":"password", "openid":"ss"},function(err, user){        
+        if(err){
+          console.log(err)
+          expect(err).to.be.not.null;
+          done();
+        }
+        
+        expect(user.username).to.be.a('string');
+        expect(user.username).to.equal('stuq');
+        done();
+      });
+    })
+  })
+})
+```
+
+用户与课程
+
+```
+var request = require('supertest');
+var assert  = require('chai').assert;
+var expect  = require('chai').expect;
+require('chai').should();
+
+require('../db')
+
+var User = require('../app/models/user')
+var Course = require('../app/models/course')
+var Order = require('../app/models/order')
+
+var _user;
+
+// 测试代码基本结构
+describe('课程Course', function(){
+	before(function(done) {
+    // runs before all tests in this block
+    User.removeAsync({"username":"stuq","password":"password", "openid":"ss"}).then(function(){
+      return User.createAsync({"username":"stuq","password":"password", "openid":"ss"})
+    }).then(function(user){
+      _user = user;
+      return  Course.removeAsync({"name":"Node.js微信开发"});
+    }).then(function(){
+      done();
+    });
+  })
+  after(function(){
+    // runs after all tests in this block
+    // User.remove({},function(err, user){
+    // });
+  })
+  beforeEach(function(){
+    // runs before each test in this block
+  })
+  afterEach(function(){
+    // runs after each test in this block
+  })
+
+  describe('#save()', function(){
+    it('should return Node.js微信开发 when Course save', function(done){
+      Course.create({
+        "name":"Node.js微信开发","desc":"stuq在线课程", "docent":"桑世龙", owner_id: _user._id,
+        desc:"通过学习Node.js基础和express，微信开发常用库，h5，最后达到学会Node.js开发的目的，该课程以实战为主，深入浅出"
+      },function(err, c){        
+        if(err){
+          console.log(err)
+          expect(err).to.be.not.null;
+          done();
+        }
+        
+        expect(c.name).to.be.a('string');
+        expect(c.name).to.equal('Node.js微信开发');
+        done();
+      });
+    })
+  })
+})
+```
+
+三个表相关的订单
+
+```
+var request = require('supertest');
+var assert  = require('chai').assert;
+var expect  = require('chai').expect;
+require('chai').should();
+
+require('../db')
+
+var User = require('../app/models/user')
+var Order = require('../app/models/order')
+var Course = require('../app/models/course')
+
+var _user, _course;
+
+// 测试代码基本结构
+describe('订单Order', function(){
+	before(function(done) {
+    // runs before all tests in this block
+    User.removeAsync({"openid":"ss1"}).then(function(){
+      return  Course.removeAsync({"name":"Node.js微信开发1"});
+    }).then(function(){
+      User.create({"username":"stuq1","password":"password", "openid":"ss1"},function(err, user){        
+        _user = user;
+        // console.log(err)
+        // console.log(_user)
+        return Course.create({"name":"Node.js微信开发1","desc":"stuq在线课程", "docent":"桑世龙", owner_id: _user._id},function(err1, c){        
+          // console.log(c)
+          _course = c;
+        
+          done();
+        });
+      });
+    })
+  })
+  after(function(){
+     
+  })
+  beforeEach(function(){
+    // runs before each test in this block
+  })
+  afterEach(function(){
+    // runs after each test in this block
+  })
+  
+  describe('#save()', function(){
+    it('should return order when order save', function(done){
+      Order.create({
+        "desc":"a order"
+        ,"user_id":_user._id
+        , "user_name": _user.username
+        ,course_id : _course._id
+        ,course_name : _course.name
+      },function(err, order){        
+        if(err){
+          console.log(err)
+          expect(err).to.be.not.null;
+          done();
+        }
+        
+        expect(order.desc).to.be.a('string');
+        expect(order.desc).to.equal('a order');
+        done();
+      });
+    })
+  })
+})
+```
+
+另外举例runkoa没有ci引发的血案
 
 ### api
 
+自动挂载路由
+
+```
+var mount         = require('mount-routes');
+ 
+// simple
+mount(app, __dirname + '/app/routes');
+```
+
+示例
+
+```
+var express = require('express');
+var router = express.Router();
+
+var User = require('../../models/user')
+var Course = require('../../models/course')
+var Order = require('../../models/order')
+
+router.get('/', function(req, res, next) {
+  Course.find({},function(err, courses){
+    res.json({
+      status:{
+        code:0,
+        msg:'sucess'
+      },
+      data:courses
+    });
+  });
+})
+
+module.exports = router;
+```
+
+测试
+
+```
+curl http://127.0.0.1:3019/api/courses
+```
+
+或者`postman`
 
 ## 前端weui代码
 
+weui v0.4.x新增了路由和tab等组件，问题还是挺多的
 
-### index.html
+frontend目录随便配，目的就是为了让大家理解前后端分离
+
+### 路由
+
+
+定义骨架
+
+```
+    var router = new Router({
+        container: '#container',
+        enterTimeout: 250,
+        leaveTimeout: 250
+    });
+```
+
+然后
+
+```
+
+    // course
+    var course = {
+        url: '/course',
+        className: 'panel',
+        render: function () {
+            // alert(getQueryStringByName('id'));
+            return $('#tpl_course').html();
+        },
+        bind: function () {       
+            $('.pay_btn').on('click', function(){
+              var id = getQueryStringByName('id');
+              pay_h5(id);
+            })
+        }
+    };
+
+    // tabbar
+    var tabbar = {
+        url: '/home',
+        className: 'tabbar',
+        render: function () {
+            var _t = this;
+            setTimeout(function(){
+              _t.bind()
+            },100)
+            return $('#tpl_tabbar').html();
+        },
+        bind: function () {       
+          $('.course_list').html(all_courses_html);   
+          $('.weui_tabbar_content').eq(0).show()
+          $('.weui_tabbar_item').on('click', function () {
+            $('.weui_tabbar_item').eq($('.weui_tabbar_item').index(this)).addClass('weui_bar_item_on').siblings().removeClass('weui_bar_item_on')
+            $('.weui_tabbar_content').eq($('.weui_tabbar_item').index(this)).show().siblings().hide();
+          });
+        }
+    };
+
+    router.push(tabbar)
+        .push(course)
+        .setDefault('/home')
+        .init();
+```
 
 
 ### example.js
 
+根据query的参数名，取值
+
+```
+function getQueryStringByName(name){
+  var result = location.hash.match(new RegExp("[\?\&]" + name+ "=([^\&]+)","i"));
+  if(result == null || result.length < 1){
+    return "";
+  }
+  return result[1];
+}
+```
+
+ajax
+
+```
+var all_courses_html;
+$.getJSON('/api/courses',function(res){
+  // alert(res)
+  var item_html = ""
+  for(var i in res.data){
+    console.log(i);
+    var course = res.data[i];
+    
+    var item = "  <a href='#/course?id=" + course._id + "' class='weui_media_box weui_media_appmsg'>"
+              +"    <div class='weui_media_hd'>"
+              +"        <img class='weui_media_appmsg_thumb' src='" + course.pic + "' alt=''>"
+              +"    </div>"
+              +"    <div class='weui_media_bd'>"
+              +"        <h4 class='weui_media_title'>" + course.name + "</h4>"
+              +"        <p class='weui_media_desc'>" + course.desc + "</p>"
+              +"    </div>"
+              +"  </a>"
+    
+    item_html += item;
+  }
+  
+  all_courses_html = "<div class='weui_panel_bd'> " + item_html + " </div><a class='weui_panel_ft' href='javascript:void(0);'>查看更多</a>"
+  // alert(all);
+  
+  $('.course_list').html(all_courses_html);
+})
+```
+
+这样首页是ok了，但是里面呢？
+
+```
+// tabbar
+var tabbar = {
+    url: '/home',
+    className: 'tabbar',
+    render: function () {
+        var _t = this;
+        setTimeout(function(){
+          _t.bind()
+        },100)
+        return $('#tpl_tabbar').html();
+    },
+    bind: function () {       
+      $('.course_list').html(all_courses_html);   
+      $('.weui_tabbar_content').eq(0).show()
+      $('.weui_tabbar_item').on('click', function () {
+        $('.weui_tabbar_item').eq($('.weui_tabbar_item').index(this)).addClass('weui_bar_item_on').siblings().removeClass('weui_bar_item_on')
+        $('.weui_tabbar_content').eq($('.weui_tabbar_item').index(this)).show().siblings().hide();
+      });
+    }
+};
+```
+
+- setTimeout
+- $('.course_list').html(all_courses_html);
+
+
 ### 实现tab
+
+```
+    <script type="text/html" id="tpl_tabbar">
+        <div class="weui_tab">
+            <div class="weui_tab_bd">
+              <div class="weui_tabbar_content">
+                <div class="hd">
+                    <h1 class="page_title">StuQ课程</h1>
+                    <p class="page_desc"> 提升你的IT职业技能最好的在线学习平台</p>
+                </div>
+                
+                <div class="weui_panel weui_panel_access">
+                    <div class="weui_panel_hd">课程列表</div>
+                    <div class='course_list'></div>
+                </div>
+                
+              </div>
+              
+              <div class="weui_tabbar_content">
+ 
+              </div>
+              
+            </div>
+            <div class="weui_tabbar">
+                <a href="javascript:;" class="weui_tabbar_item">
+                    <div class="weui_tabbar_icon">
+                        <img src="./images/icon_nav_article.png" alt="">
+                    </div>
+                    <p class="weui_tabbar_label">课程</p>
+                </a>
+                <a href="javascript:;" class="weui_tabbar_item">
+                    <div class="weui_tabbar_icon">
+                        <img src="./images/icon_nav_cell.png" alt="">
+                    </div>
+                    <p class="weui_tabbar_label">我</p>
+                </a>
+            </div>
+        </div>
+    </script>
+```
+
+留意weui_tabbar_content
+
+
+```
+$('.weui_tabbar_content').eq(0).show()
+$('.weui_tabbar_item').on('click', function () {
+  $('.weui_tabbar_item').eq($('.weui_tabbar_item').index(this)).addClass('weui_bar_item_on').siblings().removeClass('weui_bar_item_on')
+  $('.weui_tabbar_content').eq($('.weui_tabbar_item').index(this)).show().siblings().hide();
+});
+```
+
+参见https://github.com/i5ting/i5ting.jquery.tab
 
 ###  绑定事件
 
-
+- on
+- live
+- bind
 
 ## 微信配置说明
 
