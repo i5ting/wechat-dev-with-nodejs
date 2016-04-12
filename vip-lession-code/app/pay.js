@@ -50,6 +50,11 @@ router.get('/', function(req, res, next) {
   });
 })
 
+// 仅供测试支付成功后回调使用
+router.post('/pay_calllback/:id', function(req, res, next){
+  console.log(req.params)
+  console.log('/wechats/pay_calllback post sucess')
+});  
 
 
 // 原生支付回调

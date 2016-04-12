@@ -181,7 +181,7 @@ $(function () {
       var ordor_id = _get_out_trade_no ();
       console.log(course_id)
       console.log(ordor_id)
-      $.get('/pay?id=' + course_id + '&order_id=' + ordor_id + '&body=1111&detail=222222&fee=1&cb_url=/wechats/pay_calllback/'+ ordor_id, function(data){
+      $.get('/pay?id=' + course_id + '&order_id=' + ordor_id + '&body=1111&detail=222222&fee=1&cb_url=/pay/pay_calllback/'+ ordor_id, function(data){
         var r = data.data;
 
         WeixinJSBridge.invoke('getBrandWCPayRequest', r, function(res){
