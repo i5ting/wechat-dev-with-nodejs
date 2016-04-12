@@ -17,6 +17,7 @@ var wxpay = WXPay({
 router.get('/', function(req, res, next) {
   
   var openid = req.session.current_user.openid;
+  console.log('openid = ' + openid)
   
   var course_id = req.query.id;
   var ordor_id = req.query.ordor_id;
@@ -25,16 +26,25 @@ router.get('/', function(req, res, next) {
   var detail = req.query.detail;
   var fee = req.query.fee;
   var cb_url = req.query.cb_url;
-
-  wxpay.getBrandWCPayRequestParams({
-      openid: openid,
-      body: body,
-      detail: detail,
-      out_trade_no: ordor_id,
-      total_fee: fee,
-      spbill_create_ip: '192.168.2.210',
-      notify_url: 'http://wxpay_notify_url'+cb_url
-  }, function(err, result){
+  
+  var req_ip = req.ip.replace('::ffff:','')
+  
+  var out_trade_no = req.query.order_id;
+  
+  var p = {
+    openid: openid,
+    body: req.query.body,
+    detail: req.query.detail,
+    out_trade_no: out_trade_no,// 2015_10_14_18_37_187949638969
+    total_fee: req.query.fee,
+    spbill_create_ip: req_ip,// 请求的ip地址
+    notify_url: cb_url,
+    prepay_id:out_trade_no
+  }
+  console.log(p);
+  wxpay.getBrandWCPayRequestParams(p, function(err, result){
+      console.log(err);
+      console.log(result);
       // in express
       res.json({ data:result })
   });
