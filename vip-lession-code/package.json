@@ -23,7 +23,8 @@
     "mongooseconfig": "^1.0.6",
     "mongoosedao": "^1.0.13",
     "wechat-api": "^1.25.1",
-    "wechat-oauth": "^1.1.1"
+    "wechat-oauth": "^1.1.1",
+    "weixin-pay": "^1.1.7"
   },
   "devDependencies": {
     "chai": "^3.5.0",

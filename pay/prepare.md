@@ -38,8 +38,8 @@ https://pay.weixin.qq.com/index.php/account/api_cert
 		微信支付api服务器上也部署了证明微信支付身份的服务器证书，您在使用api进行调用时也需要验证所调用服务器及域名的真实性
 		该文件为签署微信支付证书的权威机构的根证书，可以用来验证微信支付服务器证书的真实性
 		某些环境和工具已经内置了若干权威机构的根证书，无需引用该证书也可以正常进行验证，这里提供给您在未内置所必须根证书的环境中载入使用
-    
-```   
+
+```
 
 
 ## 学习Node.js里的weixin-pay模块
@@ -47,7 +47,7 @@ https://pay.weixin.qq.com/index.php/account/api_cert
 https://github.com/tvrcgo/weixin-pay
 
 ```
-npm i -g weixin-pay
+npm i -S weixin-pay
 ```
 
 ### 创建weixin-pay对象
