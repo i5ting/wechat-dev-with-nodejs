@@ -16,6 +16,7 @@
 
 ## 部署服务器
 
+阿里云
 
 ubuntu 14.10 LTS  64位
 
@@ -79,12 +80,20 @@ sudo apt-get install git
 sudo apt-get install nginx
 ```
 
-开机启动（http://www.jianshu.com/p/2e03255cfabb）
+### 开机启动
+（http://www.jianshu.com/p/2e03255cfabb）
 
 ```
 sudo apt-get install sysv-rc-conf
 sudo sysv-rc-conf nginx on
 ```
+
+注意：Ubuntu系统中服务的运行级别
+
+- 0        系统停机状态
+- 1        单用户或系统维护状态
+- 2~5      多用户状态
+- 6        重新启动
 
 ### 准备工作目录
 
@@ -857,6 +866,8 @@ https://pay.weixin.qq.com
 
 然后点击api安全
 
+- 有手机号授权找海角
+- 有域名ip地址指定找i5ting
 
 ## 总结
 
@@ -868,11 +879,12 @@ https://pay.weixin.qq.com
 
 ### 我的近况
 
-- 新书《更了不起的 Node 4:将下一代 Web 框架 Koa 进行到底》
-- StuQ-Koa在线课程
+- 新书《更了不起的 Node 4:将下一代 Web 框架 Koa 进行到底》，预计2到3个月就能和大家见面
+- StuQ-Koa在线课程，准备招生
 
 ## 写给大家
 
+- 学不学在自己，会不会也在自己
 - 少抱怨、多思考、未来更美好
 - 闲时要有吃紧的心思
 - 一万个小时就能成为专家，难在坚持
