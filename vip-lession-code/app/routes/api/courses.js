@@ -20,4 +20,19 @@ router.get('/', function(req, res, next) {
   
 })
 
+
+router.get('/:id', function(req, res, next) {
+  var cid = req.params.id; 
+  Course.findById(cid, function(err, course){
+    res.json({
+      status:{
+        code:0,
+        msg:'sucess'
+      },
+      data:course
+    });
+  });
+  
+})
+
 module.exports = router;
