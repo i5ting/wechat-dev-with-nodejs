@@ -39,9 +39,7 @@ $(function () {
         enterTimeout: 250,
         leaveTimeout: 250
     });
-
- 
-
+     
     // article
     var article = {
         url: '/article',
