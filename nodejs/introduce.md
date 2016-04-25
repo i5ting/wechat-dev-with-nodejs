@@ -16,13 +16,14 @@ Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine. Node.j
 ## 它能干什么？
 
 - 网站（如express/koa等）
-- im即使聊天(socket.io)
+- im即时聊天(socket.io)
 - api（移动端，pc，h5）
 - http proxy（淘宝首页）
 - 前端构建工具(grunt/gulp/bower/webpack/fis3...)
 - 写操作系统（NodeOS）
-- 跨平台打包工具（以前叫Node-WebKit现在叫nw.js）
+- 跨平台打包工具（以前叫Node-WebKit现在叫nw.js,electron）
 - 命令行工具（比如cordova）
+- 编辑器（atom，vscode）
 
 更多的见
 https://github.com/sindresorhus/awesome-nodejs
