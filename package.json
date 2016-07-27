@@ -16,10 +16,22 @@
     "url": "https://github.com/base-n/koa-generator-examples/issues"
   },
   "homepage": "https://github.com/base-n/koa-generator-examples#readme",
+  "dependencies": {
+    "gitbook-plugin-toc2": "^1.0.5"
+  },
   "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-gh-pages": "^0.5.4",
     "http-server": "^0.8.5",
-    "nodemon": "^1.8.1"
-  }
+    "nodemon": "^1.8.1",
+    "gulp-open": "^0.3.1",
+    "gulp-rename": "^1.2.0",
+    "shelljs": "^0.3.0"
+  },
+  "scripts": {
+    "start": "watch -i 300ms gitbook serve",
+     "open": "npm run build && open _book/index.html",
+     "build": "gitbook build . --gitbook=2.0.1",
+     "test": "echo \"Error: no test specified\" && exit 1"
+  },
 }
