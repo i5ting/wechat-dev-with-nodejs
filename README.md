@@ -1,4 +1,4 @@
-# 《Node.js微信开发》
+# StuQ《Node.js微信开发》
 
 
 大家好，我是桑世龙，github和cnodejs上的i5ting，目前在天津创业，空弦科技cto，公司目前使用技术主要是Node.js，Moajs作者，
