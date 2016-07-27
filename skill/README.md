@@ -1,4 +1,4 @@
-# Nodejs Newbie
+# Node.js Newbie
 
 - linux操作系统和bash编程要会（以后要有一定的服务器部署、运维工作）
 - vi是编辑器，需要会使用
