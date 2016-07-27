@@ -1,0 +1,1732 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
+        <title>微信OAuth用户授权 | 《Nodejs微信开发》</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.0.1">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    
+    
+    <link rel="next" href="../wechat/share.html" />
+    
+    
+    <link rel="prev" href="../wechat/reply.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+    
+
+        
+    <div class="book" data-level="4.3" data-basepath=".." data-revision="Wed Jul 27 2016 22:37:12 GMT+0800 (CST)">
+    
+
+<div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Type to search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+        
+        
+        
+
+        
+
+        
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="skill/index.html">
+            
+                
+                    <a href="../skill/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        skill
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="skill/coding_webide.html">
+            
+                
+                    <a href="../skill/coding_webide.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        Coding WebIDE
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="skill/git.html">
+            
+                
+                    <a href="../skill/git.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        git
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="skill/extra.html">
+            
+                
+                    <a href="../skill/extra.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        extra
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="faq.html">
+            
+                
+                    <a href="../faq.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        预习
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="nodejs/index.html">
+            
+                
+                    <a href="../nodejs/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Nodejs入门
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="nodejs/introduce.html">
+            
+                
+                    <a href="../nodejs/introduce.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        入门
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="nodejs/install.html">
+            
+                
+                    <a href="../nodejs/install.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        安装
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="nodejs/helloworld.html">
+            
+                
+                    <a href="../nodejs/helloworld.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        Hello world
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="nodejs/commonjs.html">
+            
+                
+                    <a href="../nodejs/commonjs.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        Common JS规范
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="nodejs/module-exports.html">
+            
+                
+                    <a href="../nodejs/module-exports.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        模块导出
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="nodejs/terms.html">
+            
+                
+                    <a href="../nodejs/terms.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.6.</b>
+                        
+                        Nodejs代码调试
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="nodejs/npm.html">
+            
+                
+                    <a href="../nodejs/npm.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.7.</b>
+                        
+                        编写Nodejs模块
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="nodejs/how-to-study.html">
+            
+                
+                    <a href="../nodejs/how-to-study.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.8.</b>
+                        
+                        最小化问题
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="nodejs/exercises.html">
+            
+                
+                    <a href="../nodejs/exercises.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.9.</b>
+                        
+                        随堂练习：写一个Nodejs模块并发布
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="express/index.html">
+            
+                
+                    <a href="../express/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        Express和微信开发入门
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="express/intro.html">
+            
+                
+                    <a href="../express/intro.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        入门
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="express/minimal.html">
+            
+                
+                    <a href="../express/minimal.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        Connect
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="express/html.html">
+            
+                
+                    <a href="../express/html.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        静态Http服务器
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="express/precompile.html">
+            
+                
+                    <a href="../express/precompile.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        那些预处理器
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="express/route.html">
+            
+                
+                    <a href="../express/route.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.</b>
+                        
+                        路由
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="express/view.html">
+            
+                
+                    <a href="../express/view.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.6.</b>
+                        
+                        视图与模板引擎
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="express/middleware.html">
+            
+                
+                    <a href="../express/middleware.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.7.</b>
+                        
+                        中间件
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="express/gulp.html">
+            
+                
+                    <a href="../express/gulp.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.8.</b>
+                        
+                        更多实践
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9" data-path="express/how-to-study.html">
+            
+                
+                    <a href="../express/how-to-study.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.9.</b>
+                        
+                        微信入门
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10" data-path="express/exercises.html">
+            
+                
+                    <a href="../express/exercises.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.10.</b>
+                        
+                        随堂练习：完成登录、注册功能
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="wechat/index.html">
+            
+                
+                    <a href="../wechat/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        微信实例和H5实践
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="wechat/init.html">
+            
+                
+                    <a href="../wechat/init.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        微信基础和Sandbox
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="wechat/reply.html">
+            
+                
+                    <a href="../wechat/reply.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        公众号菜单和自动回复
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.3" data-path="wechat/oauth.html">
+            
+                
+                    <a href="../wechat/oauth.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        微信OAuth用户授权
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="wechat/share.html">
+            
+                
+                    <a href="../wechat/share.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.</b>
+                        
+                        微信分享
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="wechat/api.html">
+            
+                
+                    <a href="../wechat/api.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.</b>
+                        
+                        Wechat-api
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="wechat/h5.html">
+            
+                
+                    <a href="../wechat/h5.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.6.</b>
+                        
+                        H5-上篇
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="wechat/h5.html">
+            
+                
+                    <a href="../wechat/h5.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.7.</b>
+                        
+                        H5-下篇
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8" data-path="wechat/exercises.html">
+            
+                
+                    <a href="../wechat/exercises.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.8.</b>
+                        
+                        随堂练习：写一个页面分享到朋友圈
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="weui/index.html">
+            
+                
+                    <a href="../weui/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        WeUI实战
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="weui/bower.html">
+            
+                
+                    <a href="../weui/bower.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        使用Bower
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="weui/mobile.html">
+            
+                
+                    <a href="../weui/mobile.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.</b>
+                        
+                        移动端抽象
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="weui/iscroll.html">
+            
+                
+                    <a href="../weui/iscroll.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.</b>
+                        
+                        优化滑动列表
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="weui/weui.html">
+            
+                
+                    <a href="../weui/weui.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.4.</b>
+                        
+                        WeUI
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="weui/iscroll+weui.html">
+            
+                
+                    <a href="../weui/iscroll+weui.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.5.</b>
+                        
+                        让WeUI和iScroll结婚
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.6" data-path="weui/event.html">
+            
+                
+                    <a href="../weui/event.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.6.</b>
+                        
+                        优化事件
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.7" data-path="weui/how-to-h5.html">
+            
+                
+                    <a href="../weui/how-to-h5.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.7.</b>
+                        
+                        如何编写H5代码
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.8" data-path="weui/more.html">
+            
+                
+                    <a href="../weui/more.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.8.</b>
+                        
+                        优化无止境
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.9" data-path="weui/layermobile.html">
+            
+                
+                    <a href="../weui/layermobile.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.9.</b>
+                        
+                        随堂练习：集成Layer.mobile
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="pay/index.html">
+            
+                
+                    <a href="../pay/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        微信支付
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1" data-path="pay/pay.html">
+            
+                
+                    <a href="../pay/pay.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.</b>
+                        
+                        吹个牛
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="pay/overview.html">
+            
+                
+                    <a href="../pay/overview.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.2.</b>
+                        
+                        支付概述
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="pay/concept.html">
+            
+                
+                    <a href="../pay/concept.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.3.</b>
+                        
+                        科普几个概念
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="pay/prepare.html">
+            
+                
+                    <a href="../pay/prepare.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.4.</b>
+                        
+                        准备
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="pay/debug.html">
+            
+                
+                    <a href="../pay/debug.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.5.</b>
+                        
+                        调试
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6" data-path="pay/js_pay.html">
+            
+                
+                    <a href="../pay/js_pay.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.6.</b>
+                        
+                        公众号支付（JSAPI）
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.7" data-path="pay/statement.html">
+            
+                
+                    <a href="../pay/statement.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.7.</b>
+                        
+                        对账单
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.8" data-path="pay/data.html">
+            
+                
+                    <a href="../pay/data.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.8.</b>
+                        
+                        数据处理
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.9" data-path="pay/exercises.html">
+            
+                
+                    <a href="../pay/exercises.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.9.</b>
+                        
+                        随堂练习：写一个通用h5支付接口
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="vip-lession/index.html">
+            
+                
+                    <a href="../vip-lession/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        项目实战《付费课程系统MVP》
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1" data-path="vip-lession/requirement.html">
+            
+                
+                    <a href="../vip-lession/requirement.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.1.</b>
+                        
+                        需求分析
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="vip-lession/uiue.html">
+            
+                
+                    <a href="../vip-lession/uiue.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.2.</b>
+                        
+                        ui/ue
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="vip-lession/teck.html">
+            
+                
+                    <a href="../vip-lession/teck.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.3.</b>
+                        
+                        技术栈
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4" data-path="vip-lession/model.html">
+            
+                
+                    <a href="../vip-lession/model.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.4.</b>
+                        
+                        模型
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.5" data-path="vip-lession/api.html">
+            
+                
+                    <a href="../vip-lession/api.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.5.</b>
+                        
+                        静态api
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.6" data-path="vip-lession/dev.html">
+            
+                
+                    <a href="../vip-lession/dev.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.6.</b>
+                        
+                        开发
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.7" data-path="vip-lession/deployment.html">
+            
+                
+                    <a href="../vip-lession/deployment.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.7.</b>
+                        
+                        部署
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.8" data-path="vip-lession/monit.html">
+            
+                
+                    <a href="../vip-lession/monit.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.8.</b>
+                        
+                        监控
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.9" data-path="vip-lession/data_analyze.html">
+            
+                
+                    <a href="../vip-lession/data_analyze.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.9.</b>
+                        
+                        数据统计
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.10" data-path="vip-lession/demo.html">
+            
+                
+                    <a href="../vip-lession/demo.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.10.</b>
+                        
+                        demo
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="vip-lession/index.html">
+            
+                
+                    <a href="../vip-lession/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        高级篇（赠送）
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1" data-path="more/practice.html">
+            
+                
+                    <a href="../more/practice.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.1.</b>
+                        
+                        前后端分离实践？
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="more/tomorow.html">
+            
+                
+                    <a href="../more/tomorow.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.2.</b>
+                        
+                        如何展望未来的大前端？
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="more/microservice.html">
+            
+                
+                    <a href="../more/microservice.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.3.</b>
+                        
+                        容器化和微服务
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                Published with GitBook
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Table of Contents"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Search"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Font Settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="Share"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">
+                    Share on Twitter
+                </button>
+                <button type="button" data-sharing="google-plus" class="button">
+                    Share on Google
+                </button>
+                <button type="button" data-sharing="facebook" class="button">
+                    Share on Facebook
+                </button>
+                <button type="button" data-sharing="weibo" class="button">
+                    Share on Weibo
+                </button>
+                <button type="button" data-sharing="instapaper" class="button">
+                    Share on Instapaper
+                </button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Google"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >《Nodejs微信开发》</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="oauth">OAuth</h1>
+<h2 id="%E4%BB%80%E4%B9%88%E6%98%AFoauth">&#x4EC0;&#x4E48;&#x662F;OAuth?</h2>
+<p>OAuth&#xFF08;&#x5F00;&#x653E;&#x6388;&#x6743;&#xFF09;&#x662F;&#x4E00;&#x4E2A;&#x5F00;&#x653E;&#x6807;&#x51C6;&#xFF0C;&#x5141;&#x8BB8;&#x7528;&#x6237;&#x8BA9;&#x7B2C;&#x4E09;&#x65B9;&#x5E94;&#x7528;&#x8BBF;&#x95EE;&#x8BE5;&#x7528;&#x6237;&#x5728;&#x67D0;&#x4E00;&#x7F51;&#x7AD9;&#x4E0A;&#x5B58;&#x50A8;&#x7684;&#x79C1;&#x5BC6;&#x7684;&#x8D44;&#x6E90;&#xFF08;&#x5982;&#x7167;&#x7247;&#xFF0C;&#x89C6;&#x9891;&#xFF0C;&#x8054;&#x7CFB;&#x4EBA;&#x5217;&#x8868;&#xFF09;&#xFF0C;&#x800C;&#x65E0;&#x9700;&#x5C06;&#x7528;&#x6237;&#x540D;&#x548C;&#x5BC6;&#x7801;&#x63D0;&#x4F9B;&#x7ED9;&#x7B2C;&#x4E09;&#x65B9;&#x5E94;&#x7528;&#x3002;</p>
+<p>&#x76EE;&#x524D;&#x4E3B;&#x6D41;&#x662F;2.0</p>
+<p>OAuth 2.0&#x662F;OAuth&#x534F;&#x8BAE;&#x7684;&#x4E0B;&#x4E00;&#x7248;&#x672C;&#xFF0C;&#x4F46;&#x4E0D;&#x5411;&#x540E;&#x517C;&#x5BB9;OAuth 1.0&#x3002;</p>
+<p>OAuth 2.0&#x5173;&#x6CE8;&#x5BA2;&#x6237;&#x7AEF;&#x5F00;&#x53D1;&#x8005;&#x7684;&#x7B80;&#x6613;&#x6027;&#xFF0C;&#x540C;&#x65F6;&#x4E3A;Web&#x5E94;&#x7528;&#xFF0C;&#x684C;&#x9762;&#x5E94;&#x7528;&#x548C;&#x624B;&#x673A;&#xFF0C;&#x548C;&#x8D77;&#x5C45;&#x5BA4;&#x8BBE;&#x5907;&#x63D0;&#x4F9B;&#x4E13;&#x95E8;&#x7684;&#x8BA4;&#x8BC1;&#x6D41;&#x7A0B;&#x3002;2012&#x5E74;10&#x6708;&#xFF0C;OAuth 2.0&#x534F;&#x8BAE;&#x6B63;&#x5F0F;&#x53D1;&#x5E03;&#x4E3A;RFC 6749[1]  &#x3002;</p>
+<p>&#x4E3B;&#x8981;&#x662F;api</p>
+<ul>
+<li>&#x5FAE;&#x535A;api</li>
+<li>twitter</li>
+<li>facebook</li>
+<li>github</li>
+<li>qq&#x3001;&#x5FAE;&#x4FE1;</li>
+</ul>
+<h2 id="%E5%8E%9F%E7%90%86">&#x539F;&#x7406;</h2>
+<p><img src="oauth_developer_1.jpg" alt=""></p>
+<p><a href="http://www.ruanyifeng.com/blog/2014/05/oauth_2_0.html" target="_blank">http://www.ruanyifeng.com/blog/2014/05/oauth_2_0.html</a></p>
+<p><img src="bg2014051203.png" alt=""></p>
+<p><img src="bg2014051204.png" alt=""></p>
+<p>server</p>
+<p>-&#xFF08;A&#xFF09;&#x7528;&#x6237;&#x6253;&#x5F00;&#x5BA2;&#x6237;&#x7AEF;&#x4EE5;&#x540E;&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x8981;&#x6C42;&#x7528;&#x6237;&#x7ED9;&#x4E88;&#x6388;&#x6743;&#x3002;
+-&#xFF08;B&#xFF09;&#x7528;&#x6237;&#x540C;&#x610F;&#x7ED9;&#x4E88;&#x5BA2;&#x6237;&#x7AEF;&#x6388;&#x6743;&#x3002;
+-&#xFF08;C&#xFF09;&#x5BA2;&#x6237;&#x7AEF;&#x4F7F;&#x7528;&#x4E0A;&#x4E00;&#x6B65;&#x83B7;&#x5F97;&#x7684;&#x6388;&#x6743;&#xFF0C;&#x5411;&#x8BA4;&#x8BC1;&#x670D;&#x52A1;&#x5668;&#x7533;&#x8BF7;&#x4EE4;&#x724C;&#x3002;
+-&#xFF08;D&#xFF09;&#x8BA4;&#x8BC1;&#x670D;&#x52A1;&#x5668;&#x5BF9;&#x5BA2;&#x6237;&#x7AEF;&#x8FDB;&#x884C;&#x8BA4;&#x8BC1;&#x4EE5;&#x540E;&#xFF0C;&#x786E;&#x8BA4;&#x65E0;&#x8BEF;&#xFF0C;&#x540C;&#x610F;&#x53D1;&#x653E;&#x4EE4;&#x724C;&#x3002;
+-&#xFF08;E&#xFF09;&#x5BA2;&#x6237;&#x7AEF;&#x4F7F;&#x7528;&#x4EE4;&#x724C;&#xFF0C;&#x5411;&#x8D44;&#x6E90;&#x670D;&#x52A1;&#x5668;&#x7533;&#x8BF7;&#x83B7;&#x53D6;&#x8D44;&#x6E90;&#x3002;
+-&#xFF08;F&#xFF09;&#x8D44;&#x6E90;&#x670D;&#x52A1;&#x5668;&#x786E;&#x8BA4;&#x4EE4;&#x724C;&#x65E0;&#x8BEF;&#xFF0C;&#x540C;&#x610F;&#x5411;&#x5BA2;&#x6237;&#x7AEF;&#x5F00;&#x653E;&#x8D44;&#x6E90;&#x3002;</p>
+<h2 id="oauth-in-nodejs">OAuth in nodejs</h2>
+<p>&#x5B9E;&#x73B0;</p>
+<ul>
+<li><a href="Complete,%20compliant%20and%20well%20tested%20module%20for%20implementing%20an%20OAuth2%20Server/Provider%20with%20express%20in%20node.js">https://github.com/thomseddon/node-oauth2-server</a></li>
+<li><a href="https://github.com/jaredhanson/passport" target="_blank">Simple, unobtrusive authentication for Node.js.</a></li>
+</ul>
+<h2 id="%E5%BE%AE%E4%BF%A1oauth%E8%AF%B4%E6%98%8E">&#x5FAE;&#x4FE1;OAuth&#x8BF4;&#x660E;</h2>
+<p>&#x5982;&#x679C;&#x7528;&#x6237;&#x5728;&#x5FAE;&#x4FE1;&#x5BA2;&#x6237;&#x7AEF;&#x4E2D;&#x8BBF;&#x95EE;&#x7B2C;&#x4E09;&#x65B9;&#x7F51;&#x9875;&#xFF0C;&#x516C;&#x4F17;&#x53F7;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5FAE;&#x4FE1;&#x7F51;&#x9875;&#x6388;&#x6743;&#x673A;&#x5236;&#xFF0C;&#x6765;&#x83B7;&#x53D6;&#x7528;&#x6237;&#x57FA;&#x672C;&#x4FE1;&#x606F;&#xFF0C;&#x8FDB;&#x800C;&#x5B9E;&#x73B0;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#x3002;</p>
+<p>&#x5173;&#x4E8E;&#x7F51;&#x9875;&#x6388;&#x6743;&#x56DE;&#x8C03;&#x57DF;&#x540D;&#x7684;&#x8BF4;&#x660E;</p>
+<p>1&#x3001;&#x5728;&#x5FAE;&#x4FE1;&#x516C;&#x4F17;&#x53F7;&#x8BF7;&#x6C42;&#x7528;&#x6237;&#x7F51;&#x9875;&#x6388;&#x6743;&#x4E4B;&#x524D;&#xFF0C;&#x5F00;&#x53D1;&#x8005;&#x9700;&#x8981;&#x5148;&#x5230;&#x516C;&#x4F17;&#x5E73;&#x53F0;&#x5B98;&#x7F51;&#x4E2D;&#x7684;&#x5F00;&#x53D1;&#x8005;&#x4E2D;&#x5FC3;&#x9875;&#x914D;&#x7F6E;&#x6388;&#x6743;&#x56DE;&#x8C03;&#x57DF;&#x540D;&#x3002;&#x8BF7;&#x6CE8;&#x610F;&#xFF0C;&#x8FD9;&#x91CC;&#x586B;&#x5199;&#x7684;&#x662F;&#x57DF;&#x540D;&#xFF08;&#x662F;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#xFF09;&#xFF0C;&#x800C;&#x4E0D;&#x662F;URL&#xFF0C;&#x56E0;&#x6B64;&#x8BF7;&#x52FF;&#x52A0;<a href="http://&#x7B49;&#x534F;&#x8BAE;&#x5934;&#xFF1B;" target="_blank">http://&#x7B49;&#x534F;&#x8BAE;&#x5934;&#xFF1B;</a>
+2&#x3001;&#x6388;&#x6743;&#x56DE;&#x8C03;&#x57DF;&#x540D;&#x914D;&#x7F6E;&#x89C4;&#x8303;&#x4E3A;&#x5168;&#x57DF;&#x540D;&#xFF0C;&#x6BD4;&#x5982;&#x9700;&#x8981;&#x7F51;&#x9875;&#x6388;&#x6743;&#x7684;&#x57DF;&#x540D;&#x4E3A;&#xFF1A;www.qq.com&#xFF0C;&#x914D;&#x7F6E;&#x4EE5;&#x540E;&#x6B64;&#x57DF;&#x540D;&#x4E0B;&#x9762;&#x7684;&#x9875;&#x9762;<a href="http://www.qq.com/music.html" target="_blank">http://www.qq.com/music.html</a> &#x3001; <a href="http://www.qq.com/login.html" target="_blank">http://www.qq.com/login.html</a> &#x90FD;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;OAuth2.0&#x9274;&#x6743;&#x3002;&#x4F46;<a href="http://pay.qq.com" target="_blank">http://pay.qq.com</a> &#x3001; <a href="http://music.qq.com" target="_blank">http://music.qq.com</a> &#x3001; <a href="http://qq.com&#x65E0;&#x6CD5;&#x8FDB;&#x884C;OAuth2.0&#x9274;&#x6743;" target="_blank">http://qq.com&#x65E0;&#x6CD5;&#x8FDB;&#x884C;OAuth2.0&#x9274;&#x6743;</a>
+3&#x3001;&#x5982;&#x679C;&#x516C;&#x4F17;&#x53F7;&#x767B;&#x5F55;&#x6388;&#x6743;&#x7ED9;&#x4E86;&#x7B2C;&#x4E09;&#x65B9;&#x5F00;&#x53D1;&#x8005;&#x6765;&#x8FDB;&#x884C;&#x7BA1;&#x7406;&#xFF0C;&#x5219;&#x4E0D;&#x5FC5;&#x505A;&#x4EFB;&#x4F55;&#x8BBE;&#x7F6E;&#xFF0C;&#x7531;&#x7B2C;&#x4E09;&#x65B9;&#x4EE3;&#x66FF;&#x516C;&#x4F17;&#x53F7;&#x5B9E;&#x73B0;&#x7F51;&#x9875;&#x6388;&#x6743;&#x5373;&#x53EF;</p>
+<p>&#x5173;&#x4E8E;&#x7F51;&#x9875;&#x6388;&#x6743;&#x7684;&#x4E24;&#x79CD;scope&#x7684;&#x533A;&#x522B;&#x8BF4;&#x660E;</p>
+<p>1&#x3001;&#x4EE5;snsapi_base&#x4E3A;scope&#x53D1;&#x8D77;&#x7684;&#x7F51;&#x9875;&#x6388;&#x6743;&#xFF0C;&#x662F;&#x7528;&#x6765;&#x83B7;&#x53D6;&#x8FDB;&#x5165;&#x9875;&#x9762;&#x7684;&#x7528;&#x6237;&#x7684;openid&#x7684;&#xFF0C;&#x5E76;&#x4E14;&#x662F;&#x9759;&#x9ED8;&#x6388;&#x6743;&#x5E76;&#x81EA;&#x52A8;&#x8DF3;&#x8F6C;&#x5230;&#x56DE;&#x8C03;&#x9875;&#x7684;&#x3002;&#x7528;&#x6237;&#x611F;&#x77E5;&#x7684;&#x5C31;&#x662F;&#x76F4;&#x63A5;&#x8FDB;&#x5165;&#x4E86;&#x56DE;&#x8C03;&#x9875;&#xFF08;&#x5F80;&#x5F80;&#x662F;&#x4E1A;&#x52A1;&#x9875;&#x9762;&#xFF09;
+2&#x3001;&#x4EE5;snsapi_userinfo&#x4E3A;scope&#x53D1;&#x8D77;&#x7684;&#x7F51;&#x9875;&#x6388;&#x6743;&#xFF0C;&#x662F;&#x7528;&#x6765;&#x83B7;&#x53D6;&#x7528;&#x6237;&#x7684;&#x57FA;&#x672C;&#x4FE1;&#x606F;&#x7684;&#x3002;&#x4F46;&#x8FD9;&#x79CD;&#x6388;&#x6743;&#x9700;&#x8981;&#x7528;&#x6237;&#x624B;&#x52A8;&#x540C;&#x610F;&#xFF0C;&#x5E76;&#x4E14;&#x7531;&#x4E8E;&#x7528;&#x6237;&#x540C;&#x610F;&#x8FC7;&#xFF0C;&#x6240;&#x4EE5;&#x65E0;&#x987B;&#x5173;&#x6CE8;&#xFF0C;&#x5C31;&#x53EF;&#x5728;&#x6388;&#x6743;&#x540E;&#x83B7;&#x53D6;&#x8BE5;&#x7528;&#x6237;&#x7684;&#x57FA;&#x672C;&#x4FE1;&#x606F;&#x3002;
+3&#x3001;&#x7528;&#x6237;&#x7BA1;&#x7406;&#x7C7B;&#x63A5;&#x53E3;&#x4E2D;&#x7684;&#x201C;&#x83B7;&#x53D6;&#x7528;&#x6237;&#x57FA;&#x672C;&#x4FE1;&#x606F;&#x63A5;&#x53E3;&#x201D;&#xFF0C;&#x662F;&#x5728;&#x7528;&#x6237;&#x548C;&#x516C;&#x4F17;&#x53F7;&#x4EA7;&#x751F;&#x6D88;&#x606F;&#x4EA4;&#x4E92;&#x6216;&#x5173;&#x6CE8;&#x540E;&#x4E8B;&#x4EF6;&#x63A8;&#x9001;&#x540E;&#xFF0C;&#x624D;&#x80FD;&#x6839;&#x636E;&#x7528;&#x6237;OpenID&#x6765;&#x83B7;&#x53D6;&#x7528;&#x6237;&#x57FA;&#x672C;&#x4FE1;&#x606F;&#x3002;&#x8FD9;&#x4E2A;&#x63A5;&#x53E3;&#xFF0C;&#x5305;&#x62EC;&#x5176;&#x4ED6;&#x5FAE;&#x4FE1;&#x63A5;&#x53E3;&#xFF0C;&#x90FD;&#x662F;&#x9700;&#x8981;&#x8BE5;&#x7528;&#x6237;&#xFF08;&#x5373;openid&#xFF09;&#x5173;&#x6CE8;&#x4E86;&#x516C;&#x4F17;&#x53F7;&#x540E;&#xFF0C;&#x624D;&#x80FD;&#x8C03;&#x7528;&#x6210;&#x529F;&#x7684;&#x3002;</p>
+<p>&#x5173;&#x4E8E;&#x7F51;&#x9875;&#x6388;&#x6743;access_token&#x548C;&#x666E;&#x901A;access_token&#x7684;&#x533A;&#x522B;</p>
+<p>1&#x3001;&#x5FAE;&#x4FE1;&#x7F51;&#x9875;&#x6388;&#x6743;&#x662F;&#x901A;&#x8FC7;OAuth2.0&#x673A;&#x5236;&#x5B9E;&#x73B0;&#x7684;&#xFF0C;&#x5728;&#x7528;&#x6237;&#x6388;&#x6743;&#x7ED9;&#x516C;&#x4F17;&#x53F7;&#x540E;&#xFF0C;&#x516C;&#x4F17;&#x53F7;&#x53EF;&#x4EE5;&#x83B7;&#x53D6;&#x5230;&#x4E00;&#x4E2A;&#x7F51;&#x9875;&#x6388;&#x6743;&#x7279;&#x6709;&#x7684;&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x51ED;&#x8BC1;&#xFF08;&#x7F51;&#x9875;&#x6388;&#x6743;access_token&#xFF09;&#xFF0C;&#x901A;&#x8FC7;&#x7F51;&#x9875;&#x6388;&#x6743;access_token&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x6388;&#x6743;&#x540E;&#x63A5;&#x53E3;&#x8C03;&#x7528;&#xFF0C;&#x5982;&#x83B7;&#x53D6;&#x7528;&#x6237;&#x57FA;&#x672C;&#x4FE1;&#x606F;&#xFF1B;
+2&#x3001;&#x5176;&#x4ED6;&#x5FAE;&#x4FE1;&#x63A5;&#x53E3;&#xFF0C;&#x9700;&#x8981;&#x901A;&#x8FC7;&#x57FA;&#x7840;&#x652F;&#x6301;&#x4E2D;&#x7684;&#x201C;&#x83B7;&#x53D6;access_token&#x201D;&#x63A5;&#x53E3;&#x6765;&#x83B7;&#x53D6;&#x5230;&#x7684;&#x666E;&#x901A;access_token&#x8C03;&#x7528;&#x3002;</p>
+<p>&#x5173;&#x4E8E;UnionID&#x673A;&#x5236;</p>
+<p>1&#x3001;&#x8BF7;&#x6CE8;&#x610F;&#xFF0C;&#x7F51;&#x9875;&#x6388;&#x6743;&#x83B7;&#x53D6;&#x7528;&#x6237;&#x57FA;&#x672C;&#x4FE1;&#x606F;&#x4E5F;&#x9075;&#x5FAA;UnionID&#x673A;&#x5236;&#x3002;&#x5373;&#x5982;&#x679C;&#x5F00;&#x53D1;&#x8005;&#x6709;&#x5728;&#x591A;&#x4E2A;&#x516C;&#x4F17;&#x53F7;&#xFF0C;&#x6216;&#x5728;&#x516C;&#x4F17;&#x53F7;&#x3001;&#x79FB;&#x52A8;&#x5E94;&#x7528;&#x4E4B;&#x95F4;&#x7EDF;&#x4E00;&#x7528;&#x6237;&#x5E10;&#x53F7;&#x7684;&#x9700;&#x6C42;&#xFF0C;&#x9700;&#x8981;&#x524D;&#x5F80;&#x5FAE;&#x4FE1;&#x5F00;&#x653E;&#x5E73;&#x53F0;&#xFF08;open.weixin.qq.com&#xFF09;&#x7ED1;&#x5B9A;&#x516C;&#x4F17;&#x53F7;&#x540E;&#xFF0C;&#x624D;&#x53EF;&#x5229;&#x7528;UnionID&#x673A;&#x5236;&#x6765;&#x6EE1;&#x8DB3;&#x4E0A;&#x8FF0;&#x9700;&#x6C42;&#x3002;
+2&#x3001;UnionID&#x673A;&#x5236;&#x7684;&#x4F5C;&#x7528;&#x8BF4;&#x660E;&#xFF1A;&#x5982;&#x679C;&#x5F00;&#x53D1;&#x8005;&#x62E5;&#x6709;&#x591A;&#x4E2A;&#x79FB;&#x52A8;&#x5E94;&#x7528;&#x3001;&#x7F51;&#x7AD9;&#x5E94;&#x7528;&#x548C;&#x516C;&#x4F17;&#x5E10;&#x53F7;&#xFF0C;&#x53EF;&#x901A;&#x8FC7;&#x83B7;&#x53D6;&#x7528;&#x6237;&#x57FA;&#x672C;&#x4FE1;&#x606F;&#x4E2D;&#x7684;unionid&#x6765;&#x533A;&#x5206;&#x7528;&#x6237;&#x7684;&#x552F;&#x4E00;&#x6027;&#xFF0C;&#x56E0;&#x4E3A;&#x540C;&#x4E00;&#x7528;&#x6237;&#xFF0C;&#x5BF9;&#x540C;&#x4E00;&#x4E2A;&#x5FAE;&#x4FE1;&#x5F00;&#x653E;&#x5E73;&#x53F0;&#x4E0B;&#x7684;&#x4E0D;&#x540C;&#x5E94;&#x7528;&#xFF08;&#x79FB;&#x52A8;&#x5E94;&#x7528;&#x3001;&#x7F51;&#x7AD9;&#x5E94;&#x7528;&#x548C;&#x516C;&#x4F17;&#x5E10;&#x53F7;&#xFF09;&#xFF0C;unionid&#x662F;&#x76F8;&#x540C;&#x7684;&#x3002;</p>
+<p>&#x5173;&#x4E8E;&#x7279;&#x6B8A;&#x573A;&#x666F;&#x4E0B;&#x7684;&#x9759;&#x9ED8;&#x6388;&#x6743;</p>
+<p>1&#x3001;&#x4E0A;&#x9762;&#x5DF2;&#x7ECF;&#x63D0;&#x5230;&#xFF0C;&#x5BF9;&#x4E8E;&#x4EE5;snsapi_base&#x4E3A;scope&#x7684;&#x7F51;&#x9875;&#x6388;&#x6743;&#xFF0C;&#x5C31;&#x9759;&#x9ED8;&#x6388;&#x6743;&#x7684;&#xFF0C;&#x7528;&#x6237;&#x65E0;&#x611F;&#x77E5;&#xFF1B;
+2&#x3001;&#x5BF9;&#x4E8E;&#x5DF2;&#x5173;&#x6CE8;&#x516C;&#x4F17;&#x53F7;&#x7684;&#x7528;&#x6237;&#xFF0C;&#x5982;&#x679C;&#x7528;&#x6237;&#x4ECE;&#x516C;&#x4F17;&#x53F7;&#x7684;&#x4F1A;&#x8BDD;&#x6216;&#x8005;&#x81EA;&#x5B9A;&#x4E49;&#x83DC;&#x5355;&#x8FDB;&#x5165;&#x672C;&#x516C;&#x4F17;&#x53F7;&#x7684;&#x7F51;&#x9875;&#x6388;&#x6743;&#x9875;&#xFF0C;&#x5373;&#x4F7F;&#x662F;scope&#x4E3A;snsapi_userinfo&#xFF0C;&#x4E5F;&#x662F;&#x9759;&#x9ED8;&#x6388;&#x6743;&#xFF0C;&#x7528;&#x6237;&#x65E0;&#x611F;&#x77E5;&#x3002;</p>
+<p>&#x5177;&#x4F53;&#x800C;&#x8A00;&#xFF0C;&#x7F51;&#x9875;&#x6388;&#x6743;&#x6D41;&#x7A0B;&#x5206;&#x4E3A;&#x56DB;&#x6B65;&#xFF1A;</p>
+<p>1&#x3001;&#x5F15;&#x5BFC;&#x7528;&#x6237;&#x8FDB;&#x5165;&#x6388;&#x6743;&#x9875;&#x9762;&#x540C;&#x610F;&#x6388;&#x6743;&#xFF0C;&#x83B7;&#x53D6;code
+2&#x3001;&#x901A;&#x8FC7;code&#x6362;&#x53D6;&#x7F51;&#x9875;&#x6388;&#x6743;access_token&#xFF08;&#x4E0E;&#x57FA;&#x7840;&#x652F;&#x6301;&#x4E2D;&#x7684;access_token&#x4E0D;&#x540C;&#xFF09;
+3&#x3001;&#x5982;&#x679C;&#x9700;&#x8981;&#xFF0C;&#x5F00;&#x53D1;&#x8005;&#x53EF;&#x4EE5;&#x5237;&#x65B0;&#x7F51;&#x9875;&#x6388;&#x6743;access_token&#xFF0C;&#x907F;&#x514D;&#x8FC7;&#x671F;
+4&#x3001;&#x901A;&#x8FC7;&#x7F51;&#x9875;&#x6388;&#x6743;access_token&#x548C;openid&#x83B7;&#x53D6;&#x7528;&#x6237;&#x57FA;&#x672C;&#x4FE1;&#x606F;&#xFF08;&#x652F;&#x6301;UnionID&#x673A;&#x5236;&#xFF09;</p>
+<h2 id="install">install</h2>
+<p><a href="https://github.com/node-webot/wechat-oauth" target="_blank">https://github.com/node-webot/wechat-oauth</a></p>
+<pre><code>npm install wechat-oauth
+</code></pre><h2 id="%E5%88%9B%E5%BB%BAroutes-oauth-js">&#x521B;&#x5EFA;routes/oauth.js</h2>
+<pre><code>var express = require(&apos;express&apos;);
+var router = express.Router();
+
+var OAuth = require(&apos;wechat-oauth&apos;);
+var client = new OAuth(&apos;wx1627638f56ff80a5&apos;, &apos;d9df5debf4e37def18cc5e37326b604e&apos;);
+
+/* GET users listing. */
+router.get(&apos;/&apos;, function (req, res, next) {
+    var domain = &quot;https://topfio-3001-rsqevg.box.myide.io&quot;
+    var auth_callback_url = domain + &quot;/oauth/callback&quot;
+    var url = client.getAuthorizeURL(auth_callback_url, &apos;&apos;, &apos;snsapi_userinfo&apos;);
+    console.log(url);
+    // &#x91CD;&#x5B9A;&#x5411;&#x8BF7;&#x6C42;&#x5230;&#x5FAE;&#x4FE1;&#x670D;&#x52A1;&#x5668;
+    res.redirect(url);
+});
+
+router.get(&apos;/callback&apos;, function (req, res, next) {
+    var code = req.query.code;
+    client.getAccessToken(code, function (err, result) {
+        console.log(result)
+        var accessToken = result.data.access_token;
+        var openid = result.data.openid;
+
+        client.getUser(openid, function (err, result) {
+            var userInfo = result;
+            // save or other opration
+            res.json(userInfo)
+        });
+    });
+});
+
+module.exports = router;
+</code></pre><h2 id="callback%E4%B9%8B%E5%90%8E">callback&#x4E4B;&#x540E;</h2>
+<p>&#x3002;&#x3002;&#x3002;</p>
+<p><a href="https://cnodejs.org/topic/555fec114eb040084cfe5d15" target="_blank">https://cnodejs.org/topic/555fec114eb040084cfe5d15</a></p>
+<p>&#x4E4B;&#x524D;&#x7684;&#x7248;&#x672C;</p>
+<p>&#x8FD9;&#x662F;&#x6734;&#x7075;&#x5199;&#x7684;&#x4E00;&#x4E2A;&#x6A21;&#x5757;</p>
+<p><a href="https://github.com/node-webot/wechat-oauth" target="_blank">https://github.com/node-webot/wechat-oauth</a></p>
+<h4 id="%E6%8E%88%E6%9D%83%E6%B5%81%E7%A8%8B">&#x6388;&#x6743;&#x6D41;&#x7A0B;</h4>
+<p>&#x7F51;&#x9875;&#x6388;&#x6743;&#x6D41;&#x7A0B;&#x5206;&#x4E3A;&#x56DB;&#x6B65;&#xFF1A;</p>
+<ul>
+<li>1&#x3001;&#x5F15;&#x5BFC;&#x7528;&#x6237;&#x8FDB;&#x5165;&#x6388;&#x6743;&#x9875;&#x9762;&#x540C;&#x610F;&#x6388;&#x6743;&#xFF0C;&#x83B7;&#x53D6;code</li>
+<li>2&#x3001;&#x901A;&#x8FC7;code&#x6362;&#x53D6;&#x7F51;&#x9875;&#x6388;&#x6743;access_token&#xFF08;&#x4E0E;&#x57FA;&#x7840;&#x652F;&#x6301;&#x4E2D;&#x7684;access_token&#x4E0D;&#x540C;&#xFF09;</li>
+<li>3&#x3001;&#x5982;&#x679C;&#x9700;&#x8981;&#xFF0C;&#x5F00;&#x53D1;&#x8005;&#x53EF;&#x4EE5;&#x5237;&#x65B0;&#x7F51;&#x9875;&#x6388;&#x6743;access_token&#xFF0C;&#x907F;&#x514D;&#x8FC7;&#x671F;</li>
+<li>4&#x3001;&#x901A;&#x8FC7;&#x7F51;&#x9875;&#x6388;&#x6743;access_token&#x548C;openid&#x83B7;&#x53D6;&#x7528;&#x6237;&#x57FA;&#x672C;&#x4FE1;&#x606F;&#xFF08;&#x652F;&#x6301;UnionID&#x673A;&#x5236;&#xFF09;</li>
+</ul>
+<p>&#x7B80;&#x5355;&#x70B9;</p>
+<ul>
+<li>1&#x3001;&#x6839;&#x636E;app_id&#x548C;app_secret&#x548C;&#x6388;&#x6743;&#x540E;&#x56DE;&#x8C03;url</li>
+<li>2&#x3001;&#x5728;&#x56DE;&#x8C03;&#x91CC;&#x5904;&#x7406;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#xFF0C;&#x6BD4;&#x5982;&#x83B7;&#x53D6;&#x7528;&#x6237;&#x4FE1;&#x606F;&#xFF0C;&#x4FDD;&#x5B58;&#x6216;&#x66F4;&#x65B0;</li>
+</ul>
+<h4 id="%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C">&#x51C6;&#x5907;&#x5DE5;&#x4F5C;</h4>
+<pre><code>var OAuth = require(&apos;wechat-oauth&apos;);
+var client = new OAuth(&apos;your appid&apos;, &apos;your secret&apos;);
+</code></pre><p>&#x4F46;&#x662F;&#x6709;&#x4E00;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x6BD4;&#x5982;&#x591A;&#x53F0;&#x673A;&#x5668;&#x96C6;&#x7FA4;&#x6216;&#x591A;&#x8FDB;&#x7A0B;&#x65F6;&#xFF0C;token&#x9700;&#x8981;&#x5168;&#x5C40;&#x7EF4;&#x62A4;&#xFF0C;&#x4EE5;&#x4E0B;&#x4E3A;&#x4FDD;&#x5B58;token&#x7684;&#x63A5;&#x53E3;&#x3002;</p>
+<pre><code>if (req.wx) {
+    req.wx_client = new OAuth(req.wx.app_id, req.wx.app_secret, function (openid, callback) {
+    // &#x4F20;&#x5165;&#x4E00;&#x4E2A;&#x6839;&#x636E;openid&#x83B7;&#x53D6;&#x5BF9;&#x5E94;&#x7684;&#x5168;&#x5C40;token&#x7684;&#x65B9;&#x6CD5;
+    // &#x5728;getUser&#x65F6;&#x4F1A;&#x901A;&#x8FC7;&#x8BE5;&#x65B9;&#x6CD5;&#x6765;&#x83B7;&#x53D6;token
+    fs.readFile(openid +&apos;:access_token.txt&apos;, &apos;utf8&apos;, function (err, txt) {
+      if (err) {return callback(err);}
+      callback(null, JSON.parse(txt));
+    });
+  }, function (openid, token, callback) {
+    // &#x8BF7;&#x5C06;token&#x5B58;&#x50A8;&#x5230;&#x5168;&#x5C40;&#xFF0C;&#x8DE8;&#x8FDB;&#x7A0B;&#x3001;&#x8DE8;&#x673A;&#x5668;&#x7EA7;&#x522B;&#x7684;&#x5168;&#x5C40;&#xFF0C;&#x6BD4;&#x5982;&#x5199;&#x5230;&#x6570;&#x636E;&#x5E93;&#x3001;redis&#x7B49;
+    // &#x8FD9;&#x6837;&#x624D;&#x80FD;&#x5728;cluster&#x6A21;&#x5F0F;&#x53CA;&#x591A;&#x673A;&#x60C5;&#x51B5;&#x4E0B;&#x4F7F;&#x7528;&#xFF0C;&#x4EE5;&#x4E0B;&#x4E3A;&#x5199;&#x5165;&#x5230;&#x6587;&#x4EF6;&#x7684;&#x793A;&#x4F8B;
+    // &#x6301;&#x4E45;&#x5316;&#x65F6;&#x8BF7;&#x6CE8;&#x610F;&#xFF0C;&#x6BCF;&#x4E2A;openid&#x90FD;&#x5BF9;&#x5E94;&#x4E00;&#x4E2A;&#x552F;&#x4E00;&#x7684;token!
+    fs.writeFile(openid + &apos;:access_token.txt&apos;, JSON.stringify(token), callback);
+  });
+}
+</code></pre><h4 id="oauth%E8%AE%A4%E8%AF%81">OAuth&#x8BA4;&#x8BC1;</h4>
+<p>&#x7B80;&#x5355;&#x70B9;&#x8BF4;&#x5C31;&#x662F;&#x6839;&#x636E;app_id&#x548C;app_secret&#x548C;&#x6388;&#x6743;&#x540E;&#x56DE;&#x8C03;url&#xFF0C;&#x53BB;&#x5FAE;&#x4FE1;&#x7684;&#x7F51;&#x5173;&#x53BB;&#x8BA4;&#x8BC1;</p>
+<p>&#x8BA4;&#x8BC1;&#x6210;&#x529F;&#x540E;&#x5C31;&#x4F1A;&#x8DF3;&#x5230;&#x56DE;&#x8C03;url</p>
+<pre><code>// &#x4E3B;&#x9875;,&#x4E3B;&#x8981;&#x662F;&#x8D1F;&#x8D23;OAuth&#x8BA4;&#x8BC1;
+router.get(&apos;/oauth&apos;, c, wx_config, wx_option, function(req, res) {
+  console.log(&apos;req.query&apos;);
+  var qs = require(&apos;qs&apos;)
+  var query_json = qs.stringify(req.query);
+  console.log(query_json);
+
+  var auth_url = req.wx.domain + req.wx.callback.url + &quot;/&quot; + query_json
+  console.log(&apos;auth_url = &apos; + auth_url);
+  var url = req.wx_client.getAuthorizeURL(auth_url, &apos;&apos;, &apos;snsapi_userinfo&apos;);
+
+  // &#x91CD;&#x5B9A;&#x5411;&#x8BF7;&#x6C42;&#x5230;&#x5FAE;&#x4FE1;&#x670D;&#x52A1;&#x5668;
+  res.redirect(url);
+});
+</code></pre><p>&#x6838;&#x5FC3;&#x65B9;&#x6CD5;&#x5C31;&#x662F;getAuthorizeURL&#x65B9;&#x6CD5;</p>
+<p>&#x53C2;&#x6570;</p>
+<ul>
+<li>&apos;redirectUrl&apos;</li>
+<li>&apos;state&apos;</li>
+<li>&apos;scope&apos;</li>
+</ul>
+<h4 id="%E8%8E%B7%E5%8F%96%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AFgetuser-openid">&#x83B7;&#x53D6;&#x7528;&#x6237;&#x4FE1;&#x606F;getUser(openid)</h4>
+<h4 id="%E8%8E%B7%E5%8F%96%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AFgetuserbycode">&#x83B7;&#x53D6;&#x7528;&#x6237;&#x4FE1;&#x606F;getUserByCode</h4>
+<h2 id="weixin-js">weixin.js</h2>
+<p>&#x8FD9;&#x6837;&#x8BF4;&#x592A;&#x62BD;&#x8C61;&#xFF0C;&#x8FD8;&#x662F;&#x770B;&#x4EE3;&#x7801;&#x5427;</p>
+<pre><code>var express = require(&apos;express&apos;);
+var router = express.Router();
+var check_session = require(&apos;../middleware/check_session_is_expired&apos;);
+var OAuth = require(&apos;wechat-oauth&apos;);
+var signature = require(&apos;wx_jsapi_sign&apos;);
+
+// &#x8BFB;&#x53D6;&#x914D;&#x7F6E;&#x9879;
+var config      = require(&apos;config&apos;);
+var app_id      = config.get(&apos;wx.app_id&apos;);
+var app_secret  = config.get(&apos;wx.app_secret&apos;);
+var domain      = config.get(&apos;domain&apos;);
+
+// &#x5FAE;&#x4FE1;&#x6388;&#x6743;&#x548C;&#x56DE;&#x8C03;
+var client = new OAuth(app_id, app_secret);
+
+// &#x4E3B;&#x9875;,&#x4E3B;&#x8981;&#x662F;&#x8D1F;&#x8D23;OAuth&#x8BA4;&#x771F;
+router.get(&apos;/&apos;, function(req, res) {
+    var url = client.getAuthorizeURL(&apos;http://&apos; + domain + &apos;/weixin/callback&apos;,&apos;&apos;,&apos;snsapi_userinfo&apos;);
+
+    // &#x91CD;&#x5B9A;&#x5411;&#x8BF7;&#x6C42;&#x5230;&#x5FAE;&#x4FE1;&#x670D;&#x52A1;&#x5668;
+    res.redirect(url);
+})
+
+/**
+ * &#x8BA4;&#x8BC1;&#x6388;&#x6743;&#x540E;&#x56DE;&#x8C03;&#x51FD;&#x6570;
+ *
+ * &#x6839;&#x636E;openid&#x5224;&#x65AD;&#x662F;&#x5426;&#x7528;&#x6237;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;
+ * - &#x5982;&#x679C;&#x662F;&#x65B0;&#x7528;&#x6237;&#xFF0C;&#x6CE8;&#x518C;&#x5E76;&#x7ED1;&#x5B9A;&#xFF0C;&#x7136;&#x540E;&#x8DF3;&#x8F6C;&#x5230;&#x624B;&#x673A;&#x53F7;&#x9A8C;&#x8BC1;&#x754C;&#x9762;
+ * - &#x5982;&#x679C;&#x662F;&#x8001;&#x7528;&#x6237;&#xFF0C;&#x8DF3;&#x8F6C;&#x5230;&#x4E3B;&#x9875;
+ */
+router.get(&apos;/callback&apos;, function(req, res) {
+    console.log(&apos;----weixin callback -----&apos;)
+    var code = req.query.code;
+    var User = req.model.UserModel;
+
+    client.getAccessToken(code, function (err, result) {
+        console.dir(err);
+        console.dir(result);
+        var accessToken = result.data.access_token;
+        var openid = result.data.openid;
+        var unionid = result.data.unionid;
+
+        console.log(&apos;token=&apos; + accessToken);
+        console.log(&apos;openid=&apos; + openid);
+        console.log(&apos;unionid=&apos; + unionid);
+
+
+        User.find_by_unionid(unionid, function(err, user){
+            console.log(&apos;&#x5FAE;&#x4FE1;&#x56DE;&#x8C03;&#x540E;&#xFF0C;User.find_by_unionid(unionid) &#x8FD4;&#x56DE;&#x7684;user = &apos; + user)
+            if(err || user == null){
+                console.log(&apos;&#x7ECF;&#x8FC7;unionid&#x67E5;&#x8BE2;&#x65E0;&#x7ED3;&#x679C;&apos;);
+
+                client.getUser(openid, function (err, get_by_openid) {
+                    console.log(get_by_openid);
+                    var oauth_user = get_by_openid;
+
+                    var _user = new User(oauth_user);
+                    _user.username = oauth_user.nickname;
+
+                    _user.save(function(err, user_save) {
+                        if (err) {
+                            console.log(&apos;User save error ....&apos; + err);
+                        } else {
+                            console.log(&apos;User save sucess ....&apos; + err);
+                            req.session.current_user = void 0;
+                            res.redirect(&apos;/users/&apos; + user_save._id + &apos;/verify&apos;);
+                        }
+                    });
+                });
+            }else{
+                console.log(&apos;&#x6839;&#x636E;unionid&#x67E5;&#x8BE2;&#xFF0C;&#x7528;&#x6237;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&apos;)
+                // if phone_number exist,go home page
+               if(user.is_valid == true){
+                   req.session.current_user = user;
+                   res.redirect(&apos;/mobile/&apos;)
+                }else{
+                    //if phone_number exist,go to user detail page to fill it
+                    req.session.current_user = void 0;
+                    res.redirect(&apos;/users/&apos; + user._id + &apos;/verify&apos;);
+                }
+            }
+        });
+    });
+});
+
+router.post(&apos;/getsignature&apos;, function(req, res) {
+    var url = req.body.url;
+    var re = /\/$/;
+
+    if(!re.test(url)) {
+        url = url + &apos;/&apos;
+    }
+    console.log(&apos;\033[32m&apos;+url+&apos;\033[39m&apos;);
+
+    var config = {
+        cache_json_file: req.server_path,
+        appId: app_id,
+        appSecret: app_secret,
+        appToken: &apos;mengxiaoban.com&apos;
+    };
+
+    signature.getSignature(config)(url, function(error, result) {
+        console.log(result);
+        if (error) {
+            res.json({
+                &apos;error&apos;: error
+            });
+        } else {
+            res.json(result);
+        }
+    });
+});
+
+module.exports = router;
+</code></pre><p>&#x5728;&#x5173;&#x6CE8;&#x8005;&#x4E0E;&#x516C;&#x4F17;&#x53F7;&#x4EA7;&#x751F;&#x6D88;&#x606F;&#x4EA4;&#x4E92;&#x540E;&#xFF0C;&#x516C;&#x4F17;&#x53F7;&#x53EF;&#x83B7;&#x5F97;&#x5173;&#x6CE8;&#x8005;&#x7684;OpenID&#xFF08;&#x52A0;&#x5BC6;&#x540E;&#x7684;&#x5FAE;&#x4FE1;&#x53F7;&#xFF0C;&#x6BCF;&#x4E2A;&#x7528;&#x6237;&#x5BF9;&#x6BCF;&#x4E2A;&#x516C;&#x4F17;&#x53F7;&#x7684;OpenID&#x662F;&#x552F;&#x4E00;&#x7684;&#x3002;&#x5BF9;&#x4E8E;&#x4E0D;&#x540C;&#x516C;&#x4F17;&#x53F7;&#xFF0C;&#x540C;&#x4E00;&#x7528;&#x6237;&#x7684;openid&#x4E0D;&#x540C;&#xFF09;&#x3002;
+&#x6458;&#x81EA;&#x300A;&#x5FAE;&#x4FE1;&#x516C;&#x4F17;&#x5E73;&#x53F0;&#x5F00;&#x53D1;&#x8005;&#x6587;&#x6863;&#x300B;</p>
+<h2 id="%E6%B5%81%E7%A8%8B">&#x6D41;&#x7A0B;</h2>
+<ul>
+<li>1&#xFF09;var client = new OAuth(app_id, app_secret);</li>
+<li>2&#xFF09;&#x5982;&#x679C;&#x6388;&#x6743;&#x6210;&#x529F;&#xFF0C;&#x5C31;&#x4F1A;&#x8DF3;&#x5230;callback url&#x5730;&#x5740;&#xFF0C;&#x5373;&#x8BA4;&#x8BC1;&#x6388;&#x6743;&#x540E;&#x56DE;&#x8C03;&#x51FD;&#x6570;</li>
+<li>3&#xFF09;&#x83B7;&#x53D6;code&#xFF0C;&#x5373;var code = req.query.code;</li>
+<li>4&#xFF09;&#x83B7;&#x53D6;&#x5FAE;&#x4FE1;&#x7528;&#x6237;&#x4FE1;&#x606F;&#xFF0C;client.getAccessToken(code,cb)</li>
+<li>5&#xFF09;&#x6839;&#x636E;&#x5FAE;&#x4FE1;&#x7528;&#x6237;&#x4FE1;&#x606F;&#x91CC;&#x7684;openid&#x6216;unionid&#x67E5;&#x8BE2;&#x5F53;&#x524D;&#x6570;&#x636E;&#x5E93;&#x91CC;&#x662F;&#x5426;&#x6709;&#x8BE5;&#x7528;&#x6237;&#xFF0C;&#x5373;</li>
+</ul>
+<pre><code>User.find_by_unionid(unionid, function(err, user)
+</code></pre><ul>
+<li>6&#xFF09;&#x5982;&#x679C;&#x6709;&#xFF0C;&#x767B;&#x5F55;&#x6210;&#x529F;&#xFF0C;&#x521B;&#x5EFA;session&#xFF0C;&#x91CD;&#x5B9A;&#x5411;&#x4E3B;&#x9875;&#x9762;</li>
+</ul>
+<pre><code>req.session.current_user = user;
+res.redirect(&apos;/mobile/&apos;)
+</code></pre><ul>
+<li>7&#xFF09;&#x5982;&#x679C;&#x6CA1;&#x6709;&#xFF0C;&#x9700;&#x8981;&#x521B;&#x5EFA;&#x7528;&#x6237;,&#x6839;&#x636E;openid&#x83B7;&#x53D6;&#x7528;&#x6237;&#x4FE1;&#x606F;</li>
+</ul>
+<pre><code>client.getUser(openid, function (err, get_by_openid)
+</code></pre><ul>
+<li>8&#xFF09;&#x4FDD;&#x5B58;&#x7528;&#x6237;</li>
+</ul>
+<pre><code>var _user = new User(oauth_user);
+_user.username = oauth_user.nickname;
+
+_user.save(function(err, user_save)
+</code></pre><ul>
+<li><p>9&#xFF09;&#x5982;&#x679C;&#x4FDD;&#x5B58;&#x7528;&#x6237;&#x6210;&#x529F;&#xFF0C;&#x8DF3;&#x8F6C;&#x5230;6&#xFF09;</p>
+</li>
+<li><p>10&#xFF09;&#x4FDD;&#x5B58;&#x5931;&#x8D25;&#xFF0C;&#x663E;&#x793A;&#x9519;&#x8BEF;&#x9875;&#x9762;&#x5373;&#x53EF;</p>
+</li>
+</ul>
+<h2 id="user-js-model">user.js model</h2>
+<pre><code>var LOCK_TIME, MAX_LOGIN_ATTEMPTS, SALT_WORK_FACTOR, Schema, UserSchema, bcrypt, mongoose;
+
+var mongoose = require(&apos;mongoose&apos;);
+var Schema = mongoose.Schema;
+var Promise = require(&apos;bluebird&apos;);
+var autoIncrement = require(&apos;mongoose-auto-increment&apos;);
+
+autoIncrement.initialize(mongoose.connection);
+
+Schema = mongoose.Schema;
+
+SALT_WORK_FACTOR = 10;
+
+MAX_LOGIN_ATTEMPTS = 5;
+
+LOCK_TIME = 2 * 60 * 60 * 1000;
+
+UserSchema = new Schema({
+  username: {// &#x771F;&#x5B9E;&#x59D3;&#x540D;
+    type: String
+  },
+  unionid       : String,
+  openid: {// from weixin openid
+    type: String,
+    required: true,
+    index: {
+      unique: true
+    }
+  },
+  nickname      : String,// from weixin &#x6635;&#x79F0;
+  sex           : String,// from weixin &#x6027;&#x522B; 0-&gt;&#x5973; 1-&gt;&#x7537;
+  language      : String,// from weixin &#x8BED;&#x8A00;
+  city          : String,// from weixin &#x57CE;&#x5E02;
+  province      : String,// from weixin
+  country       : String,// from weixin
+  headimgurl    : String,// from weixin &#x5934;&#x50CF;&#x8DEF;&#x5F84;
+  privilege     : [],    // from weixin
+  created_at    : {
+    type: Date,
+    &quot;default&quot;: Date.now
+  }
+});
+
+UserSchema.virtual(&apos;is_valid&apos;).get(function(){
+  console.log(&apos;phone_number = &apos; +this.phone_number)
+  if(this.phone_number == undefined | this.invite_code == undefined){
+    return false;
+  }
+  return this.invite_code.length &gt;= 2 &amp;&amp; this.phone_number &gt; 0
+});
+
+// &#x68C0;&#x67E5;&#x662F;&#x5426;&#x586B;&#x5199;&#x8FC7;&#x9080;&#x8BF7;&#x4FE1;&#x606F;
+UserSchema.virtual(&apos;is_invited&apos;).get(function(){
+  if(typeof this.weixin_name == &apos;undefined&apos;){
+    return false;
+  }
+});
+
+UserSchema.methods.is_exist = function(cb) {
+  var query;
+  query = {
+    username: this.username,
+    password: this.password
+  };
+  return this.model(&apos;UserModel&apos;).findOne(query, cb);
+};
+
+UserSchema.statics.findAll = function(cb) {
+    return this.find().sort({ created_at: &apos;asc&apos;}).exec(cb);
+};
+
+UserSchema.methods.save_necessary = function(cb) {
+  var update = {
+    invite_code: this.invite_code,
+    phone_number: this.phone_number,
+    address:this.address
+  };
+
+  return this.model(&apos;UserModel&apos;).findByIdAndUpdate(this.id, update, cb);
+};
+
+UserSchema.statics.find_by_openid = function(openid, cb) {
+  return this.findOne({
+    openid: openid
+  }, cb);
+};
+
+UserSchema.statics.find_by_unionid = function(unionid, cb) {
+  return this.findOne({
+    unionid: unionid
+  }, cb);
+};
+
+UserSchema.statics.find_by_nickname = function(nickname, cb) {
+  return this.findOne({
+    nickname: nickname
+  }, cb);
+};
+
+UserSchema.plugin(autoIncrement.plugin, {
+  model: &apos;XbmId&apos;,
+  field: &apos;xbm_id&apos;,
+  startAt: 10000,
+  incrementBy: 1
+});
+
+var UserModel = mongoose.model(&apos;UserModel&apos;, UserSchema);
+
+Promise.promisifyAll(UserModel);
+Promise.promisifyAll(UserModel.prototype);
+
+module.exports = UserModel;
+</code></pre><p>&#x6B64;&#x5904;&#x6309;&#x9700;&#x8BBE;&#x7F6E;&#x5373;&#x53EF;</p>
+<p>&#x6280;&#x5DE7;&#x70B9;</p>
+<ul>
+<li>mongoose&#x7528;&#x6CD5;<ul>
+<li>&#x7D22;&#x5F15;</li>
+<li>virtual</li>
+<li>plugin</li>
+<li>statics</li>
+<li>methods</li>
+</ul>
+</li>
+<li>promise/bluebird&#x7528;&#x6CD5;</li>
+</ul>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../wechat/reply.html" class="navigation navigation-prev " aria-label="Previous page: 公众号菜单和自动回复"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../wechat/share.html" class="navigation navigation-next " aria-label="Next page: 微信分享"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>
