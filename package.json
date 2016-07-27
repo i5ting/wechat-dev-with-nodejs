@@ -33,5 +33,5 @@
      "open": "npm run build && open _book/index.html",
      "build": "gitbook build . --gitbook=2.0.1",
      "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  }
 }
