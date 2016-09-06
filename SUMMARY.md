@@ -1,6 +1,7 @@
 # Summary
 
 * [skill](skill/README.md)
+* [skill](skill/README.md)
    * [Coding WebIDE](skill/coding_webide.md)
    * [git](skill/git.md)
    * [extra](skill/extra.md)

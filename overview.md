@@ -1,4 +1,6 @@
-# 课程概览
+# StuQ《Node.js微信开发》
+
+## 课程概览
 
 我们这次讲的课是《Node.js微信开发》，是StuQ推出的第一门课，期望做成一门可以打样的课。
 
@@ -13,6 +15,19 @@
 桑世龙（网名i5ting），空弦科技 CTO，StuQ 明星讲师，开源项目 Moajs 作者，Node.js 技术布道者
 
 曾就职在新浪、网秦，曾做过前端、后端、数据分析、移动端负责人、做过首席架构师、技术总监，全栈技术实践者，目前主要关注技术架构和团队梯队建设方向。
+
+[github](https://github.com/i5ting)和[cnodejs](https://cnodejs.org/user/i5ting)上的i5ting，目前在天津创业，空弦科技cto，公司目前使用技术主要是Node.js，Moajs作者，
+技术栈算所谓的MEAN（mongodb  + express + angular + node），所有代码都部署在阿里云上
+
+曾在新浪，网秦等工作过
+
+算全栈程序员吧，java、php、perl、ruby，bi、云计算、ios、android、h5都做过，带过前端、后端、数据分析、移动端负责人、做过首席架构师、技术总监、CTO
+
+哈哈
+
+我的名字i5ting，原因是我媳妇叫张婷，哈哈
+
+闲言少叙，下面开始正题
 
 ## Node.js靠谱么？
 
