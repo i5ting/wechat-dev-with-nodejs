@@ -1,7 +1,6 @@
 # Summary
 
 * [skill](skill/README.md)
-* [skill](skill/README.md)
    * [Coding WebIDE](skill/coding_webide.md)
    * [git](skill/git.md)
    * [extra](skill/extra.md)
@@ -71,4 +70,4 @@
    * [前后端分离实践？](more/practice.md)
    * [如何展望未来的大前端？](more/tomorow.md)
    * [容器化和微服务](more/microservice.md)
-
+* [答疑问题收集](faq1.md)
