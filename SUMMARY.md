@@ -16,6 +16,8 @@
    * [最小化问题](nodejs/how-to-study.md)
    * [随堂练习：写一个Node.js模块并发布](nodejs/exercises.md)
 * [异步流程控制](async/README.md)
+   * [什么时候会用到异步流程控制](async/when.md)
+   * [简单做法async模块](async/async.js.md)
    * [Promise/a+规范](async/promise.md)
    * [Node.js Promise/a+实现](async/nodejs.md)
    * [生成器Generators/yield](async/generator.md)
