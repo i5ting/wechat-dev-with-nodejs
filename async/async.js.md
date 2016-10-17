@@ -1,6 +1,7 @@
 # async.js
 
-https://github.com/caolan/async
+- 仓库 https://github.com/caolan/async
+- 文档 http://caolan.github.io/async/
 
 比如each方法，依次完成
 
