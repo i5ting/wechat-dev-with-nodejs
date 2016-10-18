@@ -1,0 +1,1551 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
+        <title>Async函数/Await | StuQ《Node.js微信开发》</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.0.1">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    
+    
+    <link rel="next" href="../async/co.html" />
+    
+    
+    <link rel="prev" href="../async/generator.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+    
+
+        
+    <div class="book" data-level="3.6" data-basepath=".." data-revision="Tue Oct 18 2016 08:23:05 GMT+0800 (CST)">
+    
+
+<div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Type to search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+        
+        
+        
+
+        
+
+        
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="skill/index.html">
+            
+                
+                    <a href="../skill/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        skill
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="skill/coding_webide.html">
+            
+                
+                    <a href="../skill/coding_webide.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        Coding WebIDE
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="skill/git.html">
+            
+                
+                    <a href="../skill/git.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        git
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="skill/extra.html">
+            
+                
+                    <a href="../skill/extra.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        extra
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="faq.html">
+            
+                
+                    <a href="../faq.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        预习
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="nodejs/index.html">
+            
+                
+                    <a href="../nodejs/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Node.js入门
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="nodejs/introduce.html">
+            
+                
+                    <a href="../nodejs/introduce.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        入门
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="nodejs/install.html">
+            
+                
+                    <a href="../nodejs/install.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        安装
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="nodejs/helloworld.html">
+            
+                
+                    <a href="../nodejs/helloworld.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        Hello world
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="nodejs/commonjs.html">
+            
+                
+                    <a href="../nodejs/commonjs.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        Common JS规范
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="nodejs/module-exports.html">
+            
+                
+                    <a href="../nodejs/module-exports.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        模块导出
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="nodejs/terms.html">
+            
+                
+                    <a href="../nodejs/terms.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.6.</b>
+                        
+                        Node.js代码调试
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="nodejs/npm.html">
+            
+                
+                    <a href="../nodejs/npm.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.7.</b>
+                        
+                        编写Node.js模块
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="nodejs/how-to-study.html">
+            
+                
+                    <a href="../nodejs/how-to-study.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.8.</b>
+                        
+                        最小化问题
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="nodejs/exercises.html">
+            
+                
+                    <a href="../nodejs/exercises.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.9.</b>
+                        
+                        随堂练习：写一个Node.js模块并发布
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="async/index.html">
+            
+                
+                    <a href="../async/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        异步流程控制
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="async/when.html">
+            
+                
+                    <a href="../async/when.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        什么时候会用到异步流程控制
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="async/async.js.html">
+            
+                
+                    <a href="../async/async.js.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        简单做法async模块
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="async/promise.html">
+            
+                
+                    <a href="../async/promise.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        Promise/a+规范
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="async/nodejs.html">
+            
+                
+                    <a href="../async/nodejs.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        Node.js Promise/a+实现
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="async/generator.html">
+            
+                
+                    <a href="../async/generator.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.</b>
+                        
+                        生成器Generators/yield
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.6" data-path="async/async.html">
+            
+                
+                    <a href="../async/async.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.6.</b>
+                        
+                        Async函数/Await
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="async/co.html">
+            
+                
+                    <a href="../async/co.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.7.</b>
+                        
+                        co引出的“血案”
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="async/yieldable.html">
+            
+                
+                    <a href="../async/yieldable.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.8.</b>
+                        
+                        5种 yieldable
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9" data-path="async/summary.html">
+            
+                
+                    <a href="../async/summary.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.9.</b>
+                        
+                        学习重点
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10" data-path="async/exercises.html">
+            
+                
+                    <a href="../async/exercises.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.10.</b>
+                        
+                        随堂练习：找到并阅读promise/a+实现的源码
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="express/index.html">
+            
+                
+                    <a href="../express/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        Express和微信开发入门
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="express/intro.html">
+            
+                
+                    <a href="../express/intro.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        入门
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="express/minimal.html">
+            
+                
+                    <a href="../express/minimal.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        Connect
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="express/html.html">
+            
+                
+                    <a href="../express/html.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        静态Http服务器
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="express/precompile.html">
+            
+                
+                    <a href="../express/precompile.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.</b>
+                        
+                        那些预处理器
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="express/route.html">
+            
+                
+                    <a href="../express/route.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.</b>
+                        
+                        路由
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="express/view.html">
+            
+                
+                    <a href="../express/view.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.6.</b>
+                        
+                        视图与模板引擎
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="express/middleware.html">
+            
+                
+                    <a href="../express/middleware.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.7.</b>
+                        
+                        中间件
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8" data-path="express/gulp.html">
+            
+                
+                    <a href="../express/gulp.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.8.</b>
+                        
+                        更多实践
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.9" data-path="express/how-to-study.html">
+            
+                
+                    <a href="../express/how-to-study.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.9.</b>
+                        
+                        微信入门
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.10" data-path="express/exercises.html">
+            
+                
+                    <a href="../express/exercises.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.10.</b>
+                        
+                        随堂练习：完成登录、注册功能
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="wechat/index.html">
+            
+                
+                    <a href="../wechat/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        微信实例和H5实践
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="wechat/init.html">
+            
+                
+                    <a href="../wechat/init.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        微信基础和Sandbox
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="wechat/reply.html">
+            
+                
+                    <a href="../wechat/reply.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.</b>
+                        
+                        公众号菜单和自动回复
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="wechat/oauth.html">
+            
+                
+                    <a href="../wechat/oauth.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.</b>
+                        
+                        微信OAuth用户授权
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="wechat/share.html">
+            
+                
+                    <a href="../wechat/share.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.4.</b>
+                        
+                        微信分享
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="wechat/api.html">
+            
+                
+                    <a href="../wechat/api.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.5.</b>
+                        
+                        Wechat-api
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.6" data-path="wechat/h5.html">
+            
+                
+                    <a href="../wechat/h5.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.6.</b>
+                        
+                        H5-上篇
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.7" data-path="wechat/h5.html">
+            
+                
+                    <a href="../wechat/h5.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.7.</b>
+                        
+                        H5-下篇
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.8" data-path="wechat/exercises.html">
+            
+                
+                    <a href="../wechat/exercises.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.8.</b>
+                        
+                        随堂练习：写一个页面分享到朋友圈
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="weui/index.html">
+            
+                
+                    <a href="../weui/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        WeUI实战
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1" data-path="weui/bower.html">
+            
+                
+                    <a href="../weui/bower.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.</b>
+                        
+                        使用Bower
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="weui/mobile.html">
+            
+                
+                    <a href="../weui/mobile.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.2.</b>
+                        
+                        移动端抽象
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="weui/iscroll.html">
+            
+                
+                    <a href="../weui/iscroll.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.3.</b>
+                        
+                        优化滑动列表
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="weui/weui.html">
+            
+                
+                    <a href="../weui/weui.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.4.</b>
+                        
+                        WeUI
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="weui/iscroll+weui.html">
+            
+                
+                    <a href="../weui/iscroll+weui.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.5.</b>
+                        
+                        让WeUI和iScroll结婚
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6" data-path="weui/event.html">
+            
+                
+                    <a href="../weui/event.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.6.</b>
+                        
+                        优化事件
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.7" data-path="weui/how-to-h5.html">
+            
+                
+                    <a href="../weui/how-to-h5.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.7.</b>
+                        
+                        如何编写H5代码
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.8" data-path="weui/more.html">
+            
+                
+                    <a href="../weui/more.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.8.</b>
+                        
+                        优化无止境
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.9" data-path="weui/layermobile.html">
+            
+                
+                    <a href="../weui/layermobile.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.9.</b>
+                        
+                        随堂练习：集成Layer.mobile
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="pay/index.html">
+            
+                
+                    <a href="../pay/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        微信支付
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1" data-path="pay/pay.html">
+            
+                
+                    <a href="../pay/pay.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.1.</b>
+                        
+                        吹个牛
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="pay/overview.html">
+            
+                
+                    <a href="../pay/overview.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.2.</b>
+                        
+                        支付概述
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="pay/concept.html">
+            
+                
+                    <a href="../pay/concept.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.3.</b>
+                        
+                        科普几个概念
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4" data-path="pay/prepare.html">
+            
+                
+                    <a href="../pay/prepare.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.4.</b>
+                        
+                        准备
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.5" data-path="pay/debug.html">
+            
+                
+                    <a href="../pay/debug.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.5.</b>
+                        
+                        调试
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.6" data-path="pay/js_pay.html">
+            
+                
+                    <a href="../pay/js_pay.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.6.</b>
+                        
+                        公众号支付（JSAPI）
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.7" data-path="pay/statement.html">
+            
+                
+                    <a href="../pay/statement.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.7.</b>
+                        
+                        对账单
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.8" data-path="pay/data.html">
+            
+                
+                    <a href="../pay/data.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.8.</b>
+                        
+                        数据处理
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.9" data-path="pay/exercises.html">
+            
+                
+                    <a href="../pay/exercises.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.9.</b>
+                        
+                        随堂练习：写一个通用h5支付接口
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="vip-lession/index.html">
+            
+                
+                    <a href="../vip-lession/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        项目实战《付费课程系统MVP》
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1" data-path="vip-lession/requirement.html">
+            
+                
+                    <a href="../vip-lession/requirement.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.1.</b>
+                        
+                        需求分析
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="vip-lession/uiue.html">
+            
+                
+                    <a href="../vip-lession/uiue.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.2.</b>
+                        
+                        ui/ue
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="vip-lession/teck.html">
+            
+                
+                    <a href="../vip-lession/teck.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.3.</b>
+                        
+                        技术栈
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4" data-path="vip-lession/model.html">
+            
+                
+                    <a href="../vip-lession/model.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.4.</b>
+                        
+                        模型
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.5" data-path="vip-lession/api.html">
+            
+                
+                    <a href="../vip-lession/api.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.5.</b>
+                        
+                        静态api
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.6" data-path="vip-lession/dev.html">
+            
+                
+                    <a href="../vip-lession/dev.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.6.</b>
+                        
+                        开发
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.7" data-path="vip-lession/deployment.html">
+            
+                
+                    <a href="../vip-lession/deployment.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.7.</b>
+                        
+                        部署
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.8" data-path="vip-lession/monit.html">
+            
+                
+                    <a href="../vip-lession/monit.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.8.</b>
+                        
+                        监控
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.9" data-path="vip-lession/data_analyze.html">
+            
+                
+                    <a href="../vip-lession/data_analyze.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.9.</b>
+                        
+                        数据统计
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.10" data-path="vip-lession/demo.html">
+            
+                
+                    <a href="../vip-lession/demo.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.10.</b>
+                        
+                        demo
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="vip-lession/index.html">
+            
+                
+                    <a href="../vip-lession/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.</b>
+                        
+                        高级篇（赠送）
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="9.1" data-path="more/practice.html">
+            
+                
+                    <a href="../more/practice.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.1.</b>
+                        
+                        前后端分离实践？
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="more/tomorow.html">
+            
+                
+                    <a href="../more/tomorow.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.2.</b>
+                        
+                        如何展望未来的大前端？
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3" data-path="more/microservice.html">
+            
+                
+                    <a href="../more/microservice.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.3.</b>
+                        
+                        容器化和微服务
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="10" data-path="faq1.html">
+            
+                
+                    <a href="../faq1.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.</b>
+                        
+                        答疑问题收集
+                    </a>
+                
+            
+            
+        </li>
+    
+
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                Published with GitBook
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Table of Contents"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Search"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Font Settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="Share"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">
+                    Share on Twitter
+                </button>
+                <button type="button" data-sharing="google-plus" class="button">
+                    Share on Google
+                </button>
+                <button type="button" data-sharing="facebook" class="button">
+                    Share on Facebook
+                </button>
+                <button type="button" data-sharing="weibo" class="button">
+                    Share on Weibo
+                </button>
+                <button type="button" data-sharing="instapaper" class="button">
+                    Share on Instapaper
+                </button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Google"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >StuQ《Node.js微信开发》</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="async%E5%87%BD%E6%95%B0-await%EF%BC%88%E4%BB%A5%E5%89%8D%E8%AF%B4%E6%98%AFes7-stage-3%EF%BC%89">Async&#x51FD;&#x6570;/Await&#xFF08;&#x4EE5;&#x524D;&#x8BF4;&#x662F;ES7 stage-3&#xFF09;</h1>
+<p>Generator&#x7684;&#x5F0A;&#x75C5;&#x662F;&#x6CA1;&#x6709;&#x6267;&#x884C;&#x5668;&#xFF0C;&#x5B83;&#x672C;&#x8EAB;&#x5C31;&#x4E0D;&#x662F;&#x4E3A;&#x6D41;&#x7A0B;&#x63A7;&#x5236;&#x800C;&#x751F;&#x7684;&#xFF0C;&#x6240;&#x4EE5;co&#x7684;&#x51FA;&#x73B0;&#x53EA;&#x662F;&#x89E3;&#x51B3;&#x4E86;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x3002;</p>
+<p>&#x53EF;&#x662F;&#xFF0C;&#x4F60;&#x4E0D;&#x89C9;&#x5F97;&#x5947;&#x602A;&#x4E48;&#xFF1F;&#x4E3A;&#x4EC0;&#x4E48;&#x975E;&#x8981;&#x52A0;&#x4E2A;co&#xFF0C;&#x624D;&#x80FD;&#x597D;&#x597D;&#x7684;&#x73A9;&#x800D;&#xFF1F;&#x4E3A;&#x4EC0;&#x4E48;&#x4E0D;&#x80FD;&#x662F;&#x76F4;&#x63A5;&#x5C31;&#x53EF;&#x4EE5;&#x6267;&#x884C;&#xFF0C;&#x5E76;&#x4E14;&#x6548;&#x679C;&#x548C;Yieldable&#x4E00;&#x6837;&#x7684;&#x5462;?</p>
+<p>Async/Await &#x5C31;&#x662F;&#x8FD9;&#x6837;&#x88AB;&#x641E;&#x51FA;&#x6765;&#x7684;&#xFF0C;&#x5F88;&#x591A;&#x4EBA;&#x8BA4;&#x4E3A;&#x5B83;&#x662F;&#x5F02;&#x6B65;&#x64CD;&#x4F5C;&#x7684;&#x7EC8;&#x6781;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x3002;</p>
+<FONT COLOR="#26B4FD">**Await**</FONT>
+
+<p>Await&#x7684;3&#x79CD;&#x53EF;&#x80FD;&#x60C5;&#x51B5;</p>
+<ul>
+<li>Await + Async&#x51FD;&#x6570;</li>
+<li>Await + Promise</li>
+<li>await + co&#xFF08;co&#x4F1A;&#x8FD4;&#x56DE;Promise&#xFF0C;&#x8FD9;&#x6837;&#x53EF;&#x4EE5;Yieldable&#xFF0C;&#x4F46;&#x96BE;&#x5EA6;&#x8F83;&#x5927;&#xFF0C;&#x9002;&#x5408;&#x8001;&#x624B;&#xFF09;</li>
+</ul>
+<p>&#x5934;2&#x79CD;&#x662F;&#x6BD4;&#x8F83;&#x5E38;&#x7528;&#x7684;&#xFF0C;&#x7B2C;&#x4E09;&#x79CD;co&#x4F5C;&#x4E3A;promise&#x751F;&#x6210;&#x5668;&#xFF0C;&#x662F;&#x4E00;&#x79CD;hack&#x7684;&#x529E;&#x6CD5;&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x7ED9;&#x51FA;&#x7B2C;&#x4E00;&#x79CD;&#x548C;&#x7B2C;&#x4E8C;&#x79CD;&#x7684;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code>async function a2() {
+  return new Promise((resolve, reject) =&gt; {
+    setTimeout(resolve, 1000);
+  })
+}
+
+async function a1() {
+  console.log(&quot;hello a1 and start a2&quot;);
+  await a2();
+  console.log(&quot;hello end a2&quot;);
+}
+
+async function a0() {
+  console.log(&quot;hello a0 and start a1&quot;);
+  await a1();
+  console.log(&quot;hello end a1&quot;);
+}
+
+a0()
+</code></pre><p><strong>&#x6267;&#x884C;</strong></p>
+<p>&#x9700;&#x8981;&#x4F7F;&#x7528;babel&#x6216;&#x8005;&#x5176;&#x4ED6;&#x652F;&#x6301;async&#x51FD;&#x6570;&#x7684;&#x7F16;&#x8BD1;&#x5DE5;&#x5177;&#xFF0C;&#x8FD9;&#x91CC;&#x4F7F;&#x7528;runkoa&#xFF08;&#x662F;&#x4E3A;koa&#x652F;&#x6301;async&#x51FD;&#x6570;&#x505A;&#x7684;&#x57FA;&#x4E8E;babel&#x7684;&#x7B80;&#x5355;&#x5C01;&#x88C5;&#xFF09;</p>
+<pre><code>$ runkoa async.js
+async.js
+3babel presets path = /Users/sang/.nvm/versions/node/v4.4.5/lib/node_modules/runkoa/node_modules/
+hello a0 and start a1
+hello a1 and start a2
+hello end a2
+hello end a1
+</code></pre><p><strong>&#x5F02;&#x5E38;&#x5904;&#x7406;</strong></p>
+<p>Node.js&#x91CC;&#x5173;&#x4E8E;&#x5F02;&#x5E38;&#x5904;&#x7406;&#x6709;&#x4E00;&#x4E2A;&#x7EA6;&#x5B9A;&#xFF0C;&#x5373;&#x540C;&#x6B65;&#x4EE3;&#x7801;&#x91C7;&#x7528;try/catch&#xFF0C;&#x975E;&#x540C;&#x6B65;&#x4EE3;&#x7801;&#x91C7;&#x7528;error-first&#x65B9;&#x5F0F;&#x3002;&#x5BF9;&#x4E8E;Async&#x51FD;&#x6570;&#x4FE9;&#x8BF4;&#xFF0C;&#x5B83;&#x7684;Await&#x8BED;&#x53E5;&#x662F;&#x540C;&#x6B65;&#x6267;&#x884C;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x6700;&#x6B63;&#x5E38;&#x7684;&#x6D41;&#x7A0B;&#x5904;&#x7406;&#x662F;&#x91C7;&#x7528;try/catch&#x8BED;&#x53E5;&#x6355;&#x83B7;&#xFF0C;&#x548C;generator/yield&#x662F;&#x4E00;&#x6837;&#x7684;&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x6240;&#x5C55;&#x793A;&#x7684;&#x662F;&#x901A;&#x7528;&#x6027;&#x7684;&#x505A;&#x6CD5;&#xFF1A;</p>
+<pre><code>try {
+  console.log(await asyncFn());
+} catch (err) {
+  console.error(err);
+}
+</code></pre><p>&#x5F88;&#x591A;&#x65F6;&#x5019;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x628A;&#x5F02;&#x5E38;&#x505A;&#x5F97;&#x7C92;&#x5EA6;&#x66F4;&#x7EC6;&#x81F4;&#x4E00;&#x4E9B;&#xFF0C;&#x8FD9;&#x65F6;&#x53EA;&#x8981;&#x628A;Promise&#x7684;&#x5F02;&#x5E38;&#x5904;&#x7406;&#x597D;&#x5C31;&#x597D;&#x4E86;&#x3002;</p>
+<p>Promise&#x91CC;&#x6709;2&#x79CD;&#x5904;&#x7406;&#x5F02;&#x5E38;&#x7684;&#x65B9;&#x6CD5;</p>
+<ul>
+<li>then(onFulfilled, onRejected)&#x91CC;&#x7684;onRejected&#xFF0C;&#x5904;&#x7406;&#x5F53;&#x524D;Promise&#x91CC;&#x7684;&#x5F02;&#x5E38;</li>
+<li>catch&#x5904;&#x7406;&#x5168;&#x5C40;&#x5F02;&#x5E38;</li>
+</ul>
+<p><strong>Async&#x51FD;&#x6570;&#x603B;&#x7ED3;</strong></p>
+<ul>
+<li>Async&#x51FD;&#x6570;&#x8BED;&#x4E49;&#x4E0A;&#x975E;&#x5E38;&#x597D;</li>
+<li>Async&#x4E0D;&#x9700;&#x8981;&#x6267;&#x884C;&#x5668;&#xFF0C;&#x5B83;&#x672C;&#x8EAB;&#x5177;&#x5907;&#x6267;&#x884C;&#x80FD;&#x529B;&#xFF0C;&#x4E0D;&#x50CF;Generator</li>
+<li>Async&#x51FD;&#x6570;&#x7684;&#x5F02;&#x5E38;&#x5904;&#x7406;&#x91C7;&#x7528;try/catch&#x548C;Promise&#x7684;&#x9519;&#x8BEF;&#x5904;&#x7406;&#xFF0C;&#x975E;&#x5E38;&#x5F3A;&#x5927;</li>
+<li>Await&#x63A5;Promise&#xFF0C;Promise&#x81EA;&#x8EAB;&#x5C31;&#x8DB3;&#x591F;&#x5E94;&#x5BF9;&#x6240;&#x6709;&#x6D41;&#x7A0B;&#x4E86;</li>
+<li>Await&#x91CA;&#x653E;Promise&#x7684;&#x7EC4;&#x5408;&#x80FD;&#x529B;&#xFF0C;&#x5916;&#x52A0;Promise&#x7684;then&#xFF0C;&#x57FA;&#x672C;&#x65E0;&#x654C;</li>
+</ul>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../async/generator.html" class="navigation navigation-prev " aria-label="Previous page: 生成器Generators/yield"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../async/co.html" class="navigation navigation-next " aria-label="Next page: co引出的“血案”"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

@@ -1,0 +1,1918 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
+        <title>Promise/a+规范 | StuQ《Node.js微信开发》</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.0.1">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    
+    
+    <link rel="next" href="../async/nodejs.html" />
+    
+    
+    <link rel="prev" href="../async/async.js.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+    
+
+        
+    <div class="book" data-level="3.3" data-basepath=".." data-revision="Tue Oct 18 2016 08:23:05 GMT+0800 (CST)">
+    
+
+<div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Type to search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+        
+        
+        
+
+        
+
+        
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="skill/index.html">
+            
+                
+                    <a href="../skill/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        skill
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="skill/coding_webide.html">
+            
+                
+                    <a href="../skill/coding_webide.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        Coding WebIDE
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="skill/git.html">
+            
+                
+                    <a href="../skill/git.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        git
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="skill/extra.html">
+            
+                
+                    <a href="../skill/extra.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        extra
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="faq.html">
+            
+                
+                    <a href="../faq.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        预习
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="nodejs/index.html">
+            
+                
+                    <a href="../nodejs/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Node.js入门
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="nodejs/introduce.html">
+            
+                
+                    <a href="../nodejs/introduce.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        入门
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="nodejs/install.html">
+            
+                
+                    <a href="../nodejs/install.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        安装
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="nodejs/helloworld.html">
+            
+                
+                    <a href="../nodejs/helloworld.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        Hello world
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="nodejs/commonjs.html">
+            
+                
+                    <a href="../nodejs/commonjs.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        Common JS规范
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="nodejs/module-exports.html">
+            
+                
+                    <a href="../nodejs/module-exports.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        模块导出
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="nodejs/terms.html">
+            
+                
+                    <a href="../nodejs/terms.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.6.</b>
+                        
+                        Node.js代码调试
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="nodejs/npm.html">
+            
+                
+                    <a href="../nodejs/npm.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.7.</b>
+                        
+                        编写Node.js模块
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="nodejs/how-to-study.html">
+            
+                
+                    <a href="../nodejs/how-to-study.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.8.</b>
+                        
+                        最小化问题
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="nodejs/exercises.html">
+            
+                
+                    <a href="../nodejs/exercises.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.9.</b>
+                        
+                        随堂练习：写一个Node.js模块并发布
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="async/index.html">
+            
+                
+                    <a href="../async/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        异步流程控制
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="async/when.html">
+            
+                
+                    <a href="../async/when.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        什么时候会用到异步流程控制
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="async/async.js.html">
+            
+                
+                    <a href="../async/async.js.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        简单做法async模块
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.3" data-path="async/promise.html">
+            
+                
+                    <a href="../async/promise.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        Promise/a+规范
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="async/nodejs.html">
+            
+                
+                    <a href="../async/nodejs.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        Node.js Promise/a+实现
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="async/generator.html">
+            
+                
+                    <a href="../async/generator.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.</b>
+                        
+                        生成器Generators/yield
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="async/async.html">
+            
+                
+                    <a href="../async/async.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.6.</b>
+                        
+                        Async函数/Await
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="async/co.html">
+            
+                
+                    <a href="../async/co.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.7.</b>
+                        
+                        co引出的“血案”
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="async/yieldable.html">
+            
+                
+                    <a href="../async/yieldable.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.8.</b>
+                        
+                        5种 yieldable
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9" data-path="async/summary.html">
+            
+                
+                    <a href="../async/summary.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.9.</b>
+                        
+                        学习重点
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10" data-path="async/exercises.html">
+            
+                
+                    <a href="../async/exercises.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.10.</b>
+                        
+                        随堂练习：找到并阅读promise/a+实现的源码
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="express/index.html">
+            
+                
+                    <a href="../express/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        Express和微信开发入门
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="express/intro.html">
+            
+                
+                    <a href="../express/intro.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        入门
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="express/minimal.html">
+            
+                
+                    <a href="../express/minimal.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        Connect
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="express/html.html">
+            
+                
+                    <a href="../express/html.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        静态Http服务器
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="express/precompile.html">
+            
+                
+                    <a href="../express/precompile.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.</b>
+                        
+                        那些预处理器
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="express/route.html">
+            
+                
+                    <a href="../express/route.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.</b>
+                        
+                        路由
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="express/view.html">
+            
+                
+                    <a href="../express/view.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.6.</b>
+                        
+                        视图与模板引擎
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="express/middleware.html">
+            
+                
+                    <a href="../express/middleware.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.7.</b>
+                        
+                        中间件
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8" data-path="express/gulp.html">
+            
+                
+                    <a href="../express/gulp.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.8.</b>
+                        
+                        更多实践
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.9" data-path="express/how-to-study.html">
+            
+                
+                    <a href="../express/how-to-study.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.9.</b>
+                        
+                        微信入门
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.10" data-path="express/exercises.html">
+            
+                
+                    <a href="../express/exercises.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.10.</b>
+                        
+                        随堂练习：完成登录、注册功能
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="wechat/index.html">
+            
+                
+                    <a href="../wechat/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        微信实例和H5实践
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="wechat/init.html">
+            
+                
+                    <a href="../wechat/init.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        微信基础和Sandbox
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="wechat/reply.html">
+            
+                
+                    <a href="../wechat/reply.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.</b>
+                        
+                        公众号菜单和自动回复
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="wechat/oauth.html">
+            
+                
+                    <a href="../wechat/oauth.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.</b>
+                        
+                        微信OAuth用户授权
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="wechat/share.html">
+            
+                
+                    <a href="../wechat/share.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.4.</b>
+                        
+                        微信分享
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="wechat/api.html">
+            
+                
+                    <a href="../wechat/api.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.5.</b>
+                        
+                        Wechat-api
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.6" data-path="wechat/h5.html">
+            
+                
+                    <a href="../wechat/h5.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.6.</b>
+                        
+                        H5-上篇
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.7" data-path="wechat/h5.html">
+            
+                
+                    <a href="../wechat/h5.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.7.</b>
+                        
+                        H5-下篇
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.8" data-path="wechat/exercises.html">
+            
+                
+                    <a href="../wechat/exercises.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.8.</b>
+                        
+                        随堂练习：写一个页面分享到朋友圈
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="weui/index.html">
+            
+                
+                    <a href="../weui/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        WeUI实战
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1" data-path="weui/bower.html">
+            
+                
+                    <a href="../weui/bower.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.</b>
+                        
+                        使用Bower
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="weui/mobile.html">
+            
+                
+                    <a href="../weui/mobile.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.2.</b>
+                        
+                        移动端抽象
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="weui/iscroll.html">
+            
+                
+                    <a href="../weui/iscroll.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.3.</b>
+                        
+                        优化滑动列表
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="weui/weui.html">
+            
+                
+                    <a href="../weui/weui.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.4.</b>
+                        
+                        WeUI
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="weui/iscroll+weui.html">
+            
+                
+                    <a href="../weui/iscroll+weui.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.5.</b>
+                        
+                        让WeUI和iScroll结婚
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6" data-path="weui/event.html">
+            
+                
+                    <a href="../weui/event.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.6.</b>
+                        
+                        优化事件
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.7" data-path="weui/how-to-h5.html">
+            
+                
+                    <a href="../weui/how-to-h5.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.7.</b>
+                        
+                        如何编写H5代码
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.8" data-path="weui/more.html">
+            
+                
+                    <a href="../weui/more.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.8.</b>
+                        
+                        优化无止境
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.9" data-path="weui/layermobile.html">
+            
+                
+                    <a href="../weui/layermobile.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.9.</b>
+                        
+                        随堂练习：集成Layer.mobile
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="pay/index.html">
+            
+                
+                    <a href="../pay/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        微信支付
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1" data-path="pay/pay.html">
+            
+                
+                    <a href="../pay/pay.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.1.</b>
+                        
+                        吹个牛
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="pay/overview.html">
+            
+                
+                    <a href="../pay/overview.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.2.</b>
+                        
+                        支付概述
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="pay/concept.html">
+            
+                
+                    <a href="../pay/concept.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.3.</b>
+                        
+                        科普几个概念
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4" data-path="pay/prepare.html">
+            
+                
+                    <a href="../pay/prepare.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.4.</b>
+                        
+                        准备
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.5" data-path="pay/debug.html">
+            
+                
+                    <a href="../pay/debug.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.5.</b>
+                        
+                        调试
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.6" data-path="pay/js_pay.html">
+            
+                
+                    <a href="../pay/js_pay.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.6.</b>
+                        
+                        公众号支付（JSAPI）
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.7" data-path="pay/statement.html">
+            
+                
+                    <a href="../pay/statement.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.7.</b>
+                        
+                        对账单
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.8" data-path="pay/data.html">
+            
+                
+                    <a href="../pay/data.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.8.</b>
+                        
+                        数据处理
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.9" data-path="pay/exercises.html">
+            
+                
+                    <a href="../pay/exercises.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.9.</b>
+                        
+                        随堂练习：写一个通用h5支付接口
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="vip-lession/index.html">
+            
+                
+                    <a href="../vip-lession/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        项目实战《付费课程系统MVP》
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1" data-path="vip-lession/requirement.html">
+            
+                
+                    <a href="../vip-lession/requirement.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.1.</b>
+                        
+                        需求分析
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="vip-lession/uiue.html">
+            
+                
+                    <a href="../vip-lession/uiue.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.2.</b>
+                        
+                        ui/ue
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="vip-lession/teck.html">
+            
+                
+                    <a href="../vip-lession/teck.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.3.</b>
+                        
+                        技术栈
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4" data-path="vip-lession/model.html">
+            
+                
+                    <a href="../vip-lession/model.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.4.</b>
+                        
+                        模型
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.5" data-path="vip-lession/api.html">
+            
+                
+                    <a href="../vip-lession/api.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.5.</b>
+                        
+                        静态api
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.6" data-path="vip-lession/dev.html">
+            
+                
+                    <a href="../vip-lession/dev.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.6.</b>
+                        
+                        开发
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.7" data-path="vip-lession/deployment.html">
+            
+                
+                    <a href="../vip-lession/deployment.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.7.</b>
+                        
+                        部署
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.8" data-path="vip-lession/monit.html">
+            
+                
+                    <a href="../vip-lession/monit.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.8.</b>
+                        
+                        监控
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.9" data-path="vip-lession/data_analyze.html">
+            
+                
+                    <a href="../vip-lession/data_analyze.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.9.</b>
+                        
+                        数据统计
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.10" data-path="vip-lession/demo.html">
+            
+                
+                    <a href="../vip-lession/demo.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.10.</b>
+                        
+                        demo
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="vip-lession/index.html">
+            
+                
+                    <a href="../vip-lession/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.</b>
+                        
+                        高级篇（赠送）
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="9.1" data-path="more/practice.html">
+            
+                
+                    <a href="../more/practice.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.1.</b>
+                        
+                        前后端分离实践？
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="more/tomorow.html">
+            
+                
+                    <a href="../more/tomorow.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.2.</b>
+                        
+                        如何展望未来的大前端？
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3" data-path="more/microservice.html">
+            
+                
+                    <a href="../more/microservice.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.3.</b>
+                        
+                        容器化和微服务
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="10" data-path="faq1.html">
+            
+                
+                    <a href="../faq1.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.</b>
+                        
+                        答疑问题收集
+                    </a>
+                
+            
+            
+        </li>
+    
+
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                Published with GitBook
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Table of Contents"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Search"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Font Settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="Share"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">
+                    Share on Twitter
+                </button>
+                <button type="button" data-sharing="google-plus" class="button">
+                    Share on Google
+                </button>
+                <button type="button" data-sharing="facebook" class="button">
+                    Share on Facebook
+                </button>
+                <button type="button" data-sharing="weibo" class="button">
+                    Share on Weibo
+                </button>
+                <button type="button" data-sharing="instapaper" class="button">
+                    Share on Instapaper
+                </button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Google"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >StuQ《Node.js微信开发》</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="promise-a-%E8%A7%84%E8%8C%83">Promise/a+&#x89C4;&#x8303;</h1>
+<p>&#x987A;&#x5E8F;&#x6267;&#x884C;&#x7684;&#x4EE3;&#x7801;&#x548C;&#x9519;&#x8BEF;&#x6709;&#x9650;&#x7684;&#x56DE;&#x8C03;&#x65B9;&#x5F0F;&#x90FD;&#x662F;js&#x5F15;&#x64CE;&#x9ED8;&#x8BA4;&#x652F;&#x6301;&#x7684;&#xFF0C;&#x8FD9;&#x90E8;&#x5206;&#x5927;&#x5BB6;&#x4F1A;&#x8C03;&#x7528;&#x63A5;&#x53E3;&#xFF0C;&#x65E0;&#x592A;&#x591A;&#x53D8;&#x5316;&#xFF0C;&#x800C;Promise&#x662F;&#x5BF9;callback&#x7684;&#x601D;&#x8003;&#xFF0C;&#x6216;&#x8005;&#x8BF4;&#x6539;&#x826F;&#x65B9;&#x6848;&#xFF0C;&#x76EE;&#x524D;&#x4F7F;&#x7528;&#x975E;&#x5E38;&#x666E;&#x904D;&#xFF0C;&#x8FD9;&#x91CC;&#x8BE6;&#x7EC6;&#x8BB2;&#x89E3;&#x4E00;&#x4E0B;&#x3002;</p>
+<h2 id="node%E9%87%8C%E7%9A%84promise">node&#x91CC;&#x7684;Promise</h2>
+<p>promise&#x6700;&#x65E9;&#x662F;&#x5728;commonjs&#x793E;&#x533A;&#x63D0;&#x51FA;&#x6765;&#x7684;&#xFF0C;&#x5F53;&#x65F6;&#x63D0;&#x51FA;&#x4E86;&#x5F88;&#x591A;&#x89C4;&#x8303;&#x3002;&#x6BD4;&#x8F83;&#x63A5;&#x53D7;&#x7684;&#x662F;promise/A&#x89C4;&#x8303;&#x3002;&#x540E;&#x6765;&#x4EBA;&#x4EEC;&#x5728;&#x8FD9;&#x4E2A;&#x57FA;&#x7840;&#x4E0A;&#x3002;&#x63D0;&#x51FA;&#x4E86;promise/A+&#x89C4;&#x8303;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x5B9E;&#x9645;&#x4E0A;&#x7684;&#x4E1A;&#x5185;&#x63A8;&#x884C;&#x7684;&#x89C4;&#x8303;&#x3002;es6&#x4E5F;&#x662F;&#x91C7;&#x7528;&#x7684;&#x8FD9;&#x79CD;&#x89C4;&#x8303;&#x3002;</p>
+<blockquote>
+<p>The Promise object is used for asynchronous computations. A Promise represents an operation that hasn&apos;t completed yet, but is expected in the future.</p>
+</blockquote>
+<p>Promise&#x5BF9;&#x8C61;&#x7528;&#x4E8E;&#x5F02;&#x6B65;&#x6280;&#x672F;&#x4E2D;&#x3002;Promise&#x610F;&#x5473;&#x7740;&#x4E00;&#x4E2A;&#x8FD8;&#x6CA1;&#x6709;&#x5B8C;&#x6210;&#x7684;&#x64CD;&#x4F5C;&#xFF08;&#x8BB8;&#x613F;&#xFF09;&#xFF0C;&#x4F46;&#x5728;&#x672A;&#x6765;&#x4F1A;&#x5B8C;&#x6210;&#x7684;&#xFF08;&#x5B9E;&#x73B0;&#xFF09;&#x3002;</p>
+<p><img src="img/promise-impl.png" alt=""></p>
+<p>&#x5728;Node.js 0.12&#x91CC;&#x5B9E;&#x73B0;9/11&#xFF0C;&#x5728;6.2&#x548C;7&#x5B9E;&#x73B0;100%&#xFF0C;&#x4E2D;&#x95F4;&#x7248;&#x672C;&#x5B9E;&#x73B0;&#x4E86;10/11&#x3002;&#x6240;&#x4EE5;Node.js&#x5BF9;Promise&#x7684;&#x652F;&#x6301;&#x662F;&#x975E;&#x5E38;&#x597D;&#x7684;&#xFF0C;0.12&#x4E4B;&#x540E;&#x7684;&#x7EDD;&#x5927;&#x90E8;&#x5206;&#x7248;&#x672C;&#x90FD;&#x652F;&#x6301;&#x7684;&#x4E0D;&#x9519;&#x3002;</p>
+<p>Promise &#x7684;&#x6700;&#x5927;&#x4F18;&#x52BF;&#x662F;&#x6807;&#x51C6;&#xFF0C;&#x5404;&#x7C7B;&#x5F02;&#x6B65;&#x5DE5;&#x5177;&#x5E93;&#x90FD;&#x8BA4;&#x540C;&#xFF0C;&#x672A;&#x6765;&#x7684; async/await &#x4E5F;&#x57FA;&#x4E8E;&#x5B83;&#xFF0C;&#x7528;&#x5B83;&#x5C01;&#x88C5; API &#x901A;&#x7528;&#x6027;&#x5F3A;&#xFF0C;&#x7528;&#x8D77;&#x6765;&#x7B80;&#x5355;&#x3002;</p>
+<p>&#x8981;&#x60F3;&#x77E5;&#x9053;node.js&#x6709;&#x54EA;&#x4E9B;&#x6BD4;&#x8F83;&#x597D;&#x7684;promise&#x5B9E;&#x73B0;&#xFF0C;&#x6700;&#x597D;&#x7684;&#x529E;&#x6CD5;&#x5C31;&#x662F;&#x770B;&#x4E00;&#x4E0B;&#x6700;&#x77E5;&#x540D;&#x7684;bluebird&#x5E93;&#x7684;<a href="http://bluebirdjs.com/docs/benchmarks.html" target="_blank">benchmark</a>&#x91CC;&#x6BD4;&#x8F83;&#x91CC;&#x54EA;&#x4E9B;&#x3002;</p>
+<ul>
+<li>async@1.5.0</li>
+<li>babel@5.8.29</li>
+<li>davy@1.0.1</li>
+<li>deferred@0.7.3</li>
+<li>kew@0.7.0</li>
+<li>lie@3.0.1</li>
+<li>neo-async@1.6.0</li>
+<li>optimist@0.6.1</li>
+<li>promise@7.0.4</li>
+<li>q@1.4.1</li>
+<li>rsvp@3.1.0</li>
+<li>streamline@1.0.7</li>
+<li>text-table@0.2.0</li>
+<li>vow@0.4.11</li>
+<li>when@3.7.4</li>
+</ul>
+<h2 id="promise%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F">Promise&#x662F;&#x4EC0;&#x4E48;&#xFF1F;</h2>
+<blockquote>
+<p>A promise is an abstraction for asynchronous programming. It&#x2019;s an object that proxies for the return value or the exception thrown by a function that has to do some asynchronous processing. &#x2014; Kris Kowal on JSJ</p>
+</blockquote>
+<p>Promise&#x8868;&#x793A;&#x4E00;&#x4E2A;&#x5F02;&#x6B65;&#x64CD;&#x4F5C;&#x7684;&#x6700;&#x7EC8;&#x7ED3;&#x679C;&#x3002;&#x4E0E;Promise&#x6700;&#x4E3B;&#x8981;&#x7684;&#x4EA4;&#x4E92;&#x65B9;&#x6CD5;&#x662F;&#x901A;&#x8FC7;&#x5C06;&#x51FD;&#x6570;&#x4F20;&#x5165;&#x5B83;&#x7684;then&#x65B9;&#x6CD5;&#x4ECE;&#x800C;&#x83B7;&#x53D6;&#x5F97;Promise&#x6700;&#x7EC8;&#x7684;&#x503C;&#x6216;Promise&#x6700;&#x7EC8;&#x6700;&#x62D2;&#x7EDD;&#xFF08;reject&#xFF09;&#x7684;&#x539F;&#x56E0;&#x3002;</p>
+<ul>
+<li>&#x9012;&#x5F52;&#xFF0C;&#x6BCF;&#x4E2A;&#x5F02;&#x6B65;&#x64CD;&#x4F5C;&#x8FD4;&#x56DE;&#x7684;&#x90FD;&#x662F;promise&#x5BF9;&#x8C61;</li>
+<li>&#x72B6;&#x6001;&#x673A;&#xFF1A;&#x4E09;&#x79CD;&#x72B6;&#x6001;&#x8F6C;&#x6362;&#xFF0C;&#x53EA;&#x5728;promise&#x5BF9;&#x8C61;&#x5185;&#x90E8;&#x53EF;&#x4EE5;&#x63A7;&#x5236;&#xFF0C;&#x5916;&#x90E8;&#x4E0D;&#x80FD;&#x6539;&#x53D8;&#x72B6;&#x6001;</li>
+<li>&#x5168;&#x5C40;&#x5F02;&#x5E38;&#x5904;&#x7406;</li>
+</ul>
+<p>&#x5B9A;&#x4E49;</p>
+<pre><code>var promise = new Promise(function(resolve, reject) {
+  // do a thing, possibly async, then&#x2026;
+
+  if (/* everything turned out fine */) {
+    resolve(&quot;Stuff worked!&quot;);
+  }
+  else {
+    reject(Error(&quot;It broke&quot;));
+  }
+});
+</code></pre><h2 id="%E6%9C%AF%E8%AF%AD">&#x672F;&#x8BED;</h2>
+<ul>
+<li>Promises    Promise&#x89C4;&#x8303;&#x81EA;&#x8EAB;</li>
+<li>promise&#x5BF9;&#x8C61;    promise&#x5BF9;&#x8C61;&#x6307;&#x7684;&#x662F; Promise &#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;</li>
+<li>ES6 Promises    &#x5982;&#x679C;&#x60F3;&#x660E;&#x786E;&#x8868;&#x793A;&#x4F7F;&#x7528; ECMAScript 6th Edition &#x7684;&#x8BDD;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;ES6&#x4F5C;&#x4E3A;&#x524D;&#x7F00;&#xFF08;prefix&#xFF09;</li>
+<li>Promises/A+    Promises/A+&#x3002; &#x8FD9;&#x662F;ES6 Promises&#x7684;&#x524D;&#x8EAB;&#xFF0C;&#x662F;&#x4E00;&#x4E2A;&#x793E;&#x533A;&#x89C4;&#x8303;&#xFF0C;&#x5B83;&#x548C; ES6 Promises &#x6709;&#x5F88;&#x591A;&#x5171;&#x901A;&#x7684;&#x5185;&#x5BB9;&#x3002;</li>
+<li>Thenable    &#x7C7B;Promise&#x5BF9;&#x8C61;&#x3002; &#x62E5;&#x6709;&#x540D;&#x4E3A;.then&#x65B9;&#x6CD5;&#x7684;&#x5BF9;&#x8C61;&#x3002;</li>
+</ul>
+<h2 id="hello-promise">hello promise</h2>
+<p>&#x7ED9;&#x51FA;&#x4E00;&#x4E2A;&#x6700;&#x7B80;&#x5355;&#x7684;&#x8BFB;&#x5199;&#x6587;&#x4EF6;&#x7684;api&#x5B9E;&#x4F8B;&#xFF0C;&#x5B83;&#x662F;error-first&#x98CE;&#x683C;&#x7684;&#x5178;&#x578B;api</p>
+<p>async/promise/hello.js</p>
+<pre><code>// callbacks
+var fs = require(&quot;fs&quot;);
+
+fs.readFile(&apos;./package.json&apos;, (err, data) =&gt; {
+  if (err) throw err;
+  console.log(data.toString());
+});
+</code></pre><p>&#x4E0B;&#x9762;&#xFF0C;&#x6211;&#x4EEC;&#x628A;&#x5B83;&#x53D8;&#x6210;promise&#x7684;&#x7B80;&#x5355;&#x793A;&#x4F8B;</p>
+<p>async/promise/hellopromise.js</p>
+<pre><code>// callbacks to promise
+var fs = require(&quot;fs&quot;);
+
+function hello (file) {
+  return new Promise(function(resolve, reject){
+    fs.readFile(file, (err, data) =&gt; {
+        if (err) {
+            reject(err);
+        } else {
+            resolve(data.toString())
+        }
+    });
+  });
+}
+
+hello(&apos;./package.json&apos;).then(function(data){
+  console.log(&apos;promise result = &apos; + data)
+}).catch(function(err) {
+  console.log(err)
+})
+</code></pre><p>&#x8FD9;&#x4E8C;&#x6BB5;&#x4EE3;&#x7801;&#x6267;&#x884C;&#x6548;&#x679C;&#x662F;&#x4E00;&#x6A21;&#x4E00;&#x6837;&#x7684;&#xFF0C;&#x552F;&#x4E00;&#x7684;&#x5DEE;&#x522B;&#x662F;&#x524D;&#x4E00;&#x79CD;&#x5199;&#x6CD5;&#x662F;Node.js&#x9ED8;&#x8BA4;api&#x5199;&#x6CD5;&#xFF0C;&#x4EE5;&#x56DE;&#x8C03;&#x4E3A;&#x4E3B;&#xFF0C;&#x800C;&#x540E;&#x4E00;&#x79CD;&#x5199;&#x6CD5;&#xFF0C;&#x901A;&#x8FC7;&#x8FD4;&#x56DE;promise&#x5BF9;&#x8C61;&#xFF0C;&#x5728;fs.readFile&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF0C;&#x5C06;&#x7ED3;&#x679C;&#x5EF6;&#x540E;&#x5904;&#x7406;&#x3002;</p>
+<p>&#x8FD9;&#x5C31;&#x662F;&#x6700;&#x7B80;&#x5355;&#x7684;promise&#x5B9E;&#x73B0;</p>
+<p>&#x5F62;&#x5F0F;</p>
+<pre><code>new Promise(function(resolve, reject){
+
+})
+</code></pre><p>&#x53C2;&#x6570;</p>
+<ul>
+<li>resolve &#x89E3;&#x51B3;&#xFF0C;&#x8FDB;&#x5165;&#x5230;&#x4E0B;&#x4E00;&#x4E2A;&#x6D41;&#x7A0B;</li>
+<li>reject  &#x62D2;&#x7EDD;&#xFF0C;&#x8DF3;&#x8F6C;&#x5230;&#x6355;&#x83B7;&#x5F02;&#x5E38;&#x6D41;&#x7A0B;</li>
+</ul>
+<p>&#x8C03;&#x7528;</p>
+<pre><code>hello(&apos;./package.json&apos;).then(function(data){
+
+})
+</code></pre><p>&#x5168;&#x5C40;&#x5904;&#x7406;&#x5F02;&#x5E38;</p>
+<pre><code>hello(&apos;./package.json&apos;).then(function(data){
+
+}).catch(function(err) {
+
+})
+</code></pre><p>&#x7ED3;&#x8BBA;</p>
+<blockquote>
+<p>Promise&#x6838;&#x5FC3;&#xFF1A;&#x5C06;callback&#x91CC;&#x7684;&#x7ED3;&#x679C;&#x5EF6;&#x540E;&#x5230;then&#x51FD;&#x6570;&#x91CC;&#x5904;&#x7406;&#x6216;&#x4EA4;&#x7ED9;&#x5168;&#x5C40;&#x5F02;&#x5E38;&#x5904;&#x7406;</p>
+</blockquote>
+<h2 id="%E5%B0%81%E8%A3%85api%E7%9A%84%E8%BF%87%E7%A8%8B">&#x5C01;&#x88C5;api&#x7684;&#x8FC7;&#x7A0B;</h2>
+<p>&#x8FD8;&#x662F;&#x4EE5;&#x4E0A;&#x9762;&#x7684;fs.readFile&#x4E3A;&#x4F8B;</p>
+<pre><code>fs.readFile(&apos;./package.json&apos;, (err, data) =&gt; {
+  if (err) throw err;
+  console.log(data.toString());
+});
+</code></pre><p>&#x53C2;&#x6570;&#x5904;&#x7406;&#xFF1A;&#x9664;&#x4E86;callback&#x5916;&#xFF0C;&#x5176;&#x4ED6;&#x4E1C;&#x897F;&#x90FD;&#x653E;&#x5230;&#x65B0;&#x7684;&#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570;&#x91CC;</p>
+<pre><code>function hello (file) {
+  ...
+}
+</code></pre><p>&#x8FD4;&#x56DE;&#x503C;&#x5904;&#x7406;&#xFF1A;&#x8FD4;&#x56DE;Promise&#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;</p>
+<pre><code>function hello (file) {
+  return new Promise(function(resolve, reject){
+    ...
+  });
+}
+</code></pre><p>&#x7ED3;&#x679C;&#x5904;&#x7406;&#xFF1A;&#x901A;&#x8FC7;resolve&#x548C;reject&#x91CD;&#x5851;&#x6D41;&#x7A0B;</p>
+<pre><code>function hello (file) {
+  return new Promise(function(resolve, reject){
+    fs.readFile(file, (err, data) =&gt; {
+        if (err) {
+            reject(err);
+        } else {
+            resolve(data.toString())
+        }
+    });
+  });
+}
+</code></pre><p>&#x6211;&#x4EEC;&#x77E5;&#x9053;&#x6240;&#x6709;&#x7684;Node.js&#x90FD;&#x662F;error-first&#x7684;callback&#x5F62;&#x5F0F;&#xFF0C;&#x901A;&#x8FC7;&#x4E0A;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x80AF;&#x5B9A;&#x662F;&#x6240;&#x6709;&#x7684;Node.js&#x7684;API&#x90FD;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x6765;&#x5904;&#x7406;&#xFF0C;&#x53EA;&#x8981;&#x5B83;&#x4EEC;&#x9075;&#x5B88;Promise&#x89C4;&#x8303;&#x5373;&#x53EF;&#x3002;</p>
+<h2 id="%E6%AF%8F%E4%B8%AA%E5%87%BD%E6%95%B0%E7%9A%84%E8%BF%94%E5%9B%9E%E5%80%BC%E9%83%BD%E6%98%AFpromise%E5%AF%B9%E8%B1%A1">&#x6BCF;&#x4E2A;&#x51FD;&#x6570;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x90FD;&#x662F;Promise&#x5BF9;&#x8C61;</h2>
+<p>&#x4E3A;&#x4E86;&#x7B80;&#x5316;&#x7F16;&#x7A0B;&#x590D;&#x6742;&#x6027;&#xFF0C;&#x6BCF;&#x4E2A;&#x51FD;&#x6570;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x90FD;&#x662F;Promise&#x5BF9;&#x8C61;&#xFF0C;&#x8FD9;&#x6837;&#x7684;&#x7EA6;&#x5B9A;&#x53EF;&#x4EE5;&#x5927;&#x5927;&#x7684;&#x7B80;&#x5316;&#x7F16;&#x7A0B;&#x7684;&#x590D;&#x6742;&#x3002;</p>
+<p>&#x5B83;&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x4E3A;&#x662F;&#x9012;&#x5F52;&#x7684;&#x53D8;&#x79CD;&#x601D;&#x60F3;&#x5E94;&#x7528;&#xFF0C;&#x53EA;&#x8981;&#x662F;Promise&#x5BF9;&#x8C61;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x63A7;&#x5236;&#x72B6;&#x6001;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x652F;&#x6301;then&#x65B9;&#x6CD5;&#xFF0C;&#x53C2;&#x6570;&#x8FD8;&#x662F;Promise&#x5BF9;&#x8C61;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x53EF;&#x4EE5;&#x65E0;&#x9650;&#x4E2A;Promise&#x5BF9;&#x8C61;&#x94FE;&#x63A5;&#x5728;&#x4E00;&#x8D77;&#x3002;</p>
+<pre><code>// callbacks to promise
+var fs = require(&quot;fs&quot;);
+
+function hello (file) {
+  return new Promise(function(resolve, reject){
+    fs.readFile(file, (err, data) =&gt; {
+        if (err) {
+            reject(err);
+        } else {
+            resolve(data.toString())
+        }
+    });
+  });
+}
+
+function world (file) {
+  return new Promise(function(resolve, reject){
+    fs.readFile(file, (err, data) =&gt; {
+        if (err) {
+            reject(err);
+        } else {
+            resolve(data.toString())
+        }
+    });
+  });
+}
+
+function log(data){
+  return new Promise(function(resolve, reject){
+    console.log(&apos;promise result = &apos; + data)
+    resolve(data)
+  });
+}
+
+hello(&apos;./package.json&apos;).then(log).then(function(){
+  return hello(&apos;./each.js&apos;).then(log)
+}).catch(function(err) {
+  console.log(err)
+})
+</code></pre><p>&#x8FD9;&#x91CC;&#x53EF;&#x4EE5;&#x770B;&#x51FA;</p>
+<ul>
+<li><code>hello</code>&#x3001;<code>world</code>&#x3001;<code>log</code> &#x8FD4;&#x56DE;&#x5355;&#x4E2A;Promise&#x5BF9;&#x8C61;</li>
+<li><code>hello(&apos;./each.js&apos;).then(log)</code> &#x8FD4;&#x56DE;&#x6D41;&#x7A0B;&#x94FE;</li>
+</ul>
+<p>&#x65E0;&#x8BBA;&#x662F;&#x5355;&#x4E2A;&#xFF0C;&#x8FD8;&#x662F;&#x6D41;&#x7A0B;&#x94FE;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x90FD;&#x662F;Promise&#x5BF9;&#x8C61;&#xFF0C;&#x90A3;&#x4E48;&#x5B83;&#x5C31;&#x662F;&#x4E00;&#x6837;&#x7684;&#x3002;</p>
+<h2 id="%E9%93%BE%E5%BC%8F%E7%9A%84thenable">&#x94FE;&#x5F0F;&#x7684;thenable</h2>
+<p>&#x6BCF;&#x4E2A;promose&#x5BF9;&#x8C61;&#x90FD;&#x6709;then&#x65B9;&#x6CD5;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;then&#x65B9;&#x6CD5;&#x662F;&#x5B9A;&#x4E49;&#x5728;&#x539F;&#x578B;&#x5BF9;&#x8C61;Promise.prototype&#x4E0A;&#x7684;&#x3002;&#x5B83;&#x7684;&#x4F5C;&#x7528;&#x662F;&#x4E3A;Promise&#x5B9E;&#x4F8B;&#x6DFB;&#x52A0;&#x72B6;&#x6001;&#x6539;&#x53D8;&#x65F6;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x3002;</p>
+<p>&#x4E00;&#x822C;&#x5B9E;&#x73B0;&#xFF0C;&#x7C7B;&#x4F3C;&#x4E8E;</p>
+<pre><code>Promise.prototype.then = function(sucess, fail) {
+    this.done(sucess);
+    this.fail(fail);
+    return this;
+};
+</code></pre><p>&#x5B83;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x662F;this&#xFF0C;&#x8FD9;&#x5C31;&#x662F;&#x4E3A;&#x4EC0;&#x4E48;then&#x53EF;&#x4EE5;&#x94FE;&#x5F0F;&#x64CD;&#x4F5C;&#x7684;&#x539F;&#x56E0;&#x3002;</p>
+<p>then&#x7684;2&#x4E2A;&#x53C2;&#x6570;</p>
+<ul>
+<li>sucess&#x662F;fulfilled&#x72B6;&#x6001;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</li>
+<li>fail&#x662F;rejected&#x72B6;&#x6001;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</li>
+</ul>
+<p>&#x4E00;&#x822C;&#x90FD;&#x662F;&#x7A7F;sucess&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x5373;&#x53EF;&#x3002;</p>
+<h2 id="%E7%8A%B6%E6%80%81%E8%BD%AC%E6%8D%A2">&#x72B6;&#x6001;&#x8F6C;&#x6362;</h2>
+<p>&#x4E00;&#x4E2A;Promise&#x5FC5;&#x987B;&#x5904;&#x5728;&#x5176;&#x4E2D;&#x4E4B;&#x4E00;&#x7684;&#x72B6;&#x6001;&#xFF1A;pending, fulfilled &#x6216; rejected.</p>
+<ul>
+<li>pending: &#x521D;&#x59CB;&#x72B6;&#x6001;, &#x975E; fulfilled &#x6216; rejected.</li>
+<li>fulfilled: &#x5B8C;&#x6210;&#xFF08;&#x6210;&#x529F;&#xFF09;&#x7684;&#x64CD;&#x4F5C;.</li>
+<li>rejected: &#x62D2;&#x7EDD;&#xFF08;&#x5931;&#x8D25;&#xFF09;&#x7684;&#x64CD;&#x4F5C;.</li>
+</ul>
+<p>&#x8FD9;&#x91CC;&#x4ECE;pending&#x72B6;&#x6001;&#x53EF;&#x4EE5;&#x5207;&#x6362;&#x5230;fulfill&#x72B6;&#x6001;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x4ECE;pengding&#x5207;&#x6362;&#x5230;reject&#x72B6;&#x6001;&#xFF0C;&#x8FD9;&#x4E2A;&#x72B6;&#x6001;&#x5207;&#x6362;&#x4E0D;&#x53EF;&#x9006;&#xFF0C;&#x4E14;fulfilled&#x548C;reject&#x4E24;&#x4E2A;&#x72B6;&#x6001;&#x4E4B;&#x95F4;&#x662F;&#x4E0D;&#x80FD;&#x4E92;&#x76F8;&#x5207;&#x6362;&#x7684;&#x3002;</p>
+<p>&#x4E00;&#x5B9A;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x53EA;&#x6709;&#x5F02;&#x6B65;&#x64CD;&#x4F5C;&#x7684;&#x7ED3;&#x679C;&#xFF0C;&#x624D;&#x53EF;&#x4EE5;&#x51B3;&#x5B9A;&#x5F53;&#x524D;&#x662F;&#x54EA;&#x4E00;&#x79CD;&#x72B6;&#x6001;&#xFF0C;&#x4EFB;&#x4F55;&#x5176;&#x4ED6;&#x64CD;&#x4F5C;&#x90FD;&#x65E0;&#x6CD5;&#x6539;&#x53D8;&#x8FD9;&#x4E2A;&#x72B6;&#x6001;&#x3002;</p>
+<p>Promise&#x5BF9;&#x8C61;&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x4E3A;&#x4E00;&#x4E2A;&#x4E50;&#x9AD8;&#x79EF;&#x6728;&#xFF0C;&#x5B83;&#x5BF9;&#x4E0B;&#x4E00;&#x4E2A;&#x6D41;&#x7A0B;&#xFF0C;&#x4F20;&#x9001;&#x72B6;&#x6001;&#x548C;&#x5177;&#x4F53;&#x7ED3;&#x679C;&#x3002;</p>
+<p><img src="img/promise.png" alt=""></p>
+<p>&#x5982;&#x679C;&#x662F;pending&#x72B6;&#x6001;,&#x5219;promise&#xFF1A;</p>
+<ul>
+<li>&#x53EF;&#x4EE5;&#x8F6C;&#x6362;&#x5230;fulfilled&#x6216;rejected&#x72B6;&#x6001;&#x3002;</li>
+</ul>
+<p>&#x5982;&#x679C;&#x662F;fulfilled&#x72B6;&#x6001;,&#x5219;promise&#xFF1A;</p>
+<ul>
+<li>&#x4E0D;&#x80FD;&#x8F6C;&#x6362;&#x6210;&#x4EFB;&#x4F55;&#x5176;&#x5B83;&#x72B6;&#x6001;&#x3002;</li>
+<li>&#x5FC5;&#x987B;&#x6709;&#x4E00;&#x4E2A;&#x503C;&#xFF0C;&#x4E14;&#x8FD9;&#x4E2A;&#x503C;&#x4E0D;&#x80FD;&#x88AB;&#x6539;&#x53D8;&#x3002;</li>
+</ul>
+<p>&#x5982;&#x679C;&#x662F;rejected&#x72B6;&#x6001;,&#x5219;promise&#x53EF;&#x4EE5;&#xFF1A;</p>
+<ul>
+<li>&#x4E0D;&#x80FD;&#x8F6C;&#x6362;&#x6210;&#x4EFB;&#x4F55;&#x5176;&#x5B83;&#x72B6;&#x6001;&#x3002;</li>
+<li>&#x5FC5;&#x987B;&#x6709;&#x4E00;&#x4E2A;&#x539F;&#x56E0;&#xFF0C;&#x4E14;&#x8FD9;&#x4E2A;&#x503C;&#x4E0D;&#x80FD;&#x88AB;&#x6539;&#x53D8;&#x3002;</li>
+</ul>
+<p>&#x201D;&#x503C;&#x4E0D;&#x80FD;&#x88AB;&#x6539;&#x53D8;&#x201D;&#x6307;&#x7684;&#x662F;&#x5176;identity&#x4E0D;&#x80FD;&#x88AB;&#x6539;&#x53D8;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x6307;&#x5176;&#x6210;&#x5458;&#x5185;&#x5BB9;&#x4E0D;&#x80FD;&#x88AB;&#x6539;&#x53D8;&#x3002;</p>
+<h2 id="reject%E5%92%8Cresove%E6%B5%81%E7%A8%8B%E5%86%8D%E9%80%A0">reject&#x548C;resove&#x6D41;&#x7A0B;&#x518D;&#x9020;</h2>
+<p>&#x524D;&#x9762;&#x8BB2;&#x4E86;&#xFF0C;&#x6BCF;&#x4E2A;&#x51FD;&#x6570;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x90FD;&#x662F;Promise&#x5BF9;&#x8C61;&#xFF0C;&#x6BCF;&#x4E2A;Promise&#x5BF9;&#x8C61;&#x90FD;&#x6709;then&#x65B9;&#x6CD5;&#xFF0C;&#x8FD9;&#x662F;&#x5B83;&#x53EF;&#x4EE5;&#x9012;&#x5F52;&#x601D;&#x8DEF;&#x7684;&#x89E3;&#x51B3;&#x529E;&#x6CD5;&#x3002;</p>
+<p>&#x90A3;&#x4E48;&#x95EE;&#x9898;&#x6765;&#x4E86;&#xFF0C;&#x5982;&#x4F55;&#x5728;&#x8FDE;&#x7EED;&#x7684;&#x64CD;&#x4F5C;&#x6B65;&#x9AA4;&#x91CC;&#xFF0C;&#x5B8C;&#x6210;&#x6D41;&#x7A0B;&#x518D;&#x9020;&#x5462;&#xFF1F;&#x8FD9;&#x5176;&#x5B9E;&#x624D;&#x662F;&#x5F02;&#x6B65;&#x6D41;&#x7A0B;&#x63A7;&#x5236;&#x6700;&#x6838;&#x5FC3;&#x7684;&#x95EE;&#x9898;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x77E5;&#x9053;Promise&#x7684;&#x4F7F;&#x7528;&#x5F62;&#x5F0F;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>new Promise(function(resolve, reject){
+
+})
+</code></pre><p>&#x4E0B;&#x9762;&#x4ECD;&#x7136;&#x4F7F;&#x7528;fs&#x7684;&#x4F8B;&#x5B50;&#xFF0C;&#x89C1;reflow.js</p>
+<p><code>way 1</code>&#xFF1A;&#x7B80;&#x5355;&#x6A21;&#x5F0F;</p>
+<pre><code>hello(&apos;./package.json&apos;).then(function(data){
+  console.log(&apos;way 1:\n&apos;)
+  return new Promise(function(resolve, reject){
+    console.log(&apos;promise result = &apos; + data)
+    resolve(data)
+  });
+}).then(function(data){
+  return new Promise(function(resolve, reject){
+    resolve(&apos;1&apos;)
+  });
+}).then(function(data){
+  console.log(data)
+
+  return new Promise(function(resolve, reject){
+    reject(new Error(&apos;reject with custom err&apos;))
+  });
+}).catch(function(err) {
+  console.log(err)
+})
+</code></pre><p>&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x5E38;&#x89C4;&#x7684;&#x4F8B;&#x5B50;&#xFF0C;&#x5C31;&#x662F;&#x5728;then&#x91CC;&#x9762;&#x7684;promise&#x5BF9;&#x8C61;&#x91CC;&#xFF0C;&#x901A;&#x8FC7;resolve&#x5C06;&#x6D41;&#x7A0B;&#x8FDB;&#x884C;&#x5230;&#x4E0B;&#x4E00;&#x6B65;&#xFF0C;&#x5728;reject&#x7684;&#x65F6;&#x5019;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#x3002;&#x8FD9;&#x91CC;&#x9762;&#x7684;&#x6BCF;&#x4E00;&#x4E2A;promise&#x5BF9;&#x8C61;&#x91CC;&#x90FD;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x505A;&#xFF0C;&#x90A3;&#x4E48;&#x662F;&#x4E0D;&#x662F;&#x8FD9;&#x4E2A;&#x64CD;&#x4F5C;&#x6D41;&#x7A0B;&#x5C31;&#x662F;&#x53EF;&#x63A7;&#x7684;&#x4E86;&#xFF1F;</p>
+<p><code>way 2</code>&#xFF1A;&#x5D4C;&#x5957;&#x6A21;&#x5F0F;</p>
+<pre><code>hello(&apos;./package.json&apos;).then(function(data){
+  console.log(&apos;\n\nway 2:\n&apos;)
+  return new Promise(function(resolve, reject){
+    console.log(&apos;promise result = &apos; + data)
+    resolve(data)
+  }).then(function(data){
+    return new Promise(function(resolve, reject){
+      resolve(&apos;1&apos;)
+    });
+  }).catch(function(err) {
+    console.log(err)
+  })
+}).then(function(data){
+  console.log(data)
+
+  return new Promise(function(resolve, reject){
+    reject(new Error(&apos;reject with custom err&apos;))
+  });
+}).catch(function(err) {
+  console.log(err)
+})
+</code></pre><p>&#x8FD9;&#x91CC;&#x7684;&#x505A;&#x6CD5;&#x662F;&#xFF0C;&#x628A;&#x7B2C;&#x4E00;&#x4E2A;then&#x548C;&#x7B2C;&#x4E8C;&#x4E2A;then&#x5408;&#x5E76;&#x5230;&#x4E00;&#x4E2A;&#x6D41;&#x7A0B;&#x91CC;&#x3002;&#x8FD9;&#x6837;&#x505A;&#x7684;&#x597D;&#x5904;&#x662F;&#xFF0C;&#x8FD9;&#x4E2A;&#x6D41;&#x7A0B;&#x4E5F;&#x53EF;&#x4EE5;&#x8003;&#x8651;&#x5355;&#x72EC;&#x5904;&#x7406;&#x5F02;&#x5E38;&#x3002;&#x4E3A;&#x4E86;&#x67D0;&#x4E9B;&#x7C92;&#x5EA6;&#x66F4;&#x65B0;&#x7684;&#x5F02;&#x6B65;&#x5904;&#x7406;&#xFF0C;&#x662F;&#x975E;&#x5E38;&#x6709;&#x597D;&#x5904;&#x7684;&#x3002;</p>
+<p><code>way 3</code>&#xFF1A;&#x5D4C;&#x5957;&#x6A21;&#x5F0F;&#x7684;refact&#x6E05;&#x6670;&#x7248;</p>
+<pre><code>var step1 = function(data){
+  console.log(&apos;\n\nway 3:\n&apos;)
+  return new Promise(function(resolve, reject){
+    console.log(&apos;promise result = &apos; + data)
+    resolve(data)
+  }).then(function(data){
+    return new Promise(function(resolve, reject){
+      resolve(&apos;1&apos;)
+    });
+  }).catch(function(err) {
+    console.log(err)
+  })
+}
+
+var step2 = function(data){
+  console.log(data)
+
+  return new Promise(function(resolve, reject){
+    reject(new Error(&apos;reject with custom err&apos;))
+  });
+}
+
+hello(&apos;./package.json&apos;).then(step1).then(step2).catch(function(err) {
+  console.log(err)
+})
+</code></pre><p>&#x628A;&#x6BCF;&#x4E2A;&#x72EC;&#x7ACB;&#x7684;&#x64CD;&#x4F5C;&#x62BD;&#x6210;&#x51FD;&#x6570;&#xFF0C;&#x7136;&#x540E;&#x51FD;&#x6570;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x662F;Promise&#x5BF9;&#x8C61;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x53EF;&#x4EE5;&#x5728;&#x771F;&#x6B63;&#x7684;&#x6D41;&#x7A0B;&#x94FE;&#x91CC;&#x968F;&#x610F;&#x7EC4;&#x7EC7;&#x4E86;&#x3002;</p>
+<p>&#x5B83;&#x4EEC;&#x5C31;&#x597D;&#x6BD4;&#x662F;&#x79EF;&#x6728;&#x4E00;&#x6837;&#xFF0C;&#x53EF;&#x4EE5;&#x8BA9;&#x903B;&#x8F91;&#x66F4;&#x6E05;&#x695A;&#xFF0C;&#x8BA9;&#x4EE3;&#x7801;&#x66F4;&#x5177;&#x53EF;&#x8BFB;&#x6027;&#x548C;&#x53EF;&#x7EF4;&#x62A4;&#x6027;&#x3002;&#x5982;&#x679C;&#x518D;&#x6781;&#x7AEF;&#x70B9;&#xFF0C;&#x6BCF;&#x4E2A;&#x64CD;&#x4F5C;&#x90FD;&#x653E;&#x5230;&#x72EC;&#x7ACB;&#x6587;&#x4EF6;&#x91CC;&#xFF0C;&#x53D8;&#x6210;&#x6A21;&#x5757;&#xFF0C;&#x662F;&#x4E0D;&#x662F;&#x66F4;&#x723D;&#x5462;&#xFF1F;  </p>
+<p><code>way 4</code>&#xFF1A;final&#x7248;&#xFF0C;&#x628A;&#x6BCF;&#x4E2A;&#x72EC;&#x7ACB;&#x7684;&#x64CD;&#x4F5C;&#x653E;&#x5230;&#x72EC;&#x7ACB;&#x6587;&#x4EF6;&#x91CC;&#xFF0C;&#x53D8;&#x6210;&#x6A21;&#x5757;</p>
+<p>&#x539F;&#x7406;: &#x4F7F;&#x7528;<code>require-directory</code></p>
+<p>&#x6839;&#x636E;commonjs&#x89C4;&#x8303;&#xFF0C;require&#x53EA;&#x80FD;&#x5F15;&#x7528;&#x67D0;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#xFF0C;&#x5F53;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x5939;&#x91CC;&#x6709;&#x5F88;&#x591A;&#x6587;&#x4EF6;&#xFF0C;&#x6BCF;&#x4E00;&#x4E2A;&#x90FD;&#x53BB;require&#x662F;&#x5F88;&#x9EBB;&#x70E6;&#x7684;&#xFF0C;<code>require-directory</code>&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x4FBF;&#x6377;&#x6A21;&#x5757;&#xFF0C;&#x53EF;&#x4EE5;&#x628A;&#x67D0;&#x4E2A;&#x6587;&#x4EF6;&#x5939;&#x5185;&#x7684;&#x591A;&#x4E2A;&#x6587;&#x4EF6;&#x6302;&#x8F7D;&#x5230;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x3002;</p>
+<p>&#x539F;&#x7406;&#xFF0C;&#x9012;&#x5F52;&#x904D;&#x5386;&#x6587;&#x4EF6;&#xFF0C;&#x8BFB;&#x53D6;&#x5177;&#x4F53;&#x6587;&#x4EF6;&#xFF0C;&#x5982;&#x679C;&#x662F;&#x9075;&#x5FAA;commonjs&#x89C4;&#x8303;&#x7684;&#x6A21;&#x5757;&#xFF0C;&#x5C31;&#x6302;&#x8F7D;&#x5728;&#x5B83;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x5BF9;&#x8C61;&#x4E0A;&#x3002;</p>
+<p>&#x6BD4;&#x5982;reflow/tasks/index.js</p>
+<pre><code>var requireDirectory = require(&apos;require-directory&apos;);
+module.exports = requireDirectory(module);
+</code></pre><p>&#x8FD9;&#x6837;<code>reflow/tasks</code>&#x4E0B;&#x7684;&#x6240;&#x6709;&#x9075;&#x5FAA;commonjs&#x89C4;&#x8303;&#x7684;&#x6A21;&#x5757;&#x90FD;&#x53EF;&#x4EE5;&#x6302;&#x8F7D;</p>
+<p>reflow/tasks/hello.js</p>
+<pre><code>var fs = require(&quot;fs&quot;);
+
+module.exports = function hello (file) {
+  return new Promise(function(resolve, reject){
+    fs.readFile(file, (err, data) =&gt; {
+        if (err) {
+            reject(err);
+        } else {
+            resolve(data.toString())
+        }
+    });
+  });
+}
+</code></pre><p>&#x8FD9;&#x5176;&#x5B9E;&#x548C;&#x4E4B;&#x524D;&#x7684;&#x5B9A;&#x4E49;&#x662F;&#x4E00;&#x6A21;&#x4E00;&#x6837;&#x7684;&#xFF0C;&#x552F;&#x4E00;&#x5DEE;&#x522B;&#x5C31;&#x662F;&#x53D8;&#x6210;&#x4E86;&#x6A21;&#x5757;&#xFF0C;&#x4F7F;&#x7528;&#x4E86;module.exports&#x6765;&#x5BFC;&#x51FA;&#x3002;</p>
+<p>&#x5176;&#x4ED6;&#x7684;step1&#x548C;step2&#x4EE5;&#x6B64;&#x7C7B;&#x63A8;&#xFF0C;&#x4E0B;&#x9762;&#x6211;&#x4EEC;&#x5361;&#x4E00;&#x4E0B;&#x5177;&#x4F53;&#x8C03;&#x7528;&#x7684;&#x4EE3;&#x7801;</p>
+<pre><code>var tasks = require(&apos;./tasks&apos;)
+
+tasks.hello(&apos;./package.json&apos;).then(tasks.step1).then(tasks.step2).catch(function(err) {
+  console.log(err)
+})
+</code></pre><p>&#x7ED9;&#x51FA;&#x5177;&#x4F53;&#x7684;&#x6D41;&#x7A0B;&#x56FE;</p>
+<p><img src="img/promise-flow.png" alt=""></p>
+<p>&#x9996;&#x5148;<code>require(&apos;./tasks&apos;)</code>&#x83B7;&#x5F97;tasks&#x76EE;&#x5F55;&#x4E0B;&#x7684;&#x6240;&#x6709;&#x64CD;&#x4F5C;&#x4EFB;&#x52A1;&#x5B9A;&#x4E49;&#xFF0C;&#x7136;&#x540E;&#x5728;&#x4E0B;&#x9762;&#x7684;Promise&#x6D41;&#x7A0B;&#x91CC;&#x5904;&#x7406;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#x5B9A;&#x4E49;&#x548C;&#x5B9E;&#x73B0;&#x5206;&#x79BB;&#xFF0C;&#x8BA9;&#x4EE3;&#x7801;&#x6709;&#x66F4;&#x597D;&#x7684;&#x53EF;&#x8BFB;&#x6027;&#x3002;</p>
+<p>&#x5982;&#x679C;&#xFF0C;&#x8FD9;&#x65F6;&#x6211;&#x4EEC;&#x6070;&#x597D;&#x9700;&#x8981;&#x8C03;&#x6574;step1&#x548C;step2&#x7684;&#x987A;&#x5E8F;&#xFF0C;&#x662F;&#x4E0D;&#x662F;&#x975E;&#x5E38;&#x7684;&#x7B80;&#x5355;&#xFF1F;</p>
+<pre><code>var tasks = require(&apos;./tasks&apos;)
+
+tasks.hello(&apos;./package.json&apos;).then(tasks.step2).then(tasks.step1).catch(function(err) {
+  console.log(err)
+})
+</code></pre><p>&#x66F4;&#x591A;&#x597D;&#x5904;&#xFF0C;&#x81EA;&#x884C;&#x4F53;&#x4F1A;&#x5427;&#xFF0C;&#x8FD9;&#x91CC;&#x5C31;&#x4E0D;&#x505A;&#x66F4;&#x591A;&#x89E3;&#x91CA;&#x4E86;&#x3002;</p>
+<h2 id="%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86">&#x9519;&#x8BEF;&#x5904;&#x7406;</h2>
+<p>&#x5E38;&#x7528;&#x7684;&#x5904;&#x7406;&#x65B9;&#x5F0F;&#x662F;&#x5168;&#x5C40;&#x5904;&#x7406;&#xFF0C;&#x5373;&#x6240;&#x6709;&#x7684;&#x5F02;&#x6B65;&#x64CD;&#x4F5C;&#x90FD;&#x7531;&#x4E00;&#x4E2A;catch&#x6765;&#x5904;&#x7406;</p>
+<pre><code>promise.then(function(result) {
+  console.log(&apos;Got data!&apos;, result);
+}).catch(function(error) {
+  console.log(&apos;Error occurred!&apos;, error);
+});
+</code></pre><p>&#x5F53;&#x7136;&#xFF0C;then&#x65B9;&#x6CD5;&#x7684;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x4E5F;&#x662F;&#x53EF;&#x4EE5;&#x7684;</p>
+<pre><code>promise.then(function(result) {
+  console.log(&apos;Got data!&apos;, result);
+}).then(undefined, function(error) {
+  console.log(&apos;Error occurred!&apos;, error);
+});
+</code></pre><p>&#x5982;&#x679C;&#x6709;&#x591A;&#x4E2A;then&#x914D;&#x5BF9;&#x7684;reject&#x51FD;&#x6570;&#x5462;&#xFF1F;&#x662F;&#x4E0D;&#x662F;&#x53EF;&#x4EE5;&#x66F4;&#x52A0;&#x7075;&#x6D3B;&#xFF1F;&#x8FD9;&#x5176;&#x5B9E;&#x5C31;&#x8981;&#x53D6;&#x51B3;&#x4E8E;&#x4F60;&#x7684;&#x4E1A;&#x52A1;&#x590D;&#x6742;&#x7A0B;&#x5EA6;&#x91CC;&#x3002;</p>
+<p>&#x9519;&#x8BEF;&#x5904;&#x7406;&#x6700;&#x7B80;&#x5355;&#x7684;&#x529E;&#x6CD5;&#x662F;&#x5728;promise&#x91CC;&#x4F7F;&#x7528;try/catch&#x7684;&#x8BED;&#x53E5;&#x3002;&#x5728;try/catch&#x5757;&#x4E2D;&#xFF0C;&#x5B83;&#x53EF;&#x80FD;&#x53BB;&#x6355;&#x83B7;&#x5F02;&#x5E38;&#xFF0C;&#x5E76;&#x663E;&#x793A;&#x5904;&#x7406;&#x5B83;&#xFF1A;&#xFF08;TODO: &#x91CD;&#x5199;&#x4E2A;&#x66F4;&#x7B80;&#x5355;&#x4F8B;&#x5B50;&#xFF09;</p>
+<pre><code>try {
+  throw new Error(&apos;never will know this happened&apos;)
+} catch (e) {}
+</code></pre><p>&#x5728;promises&#x91CC;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x5199;</p>
+<pre><code>readFile()
+  .then(function (data) {
+    throw new Error(&apos;never will know this happened&apos;)
+  })
+</code></pre><p>&#x4E3A;&#x4E86;&#x6253;&#x5370;errors&#xFF0C;&#x8FD9;&#x91CC;&#x4EE5;&#x7B80;&#x5355;&#x7684;.then(null, onRejected)&#x8BED;&#x53E5;&#x4E3A;&#x4F8B;</p>
+<pre><code>readFile()
+  .then(function (data) {
+    throw new Error(&apos;now I know this happened&apos;)
+  })
+  .then(null, console.error)
+</code></pre><p>&#x7C7B;&#x5E93;&#x5305;&#x62EC;&#x4E00;&#x4E9B;&#x66B4;&#x9732;error&#x7684;&#x5176;&#x4ED6;&#x9009;&#x9879;&#x3002;&#x6BD4;&#x5982;Q&#x5C31;&#x63D0;&#x4F9B;&#x4E86;done&#x65B9;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x518D;&#x6B21;&#x8DD1;&#x51FA;error&#x5F02;&#x5E38;&#x7684;&#x3002;</p>
+<p>&#x94FE;&#x5F0F;&#x5199;&#x6CD5;&#x5F88;&#x65B9;&#x4FBF;&#xFF0C;&#x53EF;&#x4EE5;&#x968F;&#x610F;&#x7EC4;&#x5408;&#xFF0C;</p>
+<p>api/catch.js</p>
+<pre><code>var p1 = new Promise(function(resolve, reject) {
+  resolve(&apos;Success&apos;);
+});
+
+p1.then(function(value) {
+  console.log(value); // &quot;Success!&quot;
+  return Promise.reject(&apos;oh, no!&apos;);
+}).catch(function(e) {
+  console.log(e); // &quot;oh, no!&quot;
+  // return Promise.reject(&apos;oh, no! 2&apos;);
+}).then(function(){
+  console.log(&apos;after a catch the chain is restored&apos;);
+}, function () {
+  console.log(&apos;Not fired due to the catch&apos;);
+});
+</code></pre><p>&#x6267;&#x884C;</p>
+<pre><code>$ node api/catch.js
+Success
+oh, no!
+after a catch the chain is restored
+</code></pre><p>api/catch2.js</p>
+<pre><code>var p1 = new Promise(function(resolve, reject) {
+  resolve(&apos;Success&apos;);
+});
+
+p1.then(function(value) {
+  console.log(value); // &quot;Success!&quot;
+  return Promise.reject(&apos;oh, no!&apos;);
+}).catch(function(e) {
+  console.log(e); // &quot;oh, no!&quot;
+  return Promise.reject(&apos;oh, no! 2&apos;);
+}).then(function(){
+  console.log(&apos;after a catch the chain is restored&apos;);
+}, function () {
+  console.log(&apos;Not fired due to the catch&apos;);
+});
+</code></pre><p>&#x6267;&#x884C;</p>
+<pre><code>$ node api/catch2.js
+Success
+oh, no!
+Not fired due to the catch
+</code></pre><h2 id="promise-a-%E5%8F%AA%E6%9C%89node-js%E6%9C%89%E4%B9%88%EF%BC%9F">Promise/a+&#x53EA;&#x6709;Node.js&#x6709;&#x4E48;&#xFF1F;</h2>
+<p>&#x8FD9;&#x662F;&#x5927;&#x5BB6;&#x7ECF;&#x5E38;&#x95EE;&#x5230;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x660E;&#x786E;&#x7684;&#x8BF4;&#xFF0C;promise/a+&#x662F;&#x89C4;&#x8303;&#x3002;</p>
+<p>&#x800C;Node.js&#x56E0;&#x4E3A;&#x5B8C;&#x5168;&#x5F02;&#x6B65;&#xFF0C;&#x5BFC;&#x81F4;callbackhell&#xFF0C;&#x6240;&#x4EE5;&#x662F;&#x6240;&#x6709;&#x8BED;&#x8A00;&#x91CC;&#x6BD4;&#x8F83;&#x65E9;&#x5F15;&#x5165;Promise/a+&#x89C4;&#x8303;&#x7684;&#xFF0C;&#x662F;Promise/a+&#x89C4;&#x8303;&#x7684;&#x7ECF;&#x5178;&#x5B9E;&#x73B0;&#x3002;</p>
+<p>&#x5176;&#x4ED6;&#x8BED;&#x8A00;&#x4E5F;&#x6709;&#x7C7B;&#x4F3C;&#x5B9E;&#x73B0;&#x7684;&#xFF0C;&#x6BD4;&#x5982;oc&#xFF0C;java&#xFF0C;ruby&#x7B49;</p>
+<p><a href="https://promisesaplus.com/implementations" target="_blank">https://promisesaplus.com/implementations</a></p>
+<p><img src="img/impl.png" alt="Impl"></p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../async/async.js.html" class="navigation navigation-prev " aria-label="Previous page: 简单做法async模块"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../async/nodejs.html" class="navigation navigation-next " aria-label="Next page: Node.js Promise/a+实现"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>
