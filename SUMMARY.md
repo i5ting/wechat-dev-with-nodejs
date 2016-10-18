@@ -22,7 +22,7 @@
    * [Node.js Promise/a+实现](async/nodejs.md)
    * [生成器Generators/yield](async/generator.md)
    * [Async函数/Await](async/async.md)
-   * [co引出的“血案”](async/co.md)
+   * [神奇的co](async/co.md)
    * [5种 yieldable](async/yieldable.md)
    * [学习重点](async/summary.md)
    * [随堂练习：找到并阅读promise/a+实现的源码](async/exercises.md)
