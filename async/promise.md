@@ -243,7 +243,7 @@ function log(data){
 }
 
 hello('./package.json').then(log).then(function(){
-  return hello('./each.js').then(log)
+  return world('./each.js').then(log)
 }).catch(function(err) {
   console.log(err)
 })
