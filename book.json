@@ -1,0 +1,18 @@
+{
+  "gitbook": "2.x.x",
+  "structure": {
+    "summary": "./SUMMARY.md"
+  },
+  "plugins": [
+     "toc2"
+  ],
+  "pluginsConfig": {
+    "edit-link": {
+      "base": "https://github.com/i5ting/wechat-dev-with-nodejs/tree/master",
+      "label": "Edit This Page"
+    },
+    "github": {
+      "url": "https://github.com/i5ting/wechat-dev-with-nodejs/"
+    }
+  }
+}
