@@ -40,7 +40,7 @@
     
 
         
-    <div class="book" data-level="3.4" data-basepath=".." data-revision="Tue Oct 18 2016 10:10:41 GMT+0800 (CST)">
+    <div class="book" data-level="3.4" data-basepath=".." data-revision="Wed Oct 19 2016 09:53:48 GMT+0800 (CST)">
     
 
 <div class="book-summary">
@@ -1461,7 +1461,7 @@
 <h2 id="node-js-%E5%86%85%E7%BD%AEpromise%E8%AF%B4%E6%98%8E">Node.js &#x5185;&#x7F6E;promise&#x8BF4;&#x660E;</h2>
 <p>&#x4ECE;0.12&#x5F00;&#x59CB;&#x90E8;&#x5206;&#x652F;&#x6301;&#xFF0C;&#x5230;4.0&#x652F;&#x6301;&#x7EDD;&#x5927;&#x90E8;&#x5206;&#x4E86;&#x3002;</p>
 <p><img src="img/sdk.png" alt="Sdk"></p>
-<p>&#x4F46;&#x6027;&#x80FD;&#x6BD4;&#x8F83;&#x4F4E;&#xFF0C;&#x6240;&#x4EE5;&#x4E00;&#x822C;&#x662F;&#x4F7F;&#x7528;bluebird&#x4F53;&#x4F1A;&#x7684;&#x3002;</p>
+<p>&#x4F46;&#x6027;&#x80FD;&#x6BD4;&#x8F83;&#x4F4E;&#xFF0C;&#x6240;&#x4EE5;&#x4E00;&#x822C;&#x662F;&#x4F7F;&#x7528;bluebird&#x66FF;&#x6362;&#x7684;&#x3002;</p>
 <h2 id="node-js%E7%9A%84promise%E5%BA%93">Node.js&#x7684;promise&#x5E93;</h2>
 <p>Promise&#x6269;&#x5C55;&#x7C7B;&#x5E93;&#x9664;&#x4E86;&#x5B9E;&#x73B0;&#x4E86;Promise&#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x89C4;&#x8303;&#x4E4B;&#x5916;&#xFF0C;&#x8FD8;&#x589E;&#x52A0;&#x4E86;&#x81EA;&#x5DF1;&#x72EC;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x529F;&#x80FD;&#x3002;</p>
 <p>&#x6309;&#x5B57;&#x6BCD;&#x6392;&#x5E8F;</p>
@@ -1552,7 +1552,7 @@
 <blockquote>
 <p>tj: bluebird is MASSIVE, why not use v8&apos;s?</p>
 </blockquote>
-<p>bluebird&#x662F;Node.js&#x4E16;&#x754C;&#x91CC;&#x6027;&#x80FD;&#x6700;&#x597D;&#x7684;&#x6A21;&#x5757;&#xFF0C;api&#x975E;&#x5E38;&#x9F50;&#x5168;&#xFF0C;&#x529F;&#x80FD;&#x5F3A;&#x5927;&#xFF0C;&#x662F;&#x539F;&#x751F;Promise&#x5916;&#x7684;&#x4E0D;&#x4E8C;&#x9009;&#x62E9;&#x3002;</p>
+<p>bluebird&#x662F;Node.js&#x4E16;&#x754C;&#x91CC;&#x6027;&#x80FD;&#x6700;&#x597D;&#x7684;Promise/a+&#x89C4;&#x8303;&#x7684;&#x5B9E;&#x73B0;&#x6A21;&#x5757;&#xFF0C;api&#x975E;&#x5E38;&#x9F50;&#x5168;&#xFF0C;&#x529F;&#x80FD;&#x5F3A;&#x5927;&#xFF0C;&#x662F;&#x539F;&#x751F;Promise&#x5916;&#x7684;&#x4E0D;&#x4E8C;&#x9009;&#x62E9;&#x3002;</p>
 <p>&#x5B89;&#x88C5;bluebird&#x6A21;&#x5757;</p>
 <pre><code>$ npm i -S bluebird
 </code></pre><p>&#x89C1;&#x4EE3;&#x7801;<code>hellopromise-bb.js</code></p>
@@ -1584,7 +1584,11 @@ hello(&apos;./package.json&apos;).then(function(data){
 <p>&#x8FD9;&#x91CC;&#x7528;&#x7684;&#x662F;<code>var</code>&#x6765;&#x58F0;&#x660E;<code>Promise</code>&#xFF0C;&#x4E3B;&#x8981;&#x76EE;&#x7684;&#x662F;&#x4E3A;&#x4E86;&#x5F53;&#x524D;&#x6587;&#x4EF6;&#x4F7F;&#x7528;&#xFF0C;&#x5982;&#x679C;&#x662F;koa&#x6216;express&#x8FD9;&#x6837;&#x7684;web&#x9879;&#x76EE;&#x91CC;&#xFF0C;&#x4F7F;&#x7528;&#x5168;&#x5C40;&#x66FF;&#x6362;&#x5462;&#xFF1F;</p>
 <p>&#x5176;&#x5B9E;&#x4E5F;&#x5F88;&#x7B80;&#x5355;&#xFF0C;&#x4F7F;&#x7528;global&#x5168;&#x5C40;&#x66FF;&#x6362;&#x5C31;&#x597D;&#xFF0C;&#x5728;&#x5E94;&#x7528;&#x7684;&#x5165;&#x53E3;&#x6587;&#x4EF6;app.js&#x91CC;</p>
 <pre><code>global.Promise = require(&quot;bluebird&quot;);
-</code></pre><h2 id="promisification">Promisification</h2>
+</code></pre><p>&#x6027;&#x80FD;&#x4F1A;&#x6709;&#x660E;&#x663E;&#x7684;&#x63D0;&#x5347;&#x3002;</p>
+<blockquote>
+<p>&#x53E6;&#x5916;&#x516B;&#x5366;&#x4E00;&#x4E0B;&#xFF0C;node&#x4E4B;&#x524D;&#x7248;&#x672C;&#x7684;promise&#x662F;&#x6709;&#x5185;&#x5B58;&#x6CC4;&#x6F0F;&#x7684;&#xFF0C;&#x800C;&#x4F7F;&#x7528;bluebird&#x4E0D;&#x4F1A;&#x9047;&#x5230;&#x8FD9;&#x6837;&#x7684;&#x5751;</p>
+</blockquote>
+<h2 id="promisification">Promisification</h2>
 <blockquote>
 <p>Promisification means converting an existing promise-unaware API to a promise-returning API.</p>
 </blockquote>

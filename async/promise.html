@@ -40,7 +40,7 @@
     
 
         
-    <div class="book" data-level="3.3" data-basepath=".." data-revision="Tue Oct 18 2016 10:10:41 GMT+0800 (CST)">
+    <div class="book" data-level="3.3" data-basepath=".." data-revision="Wed Oct 19 2016 09:53:48 GMT+0800 (CST)">
     
 
 <div class="book-summary">
@@ -1459,7 +1459,7 @@
                     
                         <h1 id="promise-a-%E8%A7%84%E8%8C%83">Promise/a+&#x89C4;&#x8303;</h1>
 <p>&#x987A;&#x5E8F;&#x6267;&#x884C;&#x7684;&#x4EE3;&#x7801;&#x548C;&#x9519;&#x8BEF;&#x6709;&#x9650;&#x7684;&#x56DE;&#x8C03;&#x65B9;&#x5F0F;&#x90FD;&#x662F;js&#x5F15;&#x64CE;&#x9ED8;&#x8BA4;&#x652F;&#x6301;&#x7684;&#xFF0C;&#x8FD9;&#x90E8;&#x5206;&#x5927;&#x5BB6;&#x4F1A;&#x8C03;&#x7528;&#x63A5;&#x53E3;&#xFF0C;&#x65E0;&#x592A;&#x591A;&#x53D8;&#x5316;&#xFF0C;&#x800C;Promise&#x662F;&#x5BF9;callback&#x7684;&#x601D;&#x8003;&#xFF0C;&#x6216;&#x8005;&#x8BF4;&#x6539;&#x826F;&#x65B9;&#x6848;&#xFF0C;&#x76EE;&#x524D;&#x4F7F;&#x7528;&#x975E;&#x5E38;&#x666E;&#x904D;&#xFF0C;&#x8FD9;&#x91CC;&#x8BE6;&#x7EC6;&#x8BB2;&#x89E3;&#x4E00;&#x4E0B;&#x3002;</p>
-<h2 id="node%E9%87%8C%E7%9A%84promise">node&#x91CC;&#x7684;Promise</h2>
+<h2 id="node-js%E9%87%8C%E7%9A%84promise">Node.js&#x91CC;&#x7684;Promise</h2>
 <p>promise&#x6700;&#x65E9;&#x662F;&#x5728;commonjs&#x793E;&#x533A;&#x63D0;&#x51FA;&#x6765;&#x7684;&#xFF0C;&#x5F53;&#x65F6;&#x63D0;&#x51FA;&#x4E86;&#x5F88;&#x591A;&#x89C4;&#x8303;&#x3002;&#x6BD4;&#x8F83;&#x63A5;&#x53D7;&#x7684;&#x662F;promise/A&#x89C4;&#x8303;&#x3002;&#x540E;&#x6765;&#x4EBA;&#x4EEC;&#x5728;&#x8FD9;&#x4E2A;&#x57FA;&#x7840;&#x4E0A;&#x3002;&#x63D0;&#x51FA;&#x4E86;promise/A+&#x89C4;&#x8303;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x5B9E;&#x9645;&#x4E0A;&#x7684;&#x4E1A;&#x5185;&#x63A8;&#x884C;&#x7684;&#x89C4;&#x8303;&#x3002;es6&#x4E5F;&#x662F;&#x91C7;&#x7528;&#x7684;&#x8FD9;&#x79CD;&#x89C4;&#x8303;&#x3002;</p>
 <blockquote>
 <p>The Promise object is used for asynchronous computations. A Promise represents an operation that hasn&apos;t completed yet, but is expected in the future.</p>
@@ -1639,7 +1639,7 @@ function log(data){
 }
 
 hello(&apos;./package.json&apos;).then(log).then(function(){
-  return hello(&apos;./each.js&apos;).then(log)
+  return world(&apos;./each.js&apos;).then(log)
 }).catch(function(err) {
   console.log(err)
 })
