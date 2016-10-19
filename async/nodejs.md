@@ -6,7 +6,7 @@
 
 ![Sdk](img/sdk.png)
 
-但性能比较低，所以一般是使用bluebird体会的。
+但性能比较低，所以一般是使用bluebird替换的。
 
 ## Node.js的promise库
 
@@ -55,7 +55,7 @@ Bluebird的文档除了提供了使用Promise丰富的实现方式之外，还�
 
 > tj: bluebird is MASSIVE, why not use v8's?
 
-bluebird是Node.js世界里性能最好的模块，api非常齐全，功能强大，是原生Promise外的不二选择。
+bluebird是Node.js世界里性能最好的Promise/a+规范的实现模块，api非常齐全，功能强大，是原生Promise外的不二选择。
 
 
 安装bluebird模块
@@ -107,6 +107,10 @@ var Promise = require("bluebird");
 ```
 global.Promise = require("bluebird");
 ```
+
+性能会有明显的提升。
+
+> 另外八卦一下，node之前版本的promise是有内存泄漏的，而使用bluebird不会遇到这样的坑
 
 ## Promisification
 
