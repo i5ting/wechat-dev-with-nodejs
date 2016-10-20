@@ -8,6 +8,8 @@ Generator函数本意是iterator生成器，函数运行到yield时退出，并�
 
 简单理解，这是ES6的新特性，function 后面带 * 的叫做Generator，如以下代码所示。
 
+## 执行示例
+
 ```
 function* doSomething() {
   ....
@@ -35,6 +37,39 @@ gen1.next(); // resumes execution at line (A), then prints 2
 - 第一个next，会打印出1，之后悬停在 yield所在行，即Line (A)
 - 第二个next，恢复line (A)点的执行，之后打印出2
 
+## next的返回结果说明
+
+```
+function* doSomething() {
+    console.log('1');
+    yield; // Line (A)
+    console.log('2');
+}
+
+var gen1 = doSomething();
+
+console.log(gen1.next()); // {value:'', done: false}
+console.log(gen1.next()); // {value:'', done: true}
+```
+
+第1个`gen1.next()`结果
+
+```
+next的返回对象{value:'', done: false}
+```
+
+第2个`gen1.next()`结果
+
+```
+next的返回对象{value:'', done: true}
+```
+
+如果done为true，则代表generator里的yield都完成了。这直接关系到后面的co实现，所以此处必须理解。
+
+## 如果有多个yield呢？
+
 如果有多个yield呢？那么会有无穷无尽的next。
 
 于是tj就写[co](https://github.com/tj/co)这个著名的Generator执行器，co目前已经是v4了，彻底的面向Promise了，个中曲折也是够八卦的了。
+
+这就是下一节要讲的内容。
