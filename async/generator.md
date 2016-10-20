@@ -66,9 +66,11 @@ next的返回对象{value:'', done: true}
 
 如果done为true，则代表generator里的yield都完成了。这直接关系到后面的co实现，所以此处必须理解。
 
-## 如果有多个yield呢？
+## 如果generator里有多个yield呢？
 
-如果有多个yield呢？那么会有无穷无尽的next。
+如果generator里有多个yield呢？
+
+那么会有无穷无尽的next。
 
 于是tj就写[co](https://github.com/tj/co)这个著名的Generator执行器，co目前已经是v4了，彻底的面向Promise了，个中曲折也是够八卦的了。
 
