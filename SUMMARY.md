@@ -50,7 +50,7 @@
    * [分页](db/pagination.md)
    * [关系（1对1，1对多）在mongoose里如何实现](db/relationship.md)
    * [AGGREGATION 关联](db/aggregation.md)
-   * [了解索引](db/index.md)
+   * [了解索引](db/indexes.md)
    * [了解优化](db/optimize.md)
    * [mongooseconnection](db/mongooseconnection.md)
    * [了解mongodb的部署与部署](db/install.md)

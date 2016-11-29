@@ -362,10 +362,8 @@ mongodb 中的数据存储在被称为集合（collection）的数据库对象�
 
 ## 对比
 
-
 ![](img/compare.png)
 
 观察下最重要的一点就是我们关系数据库中的表与字段被合集与文档的概念给替代了，Mongo不在具有主键的关系了，数据保存都是放在文档中用JSON风格键值对风格的文件形式存放
 
 更多请见 http://blog.nosqlfan.com/html/3548.html
-
