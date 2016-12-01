@@ -15,10 +15,13 @@
 - 配置
 在根目录下新建数据目录 data，在 data 内部新建 db 目录，或使用shell命令行 。
 打开终端, cd 到 mongodb 的根目录下,
+
 ```
 mkdir -p .data/db
 ```
- 然后输入
+
+然后输入
+ 
 ```
 sudo chown -R 输入计算机用户名 /data
 ```
@@ -28,12 +31,15 @@ TODO:
 - 使用 Homebrew 安装 MongoDB
 
 1. 首先升级 Homebrew的 package 数据库.
+
 在系统的 shell 中输入:
+
 ```
 brew update
 ```
 
 2. 安装 MongoDB.
+
 使用 brew 安装有几种选择，你可以根据需要来安装MongoDB。
 
 - 安装二进制 MongoDB
@@ -45,6 +51,7 @@ brew install mongodb
 ```
 
 - 从TLS/SSL支持源建立MongoDB
+
 从源文件建立MongoDB且包括TLS/SSL的支持, 使用如下命令:
 
 ```
@@ -52,6 +59,7 @@ brew install mongodb --with-openssl
 ```
 
 - 安装最新开发版本的 MongoDB，用于开发和测试。
+
 安装命令如下:
 
 ```
@@ -222,6 +230,7 @@ sudo rm -r /var/lib/mongodb
 - 关闭
 
 ### 通过shell进行启动
+
 ```
   #! /bin/bash
 
@@ -238,9 +247,7 @@ sudo rm -r /var/lib/mongodb
   nohup mongod --bind_ip 127.0.0.1 --port 27017 --dbpath ~/mongo/db --logpath ~/mongo/logs/mongodb.log --pidfilepath ~/mongo/pids/mongodb.pid > ~/mongo/logs/mongod.log 2>&1 &
 ```
 
-### mongohere便捷启动
-
-
+ 
 ```
 $ [sudo] npm install -g mh
 ```
