@@ -1,0 +1,2047 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
+        <title>mongooseconnection | StuQ《Node.js微信开发》</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.0.1">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    
+    
+    <link rel="next" href="../db/install.html" />
+    
+    
+    <link rel="prev" href="../db/optimize.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-toc2/toc2.css">
+        
+    
+    
+
+        
+    <div class="book" data-level="5.15" data-basepath=".." data-revision="Tue Dec 13 2016 07:19:09 GMT+0800 (CST)">
+    
+
+<div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Type to search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+        
+        
+        
+
+        
+
+        
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="skill/index.html">
+            
+                
+                    <a href="../skill/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        skill
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="skill/coding_webide.html">
+            
+                
+                    <a href="../skill/coding_webide.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        Coding WebIDE
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="skill/git.html">
+            
+                
+                    <a href="../skill/git.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        git
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="skill/extra.html">
+            
+                
+                    <a href="../skill/extra.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        extra
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="faq.html">
+            
+                
+                    <a href="../faq.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        预习
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="nodejs/index.html">
+            
+                
+                    <a href="../nodejs/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Node.js入门
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="nodejs/introduce.html">
+            
+                
+                    <a href="../nodejs/introduce.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        入门
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="nodejs/install.html">
+            
+                
+                    <a href="../nodejs/install.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        安装
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="nodejs/helloworld.html">
+            
+                
+                    <a href="../nodejs/helloworld.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        Hello world
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="nodejs/commonjs.html">
+            
+                
+                    <a href="../nodejs/commonjs.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        Common JS规范
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="nodejs/module-exports.html">
+            
+                
+                    <a href="../nodejs/module-exports.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        模块导出
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="nodejs/terms.html">
+            
+                
+                    <a href="../nodejs/terms.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.6.</b>
+                        
+                        Node.js代码调试
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="nodejs/npm.html">
+            
+                
+                    <a href="../nodejs/npm.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.7.</b>
+                        
+                        编写Node.js模块
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="nodejs/how-to-study.html">
+            
+                
+                    <a href="../nodejs/how-to-study.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.8.</b>
+                        
+                        最小化问题
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="nodejs/exercises.html">
+            
+                
+                    <a href="../nodejs/exercises.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.9.</b>
+                        
+                        随堂练习：写一个Node.js模块并发布
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="async/index.html">
+            
+                
+                    <a href="../async/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        异步流程控制
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="async/when.html">
+            
+                
+                    <a href="../async/when.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        什么时候会用到异步流程控制
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="async/async.js.html">
+            
+                
+                    <a href="../async/async.js.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        简单做法async模块
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="async/promise.html">
+            
+                
+                    <a href="../async/promise.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        Promise/a+规范
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="async/nodejs.html">
+            
+                
+                    <a href="../async/nodejs.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        Node.js Promise/a+实现
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="async/generator.html">
+            
+                
+                    <a href="../async/generator.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.</b>
+                        
+                        生成器Generators/yield
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="async/async.html">
+            
+                
+                    <a href="../async/async.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.6.</b>
+                        
+                        Async函数/Await
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="async/co.html">
+            
+                
+                    <a href="../async/co.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.7.</b>
+                        
+                        神奇的co
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="async/yieldable.html">
+            
+                
+                    <a href="../async/yieldable.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.8.</b>
+                        
+                        5种 yieldable
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9" data-path="async/summary.html">
+            
+                
+                    <a href="../async/summary.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.9.</b>
+                        
+                        学习重点
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10" data-path="async/exercises.html">
+            
+                
+                    <a href="../async/exercises.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.10.</b>
+                        
+                        随堂练习：找到并阅读promise/a+实现的源码
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="express/index.html">
+            
+                
+                    <a href="../express/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        Express和微信开发入门
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="express/intro.html">
+            
+                
+                    <a href="../express/intro.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        入门
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="express/minimal.html">
+            
+                
+                    <a href="../express/minimal.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        Connect
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="express/html.html">
+            
+                
+                    <a href="../express/html.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        静态Http服务器
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="express/precompile.html">
+            
+                
+                    <a href="../express/precompile.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.</b>
+                        
+                        那些预处理器
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="express/route.html">
+            
+                
+                    <a href="../express/route.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.</b>
+                        
+                        路由
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="express/view.html">
+            
+                
+                    <a href="../express/view.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.6.</b>
+                        
+                        视图与模板引擎
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="express/middleware.html">
+            
+                
+                    <a href="../express/middleware.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.7.</b>
+                        
+                        中间件
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8" data-path="express/gulp.html">
+            
+                
+                    <a href="../express/gulp.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.8.</b>
+                        
+                        更多实践
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.9" data-path="express/how-to-study.html">
+            
+                
+                    <a href="../express/how-to-study.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.9.</b>
+                        
+                        微信入门
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.10" data-path="express/exercises.html">
+            
+                
+                    <a href="../express/exercises.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.10.</b>
+                        
+                        随堂练习：完成登录、注册功能
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="db/index.html">
+            
+                
+                    <a href="../db/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        数据库
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="db/mongodb.html">
+            
+                
+                    <a href="../db/mongodb.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        mongodb安装
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="db/model.html">
+            
+                
+                    <a href="../db/model.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.</b>
+                        
+                        了解mvc里m的作用，以及什么样的代码该放到模型里
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="db/mongoose.html">
+            
+                
+                    <a href="../db/mongoose.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.</b>
+                        
+                        mongoose入门
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="db/extend.html">
+            
+                
+                    <a href="../db/extend.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.4.</b>
+                        
+                        扩展mongoose模型statics方法和methods的区别
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="db/virtual.html">
+            
+                
+                    <a href="../db/virtual.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.5.</b>
+                        
+                        虚拟属性
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.6" data-path="db/hook.html">
+            
+                
+                    <a href="../db/hook.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.6.</b>
+                        
+                        回调：pre和post的差别
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.7" data-path="db/plugin.html">
+            
+                
+                    <a href="../db/plugin.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.7.</b>
+                        
+                        mongoose的插件机制
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.8" data-path="db/bluebird.html">
+            
+                
+                    <a href="../db/bluebird.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.8.</b>
+                        
+                        mongoose+promise
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.9" data-path="db/mongoosedao.html">
+            
+                
+                    <a href="../db/mongoosedao.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.9.</b>
+                        
+                        mongoosedao
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.10" data-path="db/pagination.html">
+            
+                
+                    <a href="../db/pagination.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.10.</b>
+                        
+                        分页
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.11" data-path="db/relationship.html">
+            
+                
+                    <a href="../db/relationship.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.11.</b>
+                        
+                        关系（1对1，1对多）在mongoose里如何实现
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.12" data-path="db/aggregation.html">
+            
+                
+                    <a href="../db/aggregation.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.12.</b>
+                        
+                        AGGREGATION 关联
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.13" data-path="db/indexes.html">
+            
+                
+                    <a href="../db/indexes.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.13.</b>
+                        
+                        了解索引
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.14" data-path="db/optimize.html">
+            
+                
+                    <a href="../db/optimize.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.14.</b>
+                        
+                        了解优化
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="5.15" data-path="db/mongooseconnection.html">
+            
+                
+                    <a href="../db/mongooseconnection.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.15.</b>
+                        
+                        mongooseconnection
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.16" data-path="db/install.html">
+            
+                
+                    <a href="../db/install.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.16.</b>
+                        
+                        了解mongodb的部署与部署
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.17" data-path="db/user.html">
+            
+                
+                    <a href="../db/user.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.17.</b>
+                        
+                        UserModel
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="wechat/index.html">
+            
+                
+                    <a href="../wechat/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        微信实例和H5实践
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1" data-path="wechat/init.html">
+            
+                
+                    <a href="../wechat/init.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.</b>
+                        
+                        微信基础和Sandbox
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="wechat/reply.html">
+            
+                
+                    <a href="../wechat/reply.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.2.</b>
+                        
+                        公众号菜单和自动回复
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="wechat/oauth.html">
+            
+                
+                    <a href="../wechat/oauth.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.3.</b>
+                        
+                        微信OAuth用户授权
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="wechat/share.html">
+            
+                
+                    <a href="../wechat/share.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.4.</b>
+                        
+                        微信分享
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="wechat/api.html">
+            
+                
+                    <a href="../wechat/api.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.5.</b>
+                        
+                        Wechat-api
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6" data-path="wechat/h5.html">
+            
+                
+                    <a href="../wechat/h5.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.6.</b>
+                        
+                        H5-上篇
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.7" data-path="wechat/h5.html">
+            
+                
+                    <a href="../wechat/h5.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.7.</b>
+                        
+                        H5-下篇
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.8" data-path="wechat/exercises.html">
+            
+                
+                    <a href="../wechat/exercises.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.8.</b>
+                        
+                        随堂练习：写一个页面分享到朋友圈
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="weui/index.html">
+            
+                
+                    <a href="../weui/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        WeUI实战
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1" data-path="weui/bower.html">
+            
+                
+                    <a href="../weui/bower.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.1.</b>
+                        
+                        使用Bower
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="weui/mobile.html">
+            
+                
+                    <a href="../weui/mobile.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.2.</b>
+                        
+                        移动端抽象
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="weui/iscroll.html">
+            
+                
+                    <a href="../weui/iscroll.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.3.</b>
+                        
+                        优化滑动列表
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4" data-path="weui/weui.html">
+            
+                
+                    <a href="../weui/weui.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.4.</b>
+                        
+                        WeUI
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.5" data-path="weui/iscroll+weui.html">
+            
+                
+                    <a href="../weui/iscroll+weui.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.5.</b>
+                        
+                        让WeUI和iScroll结婚
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.6" data-path="weui/event.html">
+            
+                
+                    <a href="../weui/event.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.6.</b>
+                        
+                        优化事件
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.7" data-path="weui/how-to-h5.html">
+            
+                
+                    <a href="../weui/how-to-h5.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.7.</b>
+                        
+                        如何编写H5代码
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.8" data-path="weui/more.html">
+            
+                
+                    <a href="../weui/more.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.8.</b>
+                        
+                        优化无止境
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.9" data-path="weui/layermobile.html">
+            
+                
+                    <a href="../weui/layermobile.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.9.</b>
+                        
+                        随堂练习：集成Layer.mobile
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="pay/index.html">
+            
+                
+                    <a href="../pay/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        微信支付
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1" data-path="pay/pay.html">
+            
+                
+                    <a href="../pay/pay.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.1.</b>
+                        
+                        吹个牛
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="pay/overview.html">
+            
+                
+                    <a href="../pay/overview.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.2.</b>
+                        
+                        支付概述
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="pay/concept.html">
+            
+                
+                    <a href="../pay/concept.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.3.</b>
+                        
+                        科普几个概念
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4" data-path="pay/prepare.html">
+            
+                
+                    <a href="../pay/prepare.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.4.</b>
+                        
+                        准备
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.5" data-path="pay/debug.html">
+            
+                
+                    <a href="../pay/debug.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.5.</b>
+                        
+                        调试
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.6" data-path="pay/js_pay.html">
+            
+                
+                    <a href="../pay/js_pay.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.6.</b>
+                        
+                        公众号支付（JSAPI）
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.7" data-path="pay/statement.html">
+            
+                
+                    <a href="../pay/statement.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.7.</b>
+                        
+                        对账单
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.8" data-path="pay/data.html">
+            
+                
+                    <a href="../pay/data.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.8.</b>
+                        
+                        数据处理
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.9" data-path="pay/exercises.html">
+            
+                
+                    <a href="../pay/exercises.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.9.</b>
+                        
+                        随堂练习：写一个通用h5支付接口
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="vip-lession/index.html">
+            
+                
+                    <a href="../vip-lession/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.</b>
+                        
+                        项目实战《付费课程系统MVP》
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="9.1" data-path="vip-lession/requirement.html">
+            
+                
+                    <a href="../vip-lession/requirement.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.1.</b>
+                        
+                        需求分析
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="vip-lession/uiue.html">
+            
+                
+                    <a href="../vip-lession/uiue.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.2.</b>
+                        
+                        ui/ue
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3" data-path="vip-lession/teck.html">
+            
+                
+                    <a href="../vip-lession/teck.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.3.</b>
+                        
+                        技术栈
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.4" data-path="vip-lession/model.html">
+            
+                
+                    <a href="../vip-lession/model.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.4.</b>
+                        
+                        模型
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.5" data-path="vip-lession/api.html">
+            
+                
+                    <a href="../vip-lession/api.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.5.</b>
+                        
+                        静态api
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.6" data-path="vip-lession/dev.html">
+            
+                
+                    <a href="../vip-lession/dev.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.6.</b>
+                        
+                        开发
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.7" data-path="vip-lession/deployment.html">
+            
+                
+                    <a href="../vip-lession/deployment.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.7.</b>
+                        
+                        部署
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.8" data-path="vip-lession/monit.html">
+            
+                
+                    <a href="../vip-lession/monit.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.8.</b>
+                        
+                        监控
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.9" data-path="vip-lession/data_analyze.html">
+            
+                
+                    <a href="../vip-lession/data_analyze.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.9.</b>
+                        
+                        数据统计
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.10" data-path="vip-lession/demo.html">
+            
+                
+                    <a href="../vip-lession/demo.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.10.</b>
+                        
+                        demo
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="10" data-path="vip-lession/index.html">
+            
+                
+                    <a href="../vip-lession/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.</b>
+                        
+                        高级篇（赠送）
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.1" data-path="more/practice.html">
+            
+                
+                    <a href="../more/practice.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.1.</b>
+                        
+                        前后端分离实践？
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10.2" data-path="more/tomorow.html">
+            
+                
+                    <a href="../more/tomorow.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.2.</b>
+                        
+                        如何展望未来的大前端？
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10.3" data-path="more/microservice.html">
+            
+                
+                    <a href="../more/microservice.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.3.</b>
+                        
+                        容器化和微服务
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="11" data-path="faq1.html">
+            
+                
+                    <a href="../faq1.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.</b>
+                        
+                        答疑问题收集
+                    </a>
+                
+            
+            
+        </li>
+    
+
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                Published with GitBook
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Table of Contents"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Search"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Font Settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="Share"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">
+                    Share on Twitter
+                </button>
+                <button type="button" data-sharing="google-plus" class="button">
+                    Share on Google
+                </button>
+                <button type="button" data-sharing="facebook" class="button">
+                    Share on Facebook
+                </button>
+                <button type="button" data-sharing="weibo" class="button">
+                    Share on Weibo
+                </button>
+                <button type="button" data-sharing="instapaper" class="button">
+                    Share on Instapaper
+                </button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Google"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >StuQ《Node.js微信开发》</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="mongoose%E8%BF%9E%E6%8E%A5%E9%97%AE%E9%A2%98">mongoose&#x8FDE;&#x63A5;&#x95EE;&#x9898;</h1>
+<h2 id="%E6%9C%BA%E5%99%A8%E5%81%87%E6%AD%BB">&#x673A;&#x5668;&#x5047;&#x6B7B;</h2>
+<p>Linux&#x5047;&#x6B7B;&#xFF0C;&#x53EF;&#x7406;&#x89E3;&#x4E3A;&#x80FD;ping&#x901A;&#xFF0C;&#x4F46;&#x662F;&#x767B;&#x9646;&#x4E0D;&#x4E86;&#xFF0C;&#x4E5F;&#x6709;&#x662F;&#x7CFB;&#x7EDF;panic&#x5BFC;&#x81F4;</p>
+<h2 id="%E6%9F%A5%E7%9C%8Bsockstat%E7%8A%B6%E6%80%81">&#x67E5;&#x770B;sockstat&#x72B6;&#x6001;</h2>
+<pre><code>$ cat /proc/net/sockstat
+sockets: used 863
+TCP: inuse 537 orphan 1 tw 872 alloc 712 mem 358
+UDP: inuse 4 mem 1
+UDPLITE: inuse 0
+RAW: inuse 0
+FRAG: inuse 0 memory 0
+[deploy@iZ251uvtr2bZ ~]$ cat /proc/net/sockstat
+sockets: used 864
+TCP: inuse 537 orphan 1 tw 785 alloc 713 mem 386
+UDP: inuse 4 mem 1
+UDPLITE: inuse 0
+RAW: inuse 0
+FRAG: inuse 0 memory 0
+</code></pre><p>&#x53D1;&#x73B0;mem&#x7684;&#x503C;&#x975E;&#x5E38;&#x5927;&#xFF0C;&#x4E0E;sysctl -a&#x4E2D;&#x7684;net.ipv4.tcp_mem&#x503C;&#x6BD4;&#x8F83;&#x5DF2;&#x7ECF;&#x76F8;&#x540C;&#xFF0C;&#x56E0;&#x6B64;&#x65E0;&#x6CD5;&#x5206;&#x914D;&#x66F4;&#x591A;&#x7684;&#x8FDE;&#x63A5;</p>
+<pre><code>$ sysctl -a|grep net.ipv4.tcp_mem
+net.ipv4.tcp_mem = 185328    247106    370656
+</code></pre><p>&#x901A;&#x8FC7;netstat -an&#x53D1;&#x73B0;&#x5927;&#x91CF;close_wait&#x72B6;&#x6001;&#x7684;&#x8FDE;&#x63A5;&#xFF0C;&#x539F;&#x56E0;&#x627E;&#x5230;&#x3002;</p>
+<p>&#x89E3;&#x51B3;&#x65B9;&#x6CD5;;</p>
+<ol>
+<li>close_wait&#x4EA7;&#x751F;&#x7684;&#x539F;&#x56E0;</li>
+<li>&#x589E;&#x5927;tcp_mem&#x7684;&#x503C;&#x3002;</li>
+</ol>
+<h2 id="%E4%BD%BF%E7%94%A8ulimit%E8%AE%BE%E7%BD%AE%E6%96%87%E4%BB%B6%E6%9C%80%E5%A4%A7%E6%89%93%E5%BC%80%E6%95%B0">&#x4F7F;&#x7528;ulimit&#x8BBE;&#x7F6E;&#x6587;&#x4EF6;&#x6700;&#x5927;&#x6253;&#x5F00;&#x6570;</h2>
+<p>&#x5927;&#x5BB6;&#x90FD;&#x77E5;&#x9053;Linux&#x7CFB;&#x7EDF;&#x9ED8;&#x8BA4;&#x6253;&#x5F00;&#x6587;&#x4EF6;&#x6570;&#x662F;1024&#xFF0C;&#x800C;&#x5B9E;&#x9645;&#x7684;&#x751F;&#x4EA7;&#x73AF;&#x5883;&#x4E2D;&#xFF0C;&#x8FD9;&#x4E2A;&#x503C;&#x603B;&#x662F;&#x663E;&#x5F97;&#x592A;&#x5C0F;&#xFF0C;&#x800C;&#x592A;&#x5C0F;&#x7684;&#x540E;&#x679C;&#x5C31;&#x662F;&#x4F60;&#x7684;&#x7CFB;&#x7EDF;&#x4F1A;&#x62A5;&#xFF1A;too many open files &#x7B49;&#x8FD9;&#x6837;&#x7684;&#x9519;&#x8BEF;&#x5BFC;&#x81F4;&#x4F60;&#x7CFB;&#x7EDF;&#x6B7B;&#x6389;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x603B;&#x662F;&#x8981;&#x4FEE;&#x6539;&#x8FD9;&#x4E2A;&#x503C;</p>
+<pre><code>$ ulimit -a
+
+core file size          (blocks, -c) 0
+data seg size           (kbytes, -d) unlimited
+scheduling priority             (-e) 0
+file size               (blocks, -f) unlimited
+pending signals                 (-i) 31225
+max locked memory       (kbytes, -l) 64
+max memory size         (kbytes, -m) unlimited
+open files                      (-n) 64000
+pipe size            (512 bytes, -p) 8
+POSIX message queues     (bytes, -q) 819200
+real-time priority              (-r) 0
+stack size              (kbytes, -s) 8192
+cpu time               (seconds, -t) unlimited
+max user processes              (-u) 4096
+virtual memory          (kbytes, -v) unlimited
+file locks                      (-x) unlimited
+</code></pre><p>&#x4E0A;&#x9762;&#x6240;&#x793A;&#x7684;&#x662F;&#x6700;&#x5927;&#x6587;&#x4EF6;&#x6253;&#x5F00;&#x6570;&#xFF0C;&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B;&#x662F;1024&#xFF0C;&#x4F46;&#x7531;&#x4E8E;&#x6211;&#x7CFB;&#x7EDF;&#x5DF2;&#x7ECF;&#x6539;&#x4E3A;&#x4E86;64000&#xFF0C;&#x6240;&#x4EE5;&#x73B0;&#x5728;&#x770B;&#x5230;&#x7684;&#x662F;64000&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;ulimit &#x2013;n&#x547D;&#x4EE4;&#x6765;&#x67E5;&#x770B;&#x6700;&#x5927;&#x6587;&#x4EF6;&#x6253;&#x5F00;&#x6570;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>64000
+</code></pre><p>&#x901A;&#x8FC7;ulimit -a &#x53EF;&#x4EE5;&#x67E5;&#x770B;open files
+&#x4FEE;&#x6539;&#x8FD9;&#x4E2A;&#x9650;&#x5236;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;ulimt -SHn 65536</p>
+<h3 id="%E6%AD%A5%E9%AA%A41%EF%BC%9A%E4%BF%AE%E6%94%B9-etc-security-limits-conf">&#x6B65;&#x9AA4;1&#xFF1A;&#x4FEE;&#x6539;/etc/security/limits.conf</h3>
+<p>&#x901A;&#x8FC7; vi /etc/security/limits.conf&#x4FEE;&#x6539;&#x5176;&#x5185;&#x5BB9;&#xFF0C;&#x5728;&#x6587;&#x4EF6;&#x6700;&#x540E;&#x52A0;&#x5165;&#xFF08;&#x6570;&#x503C;&#x4E5F;&#x53EF;&#x4EE5;&#x81EA;&#x5DF1;&#x5B9A;&#x4E49;&#xFF09;&#xFF1A;</p>
+<pre><code>* soft  nofile = 32768
+* hard  nofile = 65536
+</code></pre><h3 id="%E6%AD%A5%E9%AA%A42%EF%BC%9A%E4%BF%AE%E6%94%B9-etc-profile">&#x6B65;&#x9AA4;2&#xFF1A;&#x4FEE;&#x6539;/etc/profile</h3>
+<p>&#x901A;&#x8FC7;vi /etc/profile&#x4FEE;&#x6539;&#xFF0C;&#x5728;&#x6700;&#x540E;&#x52A0;&#x5165;&#x4EE5;&#x4E0B;&#x5185;&#x5BB9;</p>
+<pre><code>ulimit -n 32768
+</code></pre><p>&#x7136;&#x540E;&#x91CD;&#x65B0;&#x767B;&#x5F55;&#x5373;&#x53EF;&#x751F;&#x6548;&#x4E86;&#xFF08;&#x5F00;&#x673A;&#x542F;&#x52A8;&#x4E5F;&#x53EF;&#x4EE5;&#x8003;&#x8651;&#x4FEE;&#x6539;/etc/rc.local&#xFF09;&#x3002;</p>
+<p>&#x8BF4;&#x660E;&#xFF1A;</p>
+<p>&#x5176;&#x5B9E;&#x53EA;&#x4FEE;&#x6539;/etc/profile&#x5C31;&#x53EF;&#x4EE5;&#x751F;&#x6548;&#x4E86;&#xFF0C;&#x4F46;&#x6211;&#x8FD8;&#x662F;&#x5EFA;&#x8BAE;&#x628A;/etc/security/limits.conf&#x4E5F;&#x4FEE;&#x6539;&#x4E00;&#x4E0B;&#x3002;</p>
+<h3 id="%E6%AD%A5%E9%AA%A43%EF%BC%9A%E4%BF%AE%E6%94%B9-file-max">&#x6B65;&#x9AA4;3&#xFF1A;&#x4FEE;&#x6539; file-max</h3>
+<pre><code>echo 8061540 &gt; /proc/sys/fs/file-max
+</code></pre><p>(&#x6B64;&#x5904;&#x7684;&#x6570;&#x636E;&#x6309;&#x7167;&#x60A8;&#x5B9E;&#x9645;&#x9700;&#x8981;&#x8C03;&#x8282;)</p>
+<p>&#x6B64;&#x6CD5;&#x89E3;&#x51B3;&#x7684;&#x5B9E;&#x9645;&#x95EE;&#x9898;&#x662F;:&#x5728;&#x9AD8;&#x8D1F;&#x8F7D;&#x4E0B;squid,mysql &#x4F1A;&#x53D1;&#x751F; &#x6253;&#x5F00;&#x7684;&#x6587;&#x4EF6;&#x6570;&#x8D85;&#x8FC7;&#x7CFB;&#x7EDF;&#x7684;&#x8FDB;&#x7A0B;&#x9650;&#x5236;&#xFF0C;&#x9020;&#x6210;&#x7CFB;&#x7EDF;&#x74F6;&#x9888;&#x3002;</p>
+<h2 id="%E6%9F%A5%E7%9C%8Bmongodb%E8%BF%9E%E6%8E%A5%E6%95%B0">&#x67E5;&#x770B;mongodb&#x8FDE;&#x63A5;&#x6570;</h2>
+<p>&#x5728;&#x7EC8;&#x7AEF;&#x6216;robo&#x91CC;&#x6267;&#x884C;</p>
+<pre><code>db.runCommand( { serverStatus: 1 } ).connections
+</code></pre><p>&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x5982;&#x4E0B;</p>
+<pre><code>/* 1 */
+{
+    &quot;current&quot; : 88,
+    &quot;available&quot; : 51112,
+    &quot;totalCreated&quot; : NumberLong(418)
+}
+</code></pre><p>&#x8FC7;&#x4E00;&#x6BB5;&#x65F6;&#x95F4;&#x518D;&#x67E5;</p>
+<pre><code>/* 1 */
+{
+    &quot;current&quot; : 92,
+    &quot;available&quot; : 51108,
+    &quot;totalCreated&quot; : NumberLong(500)
+}
+</code></pre><p>&#x8FC7;&#x4E00;&#x6BB5;&#x65F6;&#x95F4;&#x518D;&#x67E5;</p>
+<pre><code>/* 1 */
+{
+    &quot;current&quot; : 92,
+    &quot;available&quot; : 51108,
+    &quot;totalCreated&quot; : NumberLong(599)
+}
+</code></pre><h3 id="%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%8A%B6%E6%80%81%E9%87%8C%E7%9A%84connections%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F">&#x670D;&#x52A1;&#x5668;&#x72B6;&#x6001;&#x91CC;&#x7684;connections&#x662F;&#x4EC0;&#x4E48;&#xFF1F;</h3>
+<p>A document that reports on the status of the connections. Use these values to assess the current load and capacity requirements of the server.</p>
+<h3 id="connections-current">connections.current</h3>
+<p>The number of incoming connections from clients to the database server . This number includes the current shell session. Consider the value of connections.available to add more context to this datum.</p>
+<p>The value will include all incoming connections including any shell connections or connections from other servers, such as replica set members or mongos instances.</p>
+<h3 id="connections-available">connections.available</h3>
+<p>The number of unused incoming connections available. Consider this value in combination with the value of connections.current to understand the connection load on the database, and the UNIX ulimit Settings document for more information about system thresholds on available connections.</p>
+<h3 id="connections-totalcreated">connections.totalCreated</h3>
+<p>Count of all incoming connections created to the server. This number includes connections that have since closed.</p>
+<h2 id="%E7%8E%A9%E7%8E%A9">&#x73A9;&#x73A9;</h2>
+<p>&#x5982;&#x679C;&#x53EF;&#x7528;&#x8FDE;&#x63A5;available&#x8D8A;&#x6765;&#x8D8A;&#x5C11;&#xFF1F;&#x76F4;&#x81F3;&#x4E3A;0&#x5462;&#xFF1F;</p>
+<h2 id="mongoose%E8%BF%9E%E6%8E%A5%E6%B1%A0">mongoose&#x8FDE;&#x63A5;&#x6C60;</h2>
+<p>&#x4F7F;&#x7528;mongoose&#x5185;&#x7F6E;&#x7684;&#x8FDE;&#x63A5;&#x6C60;&#xFF0C;&#x914D;&#x7F6E;&#x5982;&#x4E0B;</p>
+<pre><code>options = {  
+  server: {
+    auto_reconnect: true,
+    poolSize: 10
+  }
+};
+</code></pre><p>&#x8BF4;&#x660E;&#xFF1A;</p>
+<ul>
+<li>poolSize&#x662F;&#x8FDE;&#x63A5;&#x6C60;&#x5927;&#x5C0F;</li>
+<li>auto_reconnect&#x662F;&#x5426;&#x81EA;&#x52A8;&#x91CD;&#x8FDE;&#x63A5;</li>
+</ul>
+<p>&#x5173;&#x4E8E;poolSize</p>
+<p>poolSize connections are opened to the db when you connect. the default is 5 which is usually plenty&#x3010;&#x5145;&#x8DB3;&#x7684;&#x3011;.</p>
+<p>best practice is to open a single mongoose connection and reuse it during the life of your application and close it at application shutdown. if you are opening many many mongoose connections the number of actual connections open will be nMongooseConnections * poolSize.</p>
+<p>keep in mind mongodb has a hard limit of 20000 open connections.</p>
+<p>Bottom line, the default is probably all you need and only play with the poolSize if you see benefits from your testing.</p>
+<p><a href="https://github.com/LearnBoost/mongoose/issues/1172" target="_blank">https://github.com/LearnBoost/mongoose/issues/1172</a></p>
+<h2 id="%E9%97%AE%E9%A2%98%E5%87%BA%E7%8E%B0%E7%9A%84%E5%8F%AF%E8%83%BD%E5%8E%9F%E5%9B%A0">&#x95EE;&#x9898;&#x51FA;&#x73B0;&#x7684;&#x53EF;&#x80FD;&#x539F;&#x56E0;</h2>
+<ul>
+<li>&#x81EA;&#x8EAB;&#x51FA;&#x73B0;&#x5D29;&#x6E83;&#x3002;&#x5F02;&#x5E38;&#x6CA1;&#x6709;&#x5904;&#x7406;</li>
+<li>&#x5D29;&#x6E83;&#x540E;pm2&#x81EA;&#x52A8;&#x91CD;&#x542F;&#xFF0C;&#x518D;&#x5D29;&#x6E83;&#xFF0C;&#x518D;&#x91CD;&#x542F;</li>
+<li>pm2&#x8D77;&#x591A;&#x4E2A;app&#xFF0C;&#x6BCF;&#x4E2A;app&#x591A;&#x4E2A;&#x5B9E;&#x4F8B;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5BB9;&#x6613;&#x51FA;&#x73B0;&#x96EA;&#x5D29;&#x95EE;&#x9898;</li>
+</ul>
+<p>&#x53EA;&#x8981;&#x51FA;&#x73B0;&#x5D29;&#x6E83;&#x95EE;&#x9898;&#xFF0C;&#x5C31;&#x4F1A;&#x5BFC;&#x81F4;mongodb&#x91CD;&#x8FDE;</p>
+<pre><code>[deploy@i51uvtr2bZ log]$ pm2 ls
+&#x250C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x252C;&#x2500;&#x2500;&#x2500;&#x2500;&#x252C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x252C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x252C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x252C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x252C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x252C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x252C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2510;
+&#x2502; App name   &#x2502; id &#x2502; mode    &#x2502; pid  &#x2502; status &#x2502; restart &#x2502; uptime &#x2502; memory       &#x2502; watching &#x2502;
+&#x251C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x253C;&#x2500;&#x2500;&#x2500;&#x2500;&#x253C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x253C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x253C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x253C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x253C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x253C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x253C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2524;
+&#x2502; shop       &#x2502; 0  &#x2502; cluster &#x2502; 3809 &#x2502; online &#x2502; 10      &#x2502; 38m    &#x2502; 361.148 MB   &#x2502; disabled &#x2502;
+&#x2502; shop       &#x2502; 1  &#x2502; cluster &#x2502; 3763 &#x2502; online &#x2502; 8       &#x2502; 38m    &#x2502; 317.813 MB   &#x2502; disabled &#x2502;
+&#x2502; shop       &#x2502; 2  &#x2502; cluster &#x2502; 3832 &#x2502; online &#x2502; 6       &#x2502; 38m    &#x2502; 372.559 MB   &#x2502; disabled &#x2502;
+&#x2502; shop       &#x2502; 3  &#x2502; cluster &#x2502; 3786 &#x2502; online &#x2502; 7       &#x2502; 38m    &#x2502; 260.098 MB   &#x2502; disabled &#x2502;
+</code></pre><p>&#x7C7B;&#x4F3C;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x5047;&#x8BBE;4&#x6838;&#xFF0C;&#x8D77;&#x4E86;4&#x4E2A;&#x5B9E;&#x4F8B;&#xFF0C;&#x6BCF;&#x4E2A;&#x5B9E;&#x4F8B;&#x521B;&#x5EFA;&#x8FDE;&#x63A5;&#x6C60;5&#x4E2A;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x662F;20&#x4E2A;&#x8FDE;&#x63A5;&#x3002;</p>
+<p>&#x90A3;&#x4E48;4&#x4E2A;&#x5B9E;&#x4F8B;&#x7684;&#x91CD;&#x542F;&#x603B;&#x6B21;&#x6570;31&#x6B21;&#x3002;</p>
+<p>&#x4E5F;&#x5C31;&#x662F;&#x8BF4;31 * 20 = 620&#x4E2A;&#x8FDE;&#x63A5;&#x6CA1;&#x6709;&#x88AB;&#x56DE;&#x6536;&#x3002;&#x3002;&#x3002;&#x3002;&#x3002;</p>
+<h2 id="%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95">&#x89E3;&#x51B3;&#x529E;&#x6CD5;</h2>
+<p>&#x76EE;&#x524D;&#x80FD;&#x60F3;&#x5230;2&#x79CD;</p>
+<ul>
+<li>&#x5B9A;&#x65F6;&#x91CD;&#x542F;mongodb&#x670D;&#x52A1;&#xFF0C;&#x53EF;&#x4EE5;&#x89E3;&#x51B3;&#xFF0C;&#x4F46;&#x592A;low</li>
+</ul>
+<pre><code>$ sudo service mongod restart
+[sudo] password for deploy: 
+Restarting mongod (via systemctl):                         [  OK  ]
+</code></pre><ul>
+<li>&#x5728;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x9000;&#x51FA;&#x4E4B;&#x540E;&#xFF0C;&#x5173;&#x95ED;&#x8FDE;&#x63A5;&#xFF08;&#x6B63;&#x89E3;&#xFF09; + &#x5916;&#x52A0;&#x6CE8;&#x610F;&#x67D0;&#x4E9B;&#x5730;&#x65B9;&#x7684;&#x5F02;&#x5E38;&#x5904;&#x7406;</li>
+</ul>
+<pre><code>var mongoose   = require(&apos;mongoose&apos;);
+var express    = require(&apos;express&apos;);
+
+var config     = require(&apos;./config/config&apos;);
+
+var db_server  = process.env.DB_ENV || &apos;primary&apos;;
+
+mongoose.connection.on(&quot;connected&quot;, function(ref) {
+  console.log(&quot;Connected to &quot; + db_server + &quot; DB!&quot;);
+
+  var app = express();
+
+  // add your middleware set-up
+  // add your routes
+
+  port = process.env.port || 3000;
+  ip = process.env.ip;
+
+  app.listen(port, ip, function() {
+  console.log(&apos;listening on port &apos; + port);
+  });
+});
+
+// If the connection throws an error
+mongoose.connection.on(&quot;error&quot;, function(err) {
+  console.error(&apos;Failed to connect to DB &apos; + db_server + &apos; on startup &apos;, err);
+});
+
+// When the connection is disconnected
+mongoose.connection.on(&apos;disconnected&apos;, function () {
+  console.log(&apos;Mongoose default connection to DB :&apos; + db_server + &apos; disconnected&apos;);
+});
+
+var gracefulExit = function() { 
+  mongoose.connection.close(function () {
+    console.log(&apos;Mongoose default connection with DB :&apos; + db_server + &apos; is disconnected through app termination&apos;);
+    process.exit(0);
+  });
+}
+
+// If the Node process ends, close the Mongoose connection
+process.on(&apos;SIGINT&apos;, gracefulExit).on(&apos;SIGTERM&apos;, gracefulExit);
+
+try {
+  options.server.socketOptions = options.replset.socketOptions = { keepAlive: 1 };
+  mongoose.connect(config.getDBURL(db_server));
+  console.log(&quot;Trying to connect to DB &quot; + db_server);
+} catch (err) {
+  console.log(&quot;Sever initialization failed &quot; , err.message);
+}
+</code></pre><h2 id="%E4%BD%BF%E7%94%A8native-parser%E6%8F%90%E9%AB%98%E6%80%A7%E8%83%BD">&#x4F7F;&#x7528;native_parser&#x63D0;&#x9AD8;&#x6027;&#x80FD;</h2>
+<pre><code>mongoose.connect(config.db, {auto_reconnect: true, native_parser: true}, function(err) {
+    var MongoStore = require(&quot;connect-mongodb&quot;);
+
+    var app = express();
+    app.use(express.session({
+        cookie: {maxAge: 60000 * 20},
+        secret: &quot;secret&quot;,
+        store: new MongoStore({db: mongoose.connection.db})
+    }));
+});
+</code></pre><h2 id="session%E6%B8%85%E7%90%86%E9%97%AE%E9%A2%98">session&#x6E05;&#x7406;&#x95EE;&#x9898;</h2>
+<pre><code>var express = require(&apos;express&apos;);
+var MongoStore = require(&apos;connect-mongo&apos;)(express);
+
+app.use(express.session({
+  secret: settings.cookie_secret,
+  store: new MongoStore({
+    &quot;db&quot;: &quot;dbName&quot;,
+    &quot;host&quot;: &quot;localhost&quot;,
+    &quot;port&quot;: &quot;27017&quot;,
+    &quot;collection&quot;: &quot;mysessions&quot;,
+    &quot;clear_interval&quot;: 3600,
+    &quot;auto_reconnect&quot;: true
+  })
+}));
+</code></pre><p>&#x6CE8;&#x610F;clear_interval</p>
+<h2 id="%E6%B5%8B%E8%AF%95%E9%87%8C%E5%85%B3%E9%97%AD">&#x6D4B;&#x8BD5;&#x91CC;&#x5173;&#x95ED;</h2>
+<pre><code>var mongoose = require(&apos;mongoose&apos;);
+
+describe(&apos;My test&apos;, function() {
+  before(function(done) {
+    //Another possibility is to check if mongoose.connection.readyState equals 1
+    if (mongoose.connection.db) return done();
+    mongoose.connect(&apos;mongodb://localhost/puan_test&apos;, done);
+  });
+});
+
+// You can put one &#x2018;after()&#x2019; statement above all else that will run when all tests are finished
+after(function(done){
+  db.connection.db.dropDatabase(function(){
+    db.connection.close(function(){
+      done();
+    });
+  });
+});
+</code></pre><h2 id="%E8%BF%9E%E6%8E%A5%E6%B1%A0">&#x8FDE;&#x63A5;&#x6C60;</h2>
+<p>&#x4F7F;&#x7528;mongoose&#x5185;&#x7F6E;&#x7684;&#x8FDE;&#x63A5;&#x6C60;&#xFF0C;&#x914D;&#x7F6E;&#x5982;&#x4E0B;</p>
+<p>options = {<br>  server: {
+    auto_reconnect: true,
+    poolSize: 10
+  }
+};
+&#x8BF4;&#x660E;&#xFF1A;</p>
+<p>poolSize&#x662F;&#x8FDE;&#x63A5;&#x6C60;&#x5927;&#x5C0F;
+auto_reconnect&#x662F;&#x5426;&#x81EA;&#x52A8;&#x91CD;&#x8FDE;&#x63A5;
+&#x4EE3;&#x7801;</p>
+<p>// mongoose config
+var mongoose = require(&apos;mongoose&apos;)<br>  , connectionString = &apos;mongodb://localhost:27017/exam_weixin&apos;
+  , options = {};</p>
+<p>options = {<br>  server: {
+    auto_reconnect: true,
+    poolSize: 10
+  }
+};</p>
+<p>mongoose.connect(connectionString, options, function(err, res) {<br>  if(err) {
+    console.log(&apos;[mongoose log] Error connecting to: &apos; + connectionString + &apos;. &apos; + err);
+  } else {
+    console.log(&apos;[mongoose log] Successfully connected to: &apos; + connectionString);
+  }
+});</p>
+<p>var db = mongoose.connection;
+db.on(&apos;error&apos;, console.error.bind(console, &apos;mongoose connection error:&apos;));
+db.once(&apos;open&apos;, function callback () {
+  // yay!
+    console.log(&apos;mongoose open success&apos;);
+});</p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../db/optimize.html" class="navigation navigation-prev " aria-label="Previous page: 了解优化"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../db/install.html" class="navigation navigation-next " aria-label="Next page: 了解mongodb的部署与部署"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-toc2/toc2.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2},"edit-link":{"base":"https://github.com/i5ting/wechat-dev-with-nodejs/tree/master","label":"Edit This Page"},"github":{"url":"https://github.com/i5ting/wechat-dev-with-nodejs/"}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

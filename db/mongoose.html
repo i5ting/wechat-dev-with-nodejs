@@ -1,0 +1,2359 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
+        <title>mongoose入门 | StuQ《Node.js微信开发》</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.0.1">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    
+    
+    <link rel="next" href="../db/extend.html" />
+    
+    
+    <link rel="prev" href="../db/model.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-toc2/toc2.css">
+        
+    
+    
+
+        
+    <div class="book" data-level="5.3" data-basepath=".." data-revision="Tue Dec 13 2016 07:19:09 GMT+0800 (CST)">
+    
+
+<div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Type to search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+        
+        
+        
+
+        
+
+        
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="skill/index.html">
+            
+                
+                    <a href="../skill/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        skill
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="skill/coding_webide.html">
+            
+                
+                    <a href="../skill/coding_webide.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        Coding WebIDE
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="skill/git.html">
+            
+                
+                    <a href="../skill/git.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        git
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="skill/extra.html">
+            
+                
+                    <a href="../skill/extra.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        extra
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="faq.html">
+            
+                
+                    <a href="../faq.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        预习
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="nodejs/index.html">
+            
+                
+                    <a href="../nodejs/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Node.js入门
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="nodejs/introduce.html">
+            
+                
+                    <a href="../nodejs/introduce.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        入门
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="nodejs/install.html">
+            
+                
+                    <a href="../nodejs/install.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        安装
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="nodejs/helloworld.html">
+            
+                
+                    <a href="../nodejs/helloworld.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        Hello world
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="nodejs/commonjs.html">
+            
+                
+                    <a href="../nodejs/commonjs.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        Common JS规范
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="nodejs/module-exports.html">
+            
+                
+                    <a href="../nodejs/module-exports.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        模块导出
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="nodejs/terms.html">
+            
+                
+                    <a href="../nodejs/terms.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.6.</b>
+                        
+                        Node.js代码调试
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="nodejs/npm.html">
+            
+                
+                    <a href="../nodejs/npm.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.7.</b>
+                        
+                        编写Node.js模块
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="nodejs/how-to-study.html">
+            
+                
+                    <a href="../nodejs/how-to-study.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.8.</b>
+                        
+                        最小化问题
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="nodejs/exercises.html">
+            
+                
+                    <a href="../nodejs/exercises.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.9.</b>
+                        
+                        随堂练习：写一个Node.js模块并发布
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="async/index.html">
+            
+                
+                    <a href="../async/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        异步流程控制
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="async/when.html">
+            
+                
+                    <a href="../async/when.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        什么时候会用到异步流程控制
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="async/async.js.html">
+            
+                
+                    <a href="../async/async.js.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        简单做法async模块
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="async/promise.html">
+            
+                
+                    <a href="../async/promise.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        Promise/a+规范
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="async/nodejs.html">
+            
+                
+                    <a href="../async/nodejs.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        Node.js Promise/a+实现
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="async/generator.html">
+            
+                
+                    <a href="../async/generator.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.</b>
+                        
+                        生成器Generators/yield
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="async/async.html">
+            
+                
+                    <a href="../async/async.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.6.</b>
+                        
+                        Async函数/Await
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="async/co.html">
+            
+                
+                    <a href="../async/co.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.7.</b>
+                        
+                        神奇的co
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="async/yieldable.html">
+            
+                
+                    <a href="../async/yieldable.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.8.</b>
+                        
+                        5种 yieldable
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9" data-path="async/summary.html">
+            
+                
+                    <a href="../async/summary.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.9.</b>
+                        
+                        学习重点
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.10" data-path="async/exercises.html">
+            
+                
+                    <a href="../async/exercises.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.10.</b>
+                        
+                        随堂练习：找到并阅读promise/a+实现的源码
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="express/index.html">
+            
+                
+                    <a href="../express/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        Express和微信开发入门
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="express/intro.html">
+            
+                
+                    <a href="../express/intro.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        入门
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="express/minimal.html">
+            
+                
+                    <a href="../express/minimal.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        Connect
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="express/html.html">
+            
+                
+                    <a href="../express/html.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        静态Http服务器
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="express/precompile.html">
+            
+                
+                    <a href="../express/precompile.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.</b>
+                        
+                        那些预处理器
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="express/route.html">
+            
+                
+                    <a href="../express/route.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.</b>
+                        
+                        路由
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="express/view.html">
+            
+                
+                    <a href="../express/view.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.6.</b>
+                        
+                        视图与模板引擎
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="express/middleware.html">
+            
+                
+                    <a href="../express/middleware.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.7.</b>
+                        
+                        中间件
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8" data-path="express/gulp.html">
+            
+                
+                    <a href="../express/gulp.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.8.</b>
+                        
+                        更多实践
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.9" data-path="express/how-to-study.html">
+            
+                
+                    <a href="../express/how-to-study.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.9.</b>
+                        
+                        微信入门
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.10" data-path="express/exercises.html">
+            
+                
+                    <a href="../express/exercises.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.10.</b>
+                        
+                        随堂练习：完成登录、注册功能
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="db/index.html">
+            
+                
+                    <a href="../db/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        数据库
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="db/mongodb.html">
+            
+                
+                    <a href="../db/mongodb.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        mongodb安装
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="db/model.html">
+            
+                
+                    <a href="../db/model.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.</b>
+                        
+                        了解mvc里m的作用，以及什么样的代码该放到模型里
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="5.3" data-path="db/mongoose.html">
+            
+                
+                    <a href="../db/mongoose.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.</b>
+                        
+                        mongoose入门
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="db/extend.html">
+            
+                
+                    <a href="../db/extend.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.4.</b>
+                        
+                        扩展mongoose模型statics方法和methods的区别
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="db/virtual.html">
+            
+                
+                    <a href="../db/virtual.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.5.</b>
+                        
+                        虚拟属性
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.6" data-path="db/hook.html">
+            
+                
+                    <a href="../db/hook.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.6.</b>
+                        
+                        回调：pre和post的差别
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.7" data-path="db/plugin.html">
+            
+                
+                    <a href="../db/plugin.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.7.</b>
+                        
+                        mongoose的插件机制
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.8" data-path="db/bluebird.html">
+            
+                
+                    <a href="../db/bluebird.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.8.</b>
+                        
+                        mongoose+promise
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.9" data-path="db/mongoosedao.html">
+            
+                
+                    <a href="../db/mongoosedao.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.9.</b>
+                        
+                        mongoosedao
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.10" data-path="db/pagination.html">
+            
+                
+                    <a href="../db/pagination.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.10.</b>
+                        
+                        分页
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.11" data-path="db/relationship.html">
+            
+                
+                    <a href="../db/relationship.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.11.</b>
+                        
+                        关系（1对1，1对多）在mongoose里如何实现
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.12" data-path="db/aggregation.html">
+            
+                
+                    <a href="../db/aggregation.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.12.</b>
+                        
+                        AGGREGATION 关联
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.13" data-path="db/indexes.html">
+            
+                
+                    <a href="../db/indexes.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.13.</b>
+                        
+                        了解索引
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.14" data-path="db/optimize.html">
+            
+                
+                    <a href="../db/optimize.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.14.</b>
+                        
+                        了解优化
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.15" data-path="db/mongooseconnection.html">
+            
+                
+                    <a href="../db/mongooseconnection.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.15.</b>
+                        
+                        mongooseconnection
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.16" data-path="db/install.html">
+            
+                
+                    <a href="../db/install.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.16.</b>
+                        
+                        了解mongodb的部署与部署
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.17" data-path="db/user.html">
+            
+                
+                    <a href="../db/user.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.17.</b>
+                        
+                        UserModel
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="wechat/index.html">
+            
+                
+                    <a href="../wechat/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        微信实例和H5实践
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1" data-path="wechat/init.html">
+            
+                
+                    <a href="../wechat/init.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.</b>
+                        
+                        微信基础和Sandbox
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="wechat/reply.html">
+            
+                
+                    <a href="../wechat/reply.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.2.</b>
+                        
+                        公众号菜单和自动回复
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="wechat/oauth.html">
+            
+                
+                    <a href="../wechat/oauth.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.3.</b>
+                        
+                        微信OAuth用户授权
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="wechat/share.html">
+            
+                
+                    <a href="../wechat/share.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.4.</b>
+                        
+                        微信分享
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="wechat/api.html">
+            
+                
+                    <a href="../wechat/api.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.5.</b>
+                        
+                        Wechat-api
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6" data-path="wechat/h5.html">
+            
+                
+                    <a href="../wechat/h5.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.6.</b>
+                        
+                        H5-上篇
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.7" data-path="wechat/h5.html">
+            
+                
+                    <a href="../wechat/h5.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.7.</b>
+                        
+                        H5-下篇
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.8" data-path="wechat/exercises.html">
+            
+                
+                    <a href="../wechat/exercises.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.8.</b>
+                        
+                        随堂练习：写一个页面分享到朋友圈
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="weui/index.html">
+            
+                
+                    <a href="../weui/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        WeUI实战
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1" data-path="weui/bower.html">
+            
+                
+                    <a href="../weui/bower.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.1.</b>
+                        
+                        使用Bower
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="weui/mobile.html">
+            
+                
+                    <a href="../weui/mobile.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.2.</b>
+                        
+                        移动端抽象
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="weui/iscroll.html">
+            
+                
+                    <a href="../weui/iscroll.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.3.</b>
+                        
+                        优化滑动列表
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.4" data-path="weui/weui.html">
+            
+                
+                    <a href="../weui/weui.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.4.</b>
+                        
+                        WeUI
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.5" data-path="weui/iscroll+weui.html">
+            
+                
+                    <a href="../weui/iscroll+weui.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.5.</b>
+                        
+                        让WeUI和iScroll结婚
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.6" data-path="weui/event.html">
+            
+                
+                    <a href="../weui/event.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.6.</b>
+                        
+                        优化事件
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.7" data-path="weui/how-to-h5.html">
+            
+                
+                    <a href="../weui/how-to-h5.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.7.</b>
+                        
+                        如何编写H5代码
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.8" data-path="weui/more.html">
+            
+                
+                    <a href="../weui/more.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.8.</b>
+                        
+                        优化无止境
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7.9" data-path="weui/layermobile.html">
+            
+                
+                    <a href="../weui/layermobile.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.9.</b>
+                        
+                        随堂练习：集成Layer.mobile
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="pay/index.html">
+            
+                
+                    <a href="../pay/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        微信支付
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1" data-path="pay/pay.html">
+            
+                
+                    <a href="../pay/pay.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.1.</b>
+                        
+                        吹个牛
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="pay/overview.html">
+            
+                
+                    <a href="../pay/overview.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.2.</b>
+                        
+                        支付概述
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="pay/concept.html">
+            
+                
+                    <a href="../pay/concept.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.3.</b>
+                        
+                        科普几个概念
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4" data-path="pay/prepare.html">
+            
+                
+                    <a href="../pay/prepare.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.4.</b>
+                        
+                        准备
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.5" data-path="pay/debug.html">
+            
+                
+                    <a href="../pay/debug.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.5.</b>
+                        
+                        调试
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.6" data-path="pay/js_pay.html">
+            
+                
+                    <a href="../pay/js_pay.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.6.</b>
+                        
+                        公众号支付（JSAPI）
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.7" data-path="pay/statement.html">
+            
+                
+                    <a href="../pay/statement.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.7.</b>
+                        
+                        对账单
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.8" data-path="pay/data.html">
+            
+                
+                    <a href="../pay/data.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.8.</b>
+                        
+                        数据处理
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8.9" data-path="pay/exercises.html">
+            
+                
+                    <a href="../pay/exercises.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.9.</b>
+                        
+                        随堂练习：写一个通用h5支付接口
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="vip-lession/index.html">
+            
+                
+                    <a href="../vip-lession/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.</b>
+                        
+                        项目实战《付费课程系统MVP》
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="9.1" data-path="vip-lession/requirement.html">
+            
+                
+                    <a href="../vip-lession/requirement.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.1.</b>
+                        
+                        需求分析
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="vip-lession/uiue.html">
+            
+                
+                    <a href="../vip-lession/uiue.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.2.</b>
+                        
+                        ui/ue
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3" data-path="vip-lession/teck.html">
+            
+                
+                    <a href="../vip-lession/teck.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.3.</b>
+                        
+                        技术栈
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.4" data-path="vip-lession/model.html">
+            
+                
+                    <a href="../vip-lession/model.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.4.</b>
+                        
+                        模型
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.5" data-path="vip-lession/api.html">
+            
+                
+                    <a href="../vip-lession/api.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.5.</b>
+                        
+                        静态api
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.6" data-path="vip-lession/dev.html">
+            
+                
+                    <a href="../vip-lession/dev.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.6.</b>
+                        
+                        开发
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.7" data-path="vip-lession/deployment.html">
+            
+                
+                    <a href="../vip-lession/deployment.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.7.</b>
+                        
+                        部署
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.8" data-path="vip-lession/monit.html">
+            
+                
+                    <a href="../vip-lession/monit.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.8.</b>
+                        
+                        监控
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.9" data-path="vip-lession/data_analyze.html">
+            
+                
+                    <a href="../vip-lession/data_analyze.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.9.</b>
+                        
+                        数据统计
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9.10" data-path="vip-lession/demo.html">
+            
+                
+                    <a href="../vip-lession/demo.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.10.</b>
+                        
+                        demo
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="10" data-path="vip-lession/index.html">
+            
+                
+                    <a href="../vip-lession/index.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.</b>
+                        
+                        高级篇（赠送）
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.1" data-path="more/practice.html">
+            
+                
+                    <a href="../more/practice.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.1.</b>
+                        
+                        前后端分离实践？
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10.2" data-path="more/tomorow.html">
+            
+                
+                    <a href="../more/tomorow.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.2.</b>
+                        
+                        如何展望未来的大前端？
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10.3" data-path="more/microservice.html">
+            
+                
+                    <a href="../more/microservice.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.3.</b>
+                        
+                        容器化和微服务
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="11" data-path="faq1.html">
+            
+                
+                    <a href="../faq1.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>11.</b>
+                        
+                        答疑问题收集
+                    </a>
+                
+            
+            
+        </li>
+    
+
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                Published with GitBook
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Table of Contents"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Search"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Font Settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="Share"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">
+                    Share on Twitter
+                </button>
+                <button type="button" data-sharing="google-plus" class="button">
+                    Share on Google
+                </button>
+                <button type="button" data-sharing="facebook" class="button">
+                    Share on Facebook
+                </button>
+                <button type="button" data-sharing="weibo" class="button">
+                    Share on Weibo
+                </button>
+                <button type="button" data-sharing="instapaper" class="button">
+                    Share on Instapaper
+                </button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Google"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >StuQ《Node.js微信开发》</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="mongoose%E5%85%A5%E9%97%A8">mongoose&#x5165;&#x95E8;</h1>
+<p>MongoDB&#x662F;&#x4E00;&#x4E2A;&#x5F00;&#x6E90;&#x7684;NoSQL&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x76F8;&#x6BD4;MySQL&#x90A3;&#x6837;&#x7684;&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x5B83;&#x66F4;&#x663E;&#x5F97;&#x8F7B;&#x5DE7;&#x3001;&#x7075;&#x6D3B;&#xFF0C;&#x975E;&#x5E38;&#x9002;&#x5408;&#x5728;&#x6570;&#x636E;&#x89C4;&#x6A21;&#x5F88;&#x5927;&#x3001;&#x4E8B;&#x52A1;&#x6027;&#x4E0D;&#x5F3A;&#x7684;&#x573A;&#x5408;&#x4E0B;&#x4F7F;&#x7528;&#x3002;&#x540C;&#x65F6;&#x5B83;&#x4E5F;&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x6CA1;&#x6709;&#x8868;&#x3001;&#x884C;&#x7B49;&#x6982;&#x5FF5;&#xFF0C;&#x4E5F;&#x6CA1;&#x6709;&#x56FA;&#x5B9A;&#x7684;&#x6A21;&#x5F0F;&#x548C;&#x7ED3;&#x6784;&#xFF0C;&#x6240;&#x6709;&#x7684;&#x6570;&#x636E;&#x4EE5;&#x6587;&#x6863;&#x7684;&#x5F62;&#x5F0F;&#x5B58;&#x50A8;(&#x6587;&#x6863;&#xFF0C;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x5173;&#x8054;&#x6570;&#x7EC4;&#x5F0F;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x5B83;&#x7684;&#x5185;&#x90E8;&#x7531;&#x5C5E;&#x6027;&#x7EC4;&#x6210;&#xFF0C;&#x4E00;&#x4E2A;&#x5C5E;&#x6027;&#x5BF9;&#x5E94;&#x7684;&#x503C;&#x53EF;&#x80FD;&#x662F;&#x4E00;&#x4E2A;&#x6570;&#x3001;&#x5B57;&#x7B26;&#x4E32;&#x3001;&#x65E5;&#x671F;&#x3001;&#x6570;&#x7EC4;&#xFF0C;&#x751A;&#x81F3;&#x662F;&#x4E00;&#x4E2A;&#x5D4C;&#x5957;&#x7684;&#x6587;&#x6863;&#x3002;)&#xFF0C;&#x6570;&#x636E;&#x683C;&#x5F0F;&#x5C31;&#x662F;JSON&#x3002;</p>
+<p>&#x5047;&#x5B9A;&#x8BFB;&#x8005;&#x5DF2;&#x7ECF;&#x4E86;&#x89E3;&#x4E86;mongdb&#x548C;mysql&#x7684;&#x533A;&#x522B;&#x548C;&#x4E3A;&#x4EC0;&#x4E48;&#x9009;&#x7528;mongodb&#xFF0C;&#x7EE7;&#x800C;&#x4ECB;&#x7ECD;nodejs&#x91CC;&#x7684;mongoose&#x6A21;&#x5757;&#x8FDB;&#x884C;&#x5B9E;&#x6218;&#xFF0C;&#x5177;&#x4F53;&#x5206;4&#x6B65;&#x9AA4;</p>
+<ul>
+<li>mongoose&#x662F;&#x4EC0;&#x4E48;&#xFF1F;</li>
+<li>mongoose&#x5165;&#x95E8;</li>
+<li>mongoose&#x6982;&#x5FF5;</li>
+<li>mongoose crud</li>
+</ul>
+<h2 id="mongoose%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F">Mongoose&#x662F;&#x4EC0;&#x4E48;&#xFF1F;</h2>
+<p>Mongoose&#x662F;MongoDB&#x7684;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x6A21;&#x578B;&#x5DE5;&#x5177;&#xFF0C;&#x662F;&#x57FA;&#x4E8E;node-mongodb-native&#x5F00;&#x53D1;&#x7684;MongoDB nodejs&#x9A71;&#x52A8;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x5F02;&#x6B65;&#x7684;&#x73AF;&#x5883;&#x4E0B;&#x6267;&#x884C;&#x3002;&#x540C;&#x65F6;&#x5B83;&#x4E5F;&#x662F;&#x9488;&#x5BF9;MongoDB&#x64CD;&#x4F5C;&#x7684;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x6A21;&#x578B;&#x5E93;&#xFF0C;&#x5C01;&#x88C5;&#x4E86;MongoDB&#x5BF9;&#x6587;&#x6863;&#x7684;&#x7684;&#x4E00;&#x4E9B;&#x589E;&#x5220;&#x6539;&#x67E5;&#x7B49;&#x5E38;&#x7528;&#x65B9;&#x6CD5;&#xFF0C;&#x8BA9;NodeJS&#x64CD;&#x4F5C;Mongodb&#x6570;&#x636E;&#x5E93;&#x53D8;&#x5F97;&#x66F4;&#x52A0;&#x7075;&#x6D3B;&#x7B80;&#x5355;&#x3002;</p>
+<p>Mongoose&#xFF0C;&#x56E0;&#x4E3A;&#x5C01;&#x88C5;&#x4E86;&#x5BF9;MongoDB&#x5BF9;&#x6587;&#x6863;&#x64CD;&#x4F5C;&#x7684;&#x5E38;&#x7528;&#x5904;&#x7406;&#x65B9;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x9AD8;&#x6548;&#x7684;&#x64CD;&#x4F5C;mongodb,&#x540C;&#x65F6;&#x53EF;&#x4EE5;&#x7406;&#x89E3;mongoose&#x662F;&#x4E00;&#x4E2A;&#x7B80;&#x6613;&#x7248;&#x7684;orm &#xFF0C;&#x63D0;&#x4F9B;&#x4E86;&#x7C7B;&#x4F3C;schema&#x5B9A;&#x4E49;&#xFF0C;hook&#x3001;plugin&#x3001;virtual&#x3001;populate&#x7B49;&#x673A;&#x5236;&#xFF0C;&#x8BA9;NodeJS&#x64CD;&#x4F5C;Mongodb&#x6570;&#x636E;&#x5E93;&#x53D8;&#x5F97;&#x7279;&#x522B;&#x7B80;&#x5355;!</p>
+<p>&#x4EE5;&#x5F80;&#x4E66;&#x4E2D;&#x5F80;&#x5F80;&#x76F4;&#x63A5;&#x4E0A;&#x4F8B;&#x5B50;&#xFF0C;&#x6DF7;&#x5408;&#x5404;&#x79CD;&#x5E93;&#x548C;&#x4EE3;&#x7801;&#xFF0C;&#x5BB9;&#x6613;&#x8BA9;&#x4EBA;&#x6655;&#xFF0C;&#x5FC5;&#x987B;&#x5728;&#x4F8B;&#x5B50;&#x4E2D;&#x624D;&#x80FD;&#x77E5;&#x9053;m&#x662F;&#x5982;&#x4F55;&#x4F7F;&#x7528;&#x7684;&#xFF0C;&#x6211;&#x4E00;&#x76F4;&#x8BA4;&#x4E3A;&#x8FD9;&#x662F;&#x4E0D;&#x5408;&#x7406;&#x7684;&#xFF0C;&#x4E3A;&#x4EC0;&#x4E48;&#x6211;&#x8981;&#x638C;&#x63E1;&#x5176;&#x4ED6;&#x7684;&#x77E5;&#x8BC6;&#x624D;&#x80FD;&#x5B66;mongoose&#xFF1F;</p>
+<p>&#x5176;&#x5B9E;&#xFF0C;&#x5B83;&#x4E5F;&#x4EC5;&#x4EC5;&#x662F;&#x4E00;&#x4E2A;node&#x6A21;&#x5757;&#x800C;&#x5DF2;&#x3002;</p>
+<p>&#x5B98;&#x7F51;&#xFF1A;<a href="http://mongoosejs.com/" target="_blank">http://mongoosejs.com/</a></p>
+<h2 id="mongoose%E5%85%A5%E9%97%A8">mongoose&#x5165;&#x95E8;</h2>
+<p>&#x524D;&#x9762;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x8BA4;&#x8BC6;&#x4E86;Mongoose&#xFF0C;&#x4E5F;&#x4E86;&#x89E3;&#x4E86;MongoDB&#xFF0C;&#x56DE;&#x987E;&#x4E00;&#x4E0B;&#xFF1A;MongoDB&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x662F;&#x7528;&#x6765;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x7684;&#xFF1B;Mongoose&#x662F;&#x5C01;&#x88C5;&#x4E86;MongoDB&#x64CD;&#x4F5C;&#x7684;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x6A21;&#x578B;&#x5E93;,&#x662F;&#x7528;&#x6765;&#x64CD;&#x4F5C;&#x8FD9;&#x4E9B;&#x6570;&#x636E;&#x7684;&#x3002;</p>
+<p>&#x597D;&#xFF0C;&#x4E0B;&#x9762;&#x6211;&#x4EEC;&#x5C31;&#x6765;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;&#x6570;&#x636E;&#x7684;&#x7B2C;&#x4E00;&#x6B65;&#x5427;&#x3002;</p>
+<h3 id="%E5%87%86%E5%A4%87">&#x51C6;&#x5907;</h3>
+<p>1&#x3001; &#x5B89;&#x88C5;mongoose</p>
+<pre><code>$ npm install --save mongoose
+</code></pre><p>2&#x3001; &#x5F15;&#x7528;mongoose</p>
+<pre><code>var mongoose = require(&quot;mongoose&quot;);
+</code></pre><p>3&#x3001; &#x4F7F;&#x7528;&quot;mongoose&quot;&#x8FDE;&#x63A5;&#x6570;&#x636E;&#x5E93;</p>
+<pre><code>var db = mongoose.connect(&quot;mongodb://user:pass@ip:port/database&quot;);
+</code></pre><p>&#x8BF4;&#x660E;</p>
+<ul>
+<li>user &#x662F;mongodb&#x91CC;&#x7528;&#x6237;&#x540D;</li>
+<li>pass &#x662F;mongodb&#x91CC;&#x7528;&#x6237;&#x5BF9;&#x5E94;&#x7684;&#x5BC6;&#x7801;</li>
+<li>ip   &#x662F;mongodb&#x670D;&#x52A1;&#x5668;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;<code>ip</code>&#x5730;&#x5740;&#xFF0C;&#x6BD4;&#x5982;&#x672C;&#x5730;&#x4E3A;<code>127.0.0.1</code></li>
+<li>port &#x662F;mongodb&#x670D;&#x52A1;&#x5668;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x7AEF;&#x53E3;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;<code>27017</code></li>
+</ul>
+<h3 id="%E6%B5%8B%E8%AF%95">&#x6D4B;&#x8BD5;</h3>
+<p>&#x6267;&#x884C;&#x4E0B;&#x9762;&#x4EE3;&#x7801;&#x68C0;&#x67E5;&#x9ED8;&#x8BA4;&#x6570;&#x636E;&#x5E93;test&#xFF0C;&#x662F;&#x5426;&#x53EF;&#x4EE5;&#x6B63;&#x5E38;&#x8FDE;&#x63A5;&#x6210;&#x529F;?</p>
+<pre><code>var mongoose = require(&quot;mongoose&quot;);
+
+var db = mongoose.connect(&quot;mongodb://127.0.0.1:27017/db_helloworld&quot;); 
+
+db.connection.on(&quot;error&quot;, function (error) {  
+  console.log(&quot;&#x6570;&#x636E;&#x5E93;&#x8FDE;&#x63A5;&#x5931;&#x8D25;&#xFF1A;&quot; + error); 
+}); 
+
+db.connection.on(&quot;open&quot;, function () {  
+  console.log(&quot;&#x6570;&#x636E;&#x5E93;&#x8FDE;&#x63A5;&#x6210;&#x529F;&quot;); 
+});
+</code></pre><p>&#x6267;&#x884C;&#x4EE3;&#x7801;</p>
+<pre><code>$ node book-source/db/helloworld/connect.js
+&#x6570;&#x636E;&#x5E93;&#x8FDE;&#x63A5;&#x6210;&#x529F;
+</code></pre><p>&#x5F53;mongodb&#x6CA1;&#x6709;&#x542F;&#x52A8;&#x7684;&#x65F6;&#x5019;&#x4F1A;&#x62A5;&#x9519;&#xFF0C;&#x5F53;&#x51FA;&#x73B0;&#x5982;&#x4E0B;&#x95EE;&#x9898;&#xFF0C;&#x8BF7;&#x6267;&#x884C;<code>mhg</code>&#x542F;&#x52A8;mongodb&#x5373;&#x53EF;</p>
+<pre><code>$ node book-source/db/helloworld/connect.js
+&#x6570;&#x636E;&#x5E93;&#x8FDE;&#x63A5;&#x5931;&#x8D25;&#xFF1A;MongoError: connect ECONNREFUSED 127.0.0.1:27017
+</code></pre><h3 id="%E6%9C%80%E5%B0%8Fdemo">&#x6700;&#x5C0F;demo</h3>
+<p>&#x8FD9;&#x91CC;&#x7ED9;&#x51FA;&#x6781;&#x7B80;demo&#xFF0C;&#x7528;&#x4E8E;&#x8BB2;&#x89E3;mongoose&#x4ECE;&#x8FDE;&#x63A5;&#x6570;&#x636E;&#x5E93;&#x5230;&#x5BF9;&#x6570;&#x636E;&#x5E93;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;&#x5B8C;&#x6574;&#x8FC7;&#x7A0B;&#xFF0C;&#x8FD9;&#x6837;&#x66F4;&#x5BB9;&#x6613;&#x8BA9;&#x8BFB;&#x8005;&#x4E86;&#x89E3;&#x6838;&#x5FC3;&#x539F;&#x7406;&#xFF0C;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>// 1&#x3001;&#x5F15;&#x5165;`mongoose`&#x6A21;&#x5757;
+var mongoose = require(&apos;mongoose&apos;);
+
+// 2&#x3001;&#x901A;&#x8FC7;`mongoose.connect`&#x8FDE;&#x63A5;mongodb&#x6570;&#x636E;&#x5E93;
+mongoose.connect(&apos;mongodb://127.0.0.1/db_helloworld&apos;);
+
+// 3&#x3001;&#x901A;&#x8FC7;`mongoose.model`&#x5B9A;&#x4E49;&#x6A21;&#x578B;(model)
+var Cat = mongoose.model(&apos;Cat&apos;, { name: String });
+
+// 4&#x3001;&#x901A;&#x8FC7;`new`&#x5173;&#x952E;&#x5B57;&#x5B9E;&#x4F8B;&#x5316;Cat&#x6A21;&#x578B;&#xFF0C;&#x53C2;&#x6570;&#x662F;`{ name: &apos;Zildjian&apos; }`&#xFF0C;&#x521B;&#x5EFA;kitty&#x5BF9;&#x8C61;
+var kitty = new Cat({ name: &apos;Zildjian&apos; });
+
+// 5&#x3001;&#x6267;&#x884C;`kitty.save`&#x6765;&#x4FDD;&#x5B58;&#x5230;&#x6570;&#x636E;&#x5E93;
+kitty.save(function (err) {
+  if (err) {
+    console.log(&apos;save error:&apos; + err);
+  }
+
+  console.log(&apos;save sucess&apos;);
+});
+</code></pre><p>&#x6838;&#x5FC3;&#x6B65;&#x9AA4;&#x8BF4;&#x660E;</p>
+<ul>
+<li>&#x5B9A;&#x4E49;&#x6A21;&#x578B;(model)</li>
+<li>&#x901A;&#x8FC7;<code>new</code>&#x5173;&#x952E;&#x5B57;&#x5B9E;&#x4F8B;&#x5316;Cat&#x6A21;&#x578B;&#xFF0C;&#x521B;&#x5EFA;kitty&#x5BF9;&#x8C61;</li>
+<li>&#x6267;&#x884C;<code>kitty.save</code>&#x6765;&#x4FDD;&#x5B58;&#x5230;&#x6570;&#x636E;&#x5E93;</li>
+</ul>
+<p>&#x8FD9;&#x4E2A;&#x5176;&#x5B9E;&#x5C31;&#x662F;mongoose&#x6700;&#x5E38;&#x89C1;&#x7684;&#x7528;&#x6CD5;&#xFF0C;&#x9996;&#x5148;&#x7EA6;&#x5B9A;schema&#xFF0C;&#x5373;&#x5728;&#x6A21;&#x578B;model&#x5B9A;&#x4E49;&#x7684;&#x65F6;&#x5019;&#x6307;&#x5B9A;&#x5B57;&#x6BB5;&#x548C;&#x5B57;&#x6BB5;&#x7C7B;&#x578B;&#xFF0C;&#x907F;&#x514D;&#x4E71;&#x7528;schema-free&#x95EE;&#x9898;&#x3002;&#x4E4B;&#x540E;&#x5BF9;&#x5B9E;&#x4F8B;&#x5316;&#x6A21;&#x578B;&#x521B;&#x5EFA;&#x7684;&#x5BF9;&#x8C61;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;&#xFF0C;&#x5B8C;&#x6210;&#x6211;&#x4EEC;&#x5E38;&#x89C1;&#x7684;&#x589E;&#x5220;&#x6539;&#x67E5;&#x529F;&#x80FD;&#x3002;</p>
+<pre><code>&#x6A21;&#x578B;(model)&#x5B9A;&#x4E49;&#x5373;&#x5B9A;&#x4E49;&#x5BF9;&#x8C61;&#xFF0C;&#x5BF9;&#x8C61;&#x64CD;&#x4F5C;&#x5373;&#x5BF9;&#x6570;&#x636E;&#x5E93;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;
+</code></pre><p>&#x6267;&#x884C;&#x5982;&#x4E0B;</p>
+<pre><code>$ node book-source/db/helloworld/helloworld.js
+</code></pre><p>&#x5982;&#x65E0;&#x9519;&#x8BEF;&#x65E5;&#x5FD7;&#xFF0C;&#x5373;&#x4EE3;&#x8868;&#x6570;&#x636E;&#x4FDD;&#x5B58;&#x6210;&#x529F;&#x3002;&#x6B64;&#x65F6;&#x6253;&#x5F00;robo mongodb&#x5BA2;&#x6237;&#x7AEF;&#x67E5;&#x770B;&#x4E00;&#x4E0B;&#x5177;&#x4F53;&#x6570;&#x636E;&#x662F;&#x5426;&#x4FDD;&#x5B58;&#x6210;&#x529F;&#x3002;</p>
+<p>&#x521B;&#x5EFA;robo&#x5BA2;&#x6237;&#x7AEF;&#x8FDE;&#x63A5;</p>
+<p><img src="img/MongoDB_Connections.png" alt=""></p>
+<p>&#x67E5;&#x770B;cat&#x6570;&#x636E;</p>
+<p><img src="img/show_cat.png" alt=""></p>
+<p>&#x5982;&#x679C;&#x6709;<code>{ name: &apos;Zildjian&apos; }</code>&#x8BB0;&#x5F55;&#x7684;&#xFF0C;&#x5373;&#x4E3A;&#x6B63;&#x5E38;&#x3002;</p>
+<h2 id="%E5%AE%9E%E4%BE%8B">&#x5B9E;&#x4F8B;</h2>
+<ul>
+<li>&#x8FDE;&#x63A5;&#x6570;&#x636E;&#x5E93;&#x4FE1;&#x606F;&#x653E;&#x5230;&#x72EC;&#x7ACB;&#x6587;&#x4EF6;&#x91CC;</li>
+<li>&#x6A21;&#x578B;&#x5B9A;&#x4E49;&#x653E;&#x5230;&#x72EC;&#x7ACB;&#x6587;&#x4EF6;</li>
+<li>&#x5728;&#x5177;&#x4F53;&#x8C03;&#x7528;&#x7684;&#x6587;&#x4EF6;&#x91CC;&#xFF0C;&#x4F7F;&#x7528;&#x6A21;&#x578B;&#x5B9A;&#x4E49;</li>
+</ul>
+<h3 id="%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93">&#x8FDE;&#x63A5;&#x6570;&#x636E;&#x5E93;</h3>
+<p>&#x770B;&#x4E00;&#x4E0B;&#x5B9E;&#x9645;&#x4EE3;&#x7801;&#xFF0C;<code>db/mini/connect.js</code></p>
+<pre><code>var mongoose = require(&quot;mongoose&quot;);
+
+var db = mongoose.connect(&quot;mongodb://127.0.0.1:27017/db_helloworld&quot;); 
+
+db.connection.on(&quot;error&quot;, function (error) {  
+  console.log(&quot;&#x6570;&#x636E;&#x5E93;&#x8FDE;&#x63A5;&#x5931;&#x8D25;&#xFF1A;&quot; + error); 
+}); 
+
+db.connection.on(&quot;open&quot;, function () {  
+  console.log(&quot;&#x6570;&#x636E;&#x5E93;&#x8FDE;&#x63A5;&#x6210;&#x529F;&quot;);
+});
+</code></pre><p>&#x4E00;&#x822C;&#x9879;&#x76EE;&#x91CC;&#xFF0C;&#x6240;&#x6709;&#x6A21;&#x578B;&#x90FD;&#x5171;&#x7528;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x5E93;&#x8FDE;&#x63A5;&#x4FE1;&#x606F;&#xFF0C;&#x6240;&#x4EE5;&#x628A;&#x8FDE;&#x63A5;&#x6570;&#x636E;&#x5E93;&#x7684;&#x4EE3;&#x7801;&#x62BD;&#x53D6;&#x5230;<code>connect.js</code>&#x91CC;&#xFF0C;&#x7136;&#x540E;&#x5728;&#x5BF9;&#x5E94;&#x7684;&#x6A21;&#x578B;&#x91CC;&#x4F1A;app&#x5165;&#x53E3;&#x5F15;&#x7528;&#x5373;&#x53EF;&#x3002;</p>
+<h3 id="%E6%A8%A1%E5%9E%8B%E5%AE%9A%E4%B9%89">&#x6A21;&#x578B;&#x5B9A;&#x4E49;</h3>
+<p>&#x770B;&#x4E00;&#x4E0B;&#x5B9E;&#x9645;&#x6A21;&#x578B;&#x5B9A;&#x4E49;&#x4EE3;&#x7801;&#xFF0C;<code>db/mini/user.js</code></p>
+<pre><code>var mongoose = require(&apos;mongoose&apos;);
+
+// &#x5B9A;&#x4E49;Schema
+UserSchema = new mongoose.Schema({
+  username: {// &#x771F;&#x5B9E;&#x59D3;&#x540D;
+    type: String,
+    required: true
+  },
+  password: { // &#x5BC6;&#x7801;
+    type: String,
+    required: true
+  }
+});
+
+// &#x5B9A;&#x4E49;Model
+var UserModel = mongoose.model(&apos;User&apos;, UserSchema);
+
+// &#x66B4;&#x9732;&#x63A5;&#x53E3;
+module.exports = UserModel;
+</code></pre><p>&#x8FD9;&#x662F;MVC&#x91CC;Model&#x5C42;&#x6700;&#x957F;&#x89C1;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x6CA1;&#x6709;&#x8FDE;&#x63A5;&#x4FE1;&#x606F;&#xFF0C;&#x4E5F;&#x6CA1;&#x6709;&#x5176;&#x4ED6;&#x989D;&#x5916;&#x4E0D;&#x76F8;&#x5E72;&#x4EE3;&#x7801;&#xFF0C;&#x5F53;&#x4F60;&#x770B;&#x5230;<code>user.js</code>&#x4F60;&#x5C31;&#x80FD;&#x7406;&#x89E3;&#x5B83;&#x5728;&#x6570;&#x636E;&#x5E93;&#x91CC;&#x5BF9;&#x5E94;&#x7684;&#x8868;&#x7ED3;&#x6784;&#xFF0C;&#x4EE5;&#x53CA;&#x5B57;&#x6BB5;&#x7684;&#x7C7B;&#x578B;&#x3001;&#x7EA6;&#x675F;&#x7B49;&#x4FE1;&#x606F;&#xFF0C;&#x4E00;&#x822C;&#x6765;&#x8BF4;&#xFF0C;&#x4EE3;&#x7801;&#x5199;&#x7684;&#x8D8A;&#x5E72;&#x51C0;&#xFF0C;&#x53EF;&#x8BFB;&#x6027;&#x4F1A;&#x66F4;&#x597D;&#x4E00;&#x4E9B;&#x3002;</p>
+<p>&#x8FD9;&#x91CC;&#x5B9A;&#x4E49;&#x7684;User&#x6A21;&#x578B;&#x91CC;&#x53EA;&#x6709; <code>&#x7528;&#x6237;&#x540D;</code> &#x548C; <code>&#x5BC6;&#x7801;</code> 2&#x4E2A;&#x5B57;&#x6BB5;&#xFF0C;&#x5B83;&#x4EEC;&#x90FD;&#x5FC5;&#x987B;&#x6709;&#x503C;&#x7684;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x5F53;&#x4F60;&#x521B;&#x5EFA;&#x7528;&#x6237;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6CA1;&#x6709;&#x5BC6;&#x7801;&#x6216;&#x8005;&#x6CA1;&#x6709;&#x7528;&#x6237;&#x540D;&#x4F60;&#x662F;&#x65E0;&#x6CD5;&#x521B;&#x5EFA;&#x6210;&#x529F;&#x7684;&#x3002;</p>
+<h3 id="%E6%B5%8B%E8%AF%95%E4%BB%A3%E7%A0%81">&#x6D4B;&#x8BD5;&#x4EE3;&#x7801;</h3>
+<p>&#x770B;&#x4E00;&#x4E0B;&#x5B9E;&#x9645;&#x4EE3;&#x7801;<code>db/mini/test.js</code></p>
+<pre><code>// 1&#x3001;&#x5F15;&#x5165;`mongoose connect`
+require(&apos;./connect&apos;);
+
+// 2&#x3001;&#x5F15;&#x5165;`User` Model
+var User = require(&apos;./user&apos;);
+
+// 3&#x3001;&#x5B9A;&#x4E49;`user` Entity
+var user = new User({
+  username: &apos;i5ting&apos;,
+  password: &apos;0123456789&apos;
+});
+
+// 4&#x3001;&#x5BF9;&#x6570;&#x636E;&#x5E93;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;
+user.save(function(err, doc){
+  if (err) {
+    console.log(&apos;save error:&apos; + err);
+  }
+
+  console.log(&apos;save sucess \n&apos; + doc);
+})
+</code></pre><p>&#x6838;&#x5FC3;&#x6B65;&#x9AA4;</p>
+<ul>
+<li>&#x5F15;&#x5165;&#x6570;&#x636E;&#x5E93;&#x8FDE;&#x63A5;&#xFF0C;&#x4FDD;&#x8BC1;mongodb&#x5DF2;&#x7ECF;&#x8FDE;&#x63A5;&#x6210;&#x529F;</li>
+<li>&#x5F15;&#x5165;&#x6A21;&#x578B;&#xFF08;model&#xFF09;&#x5B9A;&#x4E49;&#x6587;&#x4EF6;&#xFF0C;&#x5373;&#x6587;&#x6863;&#xFF08;&#x8868;&#xFF09;&#x7ED3;&#x6784;&#x5B9A;&#x4E49;</li>
+<li>&#x5B9E;&#x4F8B;&#x5316;UserModel&#xFF0C;&#x521B;&#x5EFA;user&#x5B9E;&#x4F53;</li>
+<li>&#x6700;&#x540E;&#x901A;&#x8FC7;user&#x5B9E;&#x4F53;&#x5BF9;&#x6570;&#x636E;&#x5E93;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;&#xFF0C;&#x5B8C;&#x6210;&#x7528;&#x6237;&#x6CE8;&#x518C;&#x529F;&#x80FD;&#x3002;</li>
+</ul>
+<p>&#x8FD9;&#x662F;&#x9879;&#x76EE;&#x91CC;&#x6570;&#x636E;&#x8BBF;&#x95EE;&#x5C42;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x5B83;&#x771F;&#x5B9E;&#x7684;&#x5BF9;&#x6570;&#x636E;&#x5E93;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;&#xFF0C;&#x6240;&#x4EE5;&#x5B83;&#x4E00;&#x822C;&#x4F1A;&#x51FA;&#x73B0;&#x5728;<code>controller</code>&#x6216;<code>service</code>&#x5C42;&#x3002;</p>
+<h3 id="%E6%89%A7%E8%A1%8C%E6%B5%8B%E8%AF%95">&#x6267;&#x884C;&#x6D4B;&#x8BD5;</h3>
+<pre><code>$ node db/mini/test.js 
+&#x6570;&#x636E;&#x5E93;&#x8FDE;&#x63A5;&#x6210;&#x529F;
+save sucess 
+{ _id: 57341fc54d97ee0249082a1d,
+  password: &apos;0123456789&apos;,
+  username: &apos;i5ting&apos;,
+  __v: 0 }
+</code></pre><h2 id="%E6%A6%82%E5%BF%B5">&#x6982;&#x5FF5;</h2>
+<p>&#x7ED3;&#x5408;&#x4E0A;&#x9762;&#x7684;&#x5B9E;&#x4F8B;&#x6765;&#x8BB2;4&#x4E2A;&#x6838;&#x5FC3;&#x6982;&#x5FF5;&#xFF0C;&#x4EE5;&#x4FBF;&#x4E8E;&#x7406;&#x89E3;</p>
+<ul>
+<li>ORM &#x5BF9;&#x8C61;&#x5173;&#x7CFB;&#x6620;&#x5C04;</li>
+<li>Schema</li>
+<li>Model &#x6A21;&#x578B;</li>
+<li>Entity &#x5B9E;&#x4F53;</li>
+</ul>
+<h2 id="%E5%AF%B9%E8%B1%A1%E5%85%B3%E7%B3%BB%E6%98%A0%E5%B0%84">&#x5BF9;&#x8C61;&#x5173;&#x7CFB;&#x6620;&#x5C04;</h2>
+<p>&#x5BF9;&#x8C61;&#x5173;&#x7CFB;&#x6620;&#x5C04;&#xFF08;&#x82F1;&#x8BED;&#xFF1A;Object Relational Mapping&#xFF0C;&#x7B80;&#x79F0;ORM&#xFF0C;&#x6216;O/RM&#xFF0C;&#x6216;O/R mapping&#xFF09;&#xFF0C;&#x662F;&#x4E00;&#x79CD;&#x7A0B;&#x5E8F;&#x8BBE;&#x8BA1;&#x6280;&#x672F;&#xFF0C;&#x7528;&#x4E8E;&#x5B9E;&#x73B0;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x91CC;&#x4E0D;&#x540C;&#x7C7B;&#x578B;&#x7CFB;&#x7EDF;&#x7684;&#x6570;&#x636E;&#x4E4B;&#x95F4;&#x7684;&#x8F6C;&#x6362;&#x3002;&#x4ECE;&#x6548;&#x679C;&#x4E0A;&#x8BF4;&#xFF0C;&#x5B83;&#x5176;&#x5B9E;&#x662F;&#x521B;&#x5EFA;&#x4E86;&#x4E00;&#x4E2A;&#x53EF;&#x5728;&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x91CC;&#x4F7F;&#x7528;&#x7684;&#x201C;&#x865A;&#x62DF;&#x5BF9;&#x8C61;&#x6570;&#x636E;&#x5E93;&#x201D;&#x3002;&#x5982;&#x4ECA;&#x5DF2;&#x6709;&#x5F88;&#x591A;&#x514D;&#x8D39;&#x548C;&#x6536;&#x8D39;&#x7684;ORM&#x4EA7;&#x54C1;&#xFF0C;&#x800C;&#x6709;&#x4E9B;&#x7A0B;&#x5E8F;&#x5458;&#x66F4;&#x503E;&#x5411;&#x4E8E;&#x521B;&#x5EFA;&#x81EA;&#x5DF1;&#x7684;ORM&#x5DE5;&#x5177;&#x3002;</p>
+<p>&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x662F;&#x4ECE;&#x8F6F;&#x4EF6;&#x5DE5;&#x7A0B;&#x57FA;&#x672C;&#x539F;&#x5219;&#xFF08;&#x5982;&#x8026;&#x5408;&#x3001;&#x805A;&#x5408;&#x3001;&#x5C01;&#x88C5;&#xFF09;&#x7684;&#x57FA;&#x7840;&#x4E0A;&#x53D1;&#x5C55;&#x8D77;&#x6765;&#x7684;&#xFF0C;&#x800C;&#x5173;&#x7CFB;&#x6570;&#x636E;&#x5E93;&#x5219;&#x662F;&#x4ECE;&#x6570;&#x5B66;&#x7406;&#x8BBA;&#x53D1;&#x5C55;&#x800C;&#x6765;&#x7684;&#xFF0C;&#x4E24;&#x5957;&#x7406;&#x8BBA;&#x5B58;&#x5728;&#x663E;&#x8457;&#x7684;&#x533A;&#x522B;&#x3002;&#x4E3A;&#x4E86;&#x89E3;&#x51B3;&#x8FD9;&#x4E2A;&#x4E0D;&#x5339;&#x914D;&#x7684;&#x73B0;&#x8C61;&#xFF0C;&#x5BF9;&#x8C61;&#x5173;&#x7CFB;&#x6620;&#x5C04;&#x6280;&#x672F;&#x5E94;&#x8FD0;&#x800C;&#x751F;&#x3002;</p>
+<p>&#x5BF9;&#x8C61;&#x5173;&#x7CFB;&#x6620;&#x5C04;&#xFF08;Object-Relational Mapping&#xFF09;&#x63D0;&#x4F9B;&#x4E86;&#x6982;&#x5FF5;&#x6027;&#x7684;&#x3001;&#x6613;&#x4E8E;&#x7406;&#x89E3;&#x7684;&#x6A21;&#x578B;&#x5316;&#x6570;&#x636E;&#x7684;&#x65B9;&#x6CD5;&#x3002;</p>
+<p>ORM&#x65B9;&#x6CD5;&#x8BBA;&#x57FA;&#x4E8E;&#x4E09;&#x4E2A;&#x6838;&#x5FC3;&#x539F;&#x5219;&#xFF1A;</p>
+<ul>
+<li>&#x7B80;&#x5355;&#xFF1A;&#x4EE5;&#x6700;&#x57FA;&#x672C;&#x7684;&#x5F62;&#x5F0F;&#x5EFA;&#x6A21;&#x6570;&#x636E;&#x3002;</li>
+<li>&#x4F20;&#x8FBE;&#x6027;&#xFF1A;&#x6570;&#x636E;&#x5E93;&#x7ED3;&#x6784;&#x88AB;&#x4EFB;&#x4F55;&#x4EBA;&#x90FD;&#x80FD;&#x7406;&#x89E3;&#x7684;&#x8BED;&#x8A00;&#x6587;&#x6863;&#x5316;&#x3002; </li>
+<li>&#x7CBE;&#x786E;&#x6027;&#xFF1A;&#x57FA;&#x4E8E;&#x6570;&#x636E;&#x6A21;&#x578B;&#x521B;&#x5EFA;&#x6B63;&#x786E;&#x6807;&#x51C6;&#x5316;&#x7684;&#x7ED3;&#x6784;&#x3002; </li>
+</ul>
+<p>&#x5178;&#x578B;&#x5730;&#xFF0C;&#x5EFA;&#x6A21;&#x8005;&#x901A;&#x8FC7;&#x6536;&#x96C6;&#x6765;&#x81EA;&#x90A3;&#x4E9B;&#x719F;&#x6089;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4F46;&#x4E0D;&#x719F;&#x7EC3;&#x7684;&#x6570;&#x636E;&#x5EFA;&#x6A21;&#x8005;&#x7684;&#x4EBA;&#x7684;&#x4FE1;&#x606F;&#x5F00;&#x53D1;&#x4FE1;&#x606F;&#x6A21;&#x578B;&#x3002;&#x5EFA;&#x6A21;&#x8005;&#x5FC5;&#x987B;&#x80FD;&#x591F;&#x7528;&#x975E;&#x6280;&#x672F;&#x4F01;&#x4E1A;&#x4E13;&#x5BB6;&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x7684;&#x672F;&#x8BED;&#x5728;&#x6982;&#x5FF5;&#x5C42;&#x6B21;&#x4E0A;&#x4E0E;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x8FDB;&#x884C;&#x901A;&#x8BAF;&#x3002;&#x5EFA;&#x6A21;&#x8005;&#x4E5F;&#x5FC5;&#x987B;&#x80FD;&#x4EE5;&#x7B80;&#x5355;&#x7684;&#x5355;&#x5143;&#x5206;&#x6790;&#x4FE1;&#x606F;&#xFF0C;&#x5BF9;&#x6837;&#x672C;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x5904;&#x7406;&#x3002;ORM&#x4E13;&#x95E8;&#x88AB;&#x8BBE;&#x8BA1;&#x4E3A;&#x6539;&#x8FDB;&#x8FD9;&#x79CD;&#x8054;&#x7CFB;&#x3002;</p>
+<p>&#x8BA9;&#x6211;&#x4EEC;&#x4ECE;O/R&#x5F00;&#x59CB;&#x3002;&#x5B57;&#x6BCD;O&#x8D77;&#x6E90;&#x4E8E; &#x5BF9;&#x8C61;(OBJECT),&#x800C;R&#x5219;&#x6765;&#x81EA;&#x4E8E; &#x5173;&#x7CFB;(RELATIONAL)&#x3002;&#x51E0;&#x4E4E;&#x6240;&#x6709;&#x7684;&#x7A0B;&#x5E8F;&#x91CC;&#x9762;&#xFF0C;&#x90FD;&#x5B58;&#x5728;&#x5BF9;&#x8C61;&#x548C;&#x5173;&#x7CFB;&#x6570;&#x636E;&#x5E93;&#x3002;&#x5728;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#x5C42;&#x548C;&#x7528;&#x6237;&#x754C;&#x9762;&#x5C42;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x662F;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7684;&#x3002;&#x5F53;&#x5BF9;&#x8C61;&#x4FE1;&#x606F;&#x53D1;&#x751F;&#x53D8;&#x5316;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x628A;&#x5BF9;&#x8C61;&#x7684;&#x4FE1;&#x606F;&#x4FDD;&#x5B58;&#x5728;&#x5173;&#x7CFB;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x3002;</p>
+<p>&#x6700;&#x7B80;&#x5355;&#x7684;&#x7406;&#x89E3;&#xFF1A;</p>
+<pre><code>ORM&#x662F;&#x8BA9;&#x7528;&#x8BED;&#x8A00;&#x4E2D;&#x7684;&#x5BF9;&#x8C61;&#x6765;&#x64CD;&#x4F5C;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x81F3;&#x4E8E;&#x5982;&#x4F55;&#x5B9E;&#x73B0;&#x5C31;&#x662F;orm&#x5DE5;&#x5177;&#x5B9E;&#x73B0;&#x7684;&#xFF0C;&#x53EF;&#x4EE5;&#x7406;&#x89E3;mongoose&#x662F;orm&#x5DE5;&#x5177;&#x3002;
+</code></pre><p>mongoose&#x5305;&#x62EC;&#x4EE5;&#x4E0B;&#x56DB;&#x90E8;&#x5206;&#xFF1A;</p>
+<ul>
+<li>&#x4E00;&#x4E2A;&#x5BF9;&#x6301;&#x4E45;&#x7C7B;&#x5BF9;&#x8C61;&#x8FDB;&#x884C;CRUD&#x64CD;&#x4F5C;&#x7684;API&#xFF0C;&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x4E3A;&#x5B9E;&#x4F53;Entity&#x4E0A;&#x7684;&#x65B9;&#x6CD5;</li>
+<li>&#x4E00;&#x4E2A;&#x8BED;&#x8A00;&#x6216;API&#x7528;&#x6765;&#x89C4;&#x5B9A;&#x4E0E;&#x7C7B;&#x548C;&#x7C7B;&#x5C5E;&#x6027;&#x76F8;&#x5173;&#x7684;&#x67E5;&#x8BE2;&#xFF0C;&#x6BD4;&#x5982;Population</li>
+<li>&#x4E00;&#x4E2A;&#x89C4;&#x5B9A;MAPPING METADATA&#x7684;&#x5DE5;&#x5177;&#xFF0C;&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x4E3A;Schema&#x5B9A;&#x4E49;</li>
+<li>&#x4E00;&#x79CD;&#x6280;&#x672F;&#x53EF;&#x4EE5;&#x8BA9;ORM&#x7684;&#x5B9E;&#x73B0;&#x5404;&#x79CD;db&#x64CD;&#x4F5C;&#x7684;&#x5C01;&#x88C5;</li>
+</ul>
+<h2 id="schema">Schema</h2>
+<p>Everything in Mongoose starts with a Schema. Each schema maps to a MongoDB collection and defines the shape of the documents within that collection.</p>
+<p>Schema&#x662F;&#x4E00;&#x79CD;&#x4EE5;&#x6587;&#x4EF6;&#x5F62;&#x5F0F;&#x5B58;&#x50A8;&#x7684;&#x6570;&#x636E;&#x5E93;&#x6A21;&#x578B;&#x9AA8;&#x67B6;&#xFF0C;&#x65E0;&#x6CD5;&#x76F4;&#x63A5;&#x901A;&#x5F80;&#x6570;&#x636E;&#x5E93;&#x7AEF;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x5B83;&#x4E0D;&#x5177;&#x5907;&#x5BF9;&#x6570;&#x636E;&#x5E93;&#x7684;&#x64CD;&#x4F5C;&#x80FD;&#x529B;&#xFF0C;&#x4EC5;&#x4EC5;&#x53EA;&#x662F;&#x5B9A;&#x4E49;&#x6570;&#x636E;&#x5E93;&#x6A21;&#x578B;&#x5728;&#x7A0B;&#x5E8F;&#x7247;&#x6BB5;&#x4E2D;&#x7684;&#x4E00;&#x79CD;&#x8868;&#x73B0;&#xFF0C;&#x53EF;&#x4EE5;&#x8BF4;&#x662F;&#x6570;&#x636E;&#x5C5E;&#x6027;&#x6A21;&#x578B;(&#x4F20;&#x7EDF;&#x610F;&#x4E49;&#x7684;&#x8868;&#x7ED3;&#x6784;)&#xFF0C;&#x53C8;&#x6216;&#x7740;&#x662F;&#x201C;&#x96C6;&#x5408;&#x201D;&#x7684;&#x6A21;&#x578B;&#x9AA8;&#x67B6;&#x3002;</p>
+<p>&#x6700;&#x7B80;&#x5355;&#x7684;&#x7406;&#x89E3;&#xFF1A;</p>
+<pre><code>Schema&#x662F;&#x5BF9;&#x6587;&#x6863;(&#x8868;)&#x7ED3;&#x6784;&#x7684;&#x5B9A;&#x4E49;
+</code></pre><p>&#x90A3;&#x5982;&#x4F55;&#x53BB;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;Schema&#x5462;&#xFF0C;&#x8BF7;&#x770B;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code>// &#x5B9A;&#x4E49;Schema
+UserSchema = new mongoose.Schema({
+  username: {// &#x771F;&#x5B9E;&#x59D3;&#x540D;
+    type: String,
+    required: true
+  },
+  password: { // &#x5BC6;&#x7801;
+    type: String,
+    required: true
+  }
+});
+</code></pre><p>&#x57FA;&#x672C;&#x5C5E;&#x6027;&#x7C7B;&#x578B;&#x6709;&#xFF1A;&#x5B57;&#x7B26;&#x4E32;&#x3001;&#x65E5;&#x671F;&#x578B;&#x3001;&#x6570;&#x503C;&#x578B;&#x3001;&#x5E03;&#x5C14;&#x578B;(Boolean)&#x3001;null&#x3001;&#x6570;&#x7EC4;&#x3001;&#x5185;&#x5D4C;&#x6587;&#x6863;&#x7B49;&#xFF0C;&#x5F53;&#x7136;&#x5B83;&#x8FD8;&#x6709;&#x66F4;&#x4E30;&#x5BCC;&#x7684;&#x5BF9;&#x5B57;&#x6BB5;&#x8FDB;&#x884C;&#x6821;&#x9A8C;&#x7EA6;&#x675F;&#x7684;&#x529F;&#x80FD;&#x3002;</p>
+<h2 id="%E6%A8%A1%E5%9E%8B-model">&#x6A21;&#x578B;(Model)</h2>
+<p>Models are fancy constructors compiled from our Schema definitions. Instances of these models represent documents which can be saved and retrieved from our database. All document creation and retrieval from the database is handled by these models.</p>
+<p>&#x6A21;&#x578B;(Model)&#x662F;&#x7531;Schema&#x6784;&#x9020;&#x751F;&#x6210;&#x7684;&#x6A21;&#x578B;&#xFF0C;&#x9664;&#x4E86;Schema&#x5B9A;&#x4E49;&#x7684;&#x6570;&#x636E;&#x5E93;&#x9AA8;&#x67B6;&#x4EE5;&#x5916;&#xFF0C;&#x8FD8;&#x5177;&#x6709;&#x6570;&#x636E;&#x5E93;&#x64CD;&#x4F5C;&#x7684;&#x884C;&#x4E3A;&#xFF0C;&#x7C7B;&#x4F3C;&#x4E8E;&#x7BA1;&#x7406;&#x6570;&#x636E;&#x5E93;&#x5C5E;&#x6027;&#x3001;&#x884C;&#x4E3A;&#x7684;&#x7C7B;&#x3002;</p>
+<p>&#x5982;&#x4F55;&#x901A;&#x8FC7;Schema&#x6765;&#x521B;&#x5EFA;Model&#x5462;&#xFF0C;&#x5982;&#x4E0B;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code>var db = mongoose.connect(&quot;mongodb://127.0.0.1:27017/test&quot;);  
+// &#x521B;&#x5EFA;Model 
+var TestModel = db.model(&quot;test1&quot;, TestSchema);
+
+
+// &#x5B9A;&#x4E49;Model
+var UserModel = mongoose.model(&apos;User&apos;, UserSchema);
+</code></pre><p><code>User</code>&#x662F;&#x6A21;&#x578B;&#x540D;&#x79F0;&#xFF0C;&#x5B83;&#x5BF9;&#x5E94;&#x5230;mongodb&#x91CC;&#x5C31;&#x662F;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x7684;&#x96C6;&#x5408;&#x540D;&#x79F0;&#xFF0C;&#x9ED8;&#x8BA4;&#x4F1A;&#x8F6C;&#x6210;&#x590D;&#x6570;&#xFF0C;&#x53D8;&#x4E3A;&apos;users&apos;,&#x5F53;&#x6211;&#x4EEC;&#x5BF9;&#x5176;&#x6DFB;&#x52A0;&#x6570;&#x636E;&#x65F6;&#x5982;&#x679C;<code>users</code>&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#xFF0C;&#x5219;&#x4F1A;&#x4FDD;&#x5B58;&#x5230;&#x5176;&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x5982;&#x679C;&#x672A;&#x5B58;&#x5728;&#xFF0C;&#x5219;&#x4F1A;&#x521B;&#x5EFA;users&#x96C6;&#x5408;&#xFF0C;&#x7136;&#x540E;&#x5728;&#x4FDD;&#x5B58;&#x6570;&#x636E;&#x3002;</p>
+<p>&#x62E5;&#x6709;&#x4E86;Model&#xFF0C;&#x6211;&#x4EEC;&#x4E5F;&#x5C31;&#x62E5;&#x6709;&#x4E86;&#x64CD;&#x4F5C;&#x6570;&#x636E;&#x5E93;&#x7684;&#x91D1;&#x94A5;&#x5319;&#xFF0C;&#x5728;&#x540E;&#x9762;&#x7684;&#x5185;&#x5BB9;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x4F1A;&#x5B66;&#x4E60;&#x4F7F;&#x7528;Model&#x6765;&#x8FDB;&#x884C;&#x589E;&#x5220;&#x6539;&#x67E5;&#x7684;&#x5177;&#x4F53;&#x64CD;&#x4F5C;&#xFF0C;&#x6240;&#x4EE5;&#xFF0C;&#x4E00;&#x5B9A;&#x8981;&#x719F;&#x6089;&#x4ED6;&#x7684;&#x521B;&#x5EFA;&#x683C;&#x5F0F;&#x54DF;&#xFF01;</p>
+<p>&#x5982;&#x679C;&#x4F60;&#x60F3;&#x5BF9;&#x67D0;&#x4E2A;&#x96C6;&#x5408;&#x6709;&#x6240;&#x4F5C;&#x4E3A;&#xFF0C;&#x90A3;&#x5C31;&#x4EA4;&#x7ED9;Model&#x6A21;&#x578B;&#x6765;&#x5904;&#x7406;&#x5427;&#xFF0C;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;Model&#x6A21;&#x578B;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x6307;&#x5B9A;&#xFF1A;1.&#x96C6;&#x5408;&#x540D;&#x79F0;&#xFF0C;2.&#x96C6;&#x5408;&#x7684;Schema&#x7ED3;&#x6784;&#x5BF9;&#x8C61;&#xFF0C;&#x6EE1;&#x8DB3;&#x8FD9;&#x4E24;&#x4E2A;&#x6761;&#x4EF6;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x4F1A;&#x62E5;&#x6709;&#x4E00;&#x4E2A;&#x64CD;&#x4F5C;&#x6570;&#x636E;&#x5E93;&#x7684;&#x91D1;&#x94A5;&#x5319;&#x3002;</p>
+<p>TODO&#xFF1A;&#x521B;&#x5EFA;Model  vs &#x5B9A;&#x4E49;Model</p>
+<h2 id="%E5%AE%9E%E4%BD%93-entity">&#x5B9E;&#x4F53;(Entity)</h2>
+<p>Mongoose documents represent a one-to-one mapping to documents as stored in MongoDB. Each document is an instance of its Model.</p>
+<p>&#x5B9E;&#x4F53;(Entity)&#x662F;&#x7531;Model&#x521B;&#x5EFA;&#x7684;&#x5B9E;&#x4F53;&#xFF0C;&#x4F7F;&#x7528;save&#x65B9;&#x6CD5;&#x4FDD;&#x5B58;&#x6570;&#x636E;&#xFF0C;Model&#x548C;Entity&#x90FD;&#x6709;&#x80FD;&#x5F71;&#x54CD;&#x6570;&#x636E;&#x5E93;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x4F46;Model&#x6BD4;Entity&#x66F4;&#x5177;&#x64CD;&#x4F5C;&#x6027;&#x3002;</p>
+<p>&#x4F7F;&#x7528;Model&#x521B;&#x5EFA;Entity&#xFF0C;&#x5982;&#x4E0B;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code>var user = new User({
+  username: &apos;i5ting&apos;,
+  password: &apos;0123456789&apos;
+});
+
+console.log(user.username); // i5ting 
+console.log(user.password); //0123456789
+</code></pre><p>&#x521B;&#x5EFA;&#x6210;&#x529F;&#x4E4B;&#x540E;&#xFF0C;Schema&#x5C5E;&#x6027;&#x5C31;&#x53D8;&#x6210;&#x4E86;Model&#x548C;Entity&#x7684;&#x516C;&#x5171;&#x5C5E;&#x6027;&#x4E86;&#x3002;</p>
+<h3 id="%E6%80%BB%E7%BB%93">&#x603B;&#x7ED3;</h3>
+<p>Schema&#x662F;&#x9AA8;&#x67B6;&#xFF0C;&#x6A21;&#x578B;&#xFF08;model&#xFF09;&#x662F;&#x6839;&#x636E;Schema&#x521B;&#x5EFA;&#x7684;&#x6A21;&#x677F;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;Schema&#x548C;Model&#x662F;&#x5B9A;&#x4E49;&#x90E8;&#x5206;&#xFF0C;&#x800C;&#x5B9E;&#x4F53;Entity&#x662F;&#x6A21;&#x578B;&#x5B9E;&#x4F8B;&#x5316;&#x540E;&#x521B;&#x5EFA;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x5B83;&#x624D;&#x662F;&#x771F;&#x6B63;&#x5BF9;&#x6570;&#x636E;&#x5E93;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;&#x7684;&#x3002;</p>
+<p>&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x4F1A;&#x628A;&#x5B9A;&#x4E49;&#x90E8;&#x5206;&#xFF08;Schema + model&#xFF09;&#x548C;&#x5B9E;&#x4F53;&#x64CD;&#x4F5C;&#x90E8;&#x5206;&#xFF08;Entity&#xFF09;&#x5206;&#x5F00;&#xFF0C;&#x5B9A;&#x4E49;&#x662F;&#x4E0D;&#x53D8;&#x7684;&#xFF0C;&#x800C;&#x5B9E;&#x4F53;&#x662F;&#x5BF9;&#x6570;&#x636E;&#x5E93;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;&#xFF0C;&#x64CD;&#x4F5C;&#x7C7B;&#x662F;&#x672F;&#x8BED;&#x53EF;&#x53D8;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x5728;mvc&#x5206;&#x5C42;&#x7684;&#x65F6;&#x5019;model&#x5B9E;&#x9645;&#x653E;&#x7684;&#x662F;&#x5B9A;&#x4E49;&#x90E8;&#x5206;&#xFF0C;&#x800C;&#x5728;controller&#x91CC;&#x4F7F;&#x7528;&#x7684;&#x662F;&#x5B9E;&#x4F53;&#x64CD;&#x4F5C;&#x90E8;&#x5206;&#x7684;&#x3002;</p>
+<p>&#x57FA;&#x4E8E;&#x524D;&#x9762;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#x6211;&#x4EEC;&#x5C31;&#x5F00;&#x59CB;&#x5B66;&#x4E60;&#x5BF9;&#x6570;&#x636E;&#x7684;&#x5177;&#x4F53;&#x64CD;&#x4F5C;&#x4E86;&#xFF0C;&#x4E0B;&#x9762;&#x662F;&#x5173;&#x4E8E;&#x4E00;&#x4E9B;&#x57FA;&#x7840;&#x6570;&#x636E;&#x7684;&#x5B9A;&#x4E49;&#xFF0C;&#x76F8;&#x4FE1;&#x5BF9;&#x4E8E;&#x4F60;&#x6765;&#x8BF4;&#x5DF2;&#x7ECF;&#x4E0D;&#x964C;&#x751F;&#x4E86;&#xFF0C;&#x8BF7;&#x5728;&#x4ED4;&#x7EC6;&#x6E29;&#x4E60;&#x4E00;&#x904D;&#x5427;&#xFF01;</p>
+<h2 id="crud%EF%BC%88%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5%EF%BC%89">CRUD&#xFF08;&#x589E;&#x5220;&#x6539;&#x67E5;&#xFF09;</h2>
+<p>CRUD&#x4E3A;&#x6570;&#x636E;&#x5E93;&#x7684;&#x6700;&#x5E38;&#x89C1;&#x7684;4&#x79CD;&#x57FA;&#x672C;&#x64CD;&#x4F5C;&#xFF0C;&#x5373;&#x589E;&#x52A0;(Create)&#x3001;&#x8BFB;&#x53D6;(Retrieve)(&#x91CD;&#x65B0;&#x5F97;&#x5230;&#x6570;&#x636E;)&#x3001;&#x66F4;&#x65B0;(Update)&#x548C;&#x5220;&#x9664;(Delete)&#x51E0;&#x4E2A;&#x5355;&#x8BCD;&#x7684;&#x9996;&#x5B57;&#x6BCD;&#x7B80;&#x5199;&#x3002;&#x4E3B;&#x8981;&#x88AB;&#x7528;&#x5728;&#x63CF;&#x8FF0;&#x8F6F;&#x4EF6;&#x7CFB;&#x7EDF;&#x4E2D;&#x6570;&#x636E;&#x5E93;&#x6216;&#x8005;&#x6301;&#x4E45;&#x5C42;&#x7684;&#x57FA;&#x672C;&#x64CD;&#x4F5C;&#x529F;&#x80FD;&#x3002;</p>
+<p>mongoose&#x63D0;&#x4F9B;&#x5982;&#x4E0B;&#x7684;crud&#x65B9;&#x6CD5;</p>
+<ul>
+<li>save</li>
+<li>find | findOne</li>
+<li>update</li>
+<li>remove</li>
+</ul>
+<p>&#x4E0B;&#x9762;&#x6211;&#x4EEC;&#x4F7F;&#x7528;user&#x6A21;&#x578B;&#x4E3A;&#x4F8B;&#xFF0C;&#x7ED9;&#x51FA;&#x5177;&#x4F53;&#x4F8B;&#x5B50;</p>
+<h3 id="%E5%A2%9E%E5%8A%A0-create">&#x589E;&#x52A0;(Create)</h3>
+<p>&#x6587;&#x6863;</p>
+<pre><code>Model#save(product,)
+
+@description Saves this document.
+
+Parameters:
+
+- product, &lt;function(err, &gt; Number)} [fn] optional callback
+
+Returns:
+    &lt;Promise&gt; Promise
+</code></pre><p>&#x5177;&#x4F53;&#x4EE3;&#x7801;</p>
+<pre><code>const user = new User({
+  username: &apos;i5ting&apos;,
+  password: &apos;0123456789&apos;
+});
+
+user.save((err, u) =&gt; {
+    t.false(err);
+    t.is(u.username, &apos;i5ting&apos;);
+});
+</code></pre><h3 id="%E8%AF%BB%E5%8F%96-retrieve">&#x8BFB;&#x53D6;(Retrieve)</h3>
+<h4 id="find%EF%BC%9A%E6%A0%B9%E6%8D%AE%E6%9D%A1%E4%BB%B6%E6%9F%A5%E8%AF%A2%EF%BC%8C%E8%BF%94%E5%9B%9E%E7%9A%84%E6%98%AF%E6%95%B0%E7%BB%84">find&#xFF1A;&#x6839;&#x636E;&#x6761;&#x4EF6;&#x67E5;&#x8BE2;&#xFF0C;&#x8FD4;&#x56DE;&#x7684;&#x662F;&#x6570;&#x7EC4;</h4>
+<p>&#x6587;&#x6863;</p>
+<pre><code>Model.find(conditions, [fields], [options], [callback])
+
+Finds documents
+
+Parameters:
+
+- conditions &lt;Object&gt;
+- [fields] &lt;Object&gt; optional fields to select
+- [options] &lt;Object&gt; optional
+- [callback] &lt;Function&gt;
+
+Returns:
+    &lt;Query&gt;
+</code></pre><p>&#x4EE3;&#x7801;</p>
+<pre><code>User.find({}, (err, docs) =&gt; {
+    t.false(err);
+    t.is(docs.length, 1);
+    t.is(docs[0].username, &apos;i5ting&apos;);
+});
+</code></pre><h4 id="findone%EF%BC%9A%E6%A0%B9%E6%8D%AE%E6%9D%A1%E4%BB%B6%E6%9F%A5%E8%AF%A2%EF%BC%8C%E8%BF%94%E5%9B%9E%E7%9A%84%E6%98%AF%E4%B8%80%E6%9D%A1%E6%95%B0%E6%8D%AE%E5%AF%B9%E8%B1%A1">findOne&#xFF1A;&#x6839;&#x636E;&#x6761;&#x4EF6;&#x67E5;&#x8BE2;&#xFF0C;&#x8FD4;&#x56DE;&#x7684;&#x662F;&#x4E00;&#x6761;&#x6570;&#x636E;&#x5BF9;&#x8C61;</h4>
+<p>&#x6587;&#x6863;</p>
+<pre><code>Model.findOne([conditions], [fields], [options], [callback])
+
+Finds one document.
+
+Parameters:
+
+- [conditions] &lt;Object&gt;
+- [fields] &lt;Object&gt; optional fields to select
+- [options] &lt;Object&gt; optional
+- [callback] &lt;Function&gt;
+
+Returns:
+    &lt;Query&gt;
+</code></pre><p>&#x4EE3;&#x7801;</p>
+<pre><code>User.findOne({username: &apos;i5ting&apos;}, (err, doc) =&gt; {
+    t.false(err);
+    t.is(doc.length, 1);
+    t.is(doc.username, &apos;i5ting&apos;);
+});
+</code></pre><h3 id="%E6%9B%B4%E6%96%B0-update">&#x66F4;&#x65B0;(Update)</h3>
+<h4 id="findbyidandupdate%EF%BC%9A%E6%A0%B9%E6%8D%AEid%E6%9F%A5%E6%89%BE%E5%B9%B6%E6%9B%B4%E6%96%B0">findByIdAndUpdate&#xFF1A;&#x6839;&#x636E;ID&#x67E5;&#x627E;&#x5E76;&#x66F4;&#x65B0;</h4>
+<p>&#x6587;&#x6863;&#x8BF4;&#x660E;&#x5982;&#x4E0B;</p>
+<pre><code>Model.findByIdAndUpdate(id, [update], [options], [callback])
+
+Issues a mongodb findAndModify update command by a documents id.
+
+show code
+
+Parameters:
+
+- id &lt;ObjectId, HexId&gt; an ObjectId or string that can be cast to one.
+- [update] &lt;Object&gt;
+- [options] &lt;Object&gt;
+- [callback] &lt;Function&gt;
+
+Returns:
+
+    &lt;Query&gt;
+</code></pre><p>&#x5177;&#x4F53;&#x4EE3;&#x7801;</p>
+<pre><code> User.findByIdAndUpdate(u._id, {
+    username: &apos;sang&apos;,
+}, (err, user) =&gt; {
+    t.false(err);
+    t.is(user.username, &apos;sang&apos;);
+});
+</code></pre><h4 id="findoneandupdate%EF%BC%9A%E6%A0%B9%E6%8D%AE%E6%9F%A5%E8%AF%A2%E6%9D%A1%E4%BB%B6%E6%9F%A5%E6%89%BE%E5%B9%B6%E6%9B%B4%E6%96%B0">findOneAndUpdate&#xFF1A;&#x6839;&#x636E;&#x67E5;&#x8BE2;&#x6761;&#x4EF6;&#x67E5;&#x627E;&#x5E76;&#x66F4;&#x65B0;</h4>
+<pre><code>Model.findOneAndUpdate([conditions], [update], [options], [callback])
+
+Issues a mongodb findAndModify update command.
+
+Parameters:
+
+- [conditions] &lt;Object&gt;
+- [update] &lt;Object&gt;
+- [options] &lt;Object&gt;
+- [callback] &lt;Function&gt;
+
+Returns:
+    &lt;Query&gt;
+</code></pre><p>&#x5177;&#x4F53;&#x4EE3;&#x7801;</p>
+<pre><code>User.findOneAndUpdate({
+    username: &apos;i5ting for update 2&apos;,
+}, {
+    username: &apos;sang&apos;,
+}, (err, user) =&gt; {
+    t.false(err);
+    t.is(user.username, &apos;sang&apos;);
+});
+</code></pre><h4 id="update%E6%96%B9%E6%B3%95-%E9%9C%80%E8%A6%81%E6%95%B4%E7%90%86">update&#x65B9;&#x6CD5;(&#x9700;&#x8981;&#x6574;&#x7406;)</h4>
+<pre><code>Model.update(conditions, doc, [options], [callback])
+
+Updates documents in the database without returning them.
+
+Parameters:
+
+- conditions &lt;Object&gt;
+- doc &lt;Object&gt;
+- [options] &lt;Object&gt;
+- [callback] &lt;Function&gt;
+
+Returns:
+  &lt;Query&gt;
+</code></pre><p>Examples:</p>
+<pre><code>MyModel.update({ age: { $gt: 18 } }, { oldEnough: true }, fn);
+MyModel.update({ name: &apos;Tobi&apos; }, { ferret: true }, { multi: true }, function (err, numberAffected, raw) {
+  if (err) return handleError(err);
+  console.log(&apos;The number of updated documents was %d&apos;, numberAffected);
+  console.log(&apos;The raw response from Mongo was &apos;, raw);
+});
+</code></pre><h3 id="%E5%88%A0%E9%99%A4-delete">&#x5220;&#x9664;(Delete)</h3>
+<p>&#x6587;&#x6863;</p>
+<pre><code>Model.remove(conditions, [callback])
+
+Removes documents from the collection.
+
+Parameters:
+
+- conditions &lt;Object&gt;
+- [callback] &lt;Function&gt;
+
+Returns:
+    &lt;Promise&gt; Promise
+</code></pre><p>&#x4EE3;&#x7801;</p>
+<pre><code>User.remove({username: &apos;i5ting for delete&apos;}, (err, doc) =&gt; {
+    t.false(err);
+    t.is(doc.result.ok, 1);
+    t.is(doc.result.n, 1);
+});
+</code></pre><h3 id="%E6%89%A7%E8%A1%8C%E6%B5%8B%E8%AF%95">&#x6267;&#x884C;&#x6D4B;&#x8BD5;</h3>
+<pre><code>$ cd db
+$ npm test
+
+&gt; koa-db@1.0.0 test /Users/sang/workspace/17koa/book-source/db
+&gt; ava crud -v
+
+
+&#x6570;&#x636E;&#x5E93;&#x8FDE;&#x63A5;&#x6210;&#x529F;
+  &#x2714; #save()
+  &#x2714; #find() return array
+  &#x2714; #findById() return array
+  &#x2714; #findOne() return user obj
+  &#x2714; #remove()
+  &#x2714; #findByIdAndUpdate()
+  &#x2714; #findOneAndUpdate()
+
+  6 tests passed
+</code></pre><h3 id="%E8%B0%83%E8%AF%95%E6%A8%A1%E5%BC%8F">&#x8C03;&#x8BD5;&#x6A21;&#x5F0F;</h3>
+<p>&#x8C03;&#x8BD5;&#x6A21;&#x5F0F;&#x662F;mongoose&#x63D0;&#x4F9B;&#x7684;&#x4E00;&#x4E2A;&#x975E;&#x5E38;&#x5B9E;&#x7528;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x7528;&#x4E8E;&#x67E5;&#x770B;mongoose&#x6A21;&#x5757;&#x5BF9;mongodb&#x64CD;&#x4F5C;&#x7684;&#x65E5;&#x5FD7;&#xFF0C;&#x4E00;&#x822C;&#x5F00;&#x53D1;&#x65F6;&#x4F1A;&#x6253;&#x5F00;&#x6B64;&#x529F;&#x80FD;&#xFF0C;&#x4EE5;&#x4FBF;&#x66F4;&#x597D;&#x7684;&#x4E86;&#x89E3;&#x548C;&#x4F18;&#x5316;&#x5BF9;mongodb&#x7684;&#x64CD;&#x4F5C;&#x3002;</p>
+<p>&#x6253;&#x5F00;&#x8C03;&#x8BD5;&#x7684;&#x6838;&#x5FC3;&#x4EE3;&#x7801;&#x662F;&#x8BBE;&#x7F6E; <code>debug</code> &#x53D8;&#x91CF;&#x503C;&#x4E3A; <code>true</code> &#x5373;&#x53EF;</p>
+<pre><code>var mongoose = require(&quot;mongoose&quot;);
+
+// &#x6838;&#x5FC3;&#x4EE3;&#x7801;&#xFF0C;&#x662F;&#x5426;&#x5F00;&#x542F;&#x6D4B;&#x8BD5;
+mongoose.set(&apos;debug&apos;, true);
+
+var db = mongoose.connect(&quot;mongodb://127.0.0.1:27017/db_helloworld&quot;); 
+
+db.connection.on(&quot;error&quot;, function (error) {  
+  console.log(&quot;&#x6570;&#x636E;&#x5E93;&#x8FDE;&#x63A5;&#x5931;&#x8D25;&#xFF1A;&quot; + error); 
+}); 
+
+db.connection.on(&quot;open&quot;, function () {  
+  console.log(&quot;&#x6570;&#x636E;&#x5E93;&#x8FDE;&#x63A5;&#x6210;&#x529F;&quot;);
+});
+</code></pre><p>&#x6267;&#x884C;&#x6D4B;&#x8BD5;&#x5982;&#x4E0B;</p>
+<pre><code>$ cd db
+$ npm test
+
+&gt; koa-db@1.0.0 test /Users/sang/workspace/17koa/book-source/db
+&gt; ava crud -v
+
+
+&#x6570;&#x636E;&#x5E93;&#x8FDE;&#x63A5;&#x6210;&#x529F;
+Mongoose: users.remove({}) {}  
+  &#x2714; #save()
+  &#x2714; #find() return array
+  &#x2714; #findById() return array
+  &#x2714; #findOne() return user obj
+  &#x2714; #remove()
+  &#x2714; #findByIdAndUpdate()
+  &#x2714; #findOneAndUpdate()
+Mongoose: users.insert({ username: &apos;i5ting&apos;, password: &apos;0123456789&apos;, _id: ObjectId(&quot;5734490640caa6d36906b8d4&quot;), __v: 0 })   
+Mongoose: users.find({}) { fields: undefined }  
+Mongoose: users.findOne({ username: &apos;i5ting&apos; }) { fields: undefined }  
+Mongoose: users.insert({ username: &apos;i5ting for delete&apos;, password: &apos;0123456789&apos;, _id: ObjectId(&quot;5734490640caa6d36906b8d5&quot;), __v: 0 })   
+Mongoose: users.insert({ username: &apos;i5ting for update 1&apos;, password: &apos;0123456789&apos;, _id: ObjectId(&quot;5734490640caa6d36906b8d6&quot;), __v: 0 })   
+Mongoose: users.insert({ username: &apos;i5ting for update 2&apos;, password: &apos;0123456789&apos;, _id: ObjectId(&quot;5734490640caa6d36906b8d7&quot;), __v: 0 })   
+Mongoose: users.remove({ username: &apos;i5ting for delete&apos; }) {}  
+Mongoose: users.findAndModify({ _id: ObjectId(&quot;5734490640caa6d36906b8d6&quot;) }) [] { &apos;$set&apos;: { username: &apos;sang&apos; } } { new: false, upsert: false }
+Mongoose: users.findAndModify({ username: &apos;i5ting for update 2&apos; }) [] { &apos;$set&apos;: { username: &apos;sang&apos; } } { new: false, upsert: false }
+
+  6 tests passed
+</code></pre><h2 id="schematypes">SchemaTypes</h2>
+<p>SchemaTypes handle definition of path defaults, validation, getters, setters, field selection defaults for queries and other general characteristics for Strings and Numbers. Check out their respective API documentation for more detail.</p>
+<p>Following are all valid Schema Types.</p>
+<pre><code>var mongoose = require(&apos;mongoose&apos;);
+
+for (var k in mongoose.Schema.Types) {
+  console.log(k)
+}
+</code></pre><pre><code>$ node mongoose/types.js
+String
+Number
+Boolean
+DocumentArray
+Embedded
+Array
+Buffer
+Date
+ObjectId
+Mixed
+Oid
+Object
+Bool
+</code></pre><p>&#x4F8B;&#x5B50;</p>
+<pre><code>var schema = new Schema({
+  name:    String,
+  binary:  Buffer,
+  living:  Boolean,
+  updated: { type: Date, default: Date.now },
+  age:     { type: Number, min: 18, max: 65 },
+  mixed:   Schema.Types.Mixed,
+  _someId: Schema.Types.ObjectId,
+  array:      [],
+  ofString:   [String],
+  ofNumber:   [Number],
+  ofDates:    [Date],
+  ofBuffer:   [Buffer],
+  ofBoolean:  [Boolean],
+  ofMixed:    [Schema.Types.Mixed],
+  ofObjectId: [Schema.Types.ObjectId],
+  nested: {
+    stuff: { type: String, lowercase: true, trim: true }
+  }
+})
+
+// example use
+
+var Thing = mongoose.model(&apos;Thing&apos;, schema); // &#x5B9A;&#x4E49;&#x6A21;&#x578B;
+
+var m = new Thing;
+m.name = &apos;Statue of Liberty&apos;;
+m.age = 125;
+m.updated = new Date;
+m.binary = new Buffer(0);
+m.living = false;
+m.mixed = { any: { thing: &apos;i want&apos; } };
+m.markModified(&apos;mixed&apos;);
+m._someId = new mongoose.Types.ObjectId;
+m.array.push(1);
+m.ofString.push(&quot;strings!&quot;);
+m.ofNumber.unshift(1,2,3,4);
+m.ofDates.addToSet(new Date);
+m.ofBuffer.pop();
+m.ofMixed = [1, [], &apos;three&apos;, { four: 5 }];
+m.nested.stuff = &apos;good&apos;;
+m.save(callback);
+Usage notes:
+</code></pre><p>Dates</p>
+<p>Built-in Date methods are not hooked into the mongoose change tracking logic which in English means that if you use a Date in your document and modify it with a method like setMonth(), mongoose will be unaware of this change and doc.save() will not persist this modification. If you must modify Date types using built-in methods, tell mongoose about the change with doc.markModified(&apos;pathToYourDate&apos;) before saving.</p>
+<pre><code>var Assignment = mongoose.model(&apos;Assignment&apos;, { dueDate: Date });
+Assignment.findOne(function (err, doc) {
+  doc.dueDate.setMonth(3);
+  doc.save(callback); // This does not save your change
+
+  doc.markModified(&apos;dueDate&apos;);
+  doc.save(callback); // works
+})
+</code></pre><p>Mixed</p>
+<p>An &quot;anything goes&quot; SchemaType, its flexibility comes at a trade-off of it being harder to maintain. Mixed is available either through Schema.Types.Mixed or by passing an empty object literal. The following are equivalent:</p>
+<pre><code>var Any = new Schema({ any: {} });
+var Any = new Schema({ any: Schema.Types.Mixed });
+Since it is a schema-less type, you can change the value to anything else you like, but Mongoose loses the ability to auto detect and save those changes. To &quot;tell&quot; Mongoose that the value of a Mixed type has changed, call the .markModified(path) method of the document passing the path to the Mixed type you just changed.
+person.anything = { x: [3, 4, { y: &quot;changed&quot; }] };
+person.markModified(&apos;anything&apos;);
+person.save(); // anything will now get saved
+</code></pre><p>ObjectIds</p>
+<p>To specify a type of ObjectId, use Schema.Types.ObjectId in your declaration.</p>
+<pre><code>var mongoose = require(&apos;mongoose&apos;);
+var ObjectId = mongoose.Schema.Types.ObjectId;
+var Car = new Schema({ driver: ObjectId });
+// or just Schema.ObjectId for backwards compatibility with v2
+Arrays
+
+Provide creation of arrays of SchemaTypes or Sub-Documents.
+var ToySchema = new Schema({ name: String });
+var ToyBox = new Schema({
+  toys: [ToySchema],
+  buffers: [Buffer],
+  string:  [String],
+  numbers: [Number]
+  // ... etc
+});
+</code></pre><p>&#x6CE8;&#x610F;: specifying an empty array is equivalent to Mixed. The following all create arrays of Mixed:</p>
+<pre><code>var Empty1 = new Schema({ any: [] });
+var Empty2 = new Schema({ any: Array });
+var Empty3 = new Schema({ any: [Schema.Types.Mixed] });
+var Empty4 = new Schema({ any: [{}] });
+</code></pre><p>&#x521B;&#x5EFA;&#x81EA;&#x5B9A;&#x4E49;&#x7C7B;&#x578B;</p>
+<p>Mongoose can also be extended with custom SchemaTypes. Search the plugins site for compatible types like mongoose-long and other types.
+Next Up</p>
+<p>Now that we&apos;ve covered SchemaTypes, let&apos;s take a look at Models.</p>
+<h2 id="%E6%80%BB%E7%BB%93">&#x603B;&#x7ED3;</h2>
+<p>&#x4ECE;mongoose&#x662F;&#x4EC0;&#x4E48;&#xFF0C;&#x5230;&#x5982;&#x4F55;&#x4F7F;&#x7528;&#xFF0C;&#x4EE5;&#x53CA;&#x6838;&#x5FC3;&#x6982;&#x5FF5;&#xFF08;orm&#x4EE5;&#x53CA;schema&#x3001;model&#x3001;entity&#xFF09;&#xFF0C;&#x6700;&#x540E;&#x7ED9;&#x51FA;CRUD&#x64CD;&#x4F5C;&#xFF0C;&#x5E0C;&#x671B;&#x8BFB;&#x8005;&#x80FD;&#x591F;&#x8BA4;&#x771F;&#x4F53;&#x4F1A;orm&#x548C;&#x5177;&#x4F53;&#x5206;&#x5C42;&#x542B;&#x4E49;&#x3002;</p>
+<p>&#x672C;&#x8282;&#x4EE5;&#x6700;&#x7B80;&#x5355;&#x7684;user&#xFF0C;&#x7ED3;&#x5408;ava&#x5B8C;&#x6210;&#x5355;&#x5143;&#x6D4B;&#x8BD5;&#xFF0C;&#x6211;&#x4EEC;&#x6D4B;&#x8BD5;&#x6570;&#x636E;&#x5E93;&#x4EE3;&#x7801;&#x5E76;&#x4E0D;&#x4E00;&#x5B9A;&#x8981;&#x5728;koa&#x6216;&#x5176;&#x4ED6;&#x6846;&#x67B6;&#x5185;&#x90E8;&#xFF0C;&#x6700;&#x5C0F;&#x5316;&#x95EE;&#x9898;&#xFF0C;mongoose&#x5B83;&#x53EA;&#x662F;&#x4E00;&#x4E2A;node&#x6A21;&#x5757;&#xFF0C;&#x8FD9;&#x6837;&#x5BF9;&#x4E8E;&#x6211;&#x4EEC;&#x7406;&#x89E3;&#x5B83;&#x662F;&#x6BD4;&#x8F83;&#x597D;&#x7684;&#x65B9;&#x5F0F;&#x3002;&#x63A5;&#x4E0B;&#x6765;&#x6211;&#x4EEC;&#x4F1A;&#x8BB2;&#x89E3;&#x66F4;&#x591A;&#x9AD8;&#x7EA7;mongoose&#x6280;&#x5DE7;&#xFF0C;&#x5B83;&#x4EEC;&#x7684;&#x57FA;&#x7840;&#x90FD;&#x662F;&#x672C;&#x8282;&#x5185;&#x5BB9;&#xFF0C;&#x6240;&#x4EE5;&#x672C;&#x8282;&#x5FC5;&#x987B;&#x638C;&#x63E1;&#xFF0C;&#x662F;&#x672C;&#x7AE0;&#x91CD;&#x70B9;&#x3002;</p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../db/model.html" class="navigation navigation-prev " aria-label="Previous page: 了解mvc里m的作用，以及什么样的代码该放到模型里"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../db/extend.html" class="navigation navigation-next " aria-label="Next page: 扩展mongoose模型statics方法和methods的区别"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-toc2/toc2.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2},"edit-link":{"base":"https://github.com/i5ting/wechat-dev-with-nodejs/tree/master","label":"Edit This Page"},"github":{"url":"https://github.com/i5ting/wechat-dev-with-nodejs/"}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>
