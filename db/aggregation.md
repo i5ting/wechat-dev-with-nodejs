@@ -79,8 +79,13 @@ aggregate.near({
 ### project
 
 根据project表达式指定输入的字段或者计算的字段，语法如下：
+
+```
 { $project: { <specifications> } }
+```
 比如有如下文档：
+
+```
 {
   "_id" : 1, 
   title: "abc123",
@@ -88,16 +93,28 @@ aggregate.near({
   author: { last: "zzz", first: "aaa" },
   copies: 5
 }
+```
+
 指定_id、title，author出现在输出的文档中：
+
+```
 { 
     $project : { 
     title : 1 , 
     author : 1 
     }
  }
+ ```
+
 经过操作之后，就将输出
+
+```
 { "_id" : 1, "title" : "abc123", "author" : { "last" : "zzz", "first" : "aaa" } }
+```
+
 当然，在之前也可以指定内嵌文档的字段，比如上面可以指定只输出author.last。 也可以通过加入计算操作，生成新的文档，数据库有如下文档：
+
+```
 {
   "_id" : 1,
   title: "abc123",
@@ -105,7 +122,11 @@ aggregate.near({
   author: { last: "zzz", first: "aaa" },
   copies: 5
 }
+```
+
 进行如下操作
+
+```
 db.books.aggregate(
    [
       {
@@ -124,7 +145,11 @@ db.books.aggregate(
       }
    ]
 )
+```
+
 操作之后的结果如下：
+
+```
 {
    "_id" : 1,
    "title" : "abc123",
@@ -138,7 +163,7 @@ db.books.aggregate(
    "lastName" : "zzz",
    "copiesSold" : 5
 }
-
+```
 
 ### read
 
