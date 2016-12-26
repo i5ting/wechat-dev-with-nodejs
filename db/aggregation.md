@@ -2,6 +2,10 @@
 
 ## 什么是AGGREGATION？
 
+NoSQL是K/V型数据库，本身不支持关系的，所以为了支持关系，就需要提供关联查询，这就是AGGREGATION产生的必然原因。
+
+> linux里的pipe：ps -ef|grep node|awk ‘{print $2}’|xargs kill -9
+
 ## mongoose AGGREGATION
 
 调用Model.aggregate()将会返回aggregate实例，他具有如下这些方法：
