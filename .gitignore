@@ -7,3 +7,4 @@ vip-lession-code/*.log
 vip-lession-code/frontend/*.log
 vip-lession-code/frontend/components/
 .publish/
+log
