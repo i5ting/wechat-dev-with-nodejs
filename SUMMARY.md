@@ -63,6 +63,7 @@
    * [Wechat-api](wechat/api.md)
    * [H5-上篇](wechat/h5.md)
    * [H5-下篇](wechat/h5.md)
+   * [工具](wechat/tools.md)
    * [随堂练习：写一个页面分享到朋友圈](wechat/exercises.md)
 * [WeUI实战](weui/README.md)
    * [使用Bower](weui/bower.md)

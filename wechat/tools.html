@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
-        <title>学习重点 | StuQ《Node.js微信开发》</title>
+        <title>工具 | StuQ《Node.js微信开发》</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.0.1">
@@ -20,10 +20,10 @@
         
     
     
-    <link rel="next" href="../async/exercises.html" />
+    <link rel="next" href="../wechat/exercises.html" />
     
     
-    <link rel="prev" href="../async/yieldable.html" />
+    <link rel="prev" href="../wechat/h5.html" />
     
 
         
@@ -40,7 +40,7 @@
     
 
         
-    <div class="book" data-level="3.9" data-basepath=".." data-revision="Wed Jan 04 2017 08:22:12 GMT+0800 (CST)">
+    <div class="book" data-level="6.8" data-basepath=".." data-revision="Wed Jan 04 2017 08:22:12 GMT+0800 (CST)">
     
 
 <div class="book-summary">
@@ -443,7 +443,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="3.9" data-path="async/summary.html">
+        <li class="chapter " data-level="3.9" data-path="async/summary.html">
             
                 
                     <a href="../async/summary.html">
@@ -1046,7 +1046,7 @@
             
         </li>
     
-        <li class="chapter " data-level="6.8" data-path="wechat/tools.html">
+        <li class="chapter active" data-level="6.8" data-path="wechat/tools.html">
             
                 
                     <a href="../wechat/tools.html">
@@ -1748,39 +1748,16 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="%E5%AD%A6%E4%B9%A0%E9%87%8D%E7%82%B9">&#x5B66;&#x4E60;&#x91CD;&#x70B9;</h1>
-<p>&#x7EFC;&#x4E0A;&#x6240;&#x8FF0;</p>
-<ul>
-<li>Async&#x51FD;&#x6570;&#x662F;&#x8D8B;&#x52BF;&#xFF0C;&#x5982;&#x679C;Chrome 52. v8 5.1&#x5DF2;&#x7ECF;&#x652F;&#x6301;Async&#x51FD;&#x6570;(<a href="https://github.com/nodejs/CTC/issues/7)&#x4E86;&#xFF0C;Node.js&#x652F;&#x6301;&#x8FD8;&#x4F1A;&#x8FDC;&#x4E48;&#xFF1F;" target="_blank">https://github.com/nodejs/CTC/issues/7)&#x4E86;&#xFF0C;Node.js&#x652F;&#x6301;&#x8FD8;&#x4F1A;&#x8FDC;&#x4E48;&#xFF1F;</a></li>
-<li>Async&#x548C;Generator&#x51FD;&#x6570;&#x91CC;&#x90FD;&#x652F;&#x6301;promise&#xFF0C;&#x6240;&#x4EE5;promise&#x662F;&#x5FC5;&#x987B;&#x4F1A;&#x7684;&#x3002;</li>
-<li>Generator&#x548C;yield&#x5F02;&#x5E38;&#x5F3A;&#x5927;&#xFF0C;&#x4E0D;&#x8FC7;&#x4E0D;&#x4F1A;&#x6210;&#x4E3A;&#x4E3B;&#x6D41;&#xFF0C;&#x6240;&#x4EE5;&#x5B66;&#x4F1A;&#x57FA;&#x672C;&#x7528;&#x6CD5;&#x548C;promise&#x5C31;&#x597D;&#x4E86;&#xFF0C;&#x6CA1;&#x5FC5;&#x8981;&#x6240;&#x6709;&#x7684;&#x90FD;&#x5FC5;&#x987B;&#x4F1A;&#x3002;</li>
-<li>co&#x4F5C;&#x4E3A;Generator&#x6267;&#x884C;&#x5668;&#x662F;&#x4E0D;&#x9519;&#x7684;&#xFF0C;&#x5B83;&#x66F4;&#x597D;&#x7684;&#x662F;&#x5F53;&#x505A;Promise &#x5305;&#x88C5;&#x5668;&#xFF0C;&#x901A;&#x8FC7;Generator&#x652F;&#x6301;yieldable&#xFF0C;&#x6700;&#x540E;&#x8FD4;&#x56DE;Promise&#xFF0C;&#x662F;&#x4E0D;&#x662F;&#x6709;&#x70B9;&#x65E0;&#x803B;&#xFF1F;</li>
-</ul>
-<p>&#x6211;&#x6574;&#x7406;&#x4E86;&#x4E00;&#x5F20;&#x56FE;&#xFF0C;&#x66F4;&#x76F4;&#x89C2;&#x4E00;&#x4E9B;&#x3002;</p>
-<p><img src="img/all.png" alt="All"></p>
-<ul>
-<li>&#x7EA2;&#x8272;&#x4EE3;&#x8868;Promise&#xFF0C;&#x662F;&#x4F7F;&#x7528;&#x6700;&#x591A;&#x7684;&#xFF0C;&#x65E0;&#x8BBA;async&#x8FD8;&#x662F;generator&#x90FD;&#x53EF;&#x7528;</li>
-<li>&#x84DD;&#x8272;&#x662F;Generator&#xFF0C;&#x8FC7;&#x5EA6;&#x8D27;</li>
-<li>&#x7EFF;&#x8272;&#x662F;Async&#x51FD;&#x6570;&#xFF0C;&#x8D8B;&#x52BF;</li>
-</ul>
-<p><strong>&#x7ED3;&#x8BBA;</strong>&#xFF1A;Promise&#x662F;&#x5FC5;&#x987B;&#x4F1A;&#x7684;&#xFF0C;&#x90A3;&#x4F60;&#x4E3A;&#x4EC0;&#x4E48;&#x4E0D;&#x987A;&#x52BF;&#x800C;&#x4E3A;&#x5462;&#xFF1F;</p>
-<p><strong>&#x63A8;&#x8350;</strong>&#xFF1A;&#x4F7F;&#x7528;Async&#x51FD;&#x6570; + Promise&#x7EC4;&#x5408;&#xFF0C;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#x3002;</p>
-<p><img src="img/suggest.png" alt="Suggest"></p>
-<p><strong>&#x5B9E;&#x8DF5;</strong></p>
-<p>&#x5408;&#x7406;&#x7684;&#x7ED3;&#x5408;Promise&#x548C;Async&#x51FD;&#x6570;&#x662F;&#x53EF;&#x4EE5;&#x975E;&#x5E38;&#x9AD8;&#x6548;&#x7684;&#xFF0C;&#x4F46;&#x4E5F;&#x8981;&#x56E0;&#x573A;&#x666F;&#x800C;&#x5F02;</p>
-<ul>
-<li>Promise&#x66F4;&#x5BB9;&#x6613;&#x505A;promisefyAll&#xFF08;&#x6BD4;&#x5982;&#x4F7F;&#x7528;bluebird&#xFF09;</li>
-<li>Async&#x51FD;&#x6570;&#x65E0;&#x6CD5;&#x6279;&#x91CF;&#x64CD;&#x4F5C;</li>
-</ul>
-<p>&#x90A3;&#x4E48;&#xFF0C;&#x5728;&#x5E38;&#x89C1;&#x7684;Web&#x5E94;&#x7528;&#x91CC;&#xFF0C;&#x6211;&#x4EEC;&#x603B;&#x7ED3;&#x7684;&#x5B9E;&#x8DF5;&#x662F;&#xFF0C;dao&#x5C42;&#x4F7F;&#x7528;Promise&#x6BD4;&#x8F83;&#x597D;&#xFF0C;&#x800C;service&#x5C42;&#xFF0C;&#x4F7F;&#x7528;Async/Await&#x66F4;&#x597D;&#x3002;</p>
-<p>dao&#x5C42;&#x4F7F;&#x7528;Promise&#xFF1A;</p>
-<ul>
-<li>crud</li>
-<li>&#x5355;&#x4E00;&#x6A21;&#x578B;&#x7684;&#x65B9;&#x6CD5;&#x591A;</li>
-<li>&#x5E93;&#x81EA;&#x8EAB;&#x652F;&#x6301;Promise</li>
-</ul>
-<p>&#x8FD9;&#x79CD;&#x7528;promisefyAll&#x57FA;&#x672C;&#x51E0;&#x884C;&#x4EE3;&#x7801;&#x5C31;&#x591F;&#x4E86;&#xFF0C;&#x4E00;&#x822C;&#x5355;&#x4E00;&#x6A21;&#x578B;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x4E0D;&#x4F1A;&#x7279;&#x522B;&#x590D;&#x6742;&#xFF0C;&#x5E94;&#x53D8;&#x7684;&#x9700;&#x6C42;&#x57FA;&#x672C;&#x4E0D;&#x5927;&#x3002;</p>
-<p>&#x800C;service&#x5C42;&#x4E00;&#x822C;&#x662F;&#x591A;&#x4E2A;Model&#x7EC4;&#x5408;&#x64CD;&#x4F5C;&#xFF0C;&#x591A;&#x6A21;&#x578B;&#x64CD;&#x4F5C;&#x5C31;&#x53EF;&#x4EE5;&#x62C6;&#x5206;&#x6210;&#x591A;&#x4E2A;&#x5C0F;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x7136;&#x540E;&#x4F7F;&#x7528;Await&#x6765;&#x7EC4;&#x5408;&#xFF0C;&#x770B;&#x8D77;&#x6765;&#x4F1A;&#x66F4;&#x52A0;&#x6E05;&#x6670;&#xFF0C;&#x53E6;&#x5916;&#x5BF9;&#x9700;&#x6C42;&#x5E94;&#x53D8;&#x4E5F;&#x662F;&#x975E;&#x5E38;&#x5BB9;&#x6613;&#x7684;&#x3002;</p>
+                        <h1 id="%E5%B7%A5%E5%85%B7">&#x5DE5;&#x5177;</h1>
+<p>&#x5DE5;&#x6B32;&#x5584;&#x5176;&#x4E8B;,&#x5FC5;&#x5148;&#x5229;&#x5176;&#x5668;</p>
+<h2 id="browser-sync">browser-sync</h2>
+<p><a href="https://github.com/BrowserSync/browser-sync" target="_blank">https://github.com/BrowserSync/browser-sync</a></p>
+<h2 id="vconsole">vconsole</h2>
+<p><a href="https://github.com/WechatFE/vConsole" target="_blank">https://github.com/WechatFE/vConsole</a></p>
+<h2 id="weinre">weinre</h2>
+<p><a href="http://people.apache.org/~pmuellr/weinre/docs/latest/Home.html" target="_blank">http://people.apache.org/~pmuellr/weinre/docs/latest/Home.html</a></p>
+<h2 id="spy-debugger">spy-debugger</h2>
+<p><a href="https://github.com/wuchangming/spy-debugger" target="_blank">https://github.com/wuchangming/spy-debugger</a></p>
 
                     
                     </section>
@@ -1791,10 +1768,10 @@
         </div>
 
         
-        <a href="../async/yieldable.html" class="navigation navigation-prev " aria-label="Previous page: 5种 yieldable"><i class="fa fa-angle-left"></i></a>
+        <a href="../wechat/h5.html" class="navigation navigation-prev " aria-label="Previous page: H5-下篇"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../async/exercises.html" class="navigation navigation-next " aria-label="Next page: 随堂练习：找到并阅读promise/a+实现的源码"><i class="fa fa-angle-right"></i></a>
+        <a href="../wechat/exercises.html" class="navigation navigation-next " aria-label="Next page: 随堂练习：写一个页面分享到朋友圈"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
