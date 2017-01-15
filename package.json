@@ -29,7 +29,7 @@
     "shelljs": "^0.3.0"
   },
   "scripts": {
-    "start": "watch -i 300ms gitbook serve",
+    "start": "gitbook serve",
      "open": "npm run build && open _book/index.html",
      "build": "gitbook build . --gitbook=2.0.1",
      "test": "echo \"Error: no test specified\" && exit 1"
