@@ -97,6 +97,7 @@
    * [数据统计](vip-lession/data_analyze.md)
    * [demo](vip-lession/demo.md)
 * [高级篇（赠送）](vip-lession/README.md)
+   * [gitbook用法](more/gitbook.md)
    * [前后端分离实践？](more/practice.md)
    * [如何展望未来的大前端？](more/tomorow.md)
    * [容器化和微服务](more/microservice.md)

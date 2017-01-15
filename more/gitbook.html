@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
-        <title>入门 | StuQ《Node.js微信开发》</title>
+        <title>gitbook用法 | StuQ《Node.js微信开发》</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.0.1">
@@ -20,10 +20,10 @@
         
     
     
-    <link rel="next" href="../express/minimal.html" />
+    <link rel="next" href="../more/practice.html" />
     
     
-    <link rel="prev" href="../express/index.html" />
+    <link rel="prev" href="../vip-lession/index.html" />
     
 
         
@@ -40,7 +40,7 @@
     
 
         
-    <div class="book" data-level="4.1" data-basepath=".." data-revision="Sun Jan 15 2017 18:26:36 GMT+0800 (CST)">
+    <div class="book" data-level="10.1" data-basepath=".." data-revision="Sun Jan 15 2017 18:26:36 GMT+0800 (CST)">
     
 
 <div class="book-summary">
@@ -494,7 +494,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="4.1" data-path="express/intro.html">
+        <li class="chapter " data-level="4.1" data-path="express/intro.html">
             
                 
                     <a href="../express/intro.html">
@@ -1580,7 +1580,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="10.1" data-path="more/gitbook.html">
+        <li class="chapter active" data-level="10.1" data-path="more/gitbook.html">
             
                 
                     <a href="../more/gitbook.html">
@@ -1763,35 +1763,10 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="intro">intro</h1>
-<p>&#x5728; Node.js
-web&#x5F00;&#x53D1;&#x793E;&#x533A;&#x6709;&#x4E00;&#x4EF6;&#x4E8B;&#x662F;&#x786E;&#x5B9A;&#x7684;&#xFF0C;&#x6709;2&#x4E2A;&#x7ECF;&#x5E38;&#x7528;&#x4E8E;&#x6784;&#x5EFA;&#x65B0;&#x7684;web&#x5E94;&#x7528;&#x7684;&#x5E93;&#xFF0C;&#x5B83;&#x4EEC;&#x5206;&#x522B;&#x662F;connect
-&#x548C;express&#x3002;</p>
-<ul>
-<li><a href="http://www.senchalabs.org/connect/" target="_blank">Connect&#x662F;&#x5E95;&#x5C42;&#x5DE5;&#x5177;</a> &#x8BA9;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;http&#x534F;&#x8BAE;&#x6216;&#x8005;&#x5176;&#x4ED6;&#x7F51;&#x7EDC;&#x534F;&#x8BAE;&#x8FDB;&#x884C;&#x4F1A;&#x8BDD;&#x3002;&#x66F4;&#x7B80;&#x5355;&#x70B9;&#x8BF4;&#xFF0C;&#x5B83;&#x63D0;&#x4F9B;&#x7684;&#x662F;&#x7B52;&#x5B50;&#x5F0F;&#x63D2;&#x4EF6;&#x673A;&#x5236;&#xFF0C;&#x4E3A;http&#x7F16;&#x7801;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x5B9A;&#x7684;&#x6269;&#x5C55;&#x6027;&#x3002;</li>
-<li><a href="http://expressjs.com/" target="_blank">Express&#x8BA9;&#x6784;&#x5EFA;&#x597D;&#x7684;&#x7F51;&#x7AD9;&#x66F4;&#x52A0;&#x7B80;&#x5355;</a>
-&#xFF0C;&#x800C;&#x4E14;&#x5B83;&#x662F;&#x6784;&#x5EFA;&#x4E8E;Connect&#x5E93;&#x4E4B;&#x4E0A;&#x7684;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x5B83;&#x7EE7;&#x627F;&#x4E86;&#x7B52;&#x5B50;&#x5F0F;&#x63D2;&#x4EF6;&#x673A;&#x5236;&#xFF0C;&#x5E76;&#x4E14;&#x5B83;&#x6269;&#x5C55;&#x4E86;&#x8DEF;&#x7531;&#x3001;&#x89C6;&#x56FE;&#x7B49;&#x6982;&#x5FF5;&#xFF0C;&#x8BA9;http&#x7F16;&#x7801;&#x66F4;&#x52A0;&#x7B80;&#x5355;&#x3002;</li>
-</ul>
-<p>&#x6574;&#x4F53;&#x6765;&#x770B;&#xFF0C;&#x8FD9;2&#x4E2A;&#x6846;&#x67B6;&#x90FD;&#x8FD8;&#x6BD4;&#x8F83;&#x7B80;&#x5355;&#xFF0C;&#x751A;&#x81F3;&#x53EF;&#x4EE5;&#x8BF4;&#x662F;&#x4E00;&#x4E2A;&#x5E93;&#x800C;&#x5DF2;&#x3002;&#x505A;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x670D;&#x52A1;&#x8FD8;&#x662F;&#x591F;&#x7684;&#xFF0C;&#x5982;&#x679C;&#x671F;&#x671B;&#x5B83;&#x505A;&#x66F4;&#x591A;&#xFF0C;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x81EA;&#x5DF1;&#x5C01;&#x88C5;&#x4E86;&#x3002;</p>
-<h2 id="%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%BF%E7%94%A8%E5%92%8C%E5%AD%A6%E4%B9%A0express%EF%BC%9F">&#x4E3A;&#x4EC0;&#x4E48;&#x4F7F;&#x7528;&#x548C;&#x5B66;&#x4E60;Express&#xFF1F;</h2>
-<ul>
-<li>&#x57FA;&#x4E8E;node&#x7684;&#x5F02;&#x6B65;&#xFF0C;&#x6027;&#x80FD;&#x6BD4;&#x8F83;&#x597D;</li>
-<li>Express&#x672C;&#x8EAB;&#x6BD4;&#x8F83;&#x6210;&#x719F;&#xFF0C;&#x76EE;&#x524D;&#x5DF2;&#x7ECF;&#x662F;v4&#x4E86;</li>
-<li>&#x6709;&#x5F88;&#x591A;&#x5927;&#x89C4;&#x6A21;&#x5E94;&#x7528;&#x5B9E;&#x4F8B;&#xFF0C;&#x96C6;&#x7FA4;&#x7B49;&#x90FD;&#x975E;&#x5E38;&#x5BB9;&#x6613;</li>
-</ul>
-<p>&#x4EE5;&#x4E0B;&#x662F;&#x4E3B;&#x8981;&#x5185;&#x5BB9;</p>
-<ul>
-<li>helloworld</li>
-<li>app.js</li>
-<li>public</li>
-<li>routes</li>
-<li>view</li>
-<li>auto mount routes</li>
-<li>reload</li>
-<li>test</li>
-</ul>
-<h2 id="%E6%97%A0%E7%8A%B6%E6%80%81%E7%9A%84http%E5%8D%8F%E8%AE%AE">&#x65E0;&#x72B6;&#x6001;&#x7684;http&#x534F;&#x8BAE;</h2>
-<p><img src="2.jpg" alt="2"></p>
+                        <h1 id="gitbook">gitbook</h1>
+<h2 id="%E5%85%A5%E9%97%A8">&#x5165;&#x95E8;</h2>
+<p><a href="https://github.com/GitbookIO/gitbook/blob/master/docs/setup.md" target="_blank">https://github.com/GitbookIO/gitbook/blob/master/docs/setup.md</a></p>
+<h2 id="gulp%E5%8F%91%E5%B8%83%E5%88%B0gh-pages">gulp&#x53D1;&#x5E03;&#x5230;gh-pages</h2>
 
                     
                     </section>
@@ -1802,10 +1777,10 @@ web&#x5F00;&#x53D1;&#x793E;&#x533A;&#x6709;&#x4E00;&#x4EF6;&#x4E8B;&#x662F;&#x78
         </div>
 
         
-        <a href="../express/index.html" class="navigation navigation-prev " aria-label="Previous page: Express和微信开发入门"><i class="fa fa-angle-left"></i></a>
+        <a href="../vip-lession/index.html" class="navigation navigation-prev " aria-label="Previous page: 高级篇（赠送）"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../express/minimal.html" class="navigation navigation-next " aria-label="Next page: Connect"><i class="fa fa-angle-right"></i></a>
+        <a href="../more/practice.html" class="navigation navigation-next " aria-label="Next page: 前后端分离实践？"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
