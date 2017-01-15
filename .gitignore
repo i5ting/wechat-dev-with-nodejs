@@ -9,3 +9,4 @@ vip-lession-code/frontend/components/
 .publish/
 log
 play
+*.log
