@@ -19,7 +19,7 @@ gulp.task('generate', function () {
 	}	
 })
 
-gulp.task('show',['generate'] , function () {
+gulp.task('show', ['generate'], function () {
   if (exec('hs _book -o').code !== 0) {
 	  echo('Error: generate.sh exec failed')
 	  exit(1)
