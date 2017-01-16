@@ -37,7 +37,7 @@
    * [更多实践](express/gulp.md)
    * [微信入门](express/how-to-study.md)
    * [随堂练习：完成登录、注册功能](express/exercises.md)
-* [数据库](db/README.md)
+* [Mongodb数据库](db/README.md)
    * [mongodb安装](db/mongodb.md)
    * [了解mvc里m的作用，以及什么样的代码该放到模型里](db/model.md)
    * [mongoose入门](db/mongoose.md)
