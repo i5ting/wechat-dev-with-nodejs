@@ -19,3 +19,5 @@ https://docs.npmjs.com/files/package.json
 
 4.	nodejs 系统如何和 java 系统对接呢？比如 java 侧进行数据采集，大数据离线分析，nodejs 侧进行数据渲染，是通过 mysql/mongo 等数据库做中转进行对接吗？即类似这样的处理: java 侧处理数据后落库，nodejs 侧读库即可？如果不是，能否举个例子？
 
+https://github.com/i5ting/nodejs-arch-for-java
+
