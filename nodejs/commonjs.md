@@ -1,6 +1,6 @@
 # commonJS
 
-## commonJS规范和hello world2
+## hello world2
 
 ### commonJS是一个规范
 
