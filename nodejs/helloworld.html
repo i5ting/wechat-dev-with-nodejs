@@ -40,7 +40,7 @@
     
 
         
-    <div class="book" data-level="2.3" data-basepath=".." data-revision="Wed Jan 25 2017 09:11:44 GMT+0800 (CST)">
+    <div class="book" data-level="2.3" data-basepath=".." data-revision="Wed Feb 08 2017 09:50:00 GMT+0800 (CST)">
     
 
 <div class="book-summary">
@@ -1816,6 +1816,32 @@
                     
                         <h1 id="helloworld">helloworld</h1>
 <p>&#x672C;&#x8282;&#x4E3B;&#x8981;&#x901A;&#x8FC7;helloworld&#x4E3A;&#x4F8B;&#xFF0C;&#x5F15;&#x7533;commonJS&#x89C4;&#x8303;&#x5B9E;&#x73B0;&#xFF0C;&#x6700;&#x7EC8;&#x6253;&#x901A;nodejs&#x6A21;&#x5757;&#x57FA;&#x7840;&#x3002;</p>
+<h2 id="%E5%85%A5%E9%97%A8%E6%A6%82%E8%A7%88">&#x5165;&#x95E8;&#x6982;&#x89C8;</h2>
+<ul>
+<li>&#x5FC5;&#x4F1A;js&#x57FA;&#x672C;&#x8BED;&#x6CD5;</li>
+<li>&#x719F;&#x6089;error-first api&#x5199;&#x6CD5;&#x548C;commonJS&#x89C4;&#x8303;</li>
+<li>&#x638C;&#x63E1;EvenEmit&#x4E8B;&#x4EF6;&#x9A71;&#x52A8;&#x673A;&#x5236;</li>
+<li>&#x638C;&#x63E1;Stream&#xFF0C;&#x4EE5;&#x53CA;HTTP&#x6A21;&#x5757;&#x4E2D;&#x4F7F;&#x7528;Stream&#x7684;&#x7406;&#x89E3;</li>
+<li>&#x638C;&#x63E1;Node.js SDK api&#x7528;&#x6CD5;</li>
+<li>&#x638C;&#x63E1;&#x901A;&#x8FC7;npm&#x5B89;&#x88C5;&#x7684;&#x5916;&#x90E8;&#x6A21;&#x5757;&#x7528;&#x6CD5;</li>
+</ul>
+<h2 id="%E5%8C%BA%E5%88%86npm%E5%92%8Ccommonjs%E8%A7%84%E8%8C%83">&#x533A;&#x5206;Npm&#x548C;CommonJS&#x89C4;&#x8303;</h2>
+<p>&#x770B;&#x4E00;&#x4E0B;npm</p>
+<ul>
+<li>npm&#x540D;&#x79F0;&#x662F;Node Package Manager</li>
+<li>npm&#x662F;Node.js SDK&#x4EE5;&#x5916;&#x7684;&#x6A21;&#x5757;&#x7BA1;&#x7406;&#x5668;&#xFF0C;&#x7528;&#x4E8E;&#x63D0;&#x4F9B;&#x5B89;&#x88C5;&#xFF0C;&#x5378;&#x8F7D;&#xFF0C;&#x4F9D;&#x8D56;&#x7BA1;&#x7406;&#x7B49;</li>
+<li>npm&#x662F;&#x7BA1;&#x7406;&#x57FA;&#x4E8E;CommonJS&#x89C4;&#x8303;&#x5199;&#x7684;&#x6A21;&#x5757;&#x7684;</li>
+</ul>
+<p>&#x800C;CommonJS&#x89C4;&#x8303;</p>
+<ul>
+<li>CommonJS&#x662F;&#x4E00;&#x5957;&#x89C4;&#x8303;&#xFF0C;&#x662F;&#x6A21;&#x5757;&#x5199;&#x6CD5;&#x4E0A;&#x7EA6;&#x5B9A;</li>
+<li>Node.js&#x662F;&#x57FA;&#x4E8E;CommonJS&#x89C4;&#x8303;&#x7684;&#x5B9E;&#x73B0;&#xFF0C;&#x5E76;&#x505A;&#x4E86;&#x6539;&#x8FDB;</li>
+</ul>
+<p>&#x603B;&#x7ED3;</p>
+<ul>
+<li>npm&#x662F;&#x7BA1;&#x7406;&#x57FA;&#x4E8E;CommonJS&#x89C4;&#x8303;&#x5199;&#x7684;&#x6A21;&#x5757;&#x7684;</li>
+<li>CommonJS&#x662F;&#x4E00;&#x5957;&#x89C4;&#x8303;&#xFF0C;&#x662F;&#x6A21;&#x5757;&#x5199;&#x6CD5;&#x4E0A;&#x7EA6;&#x5B9A;</li>
+</ul>
 <h2 id="hello-world">hello world</h2>
 <p>&#x521B;&#x5EFA;<code>helloworld.js</code></p>
 <pre><code>console.log(&apos;hello world&apos;);
@@ -1823,7 +1849,14 @@
 <pre><code>&#x279C;  nodejs git:(master) &#x2717; node demo/helloworld.js
 hello world
 </code></pre><p>&#x8FD9;&#x662F;&#x6700;&#x7B80;&#x5355;&#x7684;&#x4F8B;&#x5B50;&#xFF0C;&#x53EA;&#x662F;&#x8BF4;nodejs&#x7684;&#x8BED;&#x6CD5;&#x652F;&#x6301;&#x524D;&#x7AEF;js&#x8BED;&#x6CD5;</p>
+<h2 id="write-a-http-server-use-node-js">Write a http server use Node.js</h2>
+<pre><code>var http = require(&apos;http&apos;);
 
+http.createServer(function(request,response){
+    console.log(request);
+    response.end(&apos;Hello world!&apos;);
+}).listen(8888);
+</code></pre>
                     
                     </section>
                 
