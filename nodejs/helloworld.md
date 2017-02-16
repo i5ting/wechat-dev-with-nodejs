@@ -6,7 +6,7 @@
 ## 入门概览 
 
 - 必会js基本语法
-- 熟悉error-first api写法和commonJS规范
+- 熟悉api写法：error-first api写法和commonJS规范
 - 掌握EvenEmit事件驱动机制
 - 掌握Stream，以及HTTP模块中使用Stream的理解
 - 掌握Node.js SDK api用法

@@ -10,7 +10,7 @@
    * [安装](nodejs/install.md)
    * [Hello world](nodejs/helloworld.md)
    * [Common JS规范](nodejs/commonjs.md)
-   * [模块导出](nodejs/module-exports.md)
+   * [熟悉api写法](nodejs/writting.md)
    * [Node.js代码调试](nodejs/terms.md)
    * [编写Node.js模块](nodejs/npm.md)
    * [最小化问题](nodejs/how-to-study.md)
