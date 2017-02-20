@@ -818,6 +818,31 @@ winner
 loser
 ```
 
+## Timeout超时
+
+bluebird里实现的
+
+```
+const Promise = require("bluebird");
+
+
+function sleep(time) {
+  return new Promise((resolve)=> setTimeout(resolve, time))
+}
+
+sleep(200).then(function(){
+    return sleep(2000)
+}).timeout(2100)
+.catch(Promise.TimeoutError, function(e) {
+    console.log("could not read file within 100ms");
+    
+    return Promise.resolve(1)
+})
+.then(function(){
+    console.log('xxxx')
+})
+```
+
 ## Promise/a+只有Node.js有么？
 
 这是大家经常问到的问题，明确的说，promise/a+是规范。
@@ -829,3 +854,4 @@ loser
 https://promisesaplus.com/implementations
 
 ![Impl](img/impl.png)
+
