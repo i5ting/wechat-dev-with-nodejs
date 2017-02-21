@@ -11,3 +11,4 @@ vip-lession-code/frontend/components/
 log
 play
 *.log
+.DS_Store

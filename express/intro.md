@@ -1,4 +1,4 @@
-# intro
+# 简介
 
 在 Node.js
 web开发社区有一件事是确定的，有2个经常用于构建新的web应用的库，它们分别是connect
@@ -19,14 +19,25 @@ web开发社区有一件事是确定的，有2个经常用于构建新的web应�
 以下是主要内容
 
 - helloworld
+- 中间件原理
 - app.js
-- public
+- public(static server)
 - routes
-- view
+- view(模板)
 - auto mount routes
 - reload
 - test
 
-## 无状态的http协议
+## 新人适合学Express么？
 
-![2](2.jpg)
+很多人拿koa和express对比，对于新人来说容易造成困扰。
+
+- express成熟度要比koa高
+- express周边资源、文档、高手比较多
+- express更简单，会js基础即可
+
+而Koa
+
+- 非常棒的异步流程控制
+- 新，更加有活力，但对人的要求也越高
+- 喜欢填坑的是一个机会
