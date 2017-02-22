@@ -29,7 +29,7 @@
    * [随堂练习：找到并阅读promise/a+实现的源码](async/exercises.md)
 * [Express和微信开发入门](express/README.md)
    * [入门](express/intro.md)
-   * [Connect](express/minimal.md)
+   * [最小化Http](express/minimal.md)
    * [静态Http服务器](express/html.md)
    * [那些预处理器](express/precompile.md)
    * [路由](express/route.md)

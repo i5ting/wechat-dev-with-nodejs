@@ -1,4 +1,4 @@
-# minimal http
+# 最小化Http
 
 ## b/s和c/s架构
 
