@@ -40,7 +40,7 @@
     
 
         
-    <div class="book" data-level="4.1" data-basepath=".." data-revision="Wed Feb 08 2017 09:50:00 GMT+0800 (CST)">
+    <div class="book" data-level="4.1" data-basepath=".." data-revision="Thu Feb 23 2017 18:37:45 GMT+0800 (CST)">
     
 
 <div class="book-summary">
@@ -227,15 +227,15 @@
             
         </li>
     
-        <li class="chapter " data-level="2.5" data-path="nodejs/module-exports.html">
+        <li class="chapter " data-level="2.5" data-path="nodejs/writting.html">
             
                 
-                    <a href="../nodejs/module-exports.html">
+                    <a href="../nodejs/writting.html">
                         <i class="fa fa-check"></i>
                         
                             <b>2.5.</b>
                         
-                        模块导出
+                        熟悉api写法
                     </a>
                 
             
@@ -272,28 +272,43 @@
             
         </li>
     
-        <li class="chapter " data-level="2.8" data-path="nodejs/how-to-study.html">
+        <li class="chapter " data-level="2.8" data-path="nodejs/api.html">
             
                 
-                    <a href="../nodejs/how-to-study.html">
+                    <a href="../nodejs/api.html">
                         <i class="fa fa-check"></i>
                         
                             <b>2.8.</b>
                         
-                        最小化问题
+                        Api
                     </a>
                 
             
             
         </li>
     
-        <li class="chapter " data-level="2.9" data-path="nodejs/exercises.html">
+        <li class="chapter " data-level="2.9" data-path="nodejs/how-to-study.html">
+            
+                
+                    <a href="../nodejs/how-to-study.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.9.</b>
+                        
+                        如何学习
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" data-path="nodejs/exercises.html">
             
                 
                     <a href="../nodejs/exercises.html">
                         <i class="fa fa-check"></i>
                         
-                            <b>2.9.</b>
+                            <b>2.10.</b>
                         
                         随堂练习：写一个Node.js模块并发布
                     </a>
@@ -517,7 +532,7 @@
                         
                             <b>4.2.</b>
                         
-                        Connect
+                        最小化Http
                     </a>
                 
             
@@ -1814,7 +1829,7 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="intro">intro</h1>
+                        <h1 id="%E7%AE%80%E4%BB%8B">&#x7B80;&#x4ECB;</h1>
 <p>&#x5728; Node.js
 web&#x5F00;&#x53D1;&#x793E;&#x533A;&#x6709;&#x4E00;&#x4EF6;&#x4E8B;&#x662F;&#x786E;&#x5B9A;&#x7684;&#xFF0C;&#x6709;2&#x4E2A;&#x7ECF;&#x5E38;&#x7528;&#x4E8E;&#x6784;&#x5EFA;&#x65B0;&#x7684;web&#x5E94;&#x7528;&#x7684;&#x5E93;&#xFF0C;&#x5B83;&#x4EEC;&#x5206;&#x522B;&#x662F;connect
 &#x548C;express&#x3002;</p>
@@ -1830,19 +1845,31 @@ web&#x5F00;&#x53D1;&#x793E;&#x533A;&#x6709;&#x4E00;&#x4EF6;&#x4E8B;&#x662F;&#x78
 <li>Express&#x672C;&#x8EAB;&#x6BD4;&#x8F83;&#x6210;&#x719F;&#xFF0C;&#x76EE;&#x524D;&#x5DF2;&#x7ECF;&#x662F;v4&#x4E86;</li>
 <li>&#x6709;&#x5F88;&#x591A;&#x5927;&#x89C4;&#x6A21;&#x5E94;&#x7528;&#x5B9E;&#x4F8B;&#xFF0C;&#x96C6;&#x7FA4;&#x7B49;&#x90FD;&#x975E;&#x5E38;&#x5BB9;&#x6613;</li>
 </ul>
-<p>&#x4EE5;&#x4E0B;&#x662F;&#x4E3B;&#x8981;&#x5185;&#x5BB9;</p>
+<p>&#x4EE5;&#x4E0B;&#x662F;&#x4E3B;&#x8981;&#x5185;&#x5BB9;&#xFF0C;&#x901A;&#x8FC7;express-generator&#x751F;&#x6210;&#x7684;&#x76EE;&#x5F55;&#x7ED3;&#x6784;&#xFF0C;&#x9010;&#x4E00;&#x8BB2;&#x89E3;&#x6838;&#x5FC3;&#x5185;&#x5BB9;&#xFF0C;&#x7EE7;&#x800C;&#x52A0;&#x5165;&#x6D4B;&#x8BD5;&#x548C;&#x4E00;&#x4E9B;&#x6700;&#x4F73;&#x65F6;&#x95F4;</p>
 <ul>
 <li>helloworld</li>
+<li>&#x4E2D;&#x95F4;&#x4EF6;&#x539F;&#x7406;</li>
 <li>app.js</li>
-<li>public</li>
+<li>public(static server)</li>
 <li>routes</li>
-<li>view</li>
+<li>view(&#x6A21;&#x677F;)</li>
 <li>auto mount routes</li>
 <li>reload</li>
 <li>test</li>
 </ul>
-<h2 id="%E6%97%A0%E7%8A%B6%E6%80%81%E7%9A%84http%E5%8D%8F%E8%AE%AE">&#x65E0;&#x72B6;&#x6001;&#x7684;http&#x534F;&#x8BAE;</h2>
-<p><img src="2.jpg" alt="2"></p>
+<h2 id="%E6%96%B0%E4%BA%BA%E9%80%82%E5%90%88%E5%AD%A6express%E4%B9%88%EF%BC%9F">&#x65B0;&#x4EBA;&#x9002;&#x5408;&#x5B66;Express&#x4E48;&#xFF1F;</h2>
+<p>&#x5F88;&#x591A;&#x4EBA;&#x62FF;koa&#x548C;express&#x5BF9;&#x6BD4;&#xFF0C;&#x5BF9;&#x4E8E;&#x65B0;&#x4EBA;&#x6765;&#x8BF4;&#x5BB9;&#x6613;&#x9020;&#x6210;&#x56F0;&#x6270;&#x3002;</p>
+<ul>
+<li>express&#x6210;&#x719F;&#x5EA6;&#x8981;&#x6BD4;koa&#x9AD8;</li>
+<li>express&#x5468;&#x8FB9;&#x8D44;&#x6E90;&#x3001;&#x6587;&#x6863;&#x3001;&#x9AD8;&#x624B;&#x6BD4;&#x8F83;&#x591A;</li>
+<li>express&#x66F4;&#x7B80;&#x5355;&#xFF0C;&#x4F1A;js&#x57FA;&#x7840;&#x5373;&#x53EF;</li>
+</ul>
+<p>&#x800C;Koa</p>
+<ul>
+<li>&#x975E;&#x5E38;&#x68D2;&#x7684;&#x5F02;&#x6B65;&#x6D41;&#x7A0B;&#x63A7;&#x5236;</li>
+<li>&#x65B0;&#xFF0C;&#x66F4;&#x52A0;&#x6709;&#x6D3B;&#x529B;&#xFF0C;&#x4F46;&#x5BF9;&#x4EBA;&#x7684;&#x8981;&#x6C42;&#x4E5F;&#x8D8A;&#x9AD8;</li>
+<li>&#x559C;&#x6B22;&#x586B;&#x5751;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x673A;&#x4F1A;</li>
+</ul>
 
                     
                     </section>
@@ -1856,7 +1883,7 @@ web&#x5F00;&#x53D1;&#x793E;&#x533A;&#x6709;&#x4E00;&#x4EF6;&#x4E8B;&#x662F;&#x78
         <a href="../express/index.html" class="navigation navigation-prev " aria-label="Previous page: Express和微信开发入门"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../express/minimal.html" class="navigation navigation-next " aria-label="Next page: Connect"><i class="fa fa-angle-right"></i></a>
+        <a href="../express/minimal.html" class="navigation navigation-next " aria-label="Next page: 最小化Http"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

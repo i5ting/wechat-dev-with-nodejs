@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
-        <title>模块导出 | StuQ《Node.js微信开发》</title>
+        <title>Api | StuQ《Node.js微信开发》</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.0.1">
@@ -20,10 +20,10 @@
         
     
     
-    <link rel="next" href="../nodejs/terms.html" />
+    <link rel="next" href="../nodejs/how-to-study.html" />
     
     
-    <link rel="prev" href="../nodejs/commonjs.html" />
+    <link rel="prev" href="../nodejs/npm.html" />
     
 
         
@@ -40,7 +40,7 @@
     
 
         
-    <div class="book" data-level="2.5" data-basepath=".." data-revision="Wed Feb 08 2017 09:50:00 GMT+0800 (CST)">
+    <div class="book" data-level="2.8" data-basepath=".." data-revision="Thu Feb 23 2017 18:37:45 GMT+0800 (CST)">
     
 
 <div class="book-summary">
@@ -227,15 +227,15 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.5" data-path="nodejs/module-exports.html">
+        <li class="chapter " data-level="2.5" data-path="nodejs/writting.html">
             
                 
-                    <a href="../nodejs/module-exports.html">
+                    <a href="../nodejs/writting.html">
                         <i class="fa fa-check"></i>
                         
                             <b>2.5.</b>
                         
-                        模块导出
+                        熟悉api写法
                     </a>
                 
             
@@ -272,28 +272,43 @@
             
         </li>
     
-        <li class="chapter " data-level="2.8" data-path="nodejs/how-to-study.html">
+        <li class="chapter active" data-level="2.8" data-path="nodejs/api.html">
             
                 
-                    <a href="../nodejs/how-to-study.html">
+                    <a href="../nodejs/api.html">
                         <i class="fa fa-check"></i>
                         
                             <b>2.8.</b>
                         
-                        最小化问题
+                        Api
                     </a>
                 
             
             
         </li>
     
-        <li class="chapter " data-level="2.9" data-path="nodejs/exercises.html">
+        <li class="chapter " data-level="2.9" data-path="nodejs/how-to-study.html">
+            
+                
+                    <a href="../nodejs/how-to-study.html">
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.9.</b>
+                        
+                        如何学习
+                    </a>
+                
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" data-path="nodejs/exercises.html">
             
                 
                     <a href="../nodejs/exercises.html">
                         <i class="fa fa-check"></i>
                         
-                            <b>2.9.</b>
+                            <b>2.10.</b>
                         
                         随堂练习：写一个Node.js模块并发布
                     </a>
@@ -517,7 +532,7 @@
                         
                             <b>4.2.</b>
                         
-                        Connect
+                        最小化Http
                     </a>
                 
             
@@ -1814,169 +1829,62 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="module-exports">module-exports</h1>
-<h2 id="%E6%AF%94%E8%BE%83%E4%B8%80%E4%B8%8Bmodule-exports-%E5%92%8Cexports-xxx">&#x6BD4;&#x8F83;&#x4E00;&#x4E0B;module.exports &#x548C;exports.xxx</h2>
-<p>module.exports&#x624D;&#x662F;&#x771F;&#x6B63;&#x7684;&#x63A5;&#x53E3;&#xFF0C;exports&#x53EA;&#x4E0D;&#x8FC7;&#x662F;&#x5B83;&#x7684;&#x4E00;&#x4E2A;&#x8F85;&#x52A9;&#x5DE5;&#x5177;&#x3002;&#x3000;&#x6700;&#x7EC8;&#x8FD4;&#x56DE;&#x7ED9;&#x8C03;&#x7528;&#x7684;&#x662F;module.exports&#x800C;&#x4E0D;&#x662F;exports&#x3002;</p>
-<p>&#x6240;&#x6709;&#x7684;exports&#x6536;&#x96C6;&#x5230;&#x7684;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;&#xFF0C;&#x90FD;&#x8D4B;&#x503C;&#x7ED9;&#x4E86;module.exports&#x3002;</p>
-<p>&#x5F53;&#x7136;&#xFF0C;&#x8FD9;&#x6709;&#x4E2A;&#x524D;&#x63D0;&#xFF0C;&#x5C31;&#x662F;Module.exports&#x672C;&#x8EAB;&#x4E0D;&#x5177;&#x5907;&#x4EFB;&#x4F55;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;&#x3002;&#x5982;&#x679C;module.exports&#x5DF2;&#x7ECF;&#x5177;&#x5907;&#x4E00;&#x4E9B;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;&#xFF0C;&#x90A3;&#x4E48;exports&#x6536;&#x96C6;&#x6765;&#x7684;&#x4FE1;&#x606F;&#x5C06;&#x88AB;&#x5FFD;&#x7565;</p>
-<h3 id="%E5%85%B1%E5%AD%98%E7%9A%84%E5%99%A9%E6%A2%A6">&#x5171;&#x5B58;&#x7684;&#x5669;&#x68A6;</h3>
-<p>&#x4FEE;&#x6539;exports.js&#x5982;&#x4E0B;&#xFF1A;</p>
-<pre><code>module.exports = &apos;Exports IT!&apos;;
-exports.name = function () {
-  console.log(&apos;hello world&apos;);
-}
-</code></pre><p>&#x518D;&#x6B21;&#x5F15;&#x7528;&#x6267;&#x884C;e_main.js</p>
-<pre><code>var hello = require(&apos;./exports&apos;);
+                        <h1 id="api">Api</h1>
+<h2 id="2%E7%A7%8D%E9%A3%8E%E6%A0%BCapi%E5%86%99%E6%B3%95">2&#x79CD;&#x98CE;&#x683C;Api&#x5199;&#x6CD5;</h2>
+<ul>
+<li>Error-first callback</li>
+<li>EventEmit</li>
+</ul>
+<p>&#x5E38;&#x89C1;&#x7684;</p>
+<pre><code>fs.readFile(&apos;/etc/passwd&apos;, (err, data) =&gt; {
+  if (err) throw err;
+  console.log(data);
+});
+</code></pre><p>fs.readFileSync</p>
+<pre><code>fs.readFileSync(file[, options])
+</code></pre><p>&#x8FD9;&#x4E2A;&#x600E;&#x4E48;&#x6355;&#x83B7;&#x5F02;&#x5E38;&#x5462;&#xFF1F;</p>
+<p>&#x4E00;&#x4E2A;EventEmit&#x5C0F;&#x4F8B;&#x5B50;</p>
+<pre><code>var EventEmitter = require(&apos;events&apos;).EventEmitter; 
+var event = new EventEmitter(); 
 
-console.log(hello.name())
-</code></pre><p>&#x53D1;&#x73B0;&#x62A5;&#x9519;&#xFF1A;&#x5BF9;&#x8C61;hello&#x6CA1;&#x6709;name&#x65B9;&#x6CD5;</p>
-<p>exports&#x6A21;&#x5757;&#x5FFD;&#x7565;&#x4E86;exports&#x6536;&#x96C6;&#x7684;name&#x65B9;&#x6CD5;&#xFF0C;&#x8FD4;&#x56DE;&#x4E86;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x201C;Exports IT!&#x201D;&#x3002;</p>
-<p>&#x7531;&#x6B64;&#x53EF;&#x77E5;&#xFF0C;&#x4F60;&#x7684;&#x6A21;&#x5757;&#x5E76;&#x4E0D;&#x4E00;&#x5B9A;&#x975E;&#x5F97;&#x8FD4;&#x56DE;&#x201C;&#x5B9E;&#x4F8B;&#x5316;&#x5BF9;&#x8C61;&#x201D;&#x3002;</p>
-<p>&#x4F60;&#x7684;&#x6A21;&#x5757;&#x53EF;&#x4EE5;&#x662F;&#x4EFB;&#x4F55;&#x5408;&#x6CD5;&#x7684;javascript&#x5BF9;&#x8C61;--boolean, number, date, JSON, string, function, array&#x7B49;&#x7B49;&#x3002;</p>
-<p>&#x4F60;&#x7684;&#x6A21;&#x5757;&#x53EF;&#x4EE5;&#x662F;&#x4EFB;&#x4F55;&#x4F60;&#x8BBE;&#x7F6E;&#x7ED9;&#x5B83;&#x7684;&#x4E1C;&#x897F;&#x3002;&#x5982;&#x679C;&#x4F60;&#x6CA1;&#x6709;&#x663E;&#x5F0F;&#x7684;&#x7ED9;module.exports&#x8BBE;&#x7F6E;&#x4EFB;&#x4F55;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;&#xFF0C;&#x90A3;&#x4E48;&#x4F60;&#x7684;&#x6A21;&#x5757;&#x5C31;&#x662F;exports&#x8BBE;&#x7F6E;&#x7ED9;module.exports&#x7684;&#x5C5E;&#x6027;&#x3002;</p>
-<h3 id="string">string</h3>
-<pre><code>exports.name = &quot;StuQ&#x5FAE;&#x8BFE;&#x5802;&quot;
-</code></pre><h3 id="boolean">boolean</h3>
-<p>&#x5E03;&#x5C14;&#x503C;&#x5C31;&#x662F;&#x771F;&#x6216;&#x8005;&#x5047;&#xFF0C;&#x5728;js&#x8868;&#x793A;&#x4E3A;true&#x6216;false</p>
-<pre><code>exports.is_valid = true
-</code></pre><h3 id="number">number</h3>
-<p>&#x6570;&#x503C;&#x6709;&#x5F88;&#x591A;&#x79CD;&#xFF0C;&#x5927;&#x5BB6;&#x8BB0;&#x5F97;&#x5B83;&#x662F;&#x63CF;&#x8FF0;&#x6570;&#x5B57;&#x76F8;&#x5173;&#x7684;&#x5373;&#x53EF;</p>
-<p>&#x5E38;&#x89C1;&#x5982;&#x6574;&#x5F62;&#xFF0C;&#x6D6E;&#x70B9;&#x578B;</p>
-<p>&#x5E74;&#x9F84;</p>
-<pre><code>exports.age = 20
-</code></pre><p>&#x5706;&#x5468;&#x7387;</p>
-<pre><code>var  pi = 3.1415;
-exports.PI = pi
-</code></pre><h3 id="date">date</h3>
-<p>&#x65E5;&#x671F;&#x7C7B;&#x578B;</p>
-<pre><code>var date = new Date()
+event.on(&apos;some_event&apos;, function() { 
+    console.log(&apos;some_event &#x4E8B;&#x4EF6;&#x89E6;&#x53D1;&apos;); 
+}); 
 
-exports.created_at = date;
-</code></pre><p>&#x90A3;&#x4E48;&#x600E;&#x4E48;&#x6837;&#x83B7;&#x53D6;2015-11-20&#x5462;&#xFF1F;</p>
-<p>&#x4F7F;&#x7528;<a href="http://momentjs.com/docs/" target="_blank">momentjs</a></p>
-<p>&#x9996;&#x5148;&#x9700;&#x8981;&#x5B89;&#x88C5;momentjs</p>
-<pre><code>npm install --save moment
-</code></pre><p>date.js&#x5B9E;&#x4F8B;&#x4EE3;&#x7801;</p>
-<pre><code>var moment = require(&apos;moment&apos;);
-var date = moment().format(&apos;YYYY-MM-DD&apos;);
-
-exports.created_at = date;
-</code></pre><p>&#x6D4B;&#x8BD5;main.js</p>
-<pre><code>var date = require(&apos;./date&apos;);
-
-console.log(date.created_at);
-</code></pre><p>&#x6267;&#x884C;&#x7ED3;&#x679C;&#x5982;&#x4E0B;</p>
-<pre><code>&#x279C;  nodejs-practice git:(master) &#x2717; node nodejs/demo/date/main.js
-2015-11-20
-</code></pre><h3 id="json">JSON</h3>
-<p>json.js</p>
-<pre><code>exports.person = {
-  name: &quot;&#x897F;&#x74DC;&quot;,
-  age:18
-}
-</code></pre><p>&#x521B;&#x5EFA;main.js</p>
-<pre><code>var json = require(&apos;./json&apos;)
-
-console.log(json.person.name);
-
-// console.log(json.persion);
-for(var k in json.person){
-  console.log(&quot;key = &quot; + k + &quot; &amp;&amp; value = &quot; + json.person[k]);
-}
-</code></pre><h3 id="%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1">&#x6700;&#x7B80;&#x5355;&#x7684;&#x9762;&#x5411;&#x5BF9;&#x8C61;</h3>
-<p>&#x4E0B;&#x9762;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;&#x4F60;&#x7684;&#x6A21;&#x5757;&#x662F;&#x4E00;&#x4E2A;&#x7C7B;exports2.js&#xFF1A;</p>
-<pre><code>module.exports = function(name, age) {
-    this.name = name;
-    this.age = age;
-    this.about = function() {
-        console.log(this.name +&apos; is &apos;+ this.age +&apos; years old&apos;);
-    };
-};
-</code></pre><p>&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x5E94;&#x7528;&#x5B83;&#xFF1A;</p>
-<pre><code>var Person = require(&apos;./exports2&apos;);
-var p = new Person(&apos;Ting&apos;, 20);
-p.about(); // Ting is 20 years old
-</code></pre><h3 id="%E6%95%B0%E7%BB%84">&#x6570;&#x7EC4;</h3>
-<p>&#x4E0B;&#x9762;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;&#x4F60;&#x7684;&#x6A21;&#x5757;&#x662F;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF1A;</p>
-<pre><code>module.exports = [&apos;eric&apos;, &apos;&#x6D77;&#x89D2;&apos;, &apos;&#x897F;&#x74DC;&apos;, &apos;&#x674E;&#x5C0F;&#x8D31;&apos;, &apos;kevin&apos;];
-</code></pre><p>&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x5E94;&#x7528;&#x5B83;&#xFF1A;</p>
-<pre><code>var arr = require(&apos;./exports3.js&apos;);
-console.log(&apos;&#x7B2C;3&#x4E2A;&#x662F;&#x897F;&#x74DC;&#xFF1A; &apos; + arr[2]);
-
-
-console.log(&apos;-------------------\n&apos;);
-
-for(var i = 0; i &lt; arr.length; i++){
-  console.log(&quot;&#x7B2C;&quot; + i + &quot;&#x4E2A;&#x662F; &quot; + arr[i]);
-}
-
-console.log(&apos;-------------------\n&apos;);
-
-for(var i = 1; i &lt; arr.length; i++){
-  console.log(&quot;&#x7B2C;&quot; + i + &quot;&#x4E2A;&#x662F; &quot; + arr[i]);
-}
-
-
-console.log(&apos;-------------------\n&apos;);
-
-var i = 0;
-arr.forEach(function(name){
-  console.log(&quot;&#x7B2C;&quot; + i + &quot;&#x4E2A;&#x662F; &quot; + name);
-  i++;
-})
-</code></pre><p>&#x73B0;&#x5728;&#x4F60;&#x5E94;&#x8BE5;&#x660E;&#x767D;&#x4E86;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x60F3;&#x4F60;&#x7684;&#x6A21;&#x5757;&#x662F;&#x4E00;&#x4E2A;&#x7279;&#x5B9A;&#x7684;&#x7C7B;&#x578B;&#x5C31;&#x7528;module.exports&#x3002;</p>
-<p>&#x5982;&#x679C;&#x4F60;&#x60F3;&#x7684;&#x6A21;&#x5757;&#x662F;&#x4E00;&#x4E2A;&#x5178;&#x578B;&#x7684;&#x201C;&#x5B9E;&#x4F8B;&#x5316;&#x5BF9;&#x8C61;&#x201D;&#x5C31;&#x7528;exports&#x3002;</p>
-<p>&#x7ED9;Module.exports&#x6DFB;&#x52A0;&#x5C5E;&#x6027;&#x7C7B;&#x4F3C;&#x4E8E;&#x7ED9;exports&#x6DFB;&#x52A0;&#x5C5E;&#x6027;&#x3002;&#x4F8B;&#x5982;&#xFF1A;</p>
-<pre><code>module.exports.name = function() {
-    console.log(&apos;My name is Lemmy Kilmister&apos;);
-};
-</code></pre><p>&#x540C;&#x6837;&#xFF0C;exports&#x662F;&#x8FD9;&#x6837;&#x7684;</p>
-<pre><code>exports.name = function() {
-    console.log(&apos;My name is Lemmy Kilmister&apos;);
-};
-</code></pre><p>&#x8BF7;&#x6CE8;&#x610F;&#xFF0C;&#x8FD9;&#x4E24;&#x79CD;&#x7ED3;&#x679C;&#x5E76;&#x4E0D;&#x76F8;&#x540C;&#x3002;</p>
-<p>&#x524D;&#x9762;&#x5DF2;&#x7ECF;&#x63D0;&#x5230;module.exports&#x662F;&#x771F;&#x6B63;&#x7684;&#x63A5;&#x53E3;&#xFF0C;exports&#x53EA;&#x4E0D;&#x8FC7;&#x662F;&#x5B83;&#x7684;&#x8F85;&#x52A9;&#x5DE5;&#x5177;&#x3002;</p>
-<p>&#x63A8;&#x8350;&#x4F7F;&#x7528;exports&#x5BFC;&#x51FA;&#xFF0C;&#x9664;&#x975E;&#x4F60;&#x6253;&#x7B97;&#x4ECE;&#x539F;&#x6765;&#x7684;&#x201C;&#x5B9E;&#x4F8B;&#x5316;&#x5BF9;&#x8C61;&#x201D;&#x6539;&#x53D8;&#x6210;&#x4E00;&#x4E2A;&#x7C7B;&#x578B;</p>
-<h2 id="dependency-cycle%E5%BE%AA%E7%8E%AF%E5%BC%95%E7%94%A8">dependency cycle&#x5FAA;&#x73AF;&#x5F15;&#x7528;</h2>
-<p>a.js</p>
-<pre><code>console.log(&apos;a starting&apos;);
-exports.done = false;
-var b = require(&apos;./b.js&apos;);
-console.log(&apos;in a, b.done = %j&apos;, b.done);
-exports.done = true;
-console.log(&apos;a done&apos;);
-</code></pre><p>b.js</p>
-<pre><code>console.log(&apos;b starting&apos;);
-exports.done = false;
-var a = require(&apos;./a.js&apos;);
-console.log(&apos;in b, a.done = %j&apos;, a.done);
-exports.done = true;
-console.log(&apos;b done&apos;);
-</code></pre><p>main.js</p>
-<pre><code>console.log(&apos;main starting&apos;);
-var a = require(&apos;./a.js&apos;);
-var b = require(&apos;./b.js&apos;);
-console.log(&apos;in main, a.done=%j, b.done=%j&apos;, a.done, b.done);
-</code></pre><p>&#x5F53;main.js&#x52A0;&#x8F7D;a.js&#x7684;&#x65F6;&#x5019;&#xFF0C;a.js&#x52A0;&#x8F7D;b.js&#xFF0C;&#x540C;&#x65F6;&#xFF0C;b.js&#x60F3;&#x8981;&#x52A0;&#x8F7D;a.js&#xFF0C;&#x8FD9;&#x65F6;&#x5019;&#x5C31;&#x4EA7;&#x751F;&#x4E86;&#x4F9D;&#x8D56;&#x95ED;&#x73AF;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x4E3A;&#x4E86;&#x907F;&#x514D;&#x65E0;&#x9650;&#x5FAA;&#x73AF;&#xFF0C;&#x9700;&#x8981;&#x6253;&#x7834;&#x8FD9;&#x4E2A;&#x95ED;&#x73AF;&#x3002;&#x6839;&#x636E;CommonJS Modules/1.0&#x89C4;&#x8303;&#x4E2D;&#x7684;&#x8BF4;&#x660E;&#x300C;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x201D;require&#x201D;&#x8FD4;&#x56DE;&#x7684;&#x5BF9;&#x8C61;&#x5FC5;&#x987B;&#x81F3;&#x5C11;&#x5305;&#x542B;&#x6B64;&#x5916;&#x90E8;&#x6A21;&#x5757;&#x5728;&#x8C03;&#x7528;require&#x51FD;&#x6570;&#xFF08;&#x4F1A;&#x8FDB;&#x5165;&#x5F53;&#x524D;&#x6A21;&#x5757;&#x6267;&#x884C;&#x73AF;&#x5883;&#xFF09;&#x4E4B;&#x524D;&#x5C31;&#x5DF2;&#x7ECF;&#x51C6;&#x5907;&#x5B8C;&#x6BD5;&#x7684;&#x8F93;&#x51FA;&#x3002;&#x300D;&#xFF0C;&#x6709;&#x4E9B;&#x7ED5;&#xFF0C;&#x8BA9;&#x6211;&#x4EEC;&#x4ECE;&#x4F9D;&#x8D56;&#x95ED;&#x73AF;&#x4EA7;&#x751F;&#x7684;&#x5730;&#x65B9;&#x8DDF;&#x8E2A;&#xFF0C;b.js&#x9700;&#x8981;require a.js&#xFF0C;&#x8FD9;&#x91CC;b.js&#x505A;&#x4E3A;&#x5F53;&#x524D;&#x6A21;&#x5757;&#xFF0C;a.js&#x76F8;&#x5BF9;&#x4E8E;b.js&#x6765;&#x8BF4;&#x662F;&#x5916;&#x90E8;&#x6A21;&#x5757;&#xFF0C;&#x90A3;&#x4E48;a.js&#x7684;&#x8F93;&#x51FA;&#x5E94;&#x8BE5;&#x662F;&#x5728;&#x5176;require b.js&#x4E4B;&#x524D;&#xFF08;&#x5373;&#x300C;&#x8FDB;&#x5165;&#x5F53;&#x524D;&#x6A21;&#x5757;&#x6267;&#x884C;&#x73AF;&#x5883;&#x300D;&#xFF09;&#x5C31;&#x5E94;&#x8BE5;&#x8FD4;&#x56DE;&#xFF0C;&#x6267;&#x884C;&#x8FC7;&#x7A0B;&#x5982;&#x4E0B;&#xFF1A;</p>
-<p>a.js</p>
-<pre><code>console.log(&apos;a starting&apos;);
-exports.done = false;
-// &#x53EA;&#x6267;&#x884C;&#x5230;&#x8FD9;&#x91CC;&#xFF0C;&#x7136;&#x540E;exports&#x8FD4;&#x56DE;&#x7ED9;&#x8C03;&#x7528;&#x6A21;&#x5757;(b.js)&#xFF0C;&#x4EE5;&#x4E0B;&#x88AB;&#x4E22;&#x5F03;
-var b = require(&apos;./b.js&apos;);
-console.log(&apos;in a, b.done = %j&apos;, b.done);
-exports.done = true;
-console.log(&apos;a done&apos;);
-</code></pre><p>&#x7136;&#x540E;b.js&#x7EE7;&#x7EED;&#x6267;&#x884C;&#x5B8C;&#x6210;&#x3002;&#x4EE5;&#x4E0B;&#x662F;&#x6267;&#x884C;&#x7ED3;&#x679C;&#xFF1A;</p>
-<pre><code>$ node main.js
-main starting
-a starting
-b starting
-in b, a.done = false
-b done
-in a, b.done = true
-a done
-in main, a.done=true, b.done=true
-</code></pre><p>&#x6CE8;&#x610F;&#xFF0C;&#x867D;&#x7136;main.js&#x540C;&#x65F6;require&#x4E86;a.js&#x548C;b.js&#xFF0C;&#x4F46;&#x662F;&#x6839;&#x636E;node.js&#x7684;&#x6A21;&#x5757;&#x7F13;&#x5B58;&#x7B56;&#x7565;&#xFF0C;&#x6A21;&#x5757;&#x53EA;&#x6267;&#x884C;&#x4E00;&#x6B21;&#x3002;</p>
+setTimeout(function() { 
+    event.emit(&apos;some_event&apos;); 
+}, 1000);
+</code></pre><ul>
+<li>event&#x5FC5;&#x987B;&#x662F;EventEmitter&#x7684;&#x5B9E;&#x4F8B;&#xFF0C;&#x5305;&#x62EC;&#x7EE7;&#x627F;</li>
+<li>emit</li>
+<li>on</li>
+</ul>
+<p>&#x4E4B;&#x524D;&#x8BB2;&#x8FC7;&#x7684;http&#x7684;&#x4F8B;&#x5B50;</p>
+<pre><code>var http = require(&quot;http&quot;);
+http.createServer(function(request, response) {
+    response.writeHead(200, {&quot;Content-Type&quot;: &quot;text/plain&quot;});
+    response.write(&quot;Hello World&quot;);
+    response.end();
+}).listen(8888);
+</code></pre><p>&#x6355;&#x83B7;&#x5F02;&#x5E38;</p>
+<pre><code>server.on(&apos;error&apos;, function (e) {
+  // Handle your error here
+  console.log(e);
+});
+</code></pre><p>&#x7591;&#x95EE;&#xFF1A;&#x5982;&#x679C;&#x5728;&#x91CC;&#x9762;&#x7528;emit&#x5462;&#xFF1F;</p>
+<h2 id="%E6%9C%AC%E5%9C%B0api">&#x672C;&#x5730;api</h2>
+<p>&#x67E5;&#x8BE2;&#x6587;&#x6863;</p>
+<p><a href="http://zealdocs.org/" target="_blank">http://zealdocs.org/</a> (&#x63A8;&#x8350;&#xFF0C;&#x79BB;&#x7EBF;&#x4E0B;&#x8F7D;)
+&#x6709;&#x5F88;&#x591A;doc&#x5728;dash&#xFF08;mac&#xFF09;&#x91CC;&#x9ED8;&#x8BA4;&#x662F;&#x6CA1;&#x6709;&#x7684;&#xFF1B;</p>
+<p>see here &#xFF1A; <a href="http://kapeli.com/docset_links" target="_blank">http://kapeli.com/docset_links</a></p>
+<p>&#x5982;&#x679C;&#x662F;&#x4E0B;&#x8F7D;&#x5230;&#x672C;&#x5730;&#x7684;docset&#xFF0C;&#x653E;&#x5230;zealdocs&#x76EE;&#x5F55;&#x4E0B;&#x9762;&#xFF0C;&#x9700;&#x8981;&#x91CD;&#x542F;zeal</p>
+<p><img src="img/dash.png" alt="Dash"></p>
+<h2 id="%E6%80%BB%E7%BB%93">&#x603B;&#x7ED3;</h2>
+<ul>
+<li>&#x638C;&#x63E1;api&#x5199;&#x6CD5;</li>
+<li>&#x638C;&#x63E1;sdk api&#x67E5;&#x8BE2;&#x65B9;&#x6CD5;</li>
+</ul>
+<p>&#x5982;&#x679C;&#x6709;&#x7CBE;&#x529B;&#x5EFA;&#x8BAE;&#x7FFB;&#x8BD1;&#x4E00;&#x4E0B;&#x6587;&#x6863;&#x6216;&#x8005;&#x66F4;&#x591A;&#x82F1;&#x6587;&#x6587;&#x7AE0;&#xFF0C;&#x4F1A;&#x6536;&#x76CA;&#x532A;&#x6D45;&#x7684;&#x3002;&#x575A;&#x6301;&#x505A;&#xFF0C;&#x76F8;&#x4FE1;&#x81EA;&#x5DF1;&#x80FD;&#x591F;&#x505A;&#x5230;&#x3002;</p>
 
                     
                     </section>
@@ -1987,10 +1895,10 @@ in main, a.done=true, b.done=true
         </div>
 
         
-        <a href="../nodejs/commonjs.html" class="navigation navigation-prev " aria-label="Previous page: Common JS规范"><i class="fa fa-angle-left"></i></a>
+        <a href="../nodejs/npm.html" class="navigation navigation-prev " aria-label="Previous page: 编写Node.js模块"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../nodejs/terms.html" class="navigation navigation-next " aria-label="Next page: Node.js代码调试"><i class="fa fa-angle-right"></i></a>
+        <a href="../nodejs/how-to-study.html" class="navigation navigation-next " aria-label="Next page: 如何学习"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

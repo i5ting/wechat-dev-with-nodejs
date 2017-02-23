@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
-        <title>支付概述 | StuQ《Node.js微信开发》</title>
+        <title>熟悉api写法 | StuQ《Node.js微信开发》</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.0.1">
@@ -20,10 +20,10 @@
         
     
     
-    <link rel="next" href="../pay/concept.html" />
+    <link rel="next" href="../nodejs/terms.html" />
     
     
-    <link rel="prev" href="../pay/pay.html" />
+    <link rel="prev" href="../nodejs/commonjs.html" />
     
 
         
@@ -40,7 +40,7 @@
     
 
         
-    <div class="book" data-level="8.2" data-basepath=".." data-revision="Thu Feb 23 2017 18:37:45 GMT+0800 (CST)">
+    <div class="book" data-level="2.5" data-basepath=".." data-revision="Thu Feb 23 2017 18:37:45 GMT+0800 (CST)">
     
 
 <div class="book-summary">
@@ -227,7 +227,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.5" data-path="nodejs/writting.html">
+        <li class="chapter active" data-level="2.5" data-path="nodejs/writting.html">
             
                 
                     <a href="../nodejs/writting.html">
@@ -1283,7 +1283,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="8.2" data-path="pay/overview.html">
+        <li class="chapter " data-level="8.2" data-path="pay/overview.html">
             
                 
                     <a href="../pay/overview.html">
@@ -1829,46 +1829,16 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="%E6%94%AF%E4%BB%98%E6%A6%82%E8%BF%B0">&#x652F;&#x4ED8;&#x6982;&#x8FF0;</h1>
-<p><a href="https://pay.weixin.qq.com/wiki/doc/api/index.html" target="_blank">https://pay.weixin.qq.com/wiki/doc/api/index.html</a></p>
-<h2 id="%E6%94%AF%E4%BB%98%E6%A8%A1%E5%BC%8F">&#x652F;&#x4ED8;&#x6A21;&#x5F0F;</h2>
-<p>1&#x3001;
-&#x5237;&#x5361;&#x652F;&#x4ED8;
-&#x5237;&#x5361;&#x652F;&#x4ED8;&#x662F;&#x7528;&#x6237;&#x5C55;&#x793A;&#x5FAE;&#x4FE1;&#x94B1;&#x5305;&#x5185;&#x7684;&#x201C;&#x5237;&#x5361;&#x6761;&#x7801;/&#x4E8C;&#x7EF4;&#x7801;&#x201D;&#x7ED9;&#x5546;&#x6237;&#x7CFB;&#x7EDF;&#x626B;&#x63CF;&#x540E;&#x76F4;&#x63A5;&#x5B8C;&#x6210;&#x652F;&#x4ED8;&#x7684;&#x6A21;&#x5F0F;&#x3002;&#x4E3B;&#x8981;&#x5E94;&#x7528;&#x7EBF;&#x4E0B;&#x9762;&#x5BF9;&#x9762;&#x6536;&#x94F6;&#x7684;&#x573A;&#x666F;&#x3002;</p>
-<p>2&#x3001;
-&#x626B;&#x7801;&#x652F;&#x4ED8;
-&#x626B;&#x7801;&#x652F;&#x4ED8;&#x662F;&#x5546;&#x6237;&#x7CFB;&#x7EDF;&#x6309;&#x5FAE;&#x4FE1;&#x652F;&#x4ED8;&#x534F;&#x8BAE;&#x751F;&#x6210;&#x652F;&#x4ED8;&#x4E8C;&#x7EF4;&#x7801;&#xFF0C;&#x7528;&#x6237;&#x518D;&#x7528;&#x5FAE;&#x4FE1;&#x201C;&#x626B;&#x4E00;&#x626B;&#x201D;&#x5B8C;&#x6210;&#x652F;&#x4ED8;&#x7684;&#x6A21;&#x5F0F;&#x3002;&#x8BE5;&#x6A21;&#x5F0F;&#x9002;&#x7528;&#x4E8E;PC&#x7F51;&#x7AD9;&#x652F;&#x4ED8;&#x3001;&#x5B9E;&#x4F53;&#x5E97;&#x5355;&#x54C1;&#x6216;&#x8BA2;&#x5355;&#x652F;&#x4ED8;&#x3001;&#x5A92;&#x4F53;&#x5E7F;&#x544A;&#x652F;&#x4ED8;&#x7B49;&#x573A;&#x666F;&#x3002;</p>
-<p>3&#x3001;
-&#x516C;&#x4F17;&#x53F7;&#x652F;&#x4ED8;
-&#x516C;&#x4F17;&#x53F7;&#x652F;&#x4ED8;&#x662F;&#x7528;&#x6237;&#x5728;&#x5FAE;&#x4FE1;&#x4E2D;&#x6253;&#x5F00;&#x5546;&#x6237;&#x7684;H5&#x9875;&#x9762;&#xFF0C;&#x5546;&#x6237;&#x5728;H5&#x9875;&#x9762;&#x901A;&#x8FC7;&#x8C03;&#x7528;&#x5FAE;&#x4FE1;&#x652F;&#x4ED8;&#x63D0;&#x4F9B;&#x7684;JSAPI&#x63A5;&#x53E3;&#x8C03;&#x8D77;&#x5FAE;&#x4FE1;&#x652F;&#x4ED8;&#x6A21;&#x5757;&#x5B8C;&#x6210;&#x652F;&#x4ED8;&#x3002;&#x5E94;&#x7528;&#x573A;&#x666F;&#x6709;&#xFF1A;</p>
-<ul>
-<li>&#x7528;&#x6237;&#x5728;&#x5FAE;&#x4FE1;&#x516C;&#x4F17;&#x8D26;&#x53F7;&#x5185;&#x8FDB;&#x5165;&#x5546;&#x5BB6;&#x516C;&#x4F17;&#x53F7;&#xFF0C;&#x6253;&#x5F00;&#x67D0;&#x4E2A;&#x4E3B;&#x9875;&#x9762;&#xFF0C;&#x5B8C;&#x6210;&#x652F;&#x4ED8;</li>
-<li>&#x7528;&#x6237;&#x7684;&#x597D;&#x53CB;&#x5728;&#x670B;&#x53CB;&#x5708;&#x3001;&#x804A;&#x5929;&#x7A97;&#x53E3;&#x7B49;&#x5206;&#x4EAB;&#x5546;&#x5BB6;&#x9875;&#x9762;&#x8FDE;&#x63A5;&#xFF0C;&#x7528;&#x6237;&#x70B9;&#x51FB;&#x94FE;&#x63A5;&#x6253;&#x5F00;&#x5546;&#x5BB6;&#x9875;&#x9762;&#xFF0C;&#x5B8C;&#x6210;&#x652F;&#x4ED8;</li>
-<li>&#x5C06;&#x5546;&#x6237;&#x9875;&#x9762;&#x8F6C;&#x6362;&#x6210;&#x4E8C;&#x7EF4;&#x7801;&#xFF0C;&#x7528;&#x6237;&#x626B;&#x63CF;&#x4E8C;&#x7EF4;&#x7801;&#x540E;&#x5728;&#x5FAE;&#x4FE1;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x6253;&#x5F00;&#x9875;&#x9762;&#x540E;&#x5B8C;&#x6210;&#x652F;&#x4ED8;</li>
-</ul>
-<p>4&#x3001;
-APP&#x652F;&#x4ED8;
-APP&#x652F;&#x4ED8;&#x53C8;&#x79F0;&#x79FB;&#x52A8;&#x7AEF;&#x652F;&#x4ED8;&#xFF0C;&#x662F;&#x5546;&#x6237;&#x901A;&#x8FC7;&#x5728;&#x79FB;&#x52A8;&#x7AEF;&#x5E94;&#x7528;APP&#x4E2D;&#x96C6;&#x6210;&#x5F00;&#x653E;SDK&#x8C03;&#x8D77;&#x5FAE;&#x4FE1;&#x652F;&#x4ED8;&#x6A21;&#x5757;&#x5B8C;&#x6210;&#x652F;&#x4ED8;&#x7684;&#x6A21;&#x5F0F;&#x3002;</p>
-<h2 id="%E5%8E%9F%E7%94%9F%E6%94%AF%E4%BB%98-native">&#x539F;&#x751F;&#x652F;&#x4ED8; (NATIVE)</h2>
-<p>&#x6A21;&#x5F0F;&#x4E00;</p>
-<p>&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x751F;&#x6210;&#x652F;&#x4ED8;&#x4E8C;&#x7EF4;&#x7801;&#x94FE;&#x63A5;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x628A;url&#x751F;&#x6210;&#x4E8C;&#x7EF4;&#x7801;&#x7ED9;&#x7528;&#x6237;&#x626B;&#x3002;</p>
-<p>&#x540E;&#x53F0;&#x9700;&#x8981;&#x8BBE;&#x7F6E;</p>
-<pre><code>&#x626B;&#x7801;&#x652F;&#x4ED8;-&gt;&#x652F;&#x4ED8;&#x56DE;&#x8C03;URL
-</code></pre><p>&#x6A21;&#x5F0F;&#x4E8C;</p>
-<p>&#x76F4;&#x63A5;&#x8C03;&#x7528; createUnifiedOrder() &#x51FD;&#x6570;&#x751F;&#x6210;&#x9884;&#x652F;&#x4ED8;&#x4EA4;&#x6613;&#x5355;&#xFF0C;&#x5C06;&#x7ED3;&#x679C;&#x4E2D;&#x7684; code_url &#x751F;&#x6210;&#x4E8C;&#x7EF4;&#x7801;&#x7ED9;&#x7528;&#x6237;&#x626B;&#x3002;</p>
-<p>&#x4E00;&#x5E2E;</p>
-<h2 id="%E5%85%AC%E4%BC%97%E5%8F%B7%E6%94%AF%E4%BB%98-js-api">&#x516C;&#x4F17;&#x53F7;&#x652F;&#x4ED8; (JS API)</h2>
-<p>&#x751F;&#x6210;JS API&#x652F;&#x4ED8;&#x53C2;&#x6570;&#xFF0C;&#x53D1;&#x7ED9;&#x9875;&#x9762;</p>
-<h2 id="%E5%90%8D%E8%AF%8D">&#x540D;&#x8BCD;</h2>
-<p><a href="https://pay.weixin.qq.com/wiki/doc/api/app/app.php?chapter=2_2" target="_blank">https://pay.weixin.qq.com/wiki/doc/api/app/app.php?chapter=2_2</a></p>
-<h2 id="%E6%96%87%E6%A1%A3">&#x6587;&#x6863;</h2>
-<p><a href="http://mp.weixin.qq.com/htmledition/res/bussiness-faq/wx_mp_pay.zip" target="_blank">http://mp.weixin.qq.com/htmledition/res/bussiness-faq/wx_mp_pay.zip</a></p>
-<h2 id="nodejs%E4%B8%8B%E9%9D%A2%E7%9A%84%E5%AE%9E%E7%8E%B0">nodejs&#x4E0B;&#x9762;&#x7684;&#x5B9E;&#x73B0;</h2>
-<ul>
-<li><a href="https://github.com/tvrcgo/weixin-pay" target="_blank">https://github.com/tvrcgo/weixin-pay</a></li>
-<li><a href="https://github.com/node-weixin/node-weixin-pay" target="_blank">https://github.com/node-weixin/node-weixin-pay</a></li>
-<li><a href="https://github.com/supersheep/wechat-pay&#xFF08;&#x6734;&#x7075;&#x63A8;&#x8350;&#xFF09;" target="_blank">https://github.com/supersheep/wechat-pay&#xFF08;&#x6734;&#x7075;&#x63A8;&#x8350;&#xFF09;</a></li>
-</ul>
+                        <h1 id="%E7%86%9F%E6%82%89api%E5%86%99%E6%B3%95">&#x719F;&#x6089;api&#x5199;&#x6CD5;</h1>
+<p>error-first api&#x5199;&#x6CD5; &amp;&amp; EvenEmit </p>
+<h2 id="error-first-callback">Error-first Callback</h2>
+<p>&#x5982;&#x679C;&#x8BF4;Google&#x7684;V8&#x5F15;&#x64CE;&#x662F;Node.js&#x7684;&#x5FC3;&#x810F;&#xFF0C;&#x90A3;&#x4E48;&#x56DE;&#x8C03;&#x5219;&#x662F;Node&#x7684;&#x8109;&#x7EDC;&#xFF0C;&#x56DE;&#x8C03;&#x80FD;&#x591F;&#x6FC0;&#x6D3B;&#x8DE8;&#x6A21;&#x5757;&#x548C;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E4B;&#x95F4;&#x5E73;&#x8861;&#x7684;&#x3001;&#x975E;&#x5835;&#x585E;&#x7684;&#x5F02;&#x6B65;&#x63A7;&#x5236;&#x6D41;&#x7A0B;&#xFF0C;&#x56E0;&#x6B64;&#xFF0C;&#x5728;&#x5B9E;&#x9645;&#x7F16;&#x5199;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x4E00;&#x4E2A;&#x901A;&#x7528;&#x7684;&#x53EF;&#x4F9D;&#x8D56;&#x7684;&#x56DE;&#x8C03;&#x7F16;&#x7A0B;&#x65B9;&#x5F0F;&#xFF0C;error-first&#x56DE;&#x8C03;&#xFF0C;&#x4E5F;&#x79F0;&#x4E3A;errorback&#x6216;errback&#x6216;node-style callback&#xFF0C;&#x5B83;&#x4EEC;&#x90FD;&#x662F;&#x7528;&#x6765;&#x89E3;&#x51B3;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x3002;</p>
+<blockquote>
+<p>&#x8FD9;&#x662F;api&#x5199;&#x6CD5;&#x7EA6;&#x5B9A;&#xFF0C;&#x5728;&#x5F02;&#x6B65;&#x56DE;&#x6389;&#x51FD;&#x6570;&#x91CC;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x662F;error</p>
+</blockquote>
+<p>&#x4E3E;&#x4F8B;</p>
+<p>&#x6240;&#x6709;&#x4EBA;&#x90FD;&#x8981;&#x9075;&#x5B88;</p>
+<h2 id="evenemit">EvenEmit</h2>
 
                     
                     </section>
@@ -1879,10 +1849,10 @@ APP&#x652F;&#x4ED8;&#x53C8;&#x79F0;&#x79FB;&#x52A8;&#x7AEF;&#x652F;&#x4ED8;&#xFF
         </div>
 
         
-        <a href="../pay/pay.html" class="navigation navigation-prev " aria-label="Previous page: 吹个牛"><i class="fa fa-angle-left"></i></a>
+        <a href="../nodejs/commonjs.html" class="navigation navigation-prev " aria-label="Previous page: Common JS规范"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../pay/concept.html" class="navigation navigation-next " aria-label="Next page: 科普几个概念"><i class="fa fa-angle-right"></i></a>
+        <a href="../nodejs/terms.html" class="navigation navigation-next " aria-label="Next page: Node.js代码调试"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
