@@ -52,14 +52,83 @@ hello world
 
 所以，JS语法的掌握是学习Node.js的基础，非常重要，是必需要要掌握的。
 
-## sdk
+## 声明严格模式
+
+举个简单的例子，我们在helloworld.js上增加一个变量a的声明，采用es6里的let关键字
+
+```
+console.log('hello world');
+
+let a = 1
+```
+
+先通过nvm切换到4版本
+
+```
+$ nvm use 4
+Now using node v4.7.0 (npm v2.15.11)
+```
+
+执行
+
+```
+$ node demo/helloworld
+demo/helloworld.js:3
+let a = 1
+^^^
+
+SyntaxError: Block-scoped declarations (let, const, function, class) not yet supported outside strict mode
+    at exports.runInThisContext (vm.js:53:16)
+    at Module._compile (module.js:373:25)
+    at Object.Module._extensions..js (module.js:416:10)
+    at Module.load (module.js:343:32)
+    at Function.Module._load (module.js:300:12)
+    at Function.Module.runMain (module.js:441:10)
+    at startup (node.js:139:18)
+    at node.js:990:3
+```
+
+此时，报错说是语法错误（SyntaxError），对于let, const, function, class等关键字的使用在严格模式外还不支持。所以它提示我们使用严格模式。即如下
+
+```javascript
+'use strict'
+
+console.log('Hello World');
+let a = 1
+```
+
+此时再执行就不会报错了。使用`'use strict'` 声明为严格模式，标记严格模式后的好处如下
+
+- 其一，如果在语法检测时发现语法问题，则整个代码块失效，并导致一个语法异常。
+- 其二，如果在运行期出现了违反严格模式的代码，则抛出执行异常。
+
+这是我们在使用es6代码，经常要做的事儿，一些低版本的Node.js SDK里很多特性默认是不支持的，需要使用打开严格模式才能使用。
+
+## 熟悉api写法：error-first 和 event
+
+
 
 ```shell
-fs.readFile('/etc/passwd', (err, data) => {
-  if (err) throw err;
-  console.log(data);
+'use strict'
+
+const fs = require('fs')
+
+fs.readFile(__dirname + '/helloworld.js', (err, data) => {
+  if (err) throw err
+  console.log(data.toString())
 });
 ```
+
+执行
+
+```
+$ node demo/readfile.js
+console.log('hello world');
+```
+
+
+
+
 ## Write a http server use Node.js
 
 ```
