@@ -52,6 +52,14 @@ hello world
 
 所以，JS语法的掌握是学习Node.js的基础，非常重要，是必需要要掌握的。
 
+## sdk
+
+```shell
+fs.readFile('/etc/passwd', (err, data) => {
+  if (err) throw err;
+  console.log(data);
+});
+```
 ## Write a http server use Node.js
 
 ```
