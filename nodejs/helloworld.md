@@ -38,7 +38,7 @@
 console.log('Hello World');
 ```
 
-执行
+在终端里，通过node命令来执行
 
 ```shell
 ➜  nodejs git:(master) ✗ node demo/helloworld.js
@@ -50,7 +50,6 @@ hello world
 - Node.js的语法使用前端JavaScript一样的语法
 - JavaScript是脚本语言，需要Node.js解释器 `node` 命令来解释并执行
 - console.log是一个用于输出日志的方法，区别在于日志会输出在浏览器端（前端）或terminal终端（Node.js）里
-
 
 ## Write a http server use Node.js
 
