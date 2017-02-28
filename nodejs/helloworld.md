@@ -2,7 +2,6 @@
 
 本节主要通过helloworld为例，引申commonJS规范实现，最终打通nodejs模块基础。
 
-
 ## 入门概览 
 
 - 必会js基本语法
@@ -32,7 +31,7 @@
 
 ## Hello World
 
-创建`helloworld.js`
+创建 `helloworld.js` 文件，并敲入如下代码：
 
 ```javascript
 console.log('Hello World');
@@ -41,7 +40,7 @@ console.log('Hello World');
 在终端里，通过node命令来执行
 
 ```shell
-➜  nodejs git:(master) ✗ node demo/helloworld.js
+$ node demo/helloworld.js
 hello world
 ```
 
@@ -50,6 +49,8 @@ hello world
 - Node.js的语法使用前端JavaScript一样的语法
 - JavaScript是脚本语言，需要Node.js解释器 `node` 命令来解释并执行
 - console.log是一个用于输出日志的方法，区别在于日志会输出在浏览器端（前端）或terminal终端（Node.js）里
+
+所以，JS语法的掌握是学习Node.js的基础，非常重要，是必需要要掌握的。
 
 ## Write a http server use Node.js
 
