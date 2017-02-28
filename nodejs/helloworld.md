@@ -30,22 +30,26 @@
 - npm是管理基于CommonJS规范写的模块的
 - CommonJS是一套规范，是模块写法上约定
 
-## hello world
+## Hello World
 
 创建`helloworld.js`
 
-```
-console.log('hello world');
+```javascript
+console.log('Hello World');
 ```
 
 执行
 
-```
+```shell
 ➜  nodejs git:(master) ✗ node demo/helloworld.js
 hello world
 ```
 
-这是最简单的例子，只是说nodejs的语法支持前端js语法
+这是最简单的例子，要点如下
+
+- Node.js的语法使用前端JavaScript一样的语法
+- JavaScript是脚本语言，需要Node.js解释器 `node` 命令来解释并执行
+- console.log是一个用于输出日志的方法，区别在于日志会输出在浏览器端（前端）或terminal终端（Node.js）里
 
 
 ## Write a http server use Node.js
