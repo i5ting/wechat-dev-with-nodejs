@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-      "start": "./node_modules/.bin/http-server _book -p 8888 -o"
+    "start": "gitbook serve",
+    "open": "npm run build && open _book/index.html",
+    "build": "gitbook build . --gitbook=2.0.1",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -17,7 +20,10 @@
   },
   "homepage": "https://github.com/base-n/koa-generator-examples#readme",
   "dependencies": {
-    "gitbook-plugin-toc2": "^1.0.5"
+    "finalhandler": "^1.0.0",
+    "gitbook-plugin-toc2": "^1.0.5",
+    "serve-index": "^1.8.0",
+    "serve-static": "^1.12.0"
   },
   "devDependencies": {
     "gulp": "^3.9.0",
@@ -27,11 +33,5 @@
     "gulp-open": "^0.3.1",
     "gulp-rename": "^1.2.0",
     "shelljs": "^0.3.0"
-  },
-  "scripts": {
-    "start": "gitbook serve",
-     "open": "npm run build && open _book/index.html",
-     "build": "gitbook build . --gitbook=2.0.1",
-     "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
