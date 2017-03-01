@@ -7,6 +7,20 @@
 
 每个http server framework里都内置的，虽然以后不会用
 
+
+## Node.js版本的静态server
+
+nodejs里可以使用更简单的办法完成这事儿
+
+```
+npm i -g http-server
+
+http-server . -p 8080 -o
+```
+
+使用Node.js实现http还是非常简单合适的。
+
+
 ## express static
 
 ```
@@ -112,14 +126,4 @@ app.get('/', function (req, res) {
 app.listen(4001)
 
 open("http://127.0.0.1:4001");
-```
-
-## 其他
-
-nodejs里可以使用更简单的办法完成这事儿
-
-```
-npm i -g http-server
-
-http-server . -p 8080 -o
 ```
