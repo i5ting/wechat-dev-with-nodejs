@@ -1,5 +1,11 @@
 # precompile
 
+预处理，主要是指针对需要编译的做的处理，比如js和css和html都有更好的写法。
+
+- js： coffee、ts
+- css： styleus、sass、scss、postcss
+- html：各种模块，ejs、jade等，后面会单独讲
+
 ## css precompile
 
 ### create project
@@ -46,10 +52,10 @@ lessc public/stylesheets/style.less public/stylesheets/style.css
 
 举例coffee
 
-
-
+http://coffeescript.org/
 
 ## gulp
 
-https://github.com/streakq/js-tools-best-practice/blob/master/doc/Gulp.md
+- https://github.com/i5ting/stuq-gulp
+- https://github.com/streakq/js-tools-best-practice/blob/master/doc/Gulp.md
 
