@@ -69,8 +69,8 @@ var http = require('http')
 var serveIndex = require('serve-index')
 var serveStatic = require('serve-static')
  
-// Serve directory indexes for public/ftp folder (with icons) 
-var index = serveIndex('public/ftp', {'icons': true})
+// Serve directory indexes for public/stylesheets folder (with icons) 
+var index = serveIndex('public/', {'icons': true})
  
 // Serve up public/ftp folder files 
 var serve = serveStatic('public')
@@ -85,15 +85,16 @@ var server = http.createServer(function onRequest(req, res){
 })
  
 // Listen 
-server.listen(3000)
+server.listen(3002)
 ```
+
+![Static Index](static-index.png)
 
 ## 实现一个简单的网页
 
 - 创建html
 - 创建css和js和images目录
 - 完成hello world
-
 
 ## open
 
