@@ -196,9 +196,47 @@ if (err) throw err
 
 ### Event-driven
 
-Node.js 所有的异步 `I/O` 操作在完成时都会发送一个事件到事件队列。
+Node.js 所有的异步 `I/O` 操作在完成时都会发送一个事件到事件队列。很多Node.js核心API都是围绕事件驱动架构里的包括某种被称为 "emitters"的对象定时的发射命名事件来调用函数对象("listeners")。
 
-EventEmitter类, 是node中事件的基础， 实现了事件模型需要的接口， 包括addListener，removeListener, emit及其它工具方法. 同前端jQuery事件等类似， 采用了发布/订阅(观察者)的方式， 使用内部_events列表来记录注册的事件处理器.
+Much of the Node.js core API is built around an idiomatic asynchronous event-driven architecture in which certain kinds of objects (called "emitters") periodically emit named events that cause Function objects ("listeners") to be called.
+
+For instance: a net.Server object emits an event each time a peer connects to it; a fs.ReadStream emits an event when the file is opened; a stream emits an event whenever data is available to be read.
+
+EventEmitter类, 是node中事件的基础， 实现了事件模型需要的接口， 包括addListener，removeListener, emit及其它工具方法. 同前端jQuery事件等类似， 采用了发布/订阅(观察者)的方式， 使用内部_events列表来记录注册的事件处理器。在Node.js的sdk里
+
+```
+BigEvent.prototype.on = function(eventName, func) {
+    this._listeners = this._listeners || {};
+    this._listeners[eventName] = this._listeners[eventName] || [];
+    this._listeners[eventName].push(func);
+};
+
+BigEvent.prototype.off = function(eventName, func) {
+    this._listeners = this._listeners || {};
+    this._listeners[eventName].splice(this._listeners[eventName].indexOf(func), 1);
+};
+
+BigEvent.prototype.trigger = function(eventName) {
+    this._listeners = this._listeners || {};
+
+    var dataArgument = arguments[1] ? arguments[1] : null;
+    var events = this._listeners[eventName] || [];
+
+    for(var i = 0; i < events.length; i++) {
+        var ev = events[i]
+
+        if(dataArgument) {
+            ev.call(this, dataArgument);
+        } else {
+            ev.call(this);
+        }
+    };
+};
+```
+
+这里的BigEvent只是仿照jQuery的事件api写的简单实现，如果把trigger改成emit，用法就和Node.js里的Event几乎一模一样了。从英文单词角度看，trigger是触发，emit是发射，感觉emit更加霸气一些。
+
+在Node.js很早就有EventEmiter模块，在Node.js 6之前，只能通过`require("events").EventEmitter`来获取Event对象，所以非常冗余。所以在Node.js 6里就deprecated了它，可以通过`require("events")`直接引用了。尤其是结合es6的类和继承机制，可以让代码更加优雅。在Node.js 7之后，彻底移除了EventEmitter的api。大家只要知道events就可以了。
 
 Node 4以前的old做法（es5）
 
