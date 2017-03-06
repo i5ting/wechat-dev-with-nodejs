@@ -194,6 +194,42 @@ if (err) throw err
 
 更多CPS参见：http://matt.might.net/articles/by-example-continuation-passing-style/
 
+
+
+```js
+var childProcess = require('child_process');
+
+function runScript(scriptPath, callback) {
+
+    // keep track of whether callback has been invoked to prevent multiple invocations
+    var invoked = false;
+
+    var process = childProcess.fork(scriptPath);
+
+    // listen for errors as they may prevent the exit event from firing
+    process.on('error', function (err) {
+        if (invoked) return;
+        invoked = true;
+        callback(err);
+    });
+
+    // execute the callback once the process has finished running
+    process.on('exit', function (code) {
+        if (invoked) return;
+        invoked = true;
+        var err = code === 0 ? null : new Error('exit code ' + code);
+        callback(err);
+    });
+
+}
+
+// Now we can run a script and invoke a callback when complete, e.g.
+runScript('./some-script.js', function (err) {
+    if (err) throw err;
+    console.log('finished running some-script.js');
+});
+```
+
 ### Event-driven
 
 Node.js 所有的异步 `I/O` 操作在完成时都会发送一个事件到事件队列。很多Node.js核心API都是围绕事件驱动架构里的包括某种被称为 "emitters"的对象定时的发射命名事件来调用函数对象("listeners")。
@@ -301,7 +337,6 @@ myEmitter.emit('event');
 
 给出已有的expirable-hash-table模块，它是一个简单的哈希表，带有TTL(time to live)概念，即当超时后会自动清理该key，这和redis、mongodb里的ttl类似，只是它是一个更小的纯Node.js实现的模块而已。
 
-
 ```
 var ExpirableHashTable = require('expirable-hash-table')
 
@@ -337,3 +372,27 @@ http.createServer(function(request,response){
     response.end('Hello world!');
 }).listen(8888);
 ```
+
+
+
+之前讲过的http的例子
+
+```
+var http = require("http");
+http.createServer(function(request, response) {
+    response.writeHead(200, {"Content-Type": "text/plain"});
+    response.write("Hello World");
+    response.end();
+}).listen(8888);
+```
+
+捕获异常
+
+```
+server.on('error', function (e) {
+  // Handle your error here
+  console.log(e);
+});
+```
+
+疑问：如果在里面用emit呢？

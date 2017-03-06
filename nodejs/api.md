@@ -77,6 +77,11 @@ see here ： http://kapeli.com/docset_links
 
 ![Dash](img/dash.png)
 
+本地缓存文档的好处
+
+- 方便查看，不需要网络即可
+- 经常翻查文档，对sdk里的api掌握更好
+- 大局观更好
 
 ## 总结
 
