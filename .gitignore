@@ -11,3 +11,4 @@ log
 play
 *.log
 .DS_Store
+package-lock.json
